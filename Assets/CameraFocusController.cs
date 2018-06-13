@@ -9,30 +9,12 @@ using Vuforia;
 public class CameraFocusController : MonoBehaviour
 {
 
-    // code from  Vuforia Developer Library
-    // https://library.vuforia.com/articles/Solution/Camera-Focus-Modes
-    void Awake()
+    void Update()
     {
-        /*var vuforia = VuforiaARController.Instance;
-        vuforia.RegisterVuforiaStartedCallback(OnVuforiaStarted);
-        vuforia.RegisterOnPauseCallback(OnPaused);*/
-        CameraDevice.Instance.SetFocusMode(
-            CameraDevice.FocusMode.FOCUS_MODE_TRIGGERAUTO);
-    }
-    /*
-    private void OnVuforiaStarted()
-    {
-        CameraDevice.Instance.SetFocusMode(
-            CameraDevice.FocusMode.FOCUS_MODE_NORMAL);
-    }
-
-    private void OnPaused(bool paused)
-    {
-        if (!paused) // resumed
+        if (Input.touchCount == 1)
         {
-            // Set again autofocus mode when app is resumed
             CameraDevice.Instance.SetFocusMode(
                 CameraDevice.FocusMode.FOCUS_MODE_NORMAL);
         }
-    }*/
+    }
 }
