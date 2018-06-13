@@ -8,12 +8,12 @@ public class SingleFocus : MonoBehaviour {
 	
 	void Update ()
     {
-        if (Input.touchCount == 1)
+        //if (Input.touchCount == 1)
         {
-            Debug.Log("touched screen");
+            //Debug.Log("touched screen");
 
             CameraDevice.Instance.SetFocusMode(
-                CameraDevice.FocusMode.FOCUS_MODE_TRIGGERAUTO);
+                CameraDevice.FocusMode.FOCUS_MODE_CONTINUOUSAUTO);
         }
 	}
 }
