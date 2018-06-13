@@ -1,6 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <QCARConfig xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="qcar_config.xsd">
   <Tracking>
+    <CylinderTarget name="cornerTruss4" sideLength="2.600000"/>
+    <CylinderTarget name="curnerTruss3" sideLength="2.600000"/>
+    <CylinderTarget name="cornerTruss2" sideLength="2.600000"/>
+    <CylinderTarget name="cornerTruss1" sideLength="2.600000"/>
     <CylinderTarget name="trussTest" sideLength="2.500000"/>
   </Tracking>
 </QCARConfig>

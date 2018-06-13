@@ -14,7 +14,8 @@ public class CameraFocusController : MonoBehaviour
         if (Input.touchCount == 1)
         {
             CameraDevice.Instance.SetFocusMode(
-                CameraDevice.FocusMode.FOCUS_MODE_TRIGGERAUTO);
+                CameraDevice.FocusMode.FOCUS_MODE_TRIGGERAUTO
+                );
         }
     }
 }
