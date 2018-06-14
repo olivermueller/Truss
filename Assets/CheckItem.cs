@@ -8,6 +8,7 @@ public class CheckItem
     public string name;
     public bool isCompleted;
     public GameObject animationObject;
+    public List<GameObject> requiredComponents;
     public void LoadTask()
     {
         Canvas canvas = GameObject.FindObjectOfType<Canvas>();

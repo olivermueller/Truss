@@ -17,7 +17,7 @@ public class UIManager : MonoBehaviour {
         contentGameObj = GameObject.FindObjectOfType<VerticalLayoutGroup>().gameObject;
     }
 
-    public void AddCheckItem(string taskName, bool isCompleted, GameObject animationObject)
+    public void AddCheckItem(string taskName, bool isCompleted, GameObject animationObject, List<GameObject> requiredComponents)
     {
         GameObject tempCheckItem = Instantiate(checkItemPrefab);
         tempCheckItem.transform.SetParent(contentGameObj.transform);
@@ -26,6 +26,7 @@ public class UIManager : MonoBehaviour {
         if (isCompleted) completedImage.sprite = correctTexture;
         else completedImage.sprite = wrongTexture;
         tempCheckItem.GetComponent<CheckItemLoader>().animationObject = animationObject;
+        tempCheckItem.GetComponent<CheckItemLoader>().requiredComponents = requiredComponents;
     }
 
     public void RemoveAllCheckItems()

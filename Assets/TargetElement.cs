@@ -28,7 +28,7 @@ public class TargetElement : MonoBehaviour {
             TargetManager.Instance.canvas.enabled = true;
             foreach (CheckItem ci in checkItems)
             {
-                uiManager.AddCheckItem(ci.name, ci.isCompleted, ci.animationObject);
+                uiManager.AddCheckItem(ci.name, ci.isCompleted, ci.animationObject, ci.requiredComponents);
             }
 
         }

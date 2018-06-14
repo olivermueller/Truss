@@ -23,7 +23,9 @@ public class CompletedButton : MonoBehaviour {
         ci.isCompleted = true;
         GameObject currentButton = canvas.gameObject.GetComponentInChildren<ScrollRect>().transform.GetChild(0).GetChild(0).GetChild(checkItemIndex).gameObject;
         currentButton.transform.GetChild(1).GetComponent<Image>().sprite = canvas.GetComponent<UIManager>().correctTexture;
-        Destroy(currentButton.GetComponent<CheckItemLoader>().instantiatedAnimObject);
+
+        foreach(GameObject go in currentButton.GetComponent<CheckItemLoader>().instantiatedComponents)
+            Destroy(go);
         canvas.GetComponent<UIManager>().EnableScrollView();
         this.gameObject.SetActive(false);
     }
