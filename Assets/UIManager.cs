@@ -7,21 +7,25 @@ public class UIManager : MonoBehaviour {
 
     public Sprite correctTexture, wrongTexture;
     public GameObject checkItemPrefab;
+    public GameObject mainPanelObj;
+    public GameObject completedButton;
     private GameObject contentGameObj;
 
+    
     private void Start()
     {
         contentGameObj = GameObject.FindObjectOfType<VerticalLayoutGroup>().gameObject;
     }
 
-    public void AddCheckItem(string taskName, bool isCompleted)
+    public void AddCheckItem(string taskName, bool isCompleted, GameObject animationObject)
     {
         GameObject tempCheckItem = Instantiate(checkItemPrefab);
-        tempCheckItem.transform.parent = contentGameObj.transform;
+        tempCheckItem.transform.SetParent(contentGameObj.transform);
         tempCheckItem.GetComponentInChildren<Button>().GetComponentInChildren<Text>().text = taskName;
         Image completedImage = tempCheckItem.transform.GetChild(1).GetComponent<Image>();
         if (isCompleted) completedImage.sprite = correctTexture;
         else completedImage.sprite = wrongTexture;
+        tempCheckItem.GetComponent<CheckItemLoader>().animationObject = animationObject;
     }
 
     public void RemoveAllCheckItems()
@@ -32,5 +36,13 @@ public class UIManager : MonoBehaviour {
         }
     }
 
+    public void DisableScrollView()
+    {
+        mainPanelObj.GetComponent<RectTransform>().localScale = new Vector3(0, 0, 0);
+    }
+    public void EnableScrollView()
+    {
+        mainPanelObj.GetComponent<RectTransform>().localScale = new Vector3(1, 1, 1);
+    }
 
 }
