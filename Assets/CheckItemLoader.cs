@@ -29,6 +29,7 @@ public class CheckItemLoader : MonoBehaviour {
     private void OnDisable()
     {
         canvas.GetComponent<UIManager>().EnableScrollView();
+        canvas.GetComponent<UIManager>().completedButton.SetActive(false);
         if (instantiatedAnimObject) Destroy(instantiatedAnimObject);
     }
 }
