@@ -22,7 +22,7 @@ public class UIManager : MonoBehaviour {
         GameObject tempCheckItem = Instantiate(checkItemPrefab);
         tempCheckItem.transform.SetParent(contentGameObj.transform);
         tempCheckItem.GetComponentInChildren<Button>().GetComponentInChildren<Text>().text = taskName;
-        Image completedImage = tempCheckItem.transform.GetChild(1).GetComponent<Image>();
+        Image completedImage = tempCheckItem.transform.GetChild(2).GetComponent<Image>();
         if (isCompleted) completedImage.sprite = correctTexture;
         else completedImage.sprite = wrongTexture;
         tempCheckItem.GetComponent<CheckItemLoader>().animationObject = animationObject;

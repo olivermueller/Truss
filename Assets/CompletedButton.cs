@@ -22,7 +22,7 @@ public class CompletedButton : MonoBehaviour {
         CheckItem ci = TargetManager.Instance.currentlyActive.GetComponent<TargetElement>().checkItems[checkItemIndex];
         ci.isCompleted = true;
         GameObject currentButton = canvas.gameObject.GetComponentInChildren<ScrollRect>().transform.GetChild(0).GetChild(0).GetChild(checkItemIndex).gameObject;
-        currentButton.transform.GetChild(1).GetComponent<Image>().sprite = canvas.GetComponent<UIManager>().correctTexture;
+        currentButton.transform.GetChild(2).GetComponent<Image>().sprite = canvas.GetComponent<UIManager>().correctTexture;
 
         foreach(GameObject go in currentButton.GetComponent<CheckItemLoader>().instantiatedComponents)
             Destroy(go);
