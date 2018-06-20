@@ -21,6 +21,7 @@ public class UIManager : MonoBehaviour {
     {
         GameObject tempCheckItem = Instantiate(checkItemPrefab);
         tempCheckItem.transform.SetParent(contentGameObj.transform);
+        tempCheckItem.transform.localScale = new Vector3(1, 1, 1);
         tempCheckItem.GetComponentInChildren<Button>().GetComponentInChildren<Text>().text = taskName;
         Image completedImage = tempCheckItem.transform.GetChild(2).GetComponent<Image>();
         if (isCompleted) completedImage.sprite = correctTexture;
