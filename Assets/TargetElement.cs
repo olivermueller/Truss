@@ -15,7 +15,7 @@ public class TargetElement : MonoBehaviour {
     private void Start()
     {
         meshRenderer = GetComponent<MeshRenderer>();
-        uiManager = FindObjectOfType<Canvas>().gameObject.GetComponent<UIManager>();
+        uiManager = TargetManager.Instance.canvas.gameObject.GetComponent<UIManager>();
     }
 
     

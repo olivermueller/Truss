@@ -11,7 +11,7 @@ public class CompletedButton : MonoBehaviour {
     void OnEnable()
     {
         Button btn = this.GetComponent<Button>();
-        canvas = GameObject.FindObjectOfType<Canvas>();
+        canvas = TargetManager.Instance.canvas;
 
         btn.onClick.AddListener(TaskOnClick);
 
@@ -28,6 +28,9 @@ public class CompletedButton : MonoBehaviour {
             Destroy(go);
         canvas.GetComponent<UIManager>().EnableScrollView();
         this.gameObject.SetActive(false);
+
+        XAPIStatement statement = new XAPIStatement(TargetManager.Instance.username, "mailto:" + TargetManager.Instance.email, "passed", "http:∕∕adlnet.gov∕expapi∕verbs∕passed", "http:∕∕adlnet.gov∕expapi∕activities∕ARTruss", ci.name + " Test", "Completed " + ci.name);
+        TargetManager.Instance.SEND(statement);
     }
     private void OnDisable()
     {
