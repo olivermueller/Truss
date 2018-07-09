@@ -31,6 +31,8 @@ public class TargetManager : MonoBehaviour {
             targets = new List<TargetElement>();
             foreach (GameObject g in GameObject.FindGameObjectsWithTag("CylinderTarget"))
                 targets.Add(g.GetComponent<TargetElement>());
+            foreach (GameObject g in GameObject.FindGameObjectsWithTag("ImageTarget"))
+                targets.Add(g.GetComponent<TargetElement>());
             //canvas = GameObject.FindObjectOfType<Canvas>();
         }
 

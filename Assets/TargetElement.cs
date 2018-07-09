@@ -14,13 +14,15 @@ public class TargetElement : MonoBehaviour {
     UIManager uiManager;
     private void Start()
     {
-        meshRenderer = GetComponent<MeshRenderer>();
+        if(gameObject.tag == "ImageTarget")meshRenderer = transform.GetChild(0).gameObject.GetComponent<MeshRenderer>();
+        else if(gameObject.tag == "CylinderTarget") meshRenderer = GetComponent<MeshRenderer>();
         uiManager = TargetManager.Instance.canvas.gameObject.GetComponent<UIManager>();
     }
 
-    
+    public bool status;
     private void Update()
     {
+        status = meshRenderer.enabled;
         if (!isFullyVirtual)
         {
             prevActive = isActive;
