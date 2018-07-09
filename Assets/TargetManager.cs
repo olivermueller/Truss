@@ -5,7 +5,6 @@ using UnityEngine;
 public class TargetManager : MonoBehaviour {
 
     public List<TargetElement> targets;
-
     public GameObject currentlyActive;
     public Canvas canvas;
 

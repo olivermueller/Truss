@@ -8,7 +8,8 @@ public class UIManager : MonoBehaviour {
     public Sprite correctTexture, wrongTexture;
     public GameObject checkItemPrefab;
     public GameObject mainPanelObj;
-    public GameObject completedButton;
+    public GameObject yesButton, noButton, yesNoMenu;
+    public Text question;
     private GameObject contentGameObj;
 
     

@@ -32,15 +32,17 @@ public class CheckItemLoader : MonoBehaviour {
             tempObj.GetComponent<Animation>().enabled = false;
             instantiatedComponents.Add(tempObj);
         }
-
-        canvas.GetComponent<UIManager>().DisableScrollView();
-        canvas.GetComponent<UIManager>().completedButton.SetActive(true);
-        canvas.GetComponent<UIManager>().completedButton.GetComponent<CompletedButton>().checkItemIndex = transform.GetSiblingIndex();
+        UIManager um = canvas.GetComponent<UIManager>();
+        um.DisableScrollView();
+        um.yesNoMenu.SetActive(true);
+        um.yesButton.GetComponent<CompletedButton>().checkItemIndex = transform.GetSiblingIndex();
+        um.noButton.GetComponent<CompletedButton>().checkItemIndex = transform.GetSiblingIndex();
+        um.question.text = TargetManager.Instance.currentlyActive.GetComponent<TargetElement>().checkItems[transform.GetSiblingIndex()].question;
     }
     private void OnDisable()
     {
         canvas.GetComponent<UIManager>().EnableScrollView();
-        canvas.GetComponent<UIManager>().completedButton.SetActive(false);
+        canvas.GetComponent<UIManager>().yesNoMenu.SetActive(false);
         foreach(GameObject go in instantiatedComponents)
             Destroy(go);
     }
