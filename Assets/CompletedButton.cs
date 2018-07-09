@@ -11,7 +11,7 @@ public class CompletedButton : MonoBehaviour {
 
     void OnEnable()
     {
-        canvas = GameObject.FindObjectOfType<Canvas>();
+        canvas = TargetManager.Instance.canvas;
     }
 
     public void TaskOnClick()
@@ -47,6 +47,11 @@ public class CompletedButton : MonoBehaviour {
             CompletedTask(currentButton, um, ci);
         }
         
+
+      
+
+        XAPIStatement statement = new XAPIStatement(TargetManager.Instance.username, "mailto:" + TargetManager.Instance.email, "passed", "http:∕∕adlnet.gov∕expapi∕verbs∕passed", "http:∕∕adlnet.gov∕expapi∕activities∕ARTruss", ci.name + " Test", "Completed " + ci.name);
+        TargetManager.Instance.SEND(statement);
     }
 
     void CompletedTask(GameObject currentButton, UIManager um, CheckItem ci)

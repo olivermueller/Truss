@@ -7,36 +7,63 @@ public class TargetElement : MonoBehaviour {
     public bool isActive = false;
     public List<CheckItem> checkItems;
 
-    private bool prevActive = false;
+    public bool prevActive = false;
+    public bool isFullyVirtual;
    
     MeshRenderer meshRenderer;
     UIManager uiManager;
     private void Start()
     {
         meshRenderer = GetComponent<MeshRenderer>();
-        uiManager = FindObjectOfType<Canvas>().gameObject.GetComponent<UIManager>();
+        uiManager = TargetManager.Instance.canvas.gameObject.GetComponent<UIManager>();
     }
 
     
     private void Update()
     {
-        prevActive = isActive;
-        isActive = meshRenderer.enabled;
-        if (isActive != prevActive && isActive)
+        if (!isFullyVirtual)
         {
-            TargetManager.Instance.currentlyActive = this.gameObject;
-            TargetManager.Instance.canvas.enabled = true;
-            foreach (CheckItem ci in checkItems)
+            prevActive = isActive;
+            if (meshRenderer)
             {
-                uiManager.AddCheckItem(ci.name, ci.isCompleted, ci.animationObject, ci.requiredComponents);
+                isActive = meshRenderer.enabled;
             }
+            if (isActive != prevActive && isActive)
+            {
+                TargetManager.Instance.currentlyActive = this.gameObject;
+                TargetManager.Instance.canvas.enabled = true;
+                foreach (CheckItem ci in checkItems)
+                {
+                    uiManager.AddCheckItem(ci.name, ci.isCompleted, ci.animationObject, ci.requiredComponents);
+                }
 
+            }
+            if(prevActive && !isActive)
+            {
+                TargetManager.Instance.currentlyActive = null;
+                TargetManager.Instance.canvas.enabled = false;
+                uiManager.RemoveAllCheckItems();
+            }
         }
-        if(prevActive && !isActive)
+        else
         {
-            TargetManager.Instance.currentlyActive = null;
-            TargetManager.Instance.canvas.enabled = false;
-            uiManager.RemoveAllCheckItems();
+            if (isActive != prevActive && isActive)
+            {
+                TargetManager.Instance.currentlyActive = this.gameObject;
+                TargetManager.Instance.canvas.enabled = true;
+                foreach (CheckItem ci in checkItems)
+                {
+                    uiManager.AddCheckItem(ci.name, ci.isCompleted, ci.animationObject, ci.requiredComponents);
+                }
+
+            }
+            else if(prevActive && !isActive)
+            {
+                TargetManager.Instance.currentlyActive = null;
+                TargetManager.Instance.canvas.enabled = false;
+                uiManager.RemoveAllCheckItems();
+            }
+            prevActive = isActive;
         }
         
        

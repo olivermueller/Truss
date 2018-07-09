@@ -14,7 +14,7 @@ public class CheckItemLoader : MonoBehaviour {
     void OnEnable()
     {
         Button btn = button.GetComponentInChildren<Button>();
-        canvas = GameObject.FindObjectOfType<Canvas>();
+        canvas = TargetManager.Instance.canvas;
 
         btn.onClick.AddListener(TaskOnClick);
         instantiatedComponents = new List<GameObject>();
