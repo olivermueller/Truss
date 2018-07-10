@@ -5,6 +5,7 @@ using UnityEngine;
 public class TargetManager : MonoBehaviour {
 
     public List<TargetElement> targets;
+    public GameObject prevActive;
     public GameObject currentlyActive;
     public Canvas canvas, usernameCanvas;
 
@@ -64,6 +65,13 @@ public class TargetManager : MonoBehaviour {
         yield return data;
 
     }
+	private void Update()
+	{
+        if(prevActive != null && currentlyActive == null)
+        {
+            print("Go back to" + prevActive.name);
+        }
+	}
 
-    
+
 }

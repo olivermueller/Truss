@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using System.Linq;
 
 public class TargetElement : MonoBehaviour {
 
@@ -30,24 +31,34 @@ public class TargetElement : MonoBehaviour {
             {
                 isActive = meshRenderer.enabled;
             }
-            if (isActive != prevActive && isActive)
+            if (!prevActive && isActive)
             {
-                TargetManager.Instance.currentlyActive = this.gameObject;
-                TargetManager.Instance.canvas.enabled = true;
-                foreach (CheckItem ci in checkItems)
+                if (TargetManager.Instance.prevActive == this.gameObject)
                 {
-                    uiManager.AddCheckItem(ci.name, ci.isCompleted, ci.animationObject, ci.requiredComponents);
+                    TargetManager.Instance.currentlyActive = this.gameObject;
+
+                    TargetManager.Instance.canvas.enabled = true;
+                    foreach (CheckItem ci in checkItems)
+                    {
+                        uiManager.AddCheckItem(ci.name, ci.isCompleted, ci.animationObject, ci.requiredComponents);
+                    }
                 }
 
             }
             if(prevActive && !isActive)
             {
-                TargetManager.Instance.currentlyActive = null;
-                TargetManager.Instance.canvas.enabled = false;
-                uiManager.RemoveAllCheckItems();
+
+                if (TargetManager.Instance.prevActive.GetComponent<TargetElement>().checkItems.All(x => x.isCompleted))
+                {
+                    TargetManager.Instance.prevActive = this.gameObject;
+                }
+                    TargetManager.Instance.currentlyActive = null;
+                    TargetManager.Instance.canvas.enabled = false;
+                    uiManager.RemoveAllCheckItems();
+                
             }
         }
-        else
+        else 
         {
             if (isActive != prevActive && isActive)
             {
@@ -61,6 +72,7 @@ public class TargetElement : MonoBehaviour {
             }
             else if(prevActive && !isActive)
             {
+                TargetManager.Instance.prevActive = this.gameObject;
                 TargetManager.Instance.currentlyActive = null;
                 TargetManager.Instance.canvas.enabled = false;
                 uiManager.RemoveAllCheckItems();
