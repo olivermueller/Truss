@@ -1065,7 +1065,7 @@ GameObject:
   - component: {fileID: 1277421025}
   m_Layer: 0
   m_Name: TaskTracker
-  m_TagString: Untagged
+  m_TagString: TaskTracker
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1081,25 +1081,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ade84de660f0040499cf85ed2e7f6989, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  animationObjects:
-  - animationObjects:
-    - {fileID: 0}
-  - animationObjects:
-    - {fileID: 0}
-    - {fileID: 0}
-  - animationObjects:
-    - {fileID: 0}
-  - animationObjects:
-    - {fileID: 0}
-  - animationObjects: []
-  - animationObjects: []
-  - animationObjects: []
-  - animationObjects: []
-  targetObjects:
-  - {fileID: 186360199}
-  - {fileID: 1733836602}
-  - {fileID: 2043939794}
-  - {fileID: 186360199}
+  animationObjects: {fileID: 0}
+  targetObjects: {fileID: 0}
+  tasks: []
+  listCount: 0
 --- !u!4 &1277421026
 Transform:
   m_ObjectHideFlags: 0
