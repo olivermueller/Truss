@@ -34,13 +34,12 @@ public class Node
         rect.position += delta;
     }
 
-    public void Draw()
+    public virtual void Draw()
     {
         
         inPoint.Draw();
         outPoint.Draw();
         GUI.Box(rect, title, style);
-        EditorGUI.IntField(new Rect(rect.position.x+11, rect.position.y+10, rect.width/2, rect.height/3), 4);
 
     }
 

@@ -1,10 +1,10 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
+[System.Serializable]
 public class Task
 {
-    protected string _title, _description;
+    public string _title, _description;
     protected Task _next;
     public GameObject _animationObject, _baseObject, _instantiatedAnimationObject;
 

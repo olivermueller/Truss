@@ -1,7 +1,6 @@
 ﻿using UnityEngine;
 using UnityEditor;
 using System.Collections.Generic;
-
 public class NodeBasedEditor : EditorWindow
 {
     private List<Node> nodes;
@@ -17,7 +16,6 @@ public class NodeBasedEditor : EditorWindow
 
     private Vector2 offset;
     private Vector2 drag;
-
     [MenuItem("Window/Node Based Editor")]
     private static void OpenWindow()
     {
@@ -44,6 +42,12 @@ public class NodeBasedEditor : EditorWindow
         outPointStyle.normal.background = EditorGUIUtility.Load("builtin skins/darkskin/images/btn right.png") as Texture2D;
         outPointStyle.active.background = EditorGUIUtility.Load("builtin skins/darkskin/images/btn right on.png") as Texture2D;
         outPointStyle.border = new RectOffset(4, 4, 12, 12);
+        
+        
+//        for (int i=0;i<_taskModel.tasks.Count; i++)
+//        {
+//            OnClickYesNoNode(Vector3.zero, _taskModel.tasks[i]._title, _taskModel.tasks[i]._description, _taskModel.tasks[i]._animationObject, _taskModel.tasks[i]._baseObject);
+//        }
     }
 
     private void OnGUI()
@@ -188,8 +192,8 @@ public class NodeBasedEditor : EditorWindow
     private void ProcessContextMenu(Vector2 mousePosition)
     {
         GenericMenu genericMenu = new GenericMenu();
-        genericMenu.AddItem(new GUIContent("Add target task"), false, () => OnClickAddTargetNode(mousePosition));
-        genericMenu.AddItem(new GUIContent("Add yesno task"), false, () => OnClickYesNoNode(mousePosition));
+        genericMenu.AddItem(new GUIContent("Add  task"), false, () => OnClickAddTargetNode(mousePosition));
+        genericMenu.AddItem(new GUIContent("Add target task"), false, () => OnClickYesNoNode(mousePosition));
         genericMenu.ShowAsContext();
     }
 
@@ -216,15 +220,21 @@ public class NodeBasedEditor : EditorWindow
         }
 
         nodes.Add(new Node(mousePosition, 200, 50, nodeStyle, selectedNodeStyle, inPointStyle, outPointStyle, OnClickInPoint, OnClickOutPoint, OnClickRemoveNode));
+
+        
     }
-    private void OnClickYesNoNode(Vector2 mousePosition)
+    private void OnClickYesNoNode(Vector2 mousePosition, string t = " ", string d = " ", GameObject targetObj = null,GameObject animationObj = null)
     {
         if (nodes == null)
         {
             nodes = new List<Node>();
         }
+        
+        TargetTask newTask = new TargetTask(" ", " ", null, null);
+        TaskModel.Instance.tasks.Add(newTask);
+        nodes.Add(new TargetTaskNode(mousePosition, 400, 300, nodeStyle, selectedNodeStyle, inPointStyle, outPointStyle, OnClickInPoint, OnClickOutPoint, OnClickRemoveNode, newTask));
+        TargetTaskNode currentNode = (nodes[nodes.Count - 1] as TargetTaskNode);
 
-        nodes.Add(new Node(mousePosition, 200, 150, nodeStyle, selectedNodeStyle, inPointStyle, outPointStyle, OnClickInPoint, OnClickOutPoint, OnClickRemoveNode));
     }
 
     private void OnClickInPoint(ConnectionPoint inPoint)
