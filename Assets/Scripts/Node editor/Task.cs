@@ -4,15 +4,19 @@ using UnityEngine;
 using System.Linq;
 using UnityEditor;
 
-public class Task
+[System.Serializable]
+public class Task:MonoBehaviour
 {
     public string _title, _description;
+    public int ID, nextID;
+    [System.NonSerialized]
     protected Task _next;
     public GameObject _animationObject, _baseObject, _instantiatedAnimationObject;
 
     public void SetNextTask(Task next)
     {
-        _next = next;   
+        _next = next;
+        nextID = _next.ID;
     }
     public virtual void Start()
     {
@@ -30,15 +34,18 @@ public class Task
     {
         if (_instantiatedAnimationObject) GameObject.Destroy(_instantiatedAnimationObject);
         if(_next!=null) _next.Start();
+        Debug.Log("<color=green>completed " + _title+"</color>" );
+        Debug.Log("<color=purple>Next Task " + _next._title+"</color>" );
         return _next;
     }
 
-    public Task(string title, string description, GameObject animationObject, GameObject imageTargetObject)
+    public Task(string title, string description, GameObject animationObject, GameObject imageTargetObject, int id)
     {
         _title = title;
         _description = description;
         _animationObject = animationObject;
         _baseObject = imageTargetObject;
+        ID = id;
     }
 
     public virtual bool? IsCompleted()
@@ -46,25 +53,27 @@ public class Task
         return false;
     }
 
-
 }
-
+[System.Serializable]
 public class TargetTask:Task
 {
     
     Renderer _renderer;
     public override void Start()
     {
+        Debug.Log("<color=green> Started "+ _title +"</color>");
         base.Start();
         _renderer = _baseObject.GetComponentInChildren(typeof(Renderer), true) as Renderer;
     }
 
     public override bool? IsCompleted()
     {
+        Debug.Log("checking is completed" + _title);
+
         return IsImageTargetActive();
     }
 
-    public TargetTask(string title, string description, GameObject animationObject, GameObject imageTargetObject) : base(title, description, animationObject, imageTargetObject)
+    public TargetTask(string title, string description, GameObject animationObject, GameObject imageTargetObject, int id) : base(title, description, animationObject, imageTargetObject, id)
     {
         
     }
@@ -74,7 +83,7 @@ public class TargetTask:Task
     }
 
 }
-
+[System.Serializable]
 public class TriggerClass : Task
 {
     Renderer _renderer;
@@ -83,7 +92,7 @@ public class TriggerClass : Task
         base.Start();
         _renderer = _baseObject.GetComponent<Renderer>();
     }
-    public TriggerClass(string title, string description, GameObject animationObject, GameObject imageTargetObject) : base(title, description, animationObject, imageTargetObject)
+    public TriggerClass(string title, string description, GameObject animationObject, GameObject imageTargetObject, int id) : base(title, description, animationObject, imageTargetObject, id)
     {
         
     }
@@ -97,7 +106,7 @@ public class TriggerClass : Task
         return _renderer.enabled;
     }
 }
-
+[System.Serializable]
 public class SubTaskTask : Task
 {
     bool isFirst = true;
@@ -110,7 +119,7 @@ public class SubTaskTask : Task
         base.Start();
     }
 
-    public SubTaskTask(string title, string description, GameObject animationObject, GameObject imageTargetObject) : base(title, description, animationObject, imageTargetObject)
+    public SubTaskTask(string title, string description, GameObject animationObject, GameObject imageTargetObject, int id) : base(title, description, animationObject, imageTargetObject, id)
     {
         _subTasks = new List<Task>();
     }
@@ -153,7 +162,7 @@ public class SubTaskTask : Task
         return false;
     }
 }
-
+[System.Serializable]
 public class YesNoTask : Task
 {
     //state = -1 -> no
@@ -185,7 +194,7 @@ public class YesNoTask : Task
         _state = state;
     }
 
-    public YesNoTask(string title, string description, GameObject animationObject, GameObject imageTargetObject) : base(title, description, animationObject, imageTargetObject)
+    public YesNoTask(string title, string description, GameObject animationObject, GameObject imageTargetObject, int id) : base(title, description, animationObject, imageTargetObject, id)
     {
 
     }

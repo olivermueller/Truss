@@ -168,9 +168,11 @@
             <e p="ConnectionPoint.cs" t="Include" />
             <e p="Node.cs" t="Include" />
             <e p="NodeBasedEditor.cs" t="Include" />
+            <e p="TargetTaskNode.cs" t="Include" />
             <e p="Task.cs" t="Include" />
-            <e p="TaskTracker.cs" t="Include" />
+            <e p="TaskModel.cs" t="Include" />
             <e p="TaskTrackerDummy.cs" t="Include" />
+            <e p="TestingScript.cs" t="Include" />
             <e p="TriggerObject.cs" t="Include" />
           </e>
           <e p="Object.cs" t="Include" />
@@ -347,9 +349,11 @@
       <e p="Library" t="ExcludeRecursive" />
       <e p="obj" t="ExcludeRecursive" />
       <e p="packages" t="ExcludeRecursive" />
-      <e p="Temp/bin" t="ExcludeRecursive" />
+      <e p="Temp" t="ExcludeRecursive">
+        <e p="bin" t="ExcludeRecursive" />
+      </e>
       <e p="Vuforia.sln" t="IncludeFlat" />
     </e>
-    <e p="$USER_HOME$/Library/Caches/Rider2018.1/resharper-host/local/Transient/ReSharperHost/v12/SolutionCaches/_Vuforia.1891195434.00" t="ExcludeRecursive" />
+    <e p="$USER_HOME$/Library/Caches/Rider2018.1/resharper-host/local/Transient/ReSharperHost/v12/SolutionCaches/_Vuforia.1487412627.00" t="ExcludeRecursive" />
   </component>
 </project>

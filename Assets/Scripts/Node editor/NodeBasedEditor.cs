@@ -195,8 +195,7 @@ public class NodeBasedEditor : EditorWindow
     private void ProcessContextMenu(Vector2 mousePosition)
     {
         GenericMenu genericMenu = new GenericMenu();
-        genericMenu.AddItem(new GUIContent("Add  task"), false, () => OnClickAddTargetNode(mousePosition));
-        genericMenu.AddItem(new GUIContent("Add target task"), false, () => OnClickYesNoNode(mousePosition));
+        genericMenu.AddItem(new GUIContent("Add target task"), false, () => OnClickAddTargetNode(mousePosition));
         genericMenu.AddItem(new GUIContent("Clear tasks"), false, () => ClearTaskList());
         
         genericMenu.ShowAsContext();
@@ -217,32 +216,28 @@ public class NodeBasedEditor : EditorWindow
         GUI.changed = true;
     }
 
-    private void OnClickAddTargetNode(Vector2 mousePosition)
-    {
-        if (nodes == null)
-        {
-            nodes = new List<Node>();
-        }
-
-        nodes.Add(new Node(mousePosition, 200, 50, nodeStyle, selectedNodeStyle, inPointStyle, outPointStyle, OnClickInPoint, OnClickOutPoint, OnClickRemoveNode));
-
-        
-    }
+   
 
     private void ClearTaskList()
     {
         TaskModel.Instance.tasks.Clear();
     }
 
-    private void OnClickYesNoNode(Vector2 mousePosition, string t = " ", string d = " ", GameObject targetObj = null,GameObject animationObj = null)
+    private void OnClickAddTargetNode(Vector2 mousePosition, string t = " ", string d = " ", GameObject targetObj = null,GameObject animationObj = null)
     {
         if (nodes == null)
         {
             nodes = new List<Node>();
         }
+        GameObject newTaskObj = new GameObject();
+        TargetTask newTask = newTaskObj.AddComponent<TargetTask>();
+       // Debug.Log("TASK MODEL NAME" + TaskModel.Instance.name);
         
-        TargetTask newTask = new TargetTask(" ", " ", null, null);
+        //TargetTask newTask = new TargetTask(" ", " ", animationObj, targetObj, TaskModel.Instance.tasks.Count);
+       // Debug.Log("TASKS COUNT" + TaskModel.Instance.tasks.Count);
+        newTask.ID = TaskModel.Instance.tasks.Count;
         TaskModel.Instance.tasks.Add(newTask);
+
         nodes.Add(new TargetTaskNode(mousePosition, 400, 300, nodeStyle, selectedNodeStyle, inPointStyle, outPointStyle, OnClickInPoint, OnClickOutPoint, OnClickRemoveNode, newTask));
         TargetTaskNode currentNode = (nodes[nodes.Count - 1] as TargetTaskNode);
 

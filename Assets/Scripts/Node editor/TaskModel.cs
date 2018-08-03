@@ -1,30 +1,48 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
+using UnityEditor;
 using UnityEngine;
 
-public class TaskModel {
-    private static TaskModel instance;
+[ExecuteInEditMode]
+public class TaskModel:MonoBehaviour, ISerializationCallbackReceiver
+{
 
-    private TaskModel()
-    {
-        tasks = new List<Task>();
-    }
+    public List<Task> tasks;
+    private static TaskModel _instance;
 
-    public static TaskModel Instance
+    public static TaskModel Instance { get { return _instance; } }
+
+
+    private void Awake()
     {
-        get{
-            if(instance == null){
-                instance = new TaskModel();
-            }
-            return instance;
+        if (_instance != null && _instance != this)
+        {
+            
+            Destroy(this.gameObject);
+        } else {
+            _instance = this;
         }
     }
     
-    public List<Task> tasks;
-    
     public void AddTask(Task newTask)
     {
+        if(tasks == null) new List<Task>();
         tasks.Add(newTask);
+        Debug.Log("Elements in task list: " + TaskModel.Instance.tasks.Count);
+
     }
 
+    public void OnBeforeSerialize()
+    {
+        
+    }
+
+    public void OnAfterDeserialize()
+    {
+        foreach (var task in tasks)
+        {
+            task.SetNextTask(tasks.First(t=>t.ID==task.nextID));
+        }
+    }
 }
