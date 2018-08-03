@@ -1,6 +1,8 @@
 ﻿using UnityEngine;
 using UnityEditor;
 using System.Collections.Generic;
+using Node_editor;
+
 public class NodeBasedEditor : EditorWindow
 {
     private List<Node> nodes;
@@ -44,9 +46,10 @@ public class NodeBasedEditor : EditorWindow
         outPointStyle.border = new RectOffset(4, 4, 12, 12);
         
         
-//        for (int i=0;i<_taskModel.tasks.Count; i++)
+//        for (int i=0;i<TaskModel.Instance.tasks.Count; i++)
 //        {
-//            OnClickYesNoNode(Vector3.zero, _taskModel.tasks[i]._title, _taskModel.tasks[i]._description, _taskModel.tasks[i]._animationObject, _taskModel.tasks[i]._baseObject);
+//            
+//            //OnClickYesNoNode(Vector3.zero, TaskModel.Instance.tasks[i]._title, TaskModel.Instance.tasks[i]._description, TaskModel.Instance.tasks[i]._animationObject, TaskModel.Instance.tasks[i]._baseObject);
 //        }
     }
 
@@ -194,6 +197,8 @@ public class NodeBasedEditor : EditorWindow
         GenericMenu genericMenu = new GenericMenu();
         genericMenu.AddItem(new GUIContent("Add  task"), false, () => OnClickAddTargetNode(mousePosition));
         genericMenu.AddItem(new GUIContent("Add target task"), false, () => OnClickYesNoNode(mousePosition));
+        genericMenu.AddItem(new GUIContent("Clear tasks"), false, () => ClearTaskList());
+        
         genericMenu.ShowAsContext();
     }
 
@@ -223,6 +228,12 @@ public class NodeBasedEditor : EditorWindow
 
         
     }
+
+    private void ClearTaskList()
+    {
+        TaskModel.Instance.tasks.Clear();
+    }
+
     private void OnClickYesNoNode(Vector2 mousePosition, string t = " ", string d = " ", GameObject targetObj = null,GameObject animationObj = null)
     {
         if (nodes == null)
@@ -309,7 +320,8 @@ public class NodeBasedEditor : EditorWindow
         {
             connections = new List<Connection>();
         }
-
+        //Debug.Log("Ïn node:" + (selectedInPoint.node as TargetTaskNode)._targetTask._title + " ÖutNode: " + (selectedOutPoint.node as TargetTaskNode)._targetTask._title);
+        (selectedOutPoint.node as TargetTaskNode)._targetTask.SetNextTask((selectedInPoint.node as TargetTaskNode)._targetTask);
         connections.Add(new Connection(selectedInPoint, selectedOutPoint, OnClickRemoveConnection));
     }
 
