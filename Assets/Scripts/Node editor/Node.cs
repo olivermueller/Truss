@@ -1,8 +1,8 @@
 ﻿using System;
 using UnityEditor;
 using UnityEngine;
-
-public class Node
+[System.Serializable]
+public class Node : MonoBehaviour
 {
     public Rect rect;
     public string title;
@@ -22,8 +22,24 @@ public class Node
     {
         rect = new Rect(position.x, position.y, width, height);
         style = nodeStyle;
-        inPoint = new ConnectionPoint(this, ConnectionPointType.In, inPointStyle, OnClickInPoint);
-        outPoint = new ConnectionPoint(this, ConnectionPointType.Out, outPointStyle, OnClickOutPoint);
+        inPoint = gameObject.AddComponent<ConnectionPoint>();
+        inPoint.Initialize(this, ConnectionPointType.In, inPointStyle, OnClickInPoint);
+
+        outPoint = gameObject.AddComponent<ConnectionPoint>();
+        outPoint.Initialize(this, ConnectionPointType.Out, outPointStyle, OnClickOutPoint);
+        defaultNodeStyle = nodeStyle;
+        selectedNodeStyle = selectedStyle;
+        OnRemoveNode = OnClickRemoveNode;
+    }
+
+    public void Initialize(Vector2 position, float width, float height, GUIStyle nodeStyle, GUIStyle selectedStyle, GUIStyle inPointStyle, GUIStyle outPointStyle, Action<ConnectionPoint> OnClickInPoint, Action<ConnectionPoint> OnClickOutPoint, Action<Node> OnClickRemoveNode)
+    {
+        rect = new Rect(position.x, position.y, width, height);
+        style = nodeStyle;
+        inPoint = gameObject.AddComponent<ConnectionPoint>();
+        inPoint.Initialize(this, ConnectionPointType.In, inPointStyle, OnClickInPoint);
+        outPoint = gameObject.AddComponent<ConnectionPoint>();
+        outPoint.Initialize(this, ConnectionPointType.Out, outPointStyle, OnClickOutPoint);
         defaultNodeStyle = nodeStyle;
         selectedNodeStyle = selectedStyle;
         OnRemoveNode = OnClickRemoveNode;
@@ -36,7 +52,6 @@ public class Node
 
     public virtual void Draw()
     {
-        
         inPoint.Draw();
         outPoint.Draw();
         GUI.Box(rect, title, style);

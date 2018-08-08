@@ -1,13 +1,21 @@
 ﻿using System;
 using UnityEditor;
 using UnityEngine;
-public class Connection
+[Serializable]
+public class Connection : MonoBehaviour
 {
     public ConnectionPoint inPoint;
     public ConnectionPoint outPoint;
     public Action<Connection> OnClickRemoveConnection;
 
     public Connection(ConnectionPoint inPoint, ConnectionPoint outPoint, Action<Connection> OnClickRemoveConnection)
+    {
+        this.inPoint = inPoint;
+        this.outPoint = outPoint;
+        this.OnClickRemoveConnection = OnClickRemoveConnection;
+    }
+
+    public void Initialize(ConnectionPoint inPoint, ConnectionPoint outPoint, Action<Connection> OnClickRemoveConnection)
     {
         this.inPoint = inPoint;
         this.outPoint = outPoint;

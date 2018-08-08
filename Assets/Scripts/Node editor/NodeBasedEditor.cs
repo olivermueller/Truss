@@ -1,18 +1,11 @@
 ﻿using UnityEngine;
 using UnityEditor;
 using System.Collections.Generic;
+using System.IO;
 using Node_editor;
 
 public class NodeBasedEditor : EditorWindow
 {
-    private List<Node> nodes;
-    private List<Connection> connections;
-
-    private GUIStyle nodeStyle;
-    private GUIStyle selectedNodeStyle;
-    private GUIStyle inPointStyle;
-    private GUIStyle outPointStyle;
-
     private ConnectionPoint selectedInPoint;
     private ConnectionPoint selectedOutPoint;
 
@@ -27,30 +20,8 @@ public class NodeBasedEditor : EditorWindow
 
     private void OnEnable()
     {
-        nodeStyle = new GUIStyle();
-        nodeStyle.normal.background = EditorGUIUtility.Load("builtin skins/darkskin/images/node1.png") as Texture2D;
-        nodeStyle.border = new RectOffset(12, 12, 12, 12);
-
-        selectedNodeStyle = new GUIStyle();
-        selectedNodeStyle.normal.background = EditorGUIUtility.Load("builtin skins/darkskin/images/node1 on.png") as Texture2D;
-        selectedNodeStyle.border = new RectOffset(12, 12, 12, 12);
-
-        inPointStyle = new GUIStyle();
-        inPointStyle.normal.background = EditorGUIUtility.Load("builtin skins/darkskin/images/btn left.png") as Texture2D;
-        inPointStyle.active.background = EditorGUIUtility.Load("builtin skins/darkskin/images/btn left on.png") as Texture2D;
-        inPointStyle.border = new RectOffset(4, 4, 12, 12);
-
-        outPointStyle = new GUIStyle();
-        outPointStyle.normal.background = EditorGUIUtility.Load("builtin skins/darkskin/images/btn right.png") as Texture2D;
-        outPointStyle.active.background = EditorGUIUtility.Load("builtin skins/darkskin/images/btn right on.png") as Texture2D;
-        outPointStyle.border = new RectOffset(4, 4, 12, 12);
         
         
-//        for (int i=0;i<TaskModel.Instance.tasks.Count; i++)
-//        {
-//            
-//            //OnClickYesNoNode(Vector3.zero, TaskModel.Instance.tasks[i]._title, TaskModel.Instance.tasks[i]._description, TaskModel.Instance.tasks[i]._animationObject, TaskModel.Instance.tasks[i]._baseObject);
-//        }
     }
 
     private void OnGUI()
@@ -96,22 +67,22 @@ public class NodeBasedEditor : EditorWindow
 
     private void DrawNodes()
     {
-        if (nodes != null)
+        if (TaskModel.Instance.nodes != null)
         {
-            for (int i = 0; i < nodes.Count; i++)
+            for (int i = 0; i < TaskModel.Instance.nodes.Count; i++)
             {
-                nodes[i].Draw();
+                TaskModel.Instance.nodes[i].Draw();
             }
         }
     }
 
     private void DrawConnections()
     {
-        if (connections != null)
+        if (TaskModel.Instance.connections != null)
         {
-            for (int i = 0; i < connections.Count; i++)
+            for (int i = 0; i < TaskModel.Instance.connections.Count; i++)
             {
-                connections[i].Draw();
+                TaskModel.Instance.connections[i].Draw();
             }
         }
     }
@@ -145,11 +116,11 @@ public class NodeBasedEditor : EditorWindow
 
     private void ProcessNodeEvents(Event e)
     {
-        if (nodes != null)
+        if (TaskModel.Instance.nodes != null)
         {
-            for (int i = nodes.Count - 1; i >= 0; i--)
+            for (int i = TaskModel.Instance.nodes.Count - 1; i >= 0; i--)
             {
-                bool guiChanged = nodes[i].ProcessEvents(e);
+                bool guiChanged = TaskModel.Instance.nodes[i].ProcessEvents(e);
 
                 if (guiChanged)
                 {
@@ -205,11 +176,11 @@ public class NodeBasedEditor : EditorWindow
     {
         drag = delta;
 
-        if (nodes != null)
+        if (TaskModel.Instance.nodes != null)
         {
-            for (int i = 0; i < nodes.Count; i++)
+            for (int i = 0; i < TaskModel.Instance.nodes.Count; i++)
             {
-                nodes[i].Drag(delta);
+                TaskModel.Instance.nodes[i].Drag(delta);
             }
         }
 
@@ -220,27 +191,56 @@ public class NodeBasedEditor : EditorWindow
 
     private void ClearTaskList()
     {
+        if (TaskModel.Instance.nodes!=null)
+        {
+            TaskModel.Instance.nodes.Clear();
+        }
+
+        if (TaskModel.Instance.connections!=null)
+        {
+            TaskModel.Instance.connections.Clear();
+        }
         TaskModel.Instance.tasks.Clear();
+//        TaskModel.Instance.OnBeforeSerialize();
+//        OnBeforeSerialize();
     }
 
     private void OnClickAddTargetNode(Vector2 mousePosition, string t = " ", string d = " ", GameObject targetObj = null,GameObject animationObj = null)
     {
-        if (nodes == null)
+        if (TaskModel.Instance.nodes == null)
         {
-            nodes = new List<Node>();
+            TaskModel.Instance.nodes = new List<Node>();
         }
-        GameObject newTaskObj = new GameObject();
-        TargetTask newTask = newTaskObj.AddComponent<TargetTask>();
+        if (TaskModel.Instance.tasks == null)
+        {
+            TaskModel.Instance.tasks = new List<TaskData>();
+        }
+
+        var taskparent = GameObject.Find("Task Parent");
+        if (!taskparent)
+        {
+            taskparent = new GameObject("Task Parent");
+        }
+        GameObject newTaskObj = new GameObject("Task Object");
+        TargetTaskData newTaskData = newTaskObj.AddComponent<TargetTaskData>();
+        newTaskData.Initialize(" ", " ", animationObj, targetObj);
        // Debug.Log("TASK MODEL NAME" + TaskModel.Instance.name);
-        
-        //TargetTask newTask = new TargetTask(" ", " ", animationObj, targetObj, TaskModel.Instance.tasks.Count);
+//        TargetTask newTask = new TargetTask(" ", " ", animationObj, targetObj);
        // Debug.Log("TASKS COUNT" + TaskModel.Instance.tasks.Count);
-        newTask.ID = TaskModel.Instance.tasks.Count;
-        TaskModel.Instance.tasks.Add(newTask);
-
-        nodes.Add(new TargetTaskNode(mousePosition, 400, 300, nodeStyle, selectedNodeStyle, inPointStyle, outPointStyle, OnClickInPoint, OnClickOutPoint, OnClickRemoveNode, newTask));
-        TargetTaskNode currentNode = (nodes[nodes.Count - 1] as TargetTaskNode);
-
+//        newTask.ID = TaskModel.Instance.tasks.Count;
+        //
+        newTaskObj.transform.SetParent(taskparent.transform);
+        TaskModel.Instance.tasks.Add(newTaskData);
+        var nodeparent = GameObject.Find("Node Parent");
+        if (!nodeparent)
+        {
+            nodeparent = new GameObject("Node Parent");
+        }
+        GameObject newNodeObj = new GameObject("Node Object");
+        TargetTaskNode newNode = newNodeObj.AddComponent<TargetTaskNode>();
+        newNode.Initialize(mousePosition, 400, 300, TaskModel.Instance.nodeStyle, TaskModel.Instance.selectedNodeStyle, TaskModel.Instance.inPointStyle, TaskModel.Instance.outPointStyle, OnClickInPoint, OnClickOutPoint, OnClickRemoveNode, newTaskData);
+        newNodeObj.transform.SetParent(nodeparent.transform);
+        TaskModel.Instance.nodes.Add(newNode);
     }
 
     private void OnClickInPoint(ConnectionPoint inPoint)
@@ -263,6 +263,7 @@ public class NodeBasedEditor : EditorWindow
 
     private void OnClickOutPoint(ConnectionPoint outPoint)
     {
+        Debug.Log("Outpoint clicked");
         selectedOutPoint = outPoint;
 
         if (selectedInPoint != null)
@@ -281,48 +282,61 @@ public class NodeBasedEditor : EditorWindow
 
     private void OnClickRemoveNode(Node node)
     {
-        if (connections != null)
+        if (TaskModel.Instance.connections != null)
         {
             List<Connection> connectionsToRemove = new List<Connection>();
 
-            for (int i = 0; i < connections.Count; i++)
+            for (int i = 0; i < TaskModel.Instance.connections.Count; i++)
             {
-                if (connections[i].inPoint == node.inPoint || connections[i].outPoint == node.outPoint)
+                if (TaskModel.Instance.connections[i].inPoint == node.inPoint || TaskModel.Instance.connections[i].outPoint == node.outPoint)
                 {
-                    connectionsToRemove.Add(connections[i]);
+                    connectionsToRemove.Add(TaskModel.Instance.connections[i]);
                 }
             }
 
             for (int i = 0; i < connectionsToRemove.Count; i++)
             {
-                connections.Remove(connectionsToRemove[i]);
+                TaskModel.Instance.connections.Remove(connectionsToRemove[i]);
             }
 
             connectionsToRemove = null;
         }
 
-        nodes.Remove(node);
+        TaskModel.Instance.nodes.Remove(node);
     }
 
     private void OnClickRemoveConnection(Connection connection)
     {
-        connections.Remove(connection);
+        TaskModel.Instance.connections.Remove(connection);
     }
 
     private void CreateConnection()
     {
-        if (connections == null)
+        if (TaskModel.Instance.connections == null)
         {
-            connections = new List<Connection>();
+            TaskModel.Instance.connections = new List<Connection>();
         }
         //Debug.Log("Ïn node:" + (selectedInPoint.node as TargetTaskNode)._targetTask._title + " ÖutNode: " + (selectedOutPoint.node as TargetTaskNode)._targetTask._title);
-        (selectedOutPoint.node as TargetTaskNode)._targetTask.SetNextTask((selectedInPoint.node as TargetTaskNode)._targetTask);
-        connections.Add(new Connection(selectedInPoint, selectedOutPoint, OnClickRemoveConnection));
-    }
+        
+        // TODO Make it more abstract!
+        (selectedOutPoint.node as TargetTaskNode).TargetTaskData.SetNextTask((selectedInPoint.node as TargetTaskNode).TargetTaskData);
+        var connectionparent = GameObject.Find("Connection Parent");
+        if (!connectionparent)
+        {
+            connectionparent = new GameObject("Connection Parent");
+        }
+        var connectionGo = new GameObject("Connection Object");
+        var connectioncomp = connectionGo.AddComponent<Connection>();
+        connectioncomp.Initialize(selectedInPoint, selectedOutPoint, OnClickRemoveConnection);
+        connectionGo.transform.SetParent(connectionparent.transform);
+        TaskModel.Instance.connections.Add(connectioncomp);
+    }//
 
     private void ClearConnectionSelection()
     {
         selectedInPoint = null;
         selectedOutPoint = null;
     }
+
+    
 }

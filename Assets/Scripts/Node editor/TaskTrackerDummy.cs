@@ -1,11 +1,12 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using Node_editor;
 using UnityEditor;
 using UnityEngine;
 
 public class TaskTrackerDummy : MonoBehaviour {
     
-	Task iterator;
+	TaskData iterator;
 	public GameObject[] animationObjects, targetObjects;
 
 
@@ -33,26 +34,26 @@ public class TaskTrackerDummy : MonoBehaviour {
 
 	void Update () 
 	{
-		if(isFirst)
-		{
-			iterator.Start();
-			isFirst = false;
-		}
-
-		if (iterator!=null)
-		{
-			var val = iterator.IsCompleted();
-			if (!finished && val.HasValue && val.Value)
-			{
-				Debug.Log("<color=green>Completed task: " + iterator._title+"</color>" );
-				iterator = iterator.NextTask();
-				if (iterator == null) finished = true;
-				Debug.Log("ŸAAAAAAS");
-			}
-		}
-		else
-		{
-			Debug.Log("All Tasks completed!");
-		}
+//		if(isFirst)
+//		{
+//			iterator.Start();
+//			isFirst = false;
+//		}
+//
+//		if (iterator!=null)
+//		{
+//			var val = iterator.IsCompleted();
+//			if (!finished && val.HasValue && val.Value)
+//			{
+//				Debug.Log("<color=green>Completed task: " + iterator._title+"</color>" );
+//				iterator = iterator.NextTask();
+//				if (iterator == null) finished = true;
+//				Debug.Log("ŸAAAAAAS");
+//			}
+//		}
+//		else
+//		{
+//			Debug.Log("All Tasks completed!");
+//		}
 	}
 }

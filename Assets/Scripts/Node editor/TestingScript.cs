@@ -1,9 +1,10 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using Node_editor;
 using UnityEngine;
 
 public class TestingScript : MonoBehaviour {
-	Task iterator;
+	TaskData iterator;
 
 	bool isFirst = true;
 	bool finished = false;
@@ -20,7 +21,7 @@ public class TestingScript : MonoBehaviour {
 		if(isFirst)
 		{
 			iterator = TaskModel.Instance.tasks[0];
-			iterator.Start();
+			iterator.StartTask();
 			isFirst = false;
 		}
 

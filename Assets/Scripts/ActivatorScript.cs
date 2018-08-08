@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Activator : MonoBehaviour
+public class ActivatorScript : MonoBehaviour
 {
 	public GameObject Arrow;
 
