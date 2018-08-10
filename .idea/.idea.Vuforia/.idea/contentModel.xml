@@ -174,16 +174,18 @@
           <e p="Node editor" t="Include">
             <e p="Connection.cs" t="Include" />
             <e p="ConnectionPoint.cs" t="Include" />
-            <e p="Node.cs" t="Include" />
             <e p="NodeBasedEditor.cs" t="Include" />
             <e p="Nodes" t="Include">
+              <e p="Node.cs" t="Include" />
               <e p="TargetTaskNode.cs" t="Include" />
+              <e p="TestNode.cs" t="Include" />
               <e p="TriggerTaskNode.cs" t="Include" />
             </e>
-            <e p="TaskData.cs" t="Include" />
             <e p="TaskModel.cs" t="Include" />
             <e p="Tasks" t="Include">
               <e p="TargetTaskData.cs" t="Include" />
+              <e p="TaskData.cs" t="Include" />
+              <e p="TestTask.cs" t="Include" />
               <e p="TriggerTaskData.cs" t="Include" />
             </e>
             <e p="TaskTrackerDummy.cs" t="Include" />
@@ -200,6 +202,7 @@
           <e p="Verb.cs" t="Include" />
           <e p="XAPIStatement.cs" t="Include" />
         </e>
+        <e p="ShowSkin.cs" t="Include" />
         <e p="Source" t="Include">
           <e p="Aot" t="Include">
             <e p="Editor" t="Include">
@@ -441,6 +444,6 @@
       </e>
       <e p="Vuforia.sln" t="IncludeFlat" />
     </e>
-    <e p="$USER_HOME$/Library/Caches/Rider2018.1/resharper-host/local/Transient/ReSharperHost/v12/SolutionCaches/_Vuforia.1891195434.00" t="ExcludeRecursive" />
+    <e p="$USER_HOME$/Library/Caches/Rider2018.1/resharper-host/local/Transient/ReSharperHost/v12/SolutionCaches/_Vuforia.1487412627.00" t="ExcludeRecursive" />
   </component>
 </project>

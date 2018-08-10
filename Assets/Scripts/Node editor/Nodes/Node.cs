@@ -47,7 +47,8 @@ public class Node : MonoBehaviour
     {
         inPoint.Draw();
         outPoint.Draw();
-        GUI.Box(rect, title, style);
+        GUI.Box(rect, "", style);
+        GUI.Label(new Rect(rect.position.x+rect.width/2, rect.position.y +20, rect.width/2, 20), title);
 
     }
 

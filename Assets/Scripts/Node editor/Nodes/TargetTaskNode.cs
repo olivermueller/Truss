@@ -32,7 +32,7 @@ public class TargetTaskNode : Node
         {
             _nodeBasedEditor = (NodeBasedEditor) Resources.FindObjectsOfTypeAll(typeof(NodeBasedEditor))[0];
         }
-        _targetObjectRect = new Rect(rect.position.x + 11, rect.position.y + 10, 300, 20);
+        _targetObjectRect = new Rect(rect.position.x + 50, rect.position.y + 50, 300, 20);
         _animationObjectRect = new Rect(_targetObjectRect.position.x, _targetObjectRect.position.y + _targetObjectRect.height, 300, 20);
         _taskTitleRect = new Rect(_animationObjectRect.position.x, _animationObjectRect.position.y + _animationObjectRect.height, 300, 20);     
         _taskDescriptionRect = new Rect(_taskTitleRect.position.x, _taskTitleRect.position.y + _taskTitleRect.height, 300, 20);
