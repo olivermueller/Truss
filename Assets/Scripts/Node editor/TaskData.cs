@@ -5,66 +5,57 @@ using FullSerializer;
 using UnityEditor;
 using UnityEngine;
 
-namespace Node_editor
+
+[System.Serializable]
+public class TaskData : MonoBehaviour
 {
-    [System.Serializable]
-    public class TaskData : MonoBehaviour
+    public string _title, _description;
+    public TaskData _next;
+    public GameObject _animationObject, _baseObject, _instantiatedAnimationObject;
+    public void SetNextTask(TaskData next)
     {
-        public string _title, _description;
-        public TaskData _next;
-        public GameObject _animationObject, _baseObject, _instantiatedAnimationObject;
-        public void SetNextTask(TaskData next)
-        {
-            _next = next;
-        }
-        public virtual void StartTask()
-        {
-            Debug.Log("<color=red>Started " + _title+"</color>" );
-                         Debug.Log("<color=yellow>Mission: " + _description+"</color>" );
-             //        Debug.Log("Started" + _title);
-                         if (_animationObject != null)
-                         {
-                _instantiatedAnimationObject = GameObject.Instantiate(_animationObject);
-                _instantiatedAnimationObject.transform.parent = _baseObject.transform;
-
-            }
-            //
-        }
-        public virtual TaskData NextTask()
-        {
-            if (_instantiatedAnimationObject) GameObject.Destroy(_instantiatedAnimationObject);
-            Debug.Log("<color=green>completed " + _title+"</color>" );
-            if (_next != null)
-            {
-                _next.StartTask();
-                Debug.Log("<color=purple>Next Task " + _next._title+"</color>" );
-            }
-            return _next;
-        }
-
-        public TaskData(string title, string description, GameObject animationObject, GameObject imageTargetObject)
-        {
-            _title = title;
-            _description = description;
-            _animationObject = animationObject;
-            _baseObject = imageTargetObject;
-        }
-
-        public void Initialize(string title, string description, GameObject animationObject, GameObject imageTargetObject)
-        {
-            _title = title;
-            _description = description;
-            _animationObject = animationObject;
-            _baseObject = imageTargetObject;
-        }
-
-        public virtual bool? IsCompleted()
-        {
-            return false;
-        }
-
+        _next = next;
     }
-    
+    public virtual void StartTask()
+    {
+        Debug.Log("<color=red>Started " + _title+"</color>" );
+                     Debug.Log("<color=yellow>Mission: " + _description+"</color>" );
+         //        Debug.Log("Started" + _title);
+                     if (_animationObject != null)
+                     {
+            _instantiatedAnimationObject = GameObject.Instantiate(_animationObject);
+            _instantiatedAnimationObject.transform.parent = _baseObject.transform;
+
+        }
+        //
+    }
+    public virtual TaskData NextTask()
+    {
+        if (_instantiatedAnimationObject) GameObject.Destroy(_instantiatedAnimationObject);
+        Debug.Log("<color=green>completed " + _title+"</color>" );
+        if (_next != null)
+        {
+            _next.StartTask();
+            Debug.Log("<color=purple>Next Task " + _next._title+"</color>" );
+        }
+        return _next;
+    }
+
+    public void Initialize(string title, string description, GameObject animationObject, GameObject imageTargetObject)
+    {
+        _title = title;
+        _description = description;
+        _animationObject = animationObject;
+        _baseObject = imageTargetObject;
+    }
+
+    public virtual bool? IsCompleted()
+    {
+        return false;
+    }
+
+}
+
 //    public class TriggerClass : TaskData
 //    {
 //        Renderer _renderer;
@@ -178,4 +169,3 @@ namespace Node_editor
 //
 //        }
 //    }
-}

@@ -176,11 +176,15 @@
             <e p="ConnectionPoint.cs" t="Include" />
             <e p="Node.cs" t="Include" />
             <e p="NodeBasedEditor.cs" t="Include" />
-            <e p="TargetTaskNode.cs" t="Include" />
+            <e p="Nodes" t="Include">
+              <e p="TargetTaskNode.cs" t="Include" />
+              <e p="TriggerTaskNode.cs" t="Include" />
+            </e>
             <e p="TaskData.cs" t="Include" />
             <e p="TaskModel.cs" t="Include" />
             <e p="Tasks" t="Include">
               <e p="TargetTaskData.cs" t="Include" />
+              <e p="TriggerTaskData.cs" t="Include" />
             </e>
             <e p="TaskTrackerDummy.cs" t="Include" />
             <e p="TestingScript.cs" t="Include" />

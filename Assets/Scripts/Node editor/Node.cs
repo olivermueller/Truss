@@ -1,5 +1,6 @@
 ﻿using System;
 using UnityEditor;
+using UnityEditor.VersionControl;
 using UnityEngine;
 [System.Serializable]
 public class Node : MonoBehaviour
@@ -15,24 +16,14 @@ public class Node : MonoBehaviour
     public GUIStyle style;
     public GUIStyle defaultNodeStyle;
     public GUIStyle selectedNodeStyle;
-
+    public TaskData TaskData;
     public Action<Node> OnRemoveNode;
 
-    public Node(Vector2 position, float width, float height, GUIStyle nodeStyle, GUIStyle selectedStyle, GUIStyle inPointStyle, GUIStyle outPointStyle, Action<ConnectionPoint> OnClickInPoint, Action<ConnectionPoint> OnClickOutPoint, Action<Node> OnClickRemoveNode)
+    public virtual void DestroyTask()
     {
-        rect = new Rect(position.x, position.y, width, height);
-        style = nodeStyle;
-        inPoint = gameObject.AddComponent<ConnectionPoint>();
-        inPoint.Initialize(this, ConnectionPointType.In, inPointStyle, OnClickInPoint);
-
-        outPoint = gameObject.AddComponent<ConnectionPoint>();
-        outPoint.Initialize(this, ConnectionPointType.Out, outPointStyle, OnClickOutPoint);
-        defaultNodeStyle = nodeStyle;
-        selectedNodeStyle = selectedStyle;
-        OnRemoveNode = OnClickRemoveNode;
     }
 
-    public void Initialize(Vector2 position, float width, float height, GUIStyle nodeStyle, GUIStyle selectedStyle, GUIStyle inPointStyle, GUIStyle outPointStyle, Action<ConnectionPoint> OnClickInPoint, Action<ConnectionPoint> OnClickOutPoint, Action<Node> OnClickRemoveNode)
+    public void Initialize(Vector2 position, float width, float height, GUIStyle nodeStyle, GUIStyle selectedStyle, GUIStyle inPointStyle, GUIStyle outPointStyle, Action<ConnectionPoint> OnClickInPoint, Action<ConnectionPoint> OnClickOutPoint, Action<Node> OnClickRemoveNode, TaskData TaskData)
     {
         rect = new Rect(position.x, position.y, width, height);
         style = nodeStyle;
@@ -43,6 +34,8 @@ public class Node : MonoBehaviour
         defaultNodeStyle = nodeStyle;
         selectedNodeStyle = selectedStyle;
         OnRemoveNode = OnClickRemoveNode;
+        this.TaskData = TaskData;
+        title = GetType().FullName;
     }
 
     public void Drag(Vector2 delta)

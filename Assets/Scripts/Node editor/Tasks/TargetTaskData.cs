@@ -1,11 +1,6 @@
-﻿using Node_editor;
-using UnityEngine;
+﻿using UnityEngine;
 public class TargetTaskData:TaskData
 {
-        public void Initialize(string title, string description, GameObject animationObject, GameObject imageTargetObject)
-        {
-            base.Initialize(title, description, animationObject, imageTargetObject);
-        }
         Renderer _renderer;
         public override void StartTask()
         {
@@ -19,11 +14,6 @@ public class TargetTaskData:TaskData
 //            Debug.Log("checking is completed" + _title);
 
             return IsImageTargetActive();
-        }
-
-        public TargetTaskData(string title, string description, GameObject animationObject, GameObject imageTargetObject) : base(title, description, animationObject, imageTargetObject)
-        {
-        
         }
         bool IsImageTargetActive()
         {

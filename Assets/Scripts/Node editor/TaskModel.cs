@@ -1,8 +1,8 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
-using Node_editor;
 using UnityEditor;
 using UnityEngine;
 
@@ -41,17 +41,17 @@ public class TaskModel:MonoBehaviour
             return mInstance;
         }
     }
-
     public List<TaskData> tasks;
     
     //Editor stuff
     public List<Node> nodes;
     public List<Connection> connections;
-
+    
     public GUIStyle nodeStyle;
     public GUIStyle selectedNodeStyle;
     public GUIStyle inPointStyle;
     public GUIStyle outPointStyle;
+    
     
     public void AddTask(TaskData newTaskData)
     {
@@ -59,5 +59,11 @@ public class TaskModel:MonoBehaviour
         tasks.Add(newTaskData);
         Debug.Log("Elements in task list: " + TaskModel.Instance.tasks.Count);
 
+    }
+
+    public static Type[] GetSubClasses(Type parentType)
+    {
+        System.Type[] types = System.Reflection.Assembly.GetExecutingAssembly().GetTypes();
+        return (from System.Type type in types where type.IsSubclassOf(parentType) select type).ToArray();
     }
 }

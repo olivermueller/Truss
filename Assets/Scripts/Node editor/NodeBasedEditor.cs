@@ -1,8 +1,11 @@
-﻿using UnityEngine;
+﻿using System;
+using UnityEngine;
 using UnityEditor;
 using System.Collections.Generic;
 using System.IO;
-using Node_editor;
+using System.Linq;
+using System.Reflection;
+using UnityEditorInternal;
 
 public class NodeBasedEditor : EditorWindow
 {
@@ -11,6 +14,9 @@ public class NodeBasedEditor : EditorWindow
 
     private Vector2 offset;
     private Vector2 drag;
+
+    private System.Type[] subnodes;
+    private System.Type[] subtasks;
     [MenuItem("Window/Node Based Editor")]
     private static void OpenWindow()
     {
@@ -20,8 +26,33 @@ public class NodeBasedEditor : EditorWindow
 
     private void OnEnable()
     {
+
+//        var subnodes = ReflectiveEnumerator.GetEnumerableOfType<Node>();
+//        Debug.Log("Amount of subclasses: " + subnodes.Count());
+//        foreach (var node in subnodes)
+//        {
+//            Debug.Log(node.GetType().FullName);
+//        }
+        subnodes = TaskModel.GetSubClasses(typeof(Node));
+        subnodes = subnodes.OrderBy(node => node.FullName).ToArray();
+        Debug.Log("Amount of Node subclasses: " + subnodes.Count());
+//        foreach (var node in subnodes)
+//        {
+//            Debug.Log(node);
+//        }
+
         
-        
+        subtasks = TaskModel.GetSubClasses(typeof(TaskData));
+        subtasks = subtasks.OrderBy(node => node.FullName).ToArray();
+        Debug.Log("Amount of Task subclasses: " + subtasks.Length);
+//        foreach (var node in subtasks)
+//        {
+//            Debug.Log(node.FullName);
+//        }
+        for (int i = 0; i < subnodes.Length; i++)
+        {
+            Debug.Log("Node: " + subnodes[i] + " Task: " + subtasks[i]);
+        }
     }
 
     private void OnGUI()
@@ -166,7 +197,12 @@ public class NodeBasedEditor : EditorWindow
     private void ProcessContextMenu(Vector2 mousePosition)
     {
         GenericMenu genericMenu = new GenericMenu();
-        genericMenu.AddItem(new GUIContent("Add target task"), false, () => OnClickAddTargetNode(mousePosition));
+        for (int i = 0; i < subnodes.Length; i++)
+        {
+            int index = i;
+            genericMenu.AddItem(new GUIContent("Node/"+"Add "+subnodes[i].FullName), false, () => OnClickAddTargetNode(mousePosition,subnodes[index],subtasks[index]));
+        }
+        
         genericMenu.AddItem(new GUIContent("Clear tasks"), false, () => ClearTaskList());
         
         genericMenu.ShowAsContext();
@@ -194,18 +230,49 @@ public class NodeBasedEditor : EditorWindow
         if (TaskModel.Instance.nodes!=null)
         {
             TaskModel.Instance.nodes.Clear();
+            var nodeparent = GameObject.Find("Node Parent");
+            if (nodeparent)
+            {
+                int childCount = nodeparent.transform.childCount;
+                for (int i = childCount - 1; i >= 0; i--)
+                {
+                    GameObject.DestroyImmediate(nodeparent.transform.GetChild(i).gameObject);
+                }
+            }
         }
 
         if (TaskModel.Instance.connections!=null)
         {
             TaskModel.Instance.connections.Clear();
+            var connectionparent = GameObject.Find("Connection Parent");
+            if (connectionparent)
+            {
+                int childCount = connectionparent.transform.childCount;
+                for (int i = childCount - 1; i >= 0; i--)
+                {
+                    GameObject.DestroyImmediate(connectionparent.transform.GetChild(i).gameObject);
+                }
+            }
         }
-        TaskModel.Instance.tasks.Clear();
+
+        if (TaskModel.Instance.tasks != null)
+        {
+            TaskModel.Instance.tasks.Clear();
+            var taskparent = GameObject.Find("Task Parent");
+            if (taskparent)
+            {
+                int childCount = taskparent.transform.childCount;
+                for (int i = childCount - 1; i >= 0; i--)
+                {
+                    GameObject.DestroyImmediate(taskparent.transform.GetChild(i).gameObject);
+                }
+            }
+        }
 //        TaskModel.Instance.OnBeforeSerialize();
 //        OnBeforeSerialize();
     }
 
-    private void OnClickAddTargetNode(Vector2 mousePosition, string t = " ", string d = " ", GameObject targetObj = null,GameObject animationObj = null)
+    private void OnClickAddTargetNode(Vector2 mousePosition, Type nodetype, Type tasktype)
     {
         if (TaskModel.Instance.nodes == null)
         {
@@ -222,8 +289,9 @@ public class NodeBasedEditor : EditorWindow
             taskparent = new GameObject("Task Parent");
         }
         GameObject newTaskObj = new GameObject("Task Object");
-        TargetTaskData newTaskData = newTaskObj.AddComponent<TargetTaskData>();
-        newTaskData.Initialize(" ", " ", animationObj, targetObj);
+        var newTaskData = newTaskObj.AddComponent(tasktype) as TaskData;
+        //newTaskData.Initialize(" ", " ", animationObj, targetObj);
+        
        // Debug.Log("TASK MODEL NAME" + TaskModel.Instance.name);
 //        TargetTask newTask = new TargetTask(" ", " ", animationObj, targetObj);
        // Debug.Log("TASKS COUNT" + TaskModel.Instance.tasks.Count);
@@ -237,7 +305,7 @@ public class NodeBasedEditor : EditorWindow
             nodeparent = new GameObject("Node Parent");
         }
         GameObject newNodeObj = new GameObject("Node Object");
-        TargetTaskNode newNode = newNodeObj.AddComponent<TargetTaskNode>();
+        Node newNode = newNodeObj.AddComponent(nodetype) as Node;
         newNode.Initialize(mousePosition, 400, 300, TaskModel.Instance.nodeStyle, TaskModel.Instance.selectedNodeStyle, TaskModel.Instance.inPointStyle, TaskModel.Instance.outPointStyle, OnClickInPoint, OnClickOutPoint, OnClickRemoveNode, newTaskData);
         newNodeObj.transform.SetParent(nodeparent.transform);
         TaskModel.Instance.nodes.Add(newNode);
@@ -297,12 +365,15 @@ public class NodeBasedEditor : EditorWindow
             for (int i = 0; i < connectionsToRemove.Count; i++)
             {
                 TaskModel.Instance.connections.Remove(connectionsToRemove[i]);
+                DestroyImmediate(connectionsToRemove[i].gameObject);
             }
 
             connectionsToRemove = null;
         }
 
         TaskModel.Instance.nodes.Remove(node);
+        node.DestroyTask();
+        DestroyImmediate(node.gameObject);
     }
 
     private void OnClickRemoveConnection(Connection connection)
@@ -319,7 +390,7 @@ public class NodeBasedEditor : EditorWindow
         //Debug.Log("Ïn node:" + (selectedInPoint.node as TargetTaskNode)._targetTask._title + " ÖutNode: " + (selectedOutPoint.node as TargetTaskNode)._targetTask._title);
         
         // TODO Make it more abstract!
-        (selectedOutPoint.node as TargetTaskNode).TargetTaskData.SetNextTask((selectedInPoint.node as TargetTaskNode).TargetTaskData);
+        selectedOutPoint.node.TaskData.SetNextTask(selectedInPoint.node.TaskData);
         var connectionparent = GameObject.Find("Connection Parent");
         if (!connectionparent)
         {
@@ -339,4 +410,20 @@ public class NodeBasedEditor : EditorWindow
     }
 
     
+}
+
+public static class ReflectiveEnumerator
+{
+    static ReflectiveEnumerator() { }
+
+    public static IEnumerable<T> GetEnumerableOfType<T>(params object[] constructorArgs) where T : class
+    {
+        var objects = Assembly.GetAssembly(typeof(T))
+            .GetTypes()
+            .Where(myType => myType.IsClass && !myType.IsAbstract && myType.IsSubclassOf(typeof(T)))
+            .Select(type => (T) Activator.CreateInstance(type, constructorArgs))
+            .ToList();
+//        objects.Sort();
+        return objects;
+    }
 }
