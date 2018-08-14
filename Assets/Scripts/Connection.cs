@@ -1,6 +1,8 @@
 ﻿using System;
 using UnityEditor;
 using UnityEngine;
+
+#if UNITY_EDITOR
 [Serializable]
 public class Connection : MonoBehaviour
 {
@@ -43,3 +45,4 @@ public class Connection : MonoBehaviour
         }
     }
 }
+#endif

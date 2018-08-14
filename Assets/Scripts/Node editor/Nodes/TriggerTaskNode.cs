@@ -2,15 +2,12 @@
 using System.Collections.Generic;
 using UnityEditor;
 using UnityEngine;
-
+#if UNITY_EDITOR
 public class TriggerTaskNode : Node {
 
-    public override void DestroyTask()
-    {
-        DestroyImmediate(this.gameObject);
-    }
 
-    private NodeBasedEditor _nodeBasedEditor;
+
+//    private NodeBasedEditor _nodeBasedEditor;
 
     private TriggerTaskData _targetTaskData;
     
@@ -28,10 +25,10 @@ public class TriggerTaskNode : Node {
         {
             _targetTaskData = TaskData as TriggerTaskData;
         }
-        if (!_nodeBasedEditor)
-        {
-            _nodeBasedEditor = (NodeBasedEditor) Resources.FindObjectsOfTypeAll(typeof(NodeBasedEditor))[0];
-        }
+//        if (!_nodeBasedEditor)
+//        {
+//            _nodeBasedEditor = (NodeBasedEditor) Resources.FindObjectsOfTypeAll(typeof(NodeBasedEditor))[0];
+//        }
         _targetObjectRect = new Rect(rect.position.x + 50, rect.position.y + 50, 300, 20);
         _animationObjectRect = new Rect(_targetObjectRect.position.x, _targetObjectRect.position.y + _targetObjectRect.height, 300, 20);
         _taskTitleRect = new Rect(_animationObjectRect.position.x, _animationObjectRect.position.y + _animationObjectRect.height, 300, 20);     
@@ -50,3 +47,4 @@ public class TriggerTaskNode : Node {
     
     }
 }
+#endif

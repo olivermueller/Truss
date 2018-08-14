@@ -2,8 +2,8 @@
 using FullSerializer;
 using UnityEditor;
 using UnityEngine;
-
-public enum ConnectionPointType { In, Out }
+#if UNITY_EDITOR
+public enum ConnectionPointType { In, Out, Nested }
 [System.Serializable]
 public class ConnectionPoint : MonoBehaviour
 {
@@ -14,7 +14,6 @@ public class ConnectionPoint : MonoBehaviour
     public Node node;
 
     public GUIStyle style;
-    [fsProperty]
     public Action<ConnectionPoint> OnClickConnectionPoint;
 
     public ConnectionPoint(Node node, ConnectionPointType type, GUIStyle style, Action<ConnectionPoint> OnClickConnectionPoint)
@@ -64,6 +63,10 @@ public class ConnectionPoint : MonoBehaviour
 //                    style.border = new RectOffset(4, 4, 12, 12);
 //                }
                 break;
+            case ConnectionPointType.Nested:
+                rect.x = node.rect.x + node.rect.width/2;
+                rect.y = node.rect.y + node.rect.height -8;
+                break;
         }
 
         if (GUI.Button(rect, "", style))
@@ -72,6 +75,11 @@ public class ConnectionPoint : MonoBehaviour
             {
                 OnClickConnectionPoint(this);
             }
+            else
+            {
+                Debug.Log("Ëmpty");
+            }
         }
     }
 }
+#endif

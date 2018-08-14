@@ -2,15 +2,13 @@
 using UnityEngine;
 using UnityEditor;
 using System.Collections.Generic;
-using System.IO;
 using System.Linq;
 using System.Reflection;
-using UnityEditorInternal;
 
-public class NodeBasedEditor : EditorWindow
+
+    public class NodeBasedEditor : EditorWindow
 {
-    private ConnectionPoint selectedInPoint;
-    private ConnectionPoint selectedOutPoint;
+    
 
     private Vector2 offset;
     private Vector2 drag;
@@ -49,10 +47,30 @@ public class NodeBasedEditor : EditorWindow
 //        {
 //            Debug.Log(node.FullName);
 //        }
+        EditorApplication.playModeStateChanged += LogPlayModeState;
         for (int i = 0; i < subnodes.Length; i++)
         {
             Debug.Log("Node: " + subnodes[i] + " Task: " + subtasks[i]);
         }
+
+        LogPlayModeState(PlayModeStateChange.EnteredEditMode);
+
+
+    }
+
+    private void LogPlayModeState(PlayModeStateChange state)
+    {
+        foreach (var connection in TaskModel.Instance.connections)
+        {
+            connection.OnClickRemoveConnection = OnClickRemoveConnection;
+        }
+        
+        foreach (var node in TaskModel.Instance.nodes)
+        {
+            node.inPoint.OnClickConnectionPoint = OnClickInPoint;
+            node.outPoint.OnClickConnectionPoint = OnClickOutPoint;
+            node.OnRemoveNode = OnClickRemoveNode;
+        }    
     }
 
     private void OnGUI()
@@ -163,12 +181,12 @@ public class NodeBasedEditor : EditorWindow
 
     private void DrawConnectionLine(Event e)
     {
-        if (selectedInPoint != null && selectedOutPoint == null)
+        if (TaskModel.Instance.selectedInPoint != null && TaskModel.Instance.selectedOutPoint == null)
         {
             Handles.DrawBezier(
-                selectedInPoint.rect.center,
+                TaskModel.Instance.selectedInPoint.rect.center,
                 e.mousePosition,
-                selectedInPoint.rect.center + Vector2.left * 50f,
+                TaskModel.Instance.selectedInPoint.rect.center + Vector2.left * 50f,
                 e.mousePosition - Vector2.left * 50f,
                 Color.white,
                 null,
@@ -178,12 +196,12 @@ public class NodeBasedEditor : EditorWindow
             GUI.changed = true;
         }
 
-        if (selectedOutPoint != null && selectedInPoint == null)
+        if (TaskModel.Instance.selectedOutPoint != null && TaskModel.Instance.selectedInPoint == null)
         {
             Handles.DrawBezier(
-                selectedOutPoint.rect.center,
+                TaskModel.Instance.selectedOutPoint.rect.center,
                 e.mousePosition,
-                selectedOutPoint.rect.center - Vector2.left * 50f,
+                TaskModel.Instance.selectedOutPoint.rect.center - Vector2.left * 50f,
                 e.mousePosition + Vector2.left * 50f,
                 Color.white,
                 null,
@@ -287,6 +305,7 @@ public class NodeBasedEditor : EditorWindow
         if (!taskparent)
         {
             taskparent = new GameObject("Task Parent");
+
         }
         GameObject newTaskObj = new GameObject("Task Object");
         var newTaskData = newTaskObj.AddComponent(tasktype) as TaskData;
@@ -303,6 +322,7 @@ public class NodeBasedEditor : EditorWindow
         if (!nodeparent)
         {
             nodeparent = new GameObject("Node Parent");
+            nodeparent.tag = "EditorOnly";
         }
         GameObject newNodeObj = new GameObject("Node Object");
         Node newNode = newNodeObj.AddComponent(nodetype) as Node;
@@ -313,11 +333,11 @@ public class NodeBasedEditor : EditorWindow
 
     private void OnClickInPoint(ConnectionPoint inPoint)
     {
-        selectedInPoint = inPoint;
+        TaskModel.Instance.selectedInPoint = inPoint;
 
-        if (selectedOutPoint != null)
+        if (TaskModel.Instance.selectedOutPoint != null)
         {
-            if (selectedOutPoint.node != selectedInPoint.node)
+            if (TaskModel.Instance.selectedOutPoint.node != TaskModel.Instance.selectedInPoint.node)
             {
                 CreateConnection();
                 ClearConnectionSelection();
@@ -332,11 +352,11 @@ public class NodeBasedEditor : EditorWindow
     private void OnClickOutPoint(ConnectionPoint outPoint)
     {
         Debug.Log("Outpoint clicked");
-        selectedOutPoint = outPoint;
+        TaskModel.Instance.selectedOutPoint = outPoint;
 
-        if (selectedInPoint != null)
+        if (TaskModel.Instance.selectedInPoint != null)
         {
-            if (selectedOutPoint.node != selectedInPoint.node)
+            if (TaskModel.Instance.selectedOutPoint.node != TaskModel.Instance.selectedInPoint.node)
             {
                 CreateConnection();
                 ClearConnectionSelection();
@@ -372,7 +392,8 @@ public class NodeBasedEditor : EditorWindow
         }
 
         TaskModel.Instance.nodes.Remove(node);
-        node.DestroyTask();
+        TaskModel.Instance.tasks.Remove(node.TaskData);
+        DestroyImmediate(node.TaskData.gameObject);
         DestroyImmediate(node.gameObject);
     }
 
@@ -388,25 +409,35 @@ public class NodeBasedEditor : EditorWindow
             TaskModel.Instance.connections = new List<Connection>();
         }
         //Debug.Log("Ïn node:" + (selectedInPoint.node as TargetTaskNode)._targetTask._title + " ÖutNode: " + (selectedOutPoint.node as TargetTaskNode)._targetTask._title);
+        if (TaskModel.Instance.selectedOutPoint.type != ConnectionPointType.Nested)
+        {
+            TaskModel.Instance.selectedOutPoint.node.TaskData.SetNextTask(TaskModel.Instance.selectedInPoint.node
+                .TaskData);
+        }
+        else
+        {
+            (TaskModel.Instance.selectedOutPoint.node.TaskData as NestedTaskData).AddSubTask(TaskModel.Instance.selectedInPoint.node.TaskData);
+        }
+
+        TaskModel.Instance.selectedInPoint.node.TaskData._prev = TaskModel.Instance.selectedOutPoint.node.TaskData;
         
-        // TODO Make it more abstract!
-        selectedOutPoint.node.TaskData.SetNextTask(selectedInPoint.node.TaskData);
         var connectionparent = GameObject.Find("Connection Parent");
         if (!connectionparent)
         {
             connectionparent = new GameObject("Connection Parent");
+            connectionparent.tag = "EditorOnly";
         }
         var connectionGo = new GameObject("Connection Object");
         var connectioncomp = connectionGo.AddComponent<Connection>();
-        connectioncomp.Initialize(selectedInPoint, selectedOutPoint, OnClickRemoveConnection);
+        connectioncomp.Initialize(TaskModel.Instance.selectedInPoint, TaskModel.Instance.selectedOutPoint, OnClickRemoveConnection);
         connectionGo.transform.SetParent(connectionparent.transform);
         TaskModel.Instance.connections.Add(connectioncomp);
     }//
 
     private void ClearConnectionSelection()
     {
-        selectedInPoint = null;
-        selectedOutPoint = null;
+        TaskModel.Instance.selectedInPoint = null;
+        TaskModel.Instance.selectedOutPoint = null;
     }
 
     

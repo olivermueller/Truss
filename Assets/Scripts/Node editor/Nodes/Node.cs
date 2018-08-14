@@ -1,7 +1,7 @@
 ﻿using System;
 using UnityEditor;
-using UnityEditor.VersionControl;
 using UnityEngine;
+#if UNITY_EDITOR
 [System.Serializable]
 public class Node : MonoBehaviour
 {
@@ -18,10 +18,6 @@ public class Node : MonoBehaviour
     public GUIStyle selectedNodeStyle;
     public TaskData TaskData;
     public Action<Node> OnRemoveNode;
-
-    public virtual void DestroyTask()
-    {
-    }
 
     public void Initialize(Vector2 position, float width, float height, GUIStyle nodeStyle, GUIStyle selectedStyle, GUIStyle inPointStyle, GUIStyle outPointStyle, Action<ConnectionPoint> OnClickInPoint, Action<ConnectionPoint> OnClickOutPoint, Action<Node> OnClickRemoveNode, TaskData TaskData)
     {
@@ -113,3 +109,5 @@ public class Node : MonoBehaviour
         }
     }
 }
+
+#endif

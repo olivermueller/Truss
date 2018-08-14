@@ -1,5 +1,6 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 using UnityEngine;
 
 public class TestingScript : MonoBehaviour {
@@ -19,7 +20,8 @@ public class TestingScript : MonoBehaviour {
 	{
 		if(isFirst)
 		{
-			iterator = TaskModel.Instance.tasks[0];
+			
+			iterator = TaskModel.Instance.tasks.First(t => t._prev == null);
 			iterator.StartTask();
 			isFirst = false;
 		}
@@ -35,7 +37,8 @@ public class TestingScript : MonoBehaviour {
 		}
 		else
 		{
-			Debug.Log("All Tasks completed!");
+			//Debug.Log("All Tasks completed!");
+			
 		}
 	} 
 

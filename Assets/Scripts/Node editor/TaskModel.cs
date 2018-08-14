@@ -10,15 +10,19 @@ public class TaskModel:MonoBehaviour
 {
 
     static TaskModel mInstance;
- 
+    public ConnectionPoint selectedInPoint;
+    public ConnectionPoint selectedOutPoint;
     public static TaskModel Instance
     {
         get
         {
+            
             if (mInstance != null) return mInstance;
             mInstance = (TaskModel)FindObjectOfType(typeof(TaskModel));
             if (mInstance == null)
             {
+                #if UNITY_EDITOR
+                
                 mInstance = (new GameObject("Task Model")).AddComponent<TaskModel>();
                 Instance.nodeStyle = new GUIStyle();
                 Instance.nodeStyle.normal.background = EditorGUIUtility.Load("builtin skins/darkskin/images/node1.png") as Texture2D;
@@ -37,6 +41,8 @@ public class TaskModel:MonoBehaviour
                 Instance.outPointStyle.normal.background = EditorGUIUtility.Load("builtin skins/darkskin/images/btn right.png") as Texture2D;
                 Instance.outPointStyle.active.background = EditorGUIUtility.Load("builtin skins/darkskin/images/btn right on.png") as Texture2D;
                 Instance.outPointStyle.border = new RectOffset(4, 4, 12, 12);
+                
+                #endif
             }
             return mInstance;
         }
@@ -44,6 +50,8 @@ public class TaskModel:MonoBehaviour
     public List<TaskData> tasks;
     
     //Editor stuff
+    #if UNITY_EDITOR
+    
     public List<Node> nodes;
     public List<Connection> connections;
     
@@ -66,4 +74,5 @@ public class TaskModel:MonoBehaviour
         System.Type[] types = System.Reflection.Assembly.GetExecutingAssembly().GetTypes();
         return (from System.Type type in types where type.IsSubclassOf(parentType) select type).ToArray();
     }
+    #endif
 }

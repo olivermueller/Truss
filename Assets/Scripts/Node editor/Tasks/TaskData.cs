@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using FullSerializer;
+using TMPro;
 using UnityEditor;
 using UnityEngine;
 
@@ -10,8 +11,8 @@ using UnityEngine;
 public class TaskData : MonoBehaviour
 {
     public string _title, _description;
-    public TaskData _next;
-    public GameObject _animationObject, _baseObject, _instantiatedAnimationObject;
+    public TaskData _next, _prev;
+    public GameObject _animationObject, _baseObject, _instantiatedAnimationObject, _uiObject;
     public void SetNextTask(TaskData next)
     {
         _next = next;
@@ -21,12 +22,14 @@ public class TaskData : MonoBehaviour
         Debug.Log("<color=red>Started " + _title+"</color>" );
                      Debug.Log("<color=yellow>Mission: " + _description+"</color>" );
          //        Debug.Log("Started" + _title);
-                     if (_animationObject != null)
-                     {
+        if (_animationObject != null)
+        {
             _instantiatedAnimationObject = GameObject.Instantiate(_animationObject);
             _instantiatedAnimationObject.transform.parent = _baseObject.transform;
-
         }
+        
+        GameObject.FindGameObjectWithTag("CanvasTitle").GetComponent<TextMeshProUGUI>().text = _title;
+        GameObject.FindGameObjectWithTag("CanvasDescription").GetComponent<TextMeshProUGUI>().text = _description;
         //
     }
     public virtual TaskData NextTask()
