@@ -14,6 +14,7 @@ public class FinishTaskNode : Node {
     private void OnEnable()
     {
         _targetTaskData = TaskData as FinishTaskData;
+        
     }
 
     public override void Draw()
@@ -22,9 +23,9 @@ public class FinishTaskNode : Node {
         if (_targetTaskData==null)
         {
             _targetTaskData = TaskData as FinishTaskData;
-            
-            
         }
+
+        outPoint.enabled = false;
         
         _taskTitleRect = new Rect(rect.position.x + 50, rect.position.y + 50, 300, 20);     
         _taskDescriptionRect = new Rect(_taskTitleRect.position.x, _taskTitleRect.position.y + _taskTitleRect.height, 300, 20);

@@ -21,7 +21,7 @@ public class TestingScript : MonoBehaviour {
 		if(isFirst)
 		{
 			
-			iterator = TaskModel.Instance.tasks.First(t => t._prev == null);
+			iterator = TaskModel.Instance.tasks.First(t => t._in == null);
 			iterator.StartTask();
 			isFirst = false;
 		}
@@ -30,10 +30,17 @@ public class TestingScript : MonoBehaviour {
 		{
 			//Debug.Log("iterator type: " + iterator.GetType().FullName);
 			var val = iterator.IsCompleted();
-			if (val.HasValue && val.Value)
+			if (val.HasValue)
 			{
-				iterator = iterator.NextTask();
+				if(val.Value) iterator = iterator.NextTask();
+				else
+				{
+					Debug.Log("no task found");
+					iterator = (iterator as AnswerTaskData).StartNoTask();
+
+				}
 			}
+			
 		}
 		else
 		{

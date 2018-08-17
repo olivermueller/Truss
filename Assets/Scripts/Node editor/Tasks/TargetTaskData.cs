@@ -18,9 +18,11 @@ public class TargetTaskData:TaskData
 
             return IsImageTargetActive();
         }
-        bool IsImageTargetActive()
+        bool? IsImageTargetActive()
         {
-            return _renderer.enabled;
+            if (_renderer.enabled)
+                return true;
+            return null;
         }
 
 }

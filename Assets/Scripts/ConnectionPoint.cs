@@ -3,7 +3,7 @@ using FullSerializer;
 using UnityEditor;
 using UnityEngine;
 #if UNITY_EDITOR
-public enum ConnectionPointType { In, Out, Nested }
+public enum ConnectionPointType { In, Out, Nested, Answer }
 [System.Serializable]
 public class ConnectionPoint : MonoBehaviour
 {
@@ -31,14 +31,14 @@ public class ConnectionPoint : MonoBehaviour
         this.type = type;
         this.style = style;
         this.OnClickConnectionPoint = OnClickConnectionPoint;
-        rect = new Rect(0, 0, 10f, 20f);
+        rect = new Rect(0, 0, 40f, 50f);
     }
 
     public void Draw()
     {
 //        Debug.Log(style.normal.background);
         rect.y = node.rect.y + (node.rect.height * 0.5f) - rect.height * 0.5f;
-
+        
         switch (type)
         {
             case ConnectionPointType.In:
@@ -54,7 +54,7 @@ public class ConnectionPoint : MonoBehaviour
                 break;
 
             case ConnectionPointType.Out:
-                rect.x = node.rect.x + node.rect.width - 8f;
+                rect.x = node.rect.x + node.rect.width - 8;
 //                if (style.normal.background==null)
 //                {
 //                    style = new GUIStyle();
@@ -64,6 +64,10 @@ public class ConnectionPoint : MonoBehaviour
 //                }
                 break;
             case ConnectionPointType.Nested:
+                rect.x = node.rect.x + node.rect.width/2;
+                rect.y = node.rect.y + node.rect.height -8;
+                break;
+            case ConnectionPointType.Answer:
                 rect.x = node.rect.x + node.rect.width/2;
                 rect.y = node.rect.y + node.rect.height -8;
                 break;

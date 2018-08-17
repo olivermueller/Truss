@@ -48,14 +48,14 @@ public class Node : MonoBehaviour
 
     }
 
-    public bool ProcessEvents(Event e)
+    public bool ProcessEvents(Event e, Vector2 mousePos, Vector2 drag)
     {
         switch (e.type)
         {
             case EventType.MouseDown:
                 if (e.button == 0)
                 {
-                    if (rect.Contains(e.mousePosition))
+                    if (rect.Contains(mousePos))
                     {
                         isDragged = true;
                         GUI.changed = true;
@@ -70,7 +70,7 @@ public class Node : MonoBehaviour
                     }
                 }
 
-                if (e.button == 1 && isSelected && rect.Contains(e.mousePosition))
+                if (e.button == 1 && isSelected && rect.Contains(mousePos))
                 {
                     ProcessContextMenu();
                     e.Use();
@@ -84,7 +84,7 @@ public class Node : MonoBehaviour
             case EventType.MouseDrag:
                 if (e.button == 0 && isDragged)
                 {
-                    Drag(e.delta);
+                    Drag(drag);
                     e.Use();
                     return true;
                 }

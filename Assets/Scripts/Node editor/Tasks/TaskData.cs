@@ -11,12 +11,13 @@ using UnityEngine;
 public class TaskData : MonoBehaviour
 {
     public string _title, _description;
-    public TaskData _next, _prev;
+    public TaskData _out, _in;
     public GameObject _animationObject, _baseObject, _instantiatedAnimationObject, _uiObject;
     public void SetNextTask(TaskData next)
     {
-        _next = next;
+        _out = next;
     }
+    
     public virtual void StartTask()
     {
         Debug.Log("<color=red>Started " + _title+"</color>" );
@@ -36,12 +37,12 @@ public class TaskData : MonoBehaviour
     {
         if (_instantiatedAnimationObject) GameObject.Destroy(_instantiatedAnimationObject);
         Debug.Log("<color=green>completed " + _title+"</color>" );
-        if (_next != null)
+        if (_out != null)
         {
-            _next.StartTask();
-            Debug.Log("<color=purple>Next Task " + _next._title+"</color>" );
+            _out.StartTask();
+            Debug.Log("<color=purple>Next Task " + _out._title+"</color>" );
         }
-        return _next;
+        return _out;
     }
 
     public void Initialize(string title, string description, GameObject animationObject, GameObject imageTargetObject)

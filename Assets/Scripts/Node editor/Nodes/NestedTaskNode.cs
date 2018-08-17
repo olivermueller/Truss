@@ -36,8 +36,7 @@ public class NestedTaskNode : Node {
         if (listPoint == null)
         {
             listPoint = gameObject.AddComponent<ConnectionPoint>();
-            listPoint.Initialize(this, ConnectionPointType.Out, inPoint.style, OnClickListPoint);
-            listPoint.type = ConnectionPointType.Nested;
+            listPoint.Initialize(this, ConnectionPointType.Nested, inPoint.style, OnClickListPoint);
             listPoint.rect.width = 20;
             listPoint.rect.height = 10;
         }

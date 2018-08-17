@@ -33,25 +33,32 @@ public class NestedTaskData : TaskData {
             }
             // Evaluate if the subtask is completed
             var val = iterator.IsCompleted();
-            if (val.HasValue && val.Value)
+            if (val.HasValue)
             {
-                // If it is complete, move to the next task
-                iterator = iterator.NextTask();
-                if (iterator == null)
+                if (val.Value)
                 {
-                    Debug.Log("Subtask"+ subtaskId +" Completed");
-                    // If there are no more tasks, move to the next subtask if there is any left
-                    if (subtaskId < _subTasks.Count-1)
+                    // If it is complete, move to the next task
+                    iterator = iterator.NextTask();
+                    if (iterator == null)
                     {
-                        subtaskId++;
-                        iterator = _subTasks[subtaskId];
-                        iterator.StartTask();
+                        Debug.Log("Subtask" + subtaskId + " Completed");
+                        // If there are no more tasks, move to the next subtask if there is any left
+                        if (subtaskId < _subTasks.Count - 1)
+                        {
+                            subtaskId++;
+                            iterator = _subTasks[subtaskId];
+                            iterator.StartTask();
+                        }
+                        // No more subtasks, subtasktask completed
+                        else return true;
                     }
-                    // No more subtasks, subtasktask completed
-                    else return true;
+                }
+                else
+                {
+                    iterator = (iterator as AnswerTaskData).StartNoTask();
                 }
             }
             // Subtask is not completed, return false.
-            return false;
+            return null;
         }
 }

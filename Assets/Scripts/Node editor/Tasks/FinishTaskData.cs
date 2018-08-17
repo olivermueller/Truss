@@ -12,7 +12,7 @@ public class FinishTaskData : TaskData {
 
         public override bool? IsCompleted()
         {
-            return false;
+            return null;
         }
 
 }
