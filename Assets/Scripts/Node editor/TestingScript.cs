@@ -20,8 +20,8 @@ public class TestingScript : MonoBehaviour {
 	{
 		if(isFirst)
 		{
-			
-			iterator = TaskModel.Instance.tasks.First(t => t._in == null);
+			// Check if there is a start task data in the scene and use it as the starting point. If there are none, use the first task that does not have any task pointing at it.
+			iterator = (FindObjectOfType<StartTaskData>()!=null) ? FindObjectOfType<StartTaskData>() : TaskModel.Instance.tasks.First(t => t._in == null);
 			iterator.StartTask();
 			isFirst = false;
 		}
