@@ -10,8 +10,12 @@ public class TaskModel:MonoBehaviour
 {
 
     static TaskModel mInstance;
+    public Material lineMaterial;
+    #if UNITY_EDITOR
     public ConnectionPoint selectedInPoint;
     public ConnectionPoint selectedOutPoint;
+    #endif
+    
     public static TaskModel Instance
     {
         get

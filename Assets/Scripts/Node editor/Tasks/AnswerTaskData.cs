@@ -9,6 +9,7 @@ public class AnswerTaskData : TaskData
     public GameObject yesPrefab, noPrefab;
     public GameObject instantiatedYesButton, instantiatedNoButton;
     public TaskData noTask;
+
     public void SetNoTask(TaskData no)
     {
         noTask = no;
@@ -21,16 +22,23 @@ public class AnswerTaskData : TaskData
     }
     
     private bool? _finished;
+    private LineRenderer lr;
     public override void StartTask()
     {
+        if(goalPosition) lr = gameObject.AddComponent<LineRenderer>();
+        
         _finished = null;
         base.StartTask();
         GameObject canvas = FindObjectOfType<Canvas>().gameObject.GetComponentInChildren<HorizontalLayoutGroup>().gameObject;
         instantiatedYesButton = Instantiate(yesPrefab);
-        instantiatedNoButton = Instantiate(noPrefab);
+        if(noTask != null)
+        {
+            instantiatedNoButton = Instantiate(noPrefab);
+            instantiatedNoButton.transform.SetParent(canvas.transform);
+            instantiatedNoButton.GetComponent<Button>().onClick.AddListener(NoButton);
+        }
         instantiatedYesButton.transform.SetParent(canvas.transform);
-        instantiatedNoButton.transform.SetParent(canvas.transform);
-        instantiatedNoButton.GetComponent<Button>().onClick.AddListener(NoButton);
+
         instantiatedYesButton.GetComponent<Button>().onClick.AddListener(YesButton);
 
 
@@ -51,6 +59,9 @@ public class AnswerTaskData : TaskData
     }
         public override bool? IsCompleted()
         {
+            
+            if(goalPosition && lr)Utilities.DrawLine(lr, Camera.main.transform.position - new Vector3(0, 0.01f, 0), goalPosition.position, 0.05f,Color.red);
+            if(_finished != null) Destroy(lr);
             return _finished;
         }
 

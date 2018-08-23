@@ -13,6 +13,8 @@ public class TaskData : MonoBehaviour
     public string _title, _description;
     public TaskData _out, _in;
     public GameObject _animationObject, _baseObject, _instantiatedAnimationObject, _uiObject;
+    //position of the goal you are being guided towards
+    public Transform goalPosition;
     public void SetNextTask(TaskData next)
     {
         _out = next;
