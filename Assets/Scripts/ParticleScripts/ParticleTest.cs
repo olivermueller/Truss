@@ -18,6 +18,7 @@ public class ParticleTest : MonoBehaviour
 		this.transform.rotation = startPoint.transform.rotation;
 		rateOfChange =Utilities.Remap(Vector3.Angle(startPoint.forward, (startPoint.position - endPoint.position).normalized),0.0f, 360.0f, 0.002f, 0.3f);
 		angle = Vector3.Angle(startPoint.forward, (startPoint.position - endPoint.position).normalized);
+		Destroy(gameObject, 5);
 	}
 
 	public float forwardIncrease = 1.0f, sideIncrease = 0.0f;
@@ -31,6 +32,6 @@ public class ParticleTest : MonoBehaviour
 		forwardIncrease -= rateOfChange;
 		if (forwardIncrease < 0.0) forwardIncrease = 0.0f;
 		
-		if(Vector3.Distance(transform.position, endPoint.position)< 0.2f) Destroy(gameObject);
+		if(Vector3.Distance(transform.position, endPoint.position)< 0.08f) Destroy(gameObject);
 	}
 }

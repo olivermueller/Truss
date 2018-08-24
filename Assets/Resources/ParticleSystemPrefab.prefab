@@ -24,8 +24,9 @@ GameObject:
   - component: {fileID: 114866275603034288}
   - component: {fileID: 65059718085567776}
   - component: {fileID: 54288323305009682}
+  - component: {fileID: 114079149599310902}
   m_Layer: 0
-  m_Name: Particle System
+  m_Name: ParticleSystemPrefab
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -38,8 +39,8 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1795130917788010}
   m_LocalRotation: {x: -0.7071068, y: 0, z: 0, w: 0.7071068}
-  m_LocalPosition: {x: 13.27, y: -0.23, z: 0.59}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalPosition: {x: 0, y: -0.138, z: 0.198}
+  m_LocalScale: {x: 0.5, y: 0.5, z: 0.5}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
@@ -71,7 +72,7 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 0.000019073486, y: 0.000020027166, z: 0.000019997364}
   m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &114866275603034288
+--- !u!114 &114079149599310902
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
@@ -79,12 +80,26 @@ MonoBehaviour:
   m_GameObject: {fileID: 1795130917788010}
   m_Enabled: 1
   m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2204d639c15944f06ba6a388d56f86da, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  waypointArray: []
+  percentsPerSecond: 1
+  currentPathPercent: 0
+--- !u!114 &114866275603034288
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1795130917788010}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 5ce59981016924cb88e3a6c8ceb95848, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   startPoint: {fileID: 0}
   endPoint: {fileID: 0}
-  particleSpeed: 10
+  particleSpeed: 0.1
   rateOfChange: 0.01
   angle: 0
   forwardIncrease: 1
@@ -96,7 +111,7 @@ ParticleSystem:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1795130917788010}
   serializedVersion: 5
-  lengthInSec: 5
+  lengthInSec: 10
   simulationSpeed: 1
   stopAction: 0
   looping: 1
@@ -221,7 +236,7 @@ ParticleSystem:
     startSpeed:
       serializedVersion: 2
       minMaxState: 0
-      scalar: 0.2
+      scalar: 0.1
       minScalar: 5
       maxCurve:
         serializedVersion: 2
@@ -337,7 +352,7 @@ ParticleSystem:
     startSize:
       serializedVersion: 2
       minMaxState: 0
-      scalar: 1
+      scalar: 0.1
       minScalar: 1
       maxCurve:
         serializedVersion: 2
@@ -653,7 +668,7 @@ ParticleSystem:
         m_PostInfinity: 2
         m_RotationOrder: 4
     randomizeRotationDirection: 0
-    maxNumParticles: 1000
+    maxNumParticles: 5000
     size3D: 0
     rotation3D: 0
     gravityModifier:
@@ -743,7 +758,7 @@ ParticleSystem:
     sphericalDirectionAmount: 0
     randomPositionAmount: 0
     radius:
-      value: 0.01
+      value: 0.001
       mode: 0
       spread: 0
       speed:
@@ -915,7 +930,7 @@ ParticleSystem:
     rateOverDistance:
       serializedVersion: 2
       minMaxState: 0
-      scalar: 10
+      scalar: 2000
       minScalar: 0
       maxCurve:
         serializedVersion: 2
@@ -979,7 +994,7 @@ ParticleSystem:
         m_Curve:
         - serializedVersion: 3
           time: 0
-          value: 1
+          value: 0.12162399
           inSlope: 0
           outSlope: 0
           tangentMode: 0
@@ -987,13 +1002,22 @@ ParticleSystem:
           inWeight: 0.33333334
           outWeight: 0.33333334
         - serializedVersion: 3
-          time: 1
+          time: 0.37757224
           value: 0
-          inSlope: -0.28826588
-          outSlope: -0.28826588
+          inSlope: -0.10433162
+          outSlope: -0.10433162
           tangentMode: 0
           weightedMode: 0
-          inWeight: 0.09392926
+          inWeight: 0.33333334
+          outWeight: 0.33333334
+        - serializedVersion: 3
+          time: 1
+          value: 0
+          inSlope: 0.21351351
+          outSlope: 0.21351351
+          tangentMode: 0
+          weightedMode: 0
+          inWeight: 0.24288785
           outWeight: 0.33333334
         m_PreInfinity: 2
         m_PostInfinity: 2
@@ -2498,11 +2522,11 @@ ParticleSystem:
         m_PreInfinity: 2
         m_PostInfinity: 2
         m_RotationOrder: 4
-    separateAxis: 0
+    separateAxis: 1
     inWorldSpace: 0
     multiplyDragByParticleSize: 1
     multiplyDragByParticleVelocity: 1
-    dampen: 0
+    dampen: 0.85
     drag:
       serializedVersion: 2
       minMaxState: 0
@@ -2557,7 +2581,7 @@ ParticleSystem:
         m_PostInfinity: 2
         m_RotationOrder: 4
   NoiseModule:
-    enabled: 1
+    enabled: 0
     strength:
       serializedVersion: 2
       minMaxState: 0

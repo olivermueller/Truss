@@ -23,10 +23,15 @@ public class AnswerTaskData : TaskData
     }
     
     private bool? _finished;
-    private LineRenderer lr;
+    private ParticleSpawner _particleSpawner;
     public override void StartTask()
     {
-        if(goalPosition) lr = gameObject.AddComponent<LineRenderer>();
+        if (goalPosition)
+        {
+            _particleSpawner = Camera.main.gameObject.AddComponent<ParticleSpawner>();
+            _particleSpawner.endPoint = goalPosition;
+            _particleSpawner.Begin();
+        }
         
         _finished = null;
         base.StartTask();
@@ -65,8 +70,7 @@ public class AnswerTaskData : TaskData
         public override bool? IsCompleted()
         {
             
-            if(goalPosition && lr)Utilities.DrawLine(lr, Camera.main.transform.position - new Vector3(0, 0.01f, 0), goalPosition.position, 0.05f,Color.red);
-            if(_finished != null) Destroy(lr);
+            if(_finished != null) Destroy(_particleSpawner);
             return _finished;
         }
 
