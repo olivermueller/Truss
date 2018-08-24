@@ -6,16 +6,18 @@ using UnityEngine.Experimental.PlayerLoop;
 
 public class ParticleTest : MonoBehaviour
 {
-
+	[HideInInspector]
 	public Transform startPoint, endPoint;
+	
 	public float particleSpeed = 10;
 	public float rateOfChange;
-
+	public float angle;
 	private void Start()
 	{
 		this.transform.position = startPoint.transform.position;
 		this.transform.rotation = startPoint.transform.rotation;
-		//rateOfChange = Vector3.Angle(startPoint.forward, (endPoint.position - startPoint.position).normalized)/1000.0f;
+		rateOfChange =Utilities.Remap(Vector3.Angle(startPoint.forward, (startPoint.position - endPoint.position).normalized),0.0f, 360.0f, 0.002f, 0.3f);
+		angle = Vector3.Angle(startPoint.forward, (startPoint.position - endPoint.position).normalized);
 	}
 
 	public float forwardIncrease = 1.0f, sideIncrease = 0.0f;
@@ -28,17 +30,7 @@ public class ParticleTest : MonoBehaviour
 		
 		forwardIncrease -= rateOfChange;
 		if (forwardIncrease < 0.0) forwardIncrease = 0.0f;
-
-	}
-
-	private void OnTriggerEnter(Collider other)
-	{
-		if (other.tag == "EndPoint")
-		{
-			gameObject.SetActive(false);
-			transform.position = startPoint.transform.position;
-			//rateOfChange = Vector3.Angle(startPoint.forward, (endPoint.position - startPoint.position).normalized)/1000.0f;
-			gameObject.SetActive(true);
-		}
+		
+		if(Vector3.Distance(transform.position, endPoint.position)< 0.2f) Destroy(gameObject);
 	}
 }
