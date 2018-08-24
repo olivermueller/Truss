@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using System.Runtime.InteropServices;
+using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -36,6 +37,10 @@ public class AnswerTaskData : TaskData
             instantiatedNoButton = Instantiate(noPrefab);
             instantiatedNoButton.transform.SetParent(canvas.transform);
             instantiatedNoButton.GetComponent<Button>().onClick.AddListener(NoButton);
+        }
+        else
+        {
+            instantiatedYesButton.GetComponentInChildren<TextMeshProUGUI>().text = "Continue";
         }
         instantiatedYesButton.transform.SetParent(canvas.transform);
 

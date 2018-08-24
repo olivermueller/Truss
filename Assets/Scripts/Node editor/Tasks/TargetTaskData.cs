@@ -1,28 +1,37 @@
 ﻿using TMPro;
 using UnityEngine;
+using Vuforia;
+
 public class TargetTaskData:TaskData
 {
-        Renderer _renderer;
+//        Renderer _renderer;
+    public bool? finished = null;
         public override void StartTask()
         {
-            _uiObject = GameObject.FindObjectOfType<Canvas>().gameObject;
             
             Debug.Log("<color=green> Started "+ _title +"</color>");
+            _baseObject.GetComponent<MissionTrackableEventHandler>().OnTrackableStateChange.AddListener(IsTargetActive);
             base.StartTask();
-            _renderer = _baseObject.GetComponentInChildren(typeof(Renderer), true) as Renderer;
         }
 
         public override bool? IsCompleted()
         {
 //            Debug.Log("checking is completed" + _title);
-
-            return IsImageTargetActive();
+                if (finished.HasValue&&!finished.Value)
+                {
+                        return null;
+                }
+                return finished;
         }
-        bool? IsImageTargetActive()
+//        bool? IsImageTargetActive()
+//        {
+//            if (_renderer.enabled)
+//                return true;
+//            return null;
+//        }
+        public void IsTargetActive(bool active)
         {
-            if (_renderer.enabled)
-                return true;
-            return null;
+                finished = active;
+                Debug.LogWarning("Callback made on " + _title + "Value: " + active);
         }
-
 }
