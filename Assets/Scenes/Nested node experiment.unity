@@ -233,8 +233,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   rect:
     serializedVersion: 2
-    x: 2001.4655
-    y: 418.45062
+    x: 1109.6986
+    y: 220.2804
     width: 40
     height: 50
   type: 1
@@ -321,8 +321,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   rect:
     serializedVersion: 2
-    x: 1577.4655
-    y: 418.45062
+    x: 685.6986
+    y: 220.2804
     width: 40
     height: 50
   type: 0
@@ -409,8 +409,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   rect:
     serializedVersion: 2
-    x: 1609.4655
-    y: 293.45062
+    x: 717.6986
+    y: 95.280396
     width: 400
     height: 300
   title: FinishTaskNode
@@ -812,6 +812,49 @@ RectTransform:
   m_CorrespondingSourceObject: {fileID: 224765861026314004, guid: e8d294cdde60d44038a61631a7a528c5,
     type: 2}
   m_PrefabInternal: {fileID: 376317121}
+--- !u!1001 &319416437
+Prefab:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 4507484878148960, guid: 413681dfae9e34d92bcbc889bfaec02b, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4507484878148960, guid: 413681dfae9e34d92bcbc889bfaec02b, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: -0.138
+      objectReference: {fileID: 0}
+    - target: {fileID: 4507484878148960, guid: 413681dfae9e34d92bcbc889bfaec02b, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: 0.198
+      objectReference: {fileID: 0}
+    - target: {fileID: 4507484878148960, guid: 413681dfae9e34d92bcbc889bfaec02b, type: 2}
+      propertyPath: m_LocalRotation.x
+      value: -0.7071068
+      objectReference: {fileID: 0}
+    - target: {fileID: 4507484878148960, guid: 413681dfae9e34d92bcbc889bfaec02b, type: 2}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4507484878148960, guid: 413681dfae9e34d92bcbc889bfaec02b, type: 2}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4507484878148960, guid: 413681dfae9e34d92bcbc889bfaec02b, type: 2}
+      propertyPath: m_LocalRotation.w
+      value: 0.7071068
+      objectReference: {fileID: 0}
+    - target: {fileID: 4507484878148960, guid: 413681dfae9e34d92bcbc889bfaec02b, type: 2}
+      propertyPath: m_RootOrder
+      value: 15
+      objectReference: {fileID: 0}
+    m_RemovedComponents:
+    - {fileID: 114866275603034288, guid: 413681dfae9e34d92bcbc889bfaec02b, type: 2}
+  m_SourcePrefab: {fileID: 100100000, guid: 413681dfae9e34d92bcbc889bfaec02b, type: 2}
+  m_IsPrefabAsset: 0
 --- !u!1001 &376317121
 Prefab:
   m_ObjectHideFlags: 0
@@ -2054,8 +2097,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   rect:
     serializedVersion: 2
-    x: 1757.5469
-    y: 1170.0952
+    x: 865.78015
+    y: 971.9252
     width: 60
     height: 50
   type: 3
@@ -2142,8 +2185,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   rect:
     serializedVersion: 2
-    x: 1557.5469
-    y: 878.0953
+    x: 665.78015
+    y: 679.9252
     width: 400
     height: 300
   title: AnswerTaskNode
@@ -2370,8 +2413,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   rect:
     serializedVersion: 2
-    x: 1949.5469
-    y: 1003.0953
+    x: 1057.7802
+    y: 804.9252
     width: 40
     height: 50
   type: 1
@@ -2458,8 +2501,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   rect:
     serializedVersion: 2
-    x: 1525.5469
-    y: 1003.0953
+    x: 633.78015
+    y: 804.9252
     width: 40
     height: 50
   type: 0
@@ -2965,8 +3008,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   rect:
     serializedVersion: 2
-    x: 793.8021
-    y: 156.60252
+    x: -97.96445
+    y: -41.56778
     width: 40
     height: 50
   type: 1
@@ -3053,8 +3096,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   rect:
     serializedVersion: 2
-    x: 369.80215
-    y: 156.60252
+    x: -521.9645
+    y: -41.56778
     width: 40
     height: 50
   type: 0
@@ -3141,8 +3184,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   rect:
     serializedVersion: 2
-    x: 401.80215
-    y: 31.602526
+    x: -489.96445
+    y: -166.56778
     width: 400
     height: 300
   title: StartTaskNode
@@ -3539,7 +3582,7 @@ MonoBehaviour:
   _baseObject: {fileID: 0}
   _instantiatedAnimationObject: {fileID: 0}
   _uiObject: {fileID: 0}
-  goalPosition: {fileID: 0}
+  goalPosition: {fileID: 1411284643}
   yesPrefab: {fileID: 1340216274116492, guid: 402c0c0b8a3a64b4fbfa3f89e696f2d6, type: 2}
   noPrefab: {fileID: 1967012788811928, guid: 8e3ce9b6c8bec457a84bc1f260fce2ad, type: 2}
   instantiatedYesButton: {fileID: 0}
@@ -3866,8 +3909,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   rect:
     serializedVersion: 2
-    x: 1364.9025
-    y: 655.46747
+    x: 473.13666
+    y: 457.29733
     width: 40
     height: 50
   type: 1
@@ -3954,19 +3997,19 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   rect:
     serializedVersion: 2
-    x: 972.90247
-    y: 530.46747
+    x: 81.136665
+    y: 332.29733
     width: 400
     height: 300
   title: TargetTaskNode
   isDragged: 0
-  isSelected: 1
+  isSelected: 0
   inPoint: {fileID: 1186318368}
   outPoint: {fileID: 1186318366}
   style:
     m_Name: 
     m_Normal:
-      m_Background: {fileID: 7126082630596479001, guid: 0000000000000000d000000000000000,
+      m_Background: {fileID: -3453378117783705200, guid: 0000000000000000d000000000000000,
         type: 0}
       m_ScaledBackgrounds: []
       m_TextColor: {r: 0, g: 0, b: 0, a: 1}
@@ -4181,8 +4224,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   rect:
     serializedVersion: 2
-    x: 940.90247
-    y: 655.46747
+    x: 49.136665
+    y: 457.29733
     width: 40
     height: 50
   type: 0
@@ -4973,7 +5016,7 @@ MeshRenderer:
   m_ReflectionProbeUsage: 1
   m_RenderingLayerMask: 4294967295
   m_Materials:
-  - {fileID: 2050916229}
+  - {fileID: 1776833757}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -5156,7 +5199,7 @@ Camera:
     y: 0
     width: 1
     height: 1
-  near clip plane: 0.05
+  near clip plane: 0.01
   far clip plane: 2000
   field of view: 60
   orthographic: 0
@@ -5319,8 +5362,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   rect:
     serializedVersion: 2
-    x: 1161.6162
-    y: 461.29858
+    x: 269.8505
+    y: 263.12833
     width: 20
     height: 10
   type: 2
@@ -5407,8 +5450,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   rect:
     serializedVersion: 2
-    x: 1353.6162
-    y: 294.29858
+    x: 461.8505
+    y: 96.12831
     width: 40
     height: 50
   type: 1
@@ -5495,8 +5538,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   rect:
     serializedVersion: 2
-    x: 929.6163
-    y: 294.29858
+    x: 37.850502
+    y: 96.12831
     width: 40
     height: 50
   type: 0
@@ -5583,8 +5626,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   rect:
     serializedVersion: 2
-    x: 961.6163
-    y: 169.29857
+    x: 69.8505
+    y: -28.871685
     width: 400
     height: 300
   title: NestedTaskNode
@@ -6072,6 +6115,33 @@ Material:
     m_Floats: []
     m_Colors:
     - _Color: {r: 0.82089555, g: 0.82089555, b: 0.82089555, a: 1}
+--- !u!21 &1776833757
+Material:
+  serializedVersion: 6
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_Name: 'OxygenMaterial
+
+    14604'
+  m_Shader: {fileID: 10752, guid: 0000000000000000f000000000000000, type: 0}
+  m_ShaderKeywords: 
+  m_LightmapFlags: 5
+  m_EnableInstancingVariants: 0
+  m_DoubleSidedGI: 0
+  m_CustomRenderQueue: -1
+  stringTagMap: {}
+  disabledShaderPasses: []
+  m_SavedProperties:
+    serializedVersion: 3
+    m_TexEnvs:
+    - _MainTex:
+        m_Texture: {fileID: 2800000, guid: cc6daa766aade3b4cbaeeac788249a2e, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    m_Floats: []
+    m_Colors:
+    - _Color: {r: 0.82089555, g: 0.82089555, b: 0.82089555, a: 1}
 --- !u!1 &1892063081
 GameObject:
   m_ObjectHideFlags: 0
@@ -6236,33 +6306,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   inPoint: {fileID: 1186318368}
   outPoint: {fileID: 782881920}
---- !u!21 &2050916229
-Material:
-  serializedVersion: 6
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_Name: 'OxygenMaterial
-
-    18242'
-  m_Shader: {fileID: 10752, guid: 0000000000000000f000000000000000, type: 0}
-  m_ShaderKeywords: 
-  m_LightmapFlags: 5
-  m_EnableInstancingVariants: 0
-  m_DoubleSidedGI: 0
-  m_CustomRenderQueue: -1
-  stringTagMap: {}
-  disabledShaderPasses: []
-  m_SavedProperties:
-    serializedVersion: 3
-    m_TexEnvs:
-    - _MainTex:
-        m_Texture: {fileID: 2800000, guid: cc6daa766aade3b4cbaeeac788249a2e, type: 3}
-        m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
-    m_Floats: []
-    m_Colors:
-    - _Color: {r: 0.82089555, g: 0.82089555, b: 0.82089555, a: 1}
 --- !u!21 &2073139427
 Material:
   serializedVersion: 6
