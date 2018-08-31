@@ -28,7 +28,10 @@ public class TaskData : MonoBehaviour
         if (_animationObject != null)
         {
             _instantiatedAnimationObject = GameObject.Instantiate(_animationObject);
-            _instantiatedAnimationObject.transform.parent = _baseObject.transform;
+            if (_baseObject)
+            {
+                _instantiatedAnimationObject.transform.parent = _baseObject.transform;
+            }
         }
         
         GameObject.FindGameObjectWithTag("CanvasTitle").GetComponent<TextMeshProUGUI>().text = _title;
