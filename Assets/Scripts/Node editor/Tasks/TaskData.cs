@@ -28,9 +28,13 @@ public class TaskData : MonoBehaviour
         if (_animationObject != null)
         {
             _instantiatedAnimationObject = GameObject.Instantiate(_animationObject);
+            var localscale = _instantiatedAnimationObject.transform.localScale;
             if (_baseObject)
             {
                 _instantiatedAnimationObject.transform.parent = _baseObject.transform;
+                _instantiatedAnimationObject.transform.localPosition = Vector3.zero;
+                _instantiatedAnimationObject.transform.localScale = localscale;
+                _instantiatedAnimationObject.transform.localRotation = Quaternion.identity;
             }
         }
         

@@ -37,8 +37,6 @@ public class AnswerTargetTaskData : TaskData
         
         _finished = null;
         base.StartTask();
-        
-
 
     }
 
@@ -95,6 +93,6 @@ public class AnswerTargetTaskData : TaskData
     {
         targetActive = active;
         Debug.LogWarning("Callback made on " + _title + "Value: " + active);
-        CreateButtons(active);
+//        CreateButtons(active);
     }
 }
