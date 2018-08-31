@@ -23,4 +23,5 @@ public class FollowPoints : MonoBehaviour {
 		//Visual. Not used in movement
 		iTween.DrawPath(waypointArray);
 	}
+	
 }

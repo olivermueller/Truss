@@ -5613,15 +5613,15 @@ public class iTween : MonoBehaviour
 	/// A <see cref="Transform[]"/>
 	/// </param>
 	public static void DrawPath(Transform[] path) {
-		if(path.Length>0){
-			//create and store path points:
-			Vector3[] suppliedPath = new Vector3[path.Length];
-			for (int i = 0; i < path.Length; i++) {
-				suppliedPath[i]=path[i].position;
-			}
-			
-			DrawPathHelper(suppliedPath,Defaults.color,"gizmos");	
-		}
+//		if(path.Length>0){
+//			//create and store path points:
+//			Vector3[] suppliedPath = new Vector3[path.Length];
+//			for (int i = 0; i < path.Length; i++) {
+//				suppliedPath[i]=path[i].position;
+//			}
+//			
+//			DrawPathHelper(suppliedPath,Defaults.color,"gizmos");	
+//		}
 	}		
 	
 	/// <summary>
