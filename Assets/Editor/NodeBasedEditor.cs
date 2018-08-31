@@ -444,7 +444,14 @@ using System.Reflection;
                     (TaskModel.Instance.selectedOutPoint.node.TaskData as NestedTaskData).AddSubTask(TaskModel.Instance.selectedInPoint.node.TaskData);
                     break;
                 case ConnectionPointType.Answer:
-                    (TaskModel.Instance.selectedOutPoint.node.TaskData as AnswerTaskData).SetNoTask(TaskModel.Instance.selectedInPoint.node.TaskData);
+                    try
+                    {
+                        (TaskModel.Instance.selectedOutPoint.node.TaskData as AnswerTargetTaskData).SetNoTask(TaskModel.Instance.selectedInPoint.node.TaskData);
+                    }
+                    catch (Exception e)
+                    {
+                        (TaskModel.Instance.selectedOutPoint.node.TaskData as AnswerTaskData).SetNoTask(TaskModel.Instance.selectedInPoint.node.TaskData);
+                    }
                     break;
                 default:
                     TaskModel.Instance.selectedOutPoint.node.TaskData.SetNextTask(TaskModel.Instance.selectedInPoint.node.TaskData);

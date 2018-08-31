@@ -5,7 +5,7 @@ using UnityEngine.Networking;
 
 public class ParticleSpawner : MonoBehaviour
 {
-	public float spawnTime = 3.0f, distanceFromSource = 0.2f, percentPerSecond = 0.65f;
+	public float spawnTime = 1.0f, distanceFromSource = 0.2f, percentPerSecond = 0.65f;
 	public GameObject particleSystemPrefab;
 	public Transform endPoint;
 //	private void Start()

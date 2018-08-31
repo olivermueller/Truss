@@ -1,5 +1,6 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using System.Globalization;
 using System.Linq;
 using UnityEngine;
 
@@ -36,8 +37,10 @@ public class TestingScript : MonoBehaviour {
 				else
 				{
 					Debug.Log("no task found");
-					iterator = (iterator as AnswerTaskData).StartNoTask();
-
+					var answerTaskData = (iterator as AnswerTaskData);
+					var answerTargetTaskData = (iterator as AnswerTargetTaskData);
+					if (answerTaskData != null) answerTaskData.StartNoTask();
+					else if (answerTargetTaskData != null) answerTargetTaskData.StartNoTask();
 				}
 			}
 			

@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using TMPro;
@@ -59,11 +60,12 @@ public class NestedTaskData : TaskData {
             {
                 // If it is complete, move to the next task
                 iterator = iterator.NextTask();
-                if (iterator == null)
+                if (iterator == null || iterator as FinishTaskData)
                 {
                     GameObject.FindGameObjectWithTag("CanvasTitle").GetComponent<TextMeshProUGUI>().text = _title;
                     GameObject.FindGameObjectWithTag("CanvasDescription").GetComponent<TextMeshProUGUI>().text = _description;
                     var subtask = subtasks.First(t => t.isSelected);
+                    print("Subtask: "+ subtask.Task._title + " Completed");
                     subtask.isCompleted = true;
                     subtask.isSelected = false;
                     if (subtasks.All(t=>t.isCompleted))
@@ -74,7 +76,15 @@ public class NestedTaskData : TaskData {
             }
             else
             {
-                iterator = (iterator as AnswerTaskData).StartNoTask();
+                try
+                {
+                    iterator = (iterator as AnswerTaskData).StartNoTask();
+                }
+                catch (Exception e)
+                {
+                    iterator = (iterator as AnswerTargetTaskData).StartNoTask();
+                }
+                
             }
         }
         // Subtask is not completed, return null.
