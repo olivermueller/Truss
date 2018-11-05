@@ -86,6 +86,32 @@
             </e>
           </e>
         </e>
+        <e p="Fonts" t="Include">
+          <e p="OpenSans" t="Include">
+            <e p="FontLicense.txt" t="Include" />
+          </e>
+        </e>
+        <e p="Lobby" t="Include">
+          <e p="Documentation.txt" t="Include" />
+          <e p="Instruction.txt" t="Include" />
+          <e p="Scripts" t="Include">
+            <e p="DraggablePanel.cs" t="Include" />
+            <e p="EventSystemChecker.cs" t="Include" />
+            <e p="Lobby" t="Include">
+              <e p="LobbyCountdownPanel.cs" t="Include" />
+              <e p="LobbyHook.cs" t="Include" />
+              <e p="LobbyInfoPanel.cs" t="Include" />
+              <e p="LobbyMainMenu.cs" t="Include" />
+              <e p="LobbyManager.cs" t="Include" />
+              <e p="LobbyPlayer.cs" t="Include" />
+              <e p="LobbyPlayerList.cs" t="Include" />
+              <e p="LobbyServerEntry.cs" t="Include" />
+              <e p="LobbyServerList.cs" t="Include" />
+              <e p="LobbyTopPanel.cs" t="Include" />
+            </e>
+          </e>
+        </e>
+        <e p="NetworkLobby_Third-PartyNotice.txt" t="Include" />
         <e p="Plugins" t="Include">
           <e p="Pixelplacement" t="Include">
             <e p="iTween" t="Include">
@@ -213,9 +239,6 @@
           <e p="MenuScript.cs" t="Include" />
           <e p="MissionTrackableEventHandler.cs" t="Include" />
           <e p="MonoBehaviourExtended.cs" t="Include" />
-          <e p="Networking" t="Include">
-            <e p="PlayerController.cs" t="Include" />
-          </e>
           <e p="Node editor" t="Include">
             <e p="EditorZoomArea.cs" t="Include" />
             <e p="Nodes" t="Include">
@@ -251,6 +274,9 @@
             <e p="ParticleSpawner.cs" t="Include" />
             <e p="ParticleTest.cs" t="Include" />
           </e>
+          <e p="PlayerConnectionUnit.cs" t="Include" />
+          <e p="PlayerDisplayContainer.cs" t="Include" />
+          <e p="PlayerUnit.cs" t="Include" />
           <e p="SceneSelection.cs" t="Include" />
           <e p="Settings.cs" t="Include" />
           <e p="Singleton.cs" t="Include" />
@@ -341,6 +367,7 @@
         </e>
         <e p="TargetElement.cs" t="Include" />
         <e p="TargetManager.cs" t="Include" />
+        <e p="test.cs" t="Include" />
         <e p="TextMesh Pro" t="Include">
           <e p="Resources" t="Include">
             <e p="LineBreaking Following Characters.txt" t="Include" />

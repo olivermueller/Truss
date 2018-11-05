@@ -8,7 +8,7 @@ namespace UnityEngine.XR.iOS
 	
 	public class ConnectToEditor : MonoBehaviour
 	{
-		PlayerConnection playerConnection;
+		PlayerConnection _playerConnectionUnit;
 		UnityARSessionNativeInterface m_session;
 		int editorID;
 
@@ -19,10 +19,10 @@ namespace UnityEngine.XR.iOS
 		{
 			Debug.Log("STARTING ConnectToEditor");
 			editorID = -1;
-			playerConnection = PlayerConnection.instance;
-			playerConnection.RegisterConnection(EditorConnected);
-			playerConnection.RegisterDisconnection(EditorDisconnected);
-			playerConnection.Register(ConnectionMessageIds.fromEditorARKitSessionMsgId, HandleEditorMessage);
+			_playerConnectionUnit = PlayerConnection.instance;
+			_playerConnectionUnit.RegisterConnection(EditorConnected);
+			_playerConnectionUnit.RegisterDisconnection(EditorDisconnected);
+			_playerConnectionUnit.Register(ConnectionMessageIds.fromEditorARKitSessionMsgId, HandleEditorMessage);
 			m_session = null;
 
 		}
@@ -168,9 +168,9 @@ namespace UnityEngine.XR.iOS
 
 		public void SendToEditor(System.Guid msgId, byte[] data)
 		{
-			if (playerConnection.isConnected)
+			if (_playerConnectionUnit.isConnected)
 			{
-				playerConnection.Send(msgId, data);
+				_playerConnectionUnit.Send(msgId, data);
 			}
 
 
@@ -179,7 +179,7 @@ namespace UnityEngine.XR.iOS
 		public void DisconnectFromEditor()
 		{
 			#if UNITY_2017_1_OR_NEWER		
-			playerConnection.DisconnectAll();
+			_playerConnectionUnit.DisconnectAll();
 			#endif
 		}
 
