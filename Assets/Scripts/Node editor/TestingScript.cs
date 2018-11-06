@@ -22,6 +22,7 @@ public class TestingScript : MonoBehaviour {
 	void Update () 
 	{
 		if (isTrainer) return;
+		if(!FindObjectsOfType<PlayerUnit>().Any(p=>p.IsTrainer)) return;
 		if(isFirst)
 		{
 			var player = FindObjectsOfType<PlayerUnit>().First(p=>p.isLocalPlayer);
