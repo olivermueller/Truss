@@ -30,9 +30,9 @@ public class PlayerUnit : NetworkBehaviour
             CmdSpawnMyUnit();
             
             
-            _nextButton = Instantiate(NextButtonPrefab).GetComponent<Button>();
-            _nextButton.transform.parent = FindObjectOfType<Canvas>().transform;
-            _nextButton.onClick.AddListener(() => CmdOnClickSetAwating(true));
+//            _nextButton = Instantiate(NextButtonPrefab).GetComponent<Button>();
+//            _nextButton.transform.parent = FindObjectOfType<Canvas>().transform;
+//            _nextButton.onClick.AddListener(() => CmdOnClickSetAwating(true));
             
             RpcTellAllClientsToUpdateRoles(true);
         }
@@ -41,10 +41,19 @@ public class PlayerUnit : NetworkBehaviour
 
 
     [Command]
-    void CmdOnClickSetAwating(bool val)
+    public void CmdTrainerApproved()
     {
         GameStateManager = GameStateManager == null ? FindObjectOfType<NetworkedGameState>() : GameStateManager;
-        GameStateManager.CmdSetAwating(val);
+        GameStateManager.CmdSetAwating(true);
+        GameStateManager.CmdSetApproved(true);
+    }
+    
+    [Command]
+    public void CmdTraineeNext()
+    {
+        GameStateManager = GameStateManager == null ? FindObjectOfType<NetworkedGameState>() : GameStateManager;
+        GameStateManager.CmdSetAwating(true);
+        GameStateManager.CmdSetApproved(false);
     }
     
     [Command]
@@ -70,18 +79,18 @@ public class PlayerUnit : NetworkBehaviour
     }
 
 
-    void Update()
-    {
-        //Update UI on the trainer side
-        if (IsTrainer)
-        {
-            //if (gameStateManager.)
-        }
-        else
-        {
-
-        }
-    }
+//    void Update()
+//    {
+//        //Update UI on the trainer side
+//        if (IsTrainer)
+//        {
+//            //if (gameStateManager.)
+//        }
+//        else
+//        {
+//
+//        }
+//    }
 
     [ClientRpc] //fn executed on all clients
     void RpcTellAllClientsToUpdateRoles(bool newValue)

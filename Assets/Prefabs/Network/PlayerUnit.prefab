@@ -19,9 +19,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 224893880682427676}
-  - component: {fileID: 223653090872369308}
-  - component: {fileID: 114558729924718980}
-  - component: {fileID: 114784451856519280}
   - component: {fileID: 114172180747227448}
   - component: {fileID: 114899488706275370}
   m_Layer: 5
@@ -572,27 +569,6 @@ MonoBehaviour:
         m_CallState: 2
     m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
---- !u!114 &114558729924718980
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1052450968355150}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 1980459831, guid: f70555f144d8491a825f0804e09c671c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_UiScaleMode: 1
-  m_ReferencePixelsPerUnit: 100
-  m_ScaleFactor: 1
-  m_ReferenceResolution: {x: 1080, y: 1920}
-  m_ScreenMatchMode: 0
-  m_MatchWidthOrHeight: 0.5
-  m_PhysicalUnit: 3
-  m_FallbackScreenDPI: 96
-  m_DefaultSpriteDPI: 96
-  m_DynamicPixelsPerUnit: 1
 --- !u!114 &114562402834719606
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -751,22 +727,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   name: {fileID: 114259148013824696}
   nextButton: {fileID: 114078197020249058}
---- !u!114 &114784451856519280
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1052450968355150}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 1301386320, guid: f70555f144d8491a825f0804e09c671c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_IgnoreReversedGraphics: 1
-  m_BlockingObjects: 0
-  m_BlockingMask:
-    serializedVersion: 2
-    m_Bits: 4294967295
 --- !u!114 &114898019798128322
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -832,8 +792,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   GameStateManagerPrefab: {fileID: 1793422068151604, guid: 253926219dd164170b4523e4387fd5e2,
     type: 2}
-  gameStateManager: {fileID: 0}
-  isTrainer: 0
+  GameStateManager: {fileID: 0}
+  NextButtonPrefab: {fileID: 1311332875222974, guid: b7ccf7bf079dd41e1a2d89919db4dca8,
+    type: 2}
+  IsTrainer: 0
 --- !u!114 &114937719218498808
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -931,26 +893,6 @@ CanvasRenderer:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1729845023070682}
   m_CullTransparentMesh: 0
---- !u!223 &223653090872369308
-Canvas:
-  m_ObjectHideFlags: 1
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1052450968355150}
-  m_Enabled: 1
-  serializedVersion: 3
-  m_RenderMode: 0
-  m_Camera: {fileID: 0}
-  m_PlaneDistance: 100
-  m_PixelPerfect: 0
-  m_ReceivesEvents: 1
-  m_OverrideSorting: 0
-  m_OverridePixelPerfect: 0
-  m_SortingBucketNormalizedSize: 0
-  m_AdditionalShaderChannelsFlag: 0
-  m_SortingLayerID: 0
-  m_SortingOrder: 0
-  m_TargetDisplay: 0
 --- !u!224 &224164943803782206
 RectTransform:
   m_ObjectHideFlags: 1

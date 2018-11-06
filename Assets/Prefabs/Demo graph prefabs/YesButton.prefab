@@ -39,6 +39,8 @@ GameObject:
   - component: {fileID: 222145440454217456}
   - component: {fileID: 114347855691315920}
   - component: {fileID: 114275476991324750}
+  - component: {fileID: 114491325265015532}
+  - component: {fileID: 114496708840290236}
   m_Layer: 5
   m_Name: YesButton
   m_TagString: CanvasYes
@@ -227,6 +229,49 @@ MonoBehaviour:
   m_FillAmount: 1
   m_FillClockwise: 1
   m_FillOrigin: 0
+--- !u!114 &114491325265015532
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1340216274116492}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 372142912, guid: dc443db3e92b4983b9738c1131f555cb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_SceneId:
+    m_Value: 0
+  m_AssetId:
+    i0: 64
+    i1: 44
+    i2: 12
+    i3: 11
+    i4: 138
+    i5: 58
+    i6: 100
+    i7: 180
+    i8: 251
+    i9: 250
+    i10: 63
+    i11: 137
+    i12: 230
+    i13: 150
+    i14: 242
+    i15: 214
+  m_ServerOnly: 0
+  m_LocalPlayerAuthority: 0
+--- !u!114 &114496708840290236
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1340216274116492}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a689c77339f0a4c2da85782948a496ff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!222 &222145440454217456
 CanvasRenderer:
   m_ObjectHideFlags: 1
