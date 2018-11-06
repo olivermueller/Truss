@@ -29,32 +29,75 @@ public class NetworkedGameState : NetworkBehaviour
 		{
 			YesButton.gameObject.SetActive(false);
 			NoButton.gameObject.SetActive(false);
+			
+			YesButton.onClick.AddListener(CmdTrainerApproved);
 		}
 		else
 		{
 			YesButton.gameObject.SetActive(true);
 			NoButton.gameObject.SetActive(false);
+		
+			YesButton.onClick.AddListener(CmdTraineeNext);
 		}
 		
 		YesButton.interactable = true;
 		NoButton.interactable = true;
 	}
 
+	
+	[Command]
+	public void CmdTrainerApproved()
+	{
+		CmdSetAwating(true);
+		CmdSetApproved(true);
+	}
+    
+	[Command]
+	public void CmdTraineeNext()
+	{
+		CmdSetAwating(true);
+		CmdSetApproved(false);
+	}
+	
 	[Command]
 	public void CmdSetAwating(bool val)
 	{
 		isAwating = val;
+		RpcUITraineeNext();
 	}
 	
 	[Command]
 	public void CmdSetApproved(bool val)
 	{
 		isApproved = val;
+		RpcUITrainerApproved();
 	}
 	
 	[Command]
 	public void CmdSetNodeID(int val)
 	{
 		nodeID = val;
+	}
+
+	[ClientRpc]
+	void RpcUITraineeNext()
+	{
+		var player = FindObjectsOfType<PlayerUnit>().First(p=>p.isLocalPlayer);
+		
+		if(player.IsTrainer)
+			YesButton.gameObject.SetActive(isAwating);
+		else
+			YesButton.gameObject.SetActive(!isAwating);
+	}
+
+	[ClientRpc]
+	void RpcUITrainerApproved()
+	{
+		var player = FindObjectsOfType<PlayerUnit>().First(p=>p.isLocalPlayer);
+		
+		if(player.IsTrainer)
+			YesButton.gameObject.SetActive(!isApproved);
+		else
+			YesButton.gameObject.SetActive(isApproved);
 	}
 }

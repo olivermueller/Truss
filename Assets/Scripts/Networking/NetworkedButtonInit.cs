@@ -14,23 +14,23 @@ public class NetworkedButtonInit : NetworkBehaviour
 		//StartCoroutine("InitAfter");
 	}
 
-	IEnumerator InitAfter()
-	{
-		yield return new WaitForFixedUpdate();
-		Button button = GetComponent<Button>();
-		button.onClick.RemoveAllListeners();
-		
-		var player = FindObjectsOfType<PlayerUnit>().First(p=>p.isLocalPlayer);
-
-		if (player.IsTrainer)
-		{
-			button.onClick.AddListener(() => player.CmdTrainerApproved());
-			
-		}
-		else
-		{
-			button.onClick.AddListener(() => player.CmdTraineeNext());
-		}
-	}
+//	IEnumerator InitAfter()
+//	{
+////		yield return new WaitForFixedUpdate();
+////		Button button = GetComponent<Button>();
+////		button.onClick.RemoveAllListeners();
+////		
+////		var player = FindObjectsOfType<PlayerUnit>().First(p=>p.isLocalPlayer);
+////
+////		if (player.IsTrainer)
+////		{
+////			button.onClick.AddListener(() => player.CmdTrainerApproved());
+////			
+////		}
+////		else
+////		{
+////			button.onClick.AddListener(() => player.CmdTraineeNext());
+////		}
+//	}
 
 }
