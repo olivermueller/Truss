@@ -49,7 +49,8 @@ public class TestingScript : MonoBehaviour {
 					gameState.isApproved = false;
 					gameState.isAwating = false;
 					
-					gameState.RpcUITraineeNext();
+					var player = FindObjectsOfType<PlayerUnit>().First(p=>p.isLocalPlayer);
+					player.TraineeNext();
 				}
 				else if(!val.Value && gameState.isApproved && gameState.isAwating)
 				{

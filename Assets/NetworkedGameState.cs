@@ -88,6 +88,12 @@ public class NetworkedGameState : NetworkBehaviour
 			GetComponent<TestingScript>().iterator.StartTask();
 		}
 	}
+
+	[Command]
+	public void CmdUITraineeNext()
+	{
+		RpcUITraineeNext();
+	}
 	
 	[ClientRpc]
 	public void RpcUITraineeNext()

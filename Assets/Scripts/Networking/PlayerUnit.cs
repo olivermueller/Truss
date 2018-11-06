@@ -54,7 +54,24 @@ public class PlayerUnit : NetworkBehaviour
             GameStateManager.CmdSetNodeID(val);
         }
     }
+
+    public void TraineeNext()
+    {
+        GameStateManager = GameStateManager == null ? FindObjectOfType<NetworkedGameState>() : GameStateManager;
+        if (isServer)
+        {
+            //rpc
+            GameStateManager.RpcUITraineeNext();
+            
+        }
+        else
+        {
+            //cmd
+            GameStateManager.CmdUITraineeNext();
+        }
+    }
     
+
     [Command]
     public void CmdSetNodeID(string val)
     {
