@@ -15,7 +15,7 @@ public class NetworkedButtonInit : NetworkBehaviour
 		
 		var player = FindObjectsOfType<PlayerUnit>().First(p=>p.isLocalPlayer);
 
-		if (player.IsTrainer)
+		if (player.isServer)
 		{
 			button.onClick.AddListener(() => player.CmdTrainerApproved());
 		}
