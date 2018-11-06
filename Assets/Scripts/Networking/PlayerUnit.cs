@@ -39,7 +39,13 @@ public class PlayerUnit : NetworkBehaviour
 
     }
 
-
+    [Command]
+    public void CmdSetNodeID(string val)
+    {
+        GameStateManager = GameStateManager == null ? FindObjectOfType<NetworkedGameState>() : GameStateManager;
+        GameStateManager.CmdSetNodeID(val);
+        GameStateManager.RpcChangeTrainerIterator();
+    }
     [Command]
     public void CmdTrainerApproved()
     {
