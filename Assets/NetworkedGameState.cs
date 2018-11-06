@@ -52,14 +52,14 @@ public class NetworkedGameState : NetworkBehaviour
 	public void CmdSetAwating(bool val)
 	{
 		isAwating = val;
-		//RpcUITraineeNext();
+		RpcUITraineeNext();
 	}
 	
 	[Command]
 	public void CmdSetApproved(bool val)
 	{
 		isApproved = val;
-		//RpcUITrainerApproved();
+		RpcUITrainerApproved();
 	}
 	
 	[Command]

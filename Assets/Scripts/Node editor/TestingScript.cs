@@ -39,7 +39,7 @@ public class TestingScript : MonoBehaviour {
 				{
 					iterator = iterator.NextTask();
 				}
-				else
+				else if(!val.Value && gameState.isApproved && gameState.isAwating)
 				{
 					Debug.Log("no task found");
 					var answerTaskData = (iterator as AnswerTaskData);
