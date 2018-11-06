@@ -16,20 +16,37 @@ using UnityEngine.UI;
 public class PlayerUnit : NetworkBehaviour
 {
     public GameObject GameStateManagerPrefab;
-    public NetworkedGameState gameStateManager;
+    public NetworkedGameState GameStateManager;
+    public GameObject NextButtonPrefab;
 
-    [SyncVar] public bool isTrainer = false;
+    private Button _nextButton;
+
+    [SyncVar] public bool IsTrainer = false;
 
     private void Start()
     {
         if (isServer && isLocalPlayer)
         {
             CmdSpawnMyUnit();
+            
+            
+            _nextButton = Instantiate(NextButtonPrefab).GetComponent<Button>();
+            _nextButton.transform.parent = FindObjectOfType<Canvas>().transform;
+            _nextButton.onClick.AddListener(() => CmdOnClickSetAwating(true));
+            
             RpcTellAllClientsToUpdateRoles(true);
         }
 
     }
 
+
+    [Command]
+    void CmdOnClickSetAwating(bool val)
+    {
+        GameStateManager = GameStateManager == null ? FindObjectOfType<NetworkedGameState>() : GameStateManager;
+        GameStateManager.CmdSetAwating(val);
+    }
+    
     [Command]
     void CmdSpawnMyUnit()
     {
@@ -40,23 +57,23 @@ public class PlayerUnit : NetworkBehaviour
 
     public void TraineeNextButton()
     {
-        gameStateManager = gameStateManager == null ? FindObjectOfType<NetworkedGameState>() : gameStateManager;
-        gameStateManager.CmdSetApproved(false);
-        gameStateManager.CmdSetAwating(true);
+        GameStateManager = GameStateManager == null ? FindObjectOfType<NetworkedGameState>() : GameStateManager;
+        GameStateManager.CmdSetApproved(false);
+        GameStateManager.CmdSetAwating(true);
     }
 
     public void TrainerApprovedButton()
     {
-        gameStateManager = gameStateManager == null ? FindObjectOfType<NetworkedGameState>() : gameStateManager;
-        gameStateManager.CmdSetApproved(true);
-        gameStateManager.CmdSetAwating(true);
+        GameStateManager = GameStateManager == null ? FindObjectOfType<NetworkedGameState>() : GameStateManager;
+        GameStateManager.CmdSetApproved(true);
+        GameStateManager.CmdSetAwating(true);
     }
 
 
     void Update()
     {
         //Update UI on the trainer side
-        if (isTrainer)
+        if (IsTrainer)
         {
             //if (gameStateManager.)
         }
@@ -69,7 +86,7 @@ public class PlayerUnit : NetworkBehaviour
     [ClientRpc] //fn executed on all clients
     void RpcTellAllClientsToUpdateRoles(bool newValue)
     {
-        isTrainer = newValue;
+        IsTrainer = newValue;
     }
 //    [SyncVar]
 //    public bool Interactable;
