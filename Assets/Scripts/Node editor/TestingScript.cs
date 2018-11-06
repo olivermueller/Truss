@@ -25,7 +25,7 @@ public class TestingScript : MonoBehaviour {
 			// Check if there is a start task data in the scene and use it as the starting point. If there are none, use the first task that does not have any task pointing at it.
 			iterator = (FindObjectOfType<StartTaskData>()!=null) ? FindObjectOfType<StartTaskData>() : TaskModel.Instance.tasks.First(t => t._in == null);
 			
-			iterator.StartTask();
+			iterator = iterator.NextTask();
 			isFirst = false;
 		}
 
@@ -37,6 +37,7 @@ public class TestingScript : MonoBehaviour {
 			{
 				if (val.Value && gameState.isApproved && gameState.isAwating)
 				{
+					Debug.Log("Switching Task");
 					iterator = iterator.NextTask();
 				}
 				else if(!val.Value && gameState.isApproved && gameState.isAwating)

@@ -39,18 +39,19 @@ public class TaskData : MonoBehaviour
             }
         }
         
-        //GameObject.FindGameObjectWithTag("CanvasTitle").GetComponent<TextMeshProUGUI>().text = _title;
-        //GameObject.FindGameObjectWithTag("CanvasDescription").GetComponent<TextMeshProUGUI>().text = _description;
-        //
+        GameObject.FindGameObjectWithTag("CanvasTitle").GetComponent<TextMeshProUGUI>().text = _title;
+        GameObject.FindGameObjectWithTag("CanvasDescription").GetComponent<TextMeshProUGUI>().text = _description;
+        
     }
     public virtual TaskData NextTask()
     {
         if (_instantiatedAnimationObject) GameObject.Destroy(_instantiatedAnimationObject);
         Debug.Log("<color=green>completed " + _title+"</color>" );
         if (_out != null)
-        {
-            _out.StartTask();
+        { 
             Debug.Log("<color=purple>Next Task " + _out._title+"</color>" );
+            _out.StartTask();
+           
         }
         return _out;
     }
