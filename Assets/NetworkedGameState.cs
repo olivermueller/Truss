@@ -33,14 +33,14 @@ public class NetworkedGameState : NetworkBehaviour
 			YesButton.gameObject.SetActive(false);
 			NoButton.gameObject.SetActive(false);
 			
-			YesButton.onClick.AddListener(player.CmdTrainerApproved);
+			YesButton.onClick.AddListener(() => player.CmdTrainerApproved());
 		}
 		else
 		{
 			YesButton.gameObject.SetActive(true);
 			NoButton.gameObject.SetActive(false);
 		
-			YesButton.onClick.AddListener(player.CmdTraineeNext);
+			YesButton.onClick.AddListener(() => player.CmdTraineeNext());
 		}
 		
 		YesButton.interactable = true;
@@ -52,14 +52,14 @@ public class NetworkedGameState : NetworkBehaviour
 	public void CmdSetAwating(bool val)
 	{
 		isAwating = val;
-		RpcUITraineeNext();
+		//RpcUITraineeNext();
 	}
 	
 	[Command]
 	public void CmdSetApproved(bool val)
 	{
 		isApproved = val;
-		RpcUITrainerApproved();
+		//RpcUITrainerApproved();
 	}
 	
 	[Command]
