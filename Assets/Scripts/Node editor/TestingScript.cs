@@ -9,11 +9,12 @@ public class TestingScript : MonoBehaviour {
 
 	bool isFirst = true;
 	bool finished = false;
-
+	private NetworkedGameState gameState;
+	
 	void Awake () 
 	{
 		Debug.Log("Elements in task list: " + TaskModel.Instance.tasks.Count);
-		
+		gameState = GetComponent<NetworkedGameState>();
 		
 	}
 	
@@ -23,6 +24,7 @@ public class TestingScript : MonoBehaviour {
 		{
 			// Check if there is a start task data in the scene and use it as the starting point. If there are none, use the first task that does not have any task pointing at it.
 			iterator = (FindObjectOfType<StartTaskData>()!=null) ? FindObjectOfType<StartTaskData>() : TaskModel.Instance.tasks.First(t => t._in == null);
+			
 			iterator.StartTask();
 			isFirst = false;
 		}
@@ -33,7 +35,10 @@ public class TestingScript : MonoBehaviour {
 			var val = iterator.IsCompleted();
 			if (val.HasValue)
 			{
-				if(val.Value) iterator = iterator.NextTask();
+				if (val.Value && gameState.isApproved && gameState.isAwating)
+				{
+					iterator = iterator.NextTask();
+				}
 				else
 				{
 					Debug.Log("no task found");

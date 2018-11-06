@@ -11,7 +11,7 @@ public class NetworkedButtonInit : NetworkBehaviour
 	void Start ()
 	{
 
-		StartCoroutine("InitAfter");
+		//StartCoroutine("InitAfter");
 	}
 
 	IEnumerator InitAfter()
@@ -25,6 +25,7 @@ public class NetworkedButtonInit : NetworkBehaviour
 		if (player.IsTrainer)
 		{
 			button.onClick.AddListener(() => player.CmdTrainerApproved());
+			
 		}
 		else
 		{

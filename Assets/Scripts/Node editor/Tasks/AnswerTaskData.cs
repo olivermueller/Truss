@@ -27,6 +27,7 @@ public class AnswerTaskData : TaskData
     private ParticleSpawner _particleSpawner;
     public override void StartTask()
     {
+        _finished = true;
         if (goalPosition)
         {
             _particleSpawner = Camera.main.gameObject.AddComponent<ParticleSpawner>();
@@ -37,20 +38,21 @@ public class AnswerTaskData : TaskData
         _finished = null;
         base.StartTask();
         GameObject canvas = FindObjectOfType<Canvas>().gameObject.GetComponentInChildren<HorizontalLayoutGroup>().gameObject;
-        instantiatedYesButton = Instantiate(yesPrefab);
-        if(noTask != null)
-        {
-            instantiatedNoButton = Instantiate(noPrefab);
-            instantiatedNoButton.transform.SetParent(canvas.transform);
-            instantiatedNoButton.GetComponent<Button>().onClick.AddListener(NoButton);
-        }
-        else
-        {
-            instantiatedYesButton.GetComponentInChildren<TextMeshProUGUI>().text = "Continue";
-        }
-        instantiatedYesButton.transform.SetParent(canvas.transform);
-
-        instantiatedYesButton.GetComponent<Button>().onClick.AddListener(YesButton);
+        
+//        instantiatedYesButton = Instantiate(yesPrefab);
+//        if(noTask != null)
+//        {
+//            instantiatedNoButton = Instantiate(noPrefab);
+//            instantiatedNoButton.transform.SetParent(canvas.transform);
+//            instantiatedNoButton.GetComponent<Button>().onClick.AddListener(NoButton);
+//        }
+//        else
+//        {
+//            instantiatedYesButton.GetComponentInChildren<TextMeshProUGUI>().text = "Continue";
+//        }
+//        instantiatedYesButton.transform.SetParent(canvas.transform);
+//
+//        instantiatedYesButton.GetComponent<Button>().onClick.AddListener(YesButton);
 
 
     }
@@ -59,12 +61,6 @@ public class AnswerTaskData : TaskData
     {
         Destroy(instantiatedNoButton);
         Destroy(instantiatedYesButton);
-
-      //  var players = FindObjectsOfType<PlayerUnit>();
-
-        //var localPlayer = players.First(p => p.isLocalPlayer);
-        
-//       localPlayer.NextButtonClick();
         
         _finished = true;
     }
