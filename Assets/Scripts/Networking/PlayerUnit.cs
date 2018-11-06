@@ -39,6 +39,22 @@ public class PlayerUnit : NetworkBehaviour
 
     }
 
+    public void SetNode(string val)
+    {
+        GameStateManager = GameStateManager == null ? FindObjectOfType<NetworkedGameState>() : GameStateManager;
+        if (isServer)
+        {
+            //rpc
+            GameStateManager.RpcSetNodeID(val);
+            
+        }
+            else
+        {
+            //cmd
+            GameStateManager.CmdSetNodeID(val);
+        }
+    }
+    
     [Command]
     public void CmdSetNodeID(string val)
     {

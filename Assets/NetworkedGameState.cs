@@ -44,7 +44,7 @@ public class NetworkedGameState : NetworkBehaviour
 		
 			YesButton.onClick.AddListener(() => player.CmdTraineeNext());
 		}
-		IdEvent.AddListener(player.CmdSetNodeID);
+		IdEvent.AddListener(player.SetNode);
 		YesButton.interactable = true;
 		NoButton.interactable = true;
 		
@@ -66,6 +66,13 @@ public class NetworkedGameState : NetworkBehaviour
 	
 	[Command]
 	public void CmdSetNodeID(string val)
+	{
+		nodeID = val;
+		RpcSetNodeID(val);
+	}
+	
+	[ClientRpc]
+	public void RpcSetNodeID(string val)
 	{
 		nodeID = val;
 		RpcChangeTrainerIterator();
