@@ -9,7 +9,8 @@ using Utils;
 public class NetworkedGameState : NetworkBehaviour
 {
 	public Button YesButton, NoButton;
-
+	private PlayerUnit playerUnit;
+	
 	[SyncVar] public bool isAwating = false;
 	[SyncVar] public bool isApproved = false;
 	[SyncVar] public int nodeID;
@@ -19,44 +20,32 @@ public class NetworkedGameState : NetworkBehaviour
 		YesButton = GameObject.FindWithTag("CanvasYes").GetComponent<Button>();
 		NoButton = GameObject.FindWithTag("CanvasNo").GetComponent<Button>();
 		StartCoroutine(InitAfter());
+		
 	}
 
 	IEnumerator InitAfter()
 	{
 		yield return new WaitUntil(()=>FindObjectsOfType<PlayerUnit>().Any(p=>p.IsTrainer));
+		
 		var player = FindObjectsOfType<PlayerUnit>().First(p=>p.isLocalPlayer);
 		if (player.IsTrainer)
 		{
 			YesButton.gameObject.SetActive(false);
 			NoButton.gameObject.SetActive(false);
 			
-			YesButton.onClick.AddListener(CmdTrainerApproved);
+			YesButton.onClick.AddListener(player.CmdTrainerApproved);
 		}
 		else
 		{
 			YesButton.gameObject.SetActive(true);
 			NoButton.gameObject.SetActive(false);
 		
-			YesButton.onClick.AddListener(CmdTraineeNext);
+			YesButton.onClick.AddListener(player.CmdTraineeNext);
 		}
 		
 		YesButton.interactable = true;
 		NoButton.interactable = true;
-	}
-
-	
-	[Command]
-	public void CmdTrainerApproved()
-	{
-		CmdSetAwating(true);
-		CmdSetApproved(true);
-	}
-    
-	[Command]
-	public void CmdTraineeNext()
-	{
-		CmdSetAwating(true);
-		CmdSetApproved(false);
+		
 	}
 	
 	[Command]

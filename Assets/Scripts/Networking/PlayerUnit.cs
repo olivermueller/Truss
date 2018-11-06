@@ -40,7 +40,21 @@ public class PlayerUnit : NetworkBehaviour
     }
 
 
+    [Command]
+    public void CmdTrainerApproved()
+    {
+        GameStateManager = GameStateManager == null ? FindObjectOfType<NetworkedGameState>() : GameStateManager;
+        GameStateManager.CmdSetAwating(true);
+        GameStateManager.CmdSetApproved(true);
+    }
     
+    [Command]
+    public void CmdTraineeNext()
+    {
+        GameStateManager = GameStateManager == null ? FindObjectOfType<NetworkedGameState>() : GameStateManager;
+        GameStateManager.CmdSetAwating(true);
+        GameStateManager.CmdSetApproved(false);
+    }
     
     [Command]
     void CmdSpawnMyUnit()
