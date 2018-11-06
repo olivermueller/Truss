@@ -69,7 +69,7 @@ public class NetworkedGameState : NetworkBehaviour
 	}
 
 	[ClientRpc]
-	void RpcUITraineeNext()
+	public void RpcUITraineeNext()
 	{
 		var player = FindObjectsOfType<PlayerUnit>().First(p=>p.isLocalPlayer);
 		
@@ -80,7 +80,7 @@ public class NetworkedGameState : NetworkBehaviour
 	}
 
 	[ClientRpc]
-	void RpcUITrainerApproved()
+	public void RpcUITrainerApproved()
 	{
 		var player = FindObjectsOfType<PlayerUnit>().First(p=>p.isLocalPlayer);
 		
