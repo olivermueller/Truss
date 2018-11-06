@@ -2,10 +2,12 @@
 using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
+using UnityEngine.Events;
 using UnityEngine.Networking;
 using UnityEngine.UI;
 using Utils;
-
+[System.Serializable]
+public class IdEvent : UnityEvent<string> { }
 public class NetworkedGameState : NetworkBehaviour
 {
 	public Button YesButton, NoButton;
@@ -14,7 +16,7 @@ public class NetworkedGameState : NetworkBehaviour
 	[SyncVar] public bool isAwating = false;
 	[SyncVar] public bool isApproved = false;
 	[SyncVar] public string nodeID;
-
+	public IdEvent IdEvent;
 	private void Start()
 	{
 		YesButton = GameObject.FindWithTag("CanvasYes").GetComponent<Button>();
@@ -42,7 +44,7 @@ public class NetworkedGameState : NetworkBehaviour
 		
 			YesButton.onClick.AddListener(() => player.CmdTraineeNext());
 		}
-		
+		IdEvent.AddListener(CmdSetNodeID);
 		YesButton.interactable = true;
 		NoButton.interactable = true;
 		

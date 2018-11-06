@@ -5,6 +5,7 @@ using FullSerializer;
 using TMPro;
 using UnityEditor;
 using UnityEngine;
+using UnityEngine.Events;
 using UnityEngine.Networking;
 
 
@@ -16,6 +17,8 @@ public class TaskData : NetworkBehaviour
     public string _title, _description;
     public TaskData _out, _in;
     public GameObject _animationObject, _baseObject, _instantiatedAnimationObject, _uiObject;
+
+    public UnityEvent NodeIdEvent;
     //position of the goal you are being guided towards
     public Transform goalPosition;
     public void SetNextTask(TaskData next)
@@ -29,7 +32,7 @@ public class TaskData : NetworkBehaviour
         if (!player.IsTrainer)
         {
             var state = FindObjectOfType<NetworkedGameState>();
-            state.YesButton.onClick.AddListener(()=>state.CmdSetNodeID(ID));
+            state.IdEvent.Invoke(ID);
         }
 
         Debug.Log("<color=red>Started " + _title+"</color>" );
