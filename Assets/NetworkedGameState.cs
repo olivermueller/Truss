@@ -13,7 +13,7 @@ public class NetworkedGameState : NetworkBehaviour
 	
 	[SyncVar] public bool isAwating = false;
 	[SyncVar] public bool isApproved = false;
-	[SyncVar] public int nodeID;
+	[SyncVar] public string nodeID;
 
 	private void Start()
 	{
@@ -63,11 +63,23 @@ public class NetworkedGameState : NetworkBehaviour
 	}
 	
 	[Command]
-	public void CmdSetNodeID(int val)
+	public void CmdSetNodeID(string val)
 	{
 		nodeID = val;
+		RpcChangeTrainerIterator();
 	}
 
+	[ClientRpc]
+	public void RpcChangeTrainerIterator()
+	{
+		var player = FindObjectsOfType<PlayerUnit>().First(p=>p.isLocalPlayer);
+		if (player.IsTrainer)
+		{
+			GetComponent<TestingScript>().iterator = TaskModel.Instance.tasks.First(p => p.ID == nodeID);
+			GetComponent<TestingScript>().iterator.StartTask();
+		}
+	}
+	
 	[ClientRpc]
 	public void RpcUITraineeNext()
 	{

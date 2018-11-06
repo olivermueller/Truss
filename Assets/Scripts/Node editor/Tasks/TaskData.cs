@@ -11,6 +11,8 @@ using UnityEngine.Networking;
 [System.Serializable]
 public class TaskData : MonoBehaviour
 {
+    
+    public string ID;
     public string _title, _description;
     public TaskData _out, _in;
     public GameObject _animationObject, _baseObject, _instantiatedAnimationObject, _uiObject;
@@ -23,6 +25,12 @@ public class TaskData : MonoBehaviour
     
     public virtual void StartTask()
     {
+        var player = FindObjectsOfType<PlayerUnit>().First(p=>p.isLocalPlayer);
+        if (!player.IsTrainer)
+        {
+            FindObjectOfType<NetworkedGameState>().CmdSetNodeID(ID);
+        }
+
         Debug.Log("<color=red>Started " + _title+"</color>" );
                      Debug.Log("<color=yellow>Mission: " + _description+"</color>" );
          //        Debug.Log("Started" + _title);

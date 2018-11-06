@@ -337,6 +337,7 @@ using System.Reflection;
         }
         GameObject newTaskObj = new GameObject("Task Object");
         var newTaskData = newTaskObj.AddComponent(tasktype) as TaskData;
+        newTaskData.ID = System.Guid.NewGuid().ToString();
         //newTaskData.Initialize(" ", " ", animationObj, targetObj);
         
        // Debug.Log("TASK MODEL NAME" + TaskModel.Instance.name);

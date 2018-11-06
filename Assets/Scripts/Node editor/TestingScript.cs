@@ -5,12 +5,13 @@ using System.Linq;
 using UnityEngine;
 
 public class TestingScript : MonoBehaviour {
-	TaskData iterator;
+	public TaskData iterator;
 
 	bool isFirst = true;
 	bool finished = false;
 	private NetworkedGameState gameState;
-	
+
+	private bool isTrainer;
 	void Awake () 
 	{
 		Debug.Log("Elements in task list: " + TaskModel.Instance.tasks.Count);
@@ -20,8 +21,13 @@ public class TestingScript : MonoBehaviour {
 	
 	void Update () 
 	{
+		if (isTrainer) return;
 		if(isFirst)
 		{
+			var player = FindObjectsOfType<PlayerUnit>().First(p=>p.isLocalPlayer);
+			isTrainer = player.IsTrainer;
+			
+			if(isTrainer) return;
 			// Check if there is a start task data in the scene and use it as the starting point. If there are none, use the first task that does not have any task pointing at it.
 			iterator = (FindObjectOfType<StartTaskData>()!=null) ? FindObjectOfType<StartTaskData>() : TaskModel.Instance.tasks.First(t => t._in == null);
 			
