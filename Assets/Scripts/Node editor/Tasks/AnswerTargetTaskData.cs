@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
+using UnityEngine.Networking;
 using UnityEngine.UI;
 
 public class AnswerTargetTaskData : TaskData
@@ -22,7 +23,9 @@ public class AnswerTargetTaskData : TaskData
         return noTask;
     }
     
+    [SyncVar]
     private bool? _finished;
+    
     private ParticleSpawner _particleSpawner;
     public override void StartTask()
     {

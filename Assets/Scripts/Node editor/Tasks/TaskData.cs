@@ -5,10 +5,11 @@ using FullSerializer;
 using TMPro;
 using UnityEditor;
 using UnityEngine;
+using UnityEngine.Networking;
 
 
 [System.Serializable]
-public class TaskData : MonoBehaviour
+public class TaskData : NetworkBehaviour
 {
     public string _title, _description;
     public TaskData _out, _in;
@@ -38,8 +39,8 @@ public class TaskData : MonoBehaviour
             }
         }
         
-        GameObject.FindGameObjectWithTag("CanvasTitle").GetComponent<TextMeshProUGUI>().text = _title;
-        GameObject.FindGameObjectWithTag("CanvasDescription").GetComponent<TextMeshProUGUI>().text = _description;
+        //GameObject.FindGameObjectWithTag("CanvasTitle").GetComponent<TextMeshProUGUI>().text = _title;
+        //GameObject.FindGameObjectWithTag("CanvasDescription").GetComponent<TextMeshProUGUI>().text = _description;
         //
     }
     public virtual TaskData NextTask()

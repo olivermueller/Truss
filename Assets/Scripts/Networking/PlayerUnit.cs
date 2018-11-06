@@ -29,7 +29,7 @@ public class PlayerUnit : NetworkBehaviour
         if (isServer)
         {
             RpcTellAllClientsToUpdateRoles(isLocalPlayer);
-            RpcTellAllClientsToUpdateHuds(isLocalPlayer);
+//            RpcTellAllClientsToUpdateHuds(isLocalPlayer);
         }
         
     }
@@ -74,7 +74,7 @@ public class PlayerUnit : NetworkBehaviour
         foreach (var playerUnit in FindObjectsOfType<PlayerUnit>())
         {
             playerUnit.Interactable = !playerUnit.Interactable;
-            playerUnit.RpcTellAllClientsToUpdateHuds(playerUnit.Interactable);
+//            playerUnit.RpcTellAllClientsToUpdateHuds(playerUnit.Interactable);
         }
      
         //It's important to pass the correct updated value as a parameter in your Rpc function!
@@ -82,20 +82,20 @@ public class PlayerUnit : NetworkBehaviour
  
     }
  
-    [ClientRpc] //fn executed on all clients
-    void RpcTellAllClientsToUpdateHuds(bool newValue){
-        Interactable = newValue;
-        //this syncs accurately
-        if (isTrainer)
-        {
-            player1Display.nextButton.interactable = newValue;
-        }
-        else
-        {
-            player2Display.nextButton.interactable = newValue;
-        }
-
-    }
+//    [ClientRpc] //fn executed on all clients
+//    void RpcTellAllClientsToUpdateHuds(bool newValue){
+//        Interactable = newValue;
+//        //this syncs accurately
+//        if (isTrainer)
+//        {
+//            player1Display.nextButton.interactable = newValue;
+//        }
+//        else
+//        {
+//            player2Display.nextButton.interactable = newValue;
+//        }
+//
+//    }
     
     
     
