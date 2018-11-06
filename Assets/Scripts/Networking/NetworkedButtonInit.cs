@@ -10,6 +10,13 @@ public class NetworkedButtonInit : NetworkBehaviour
 	
 	void Start ()
 	{
+
+		StartCoroutine("InitAfter");
+	}
+
+	IEnumerator InitAfter()
+	{
+		yield return new WaitForFixedUpdate();
 		Button button = GetComponent<Button>();
 		button.onClick.RemoveAllListeners();
 		
@@ -23,7 +30,6 @@ public class NetworkedButtonInit : NetworkBehaviour
 		{
 			button.onClick.AddListener(() => player.CmdTraineeNext());
 		}
-		
 	}
 
 }
