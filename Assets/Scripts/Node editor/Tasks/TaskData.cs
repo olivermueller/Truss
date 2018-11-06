@@ -9,7 +9,7 @@ using UnityEngine.Networking;
 
 
 [System.Serializable]
-public class TaskData : MonoBehaviour
+public class TaskData : NetworkBehaviour
 {
     
     public string ID;
@@ -28,7 +28,8 @@ public class TaskData : MonoBehaviour
         var player = FindObjectsOfType<PlayerUnit>().First(p=>p.isLocalPlayer);
         if (!player.IsTrainer)
         {
-            FindObjectOfType<NetworkedGameState>().CmdSetNodeID(ID);
+            var state = FindObjectOfType<NetworkedGameState>();
+            state.YesButton.onClick.AddListener(()=>state.CmdSetNodeID(ID));
         }
 
         Debug.Log("<color=red>Started " + _title+"</color>" );
