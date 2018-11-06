@@ -23,7 +23,6 @@ public class AnswerTargetTaskData : TaskData
         return noTask;
     }
     
-    [SyncVar]
     private bool? _finished;
     
     private ParticleSpawner _particleSpawner;

@@ -60,11 +60,11 @@ public class AnswerTaskData : TaskData
         Destroy(instantiatedNoButton);
         Destroy(instantiatedYesButton);
 
-        var players = FindObjectsOfType<PlayerUnit>();
+      //  var players = FindObjectsOfType<PlayerUnit>();
 
-        var localPlayer = players.First(p => p.isLocalPlayer);
+        //var localPlayer = players.First(p => p.isLocalPlayer);
         
-        localPlayer.NextButtonClick();
+//       localPlayer.NextButtonClick();
         
         _finished = true;
     }

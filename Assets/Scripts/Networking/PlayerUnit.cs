@@ -15,24 +15,80 @@ using UnityEngine.UI;
 
 public class PlayerUnit : NetworkBehaviour
 {
-    [SyncVar]
-    public bool Interactable;
-    //public Button clientHudDisplay;
-    [SyncVar]
-    public bool isTrainer;
+    public GameObject GameStateManagerPrefab;
+    public NetworkedGameState gameStateManager;
 
-    public PlayerDisplayContainer player1Display, player2Display;
-    void Start(){
+    [SyncVar] public bool isTrainer = false;
 
-
-        
-        if (isServer)
+    private void Start()
+    {
+        if (isServer && isLocalPlayer)
         {
-            RpcTellAllClientsToUpdateRoles(isLocalPlayer);
-//            RpcTellAllClientsToUpdateHuds(isLocalPlayer);
+            CmdSpawnMyUnit();
+            RpcTellAllClientsToUpdateRoles(true);
         }
-        
+
     }
+
+    [Command]
+    void CmdSpawnMyUnit()
+    {
+        GameObject go = Instantiate(GameStateManagerPrefab);
+        //go.GetComponent<NetworkIdentity>().AssignClientAuthority( connectionToClient );
+        NetworkServer.SpawnWithClientAuthority(go, connectionToClient);
+    }
+
+    public void TraineeNextButton()
+    {
+        gameStateManager = gameStateManager == null ? FindObjectOfType<NetworkedGameState>() : gameStateManager;
+        gameStateManager.CmdSetApproved(false);
+        gameStateManager.CmdSetAwating(true);
+    }
+
+    public void TrainerApprovedButton()
+    {
+        gameStateManager = gameStateManager == null ? FindObjectOfType<NetworkedGameState>() : gameStateManager;
+        gameStateManager.CmdSetApproved(true);
+        gameStateManager.CmdSetAwating(true);
+    }
+
+
+    void Update()
+    {
+        //Update UI on the trainer side
+        if (isTrainer)
+        {
+            //if (gameStateManager.)
+        }
+        else
+        {
+
+        }
+    }
+
+    [ClientRpc] //fn executed on all clients
+    void RpcTellAllClientsToUpdateRoles(bool newValue)
+    {
+        isTrainer = newValue;
+    }
+//    [SyncVar]
+//    public bool Interactable;
+//    public Button clientHudDisplay;
+//    [SyncVar]
+//    public bool isTrainer;
+//
+//    public PlayerDisplayContainer player1Display, player2Display;
+//    void Start(){
+//
+//
+//        
+//       // if (isServer)
+//       // {
+//          //  RpcTellAllClientsToUpdateRoles(isLocalPlayer);
+////            RpcTellAllClientsToUpdateHuds(isLocalPlayer);
+//       // }
+//        
+//    }
 
 //    void UpdateRoles()
 //    {
@@ -45,43 +101,43 @@ public class PlayerUnit : NetworkBehaviour
 //            player2Display.gameObject.SetActive(true);
 //        }
 //    }
-    
-    public void NextButtonClick()
-    {
-        CmdUpdateServerSyncedVariable();
-    }
 
-    public void SwitchRolesButtonClick()
-    {
-        CmdSwitchRoles();
-    }
+//    public void NextButtonClick()
+//    {
+//        CmdUpdateServerSyncedVariable();
+//    }
+//
+//    public void SwitchRolesButtonClick()
+//    {
+//        CmdSwitchRoles();
+//    }
 
-    [Command] //fn executed only on server
-    void CmdSwitchRoles()
-    {
-        foreach (var playerUnit in FindObjectsOfType<PlayerUnit>())
-        {
-            playerUnit.isTrainer = !playerUnit.isTrainer;
-            playerUnit.RpcTellAllClientsToUpdateRoles(playerUnit.isTrainer);
-        }
+//    [Command] //fn executed only on server
+//    void CmdSwitchRoles()
+//    {
+//        foreach (var playerUnit in FindObjectsOfType<PlayerUnit>())
+//        {
+//            playerUnit.isTrainer = !playerUnit.isTrainer;
+//            playerUnit.RpcTellAllClientsToUpdateRoles(playerUnit.isTrainer);
+//        }
+//
+//        CmdUpdateServerSyncedVariable();
+//    }
+//
+//    [Command] //fn executed only on server
+//    void CmdUpdateServerSyncedVariable(){
+//     
+//        foreach (var playerUnit in FindObjectsOfType<PlayerUnit>())
+//        {
+//            playerUnit.Interactable = !playerUnit.Interactable;
+////            playerUnit.RpcTellAllClientsToUpdateHuds(playerUnit.Interactable);
+//        }
 
-        CmdUpdateServerSyncedVariable();
-    }
-
-    [Command] //fn executed only on server
-    void CmdUpdateServerSyncedVariable(){
-     
-        foreach (var playerUnit in FindObjectsOfType<PlayerUnit>())
-        {
-            playerUnit.Interactable = !playerUnit.Interactable;
-//            playerUnit.RpcTellAllClientsToUpdateHuds(playerUnit.Interactable);
-        }
-     
-        //It's important to pass the correct updated value as a parameter in your Rpc function!
+    //It's important to pass the correct updated value as a parameter in your Rpc function!
 //        RpcTellAllClientsToUpdateHuds(newValue); //or ...(serverSyncedVariable);
- 
-    }
- 
+
+    // }
+
 //    [ClientRpc] //fn executed on all clients
 //    void RpcTellAllClientsToUpdateHuds(bool newValue){
 //        Interactable = newValue;
@@ -96,30 +152,30 @@ public class PlayerUnit : NetworkBehaviour
 //        }
 //
 //    }
-    
-    
-    
-    [ClientRpc] //fn executed on all clients
-    void RpcTellAllClientsToUpdateRoles(bool newValue)
-    {
-        
-        isTrainer = newValue;
-        if (isLocalPlayer)
-        {
-            if (isTrainer)
-            {
-                player1Display.gameObject.SetActive(true);
-                player2Display.gameObject.SetActive(false);
-            }
-            else
-            {
-                player2Display.gameObject.SetActive(true);
-                player1Display.gameObject.SetActive(false);
 
-            }   
-        }
-        
 
-    }
-    
+
+//    [ClientRpc] //fn executed on all clients
+//    void RpcTellAllClientsToUpdateRoles(bool newValue)
+//    {
+//        
+//        isTrainer = newValue;
+//        if (isLocalPlayer)
+//        {
+//            if (isTrainer)
+//            {
+//                player1Display.gameObject.SetActive(true);
+//                player2Display.gameObject.SetActive(false);
+//            }
+//            else
+//            {
+//                player2Display.gameObject.SetActive(true);
+//                player1Display.gameObject.SetActive(false);
+//
+//            }   
+//        }
+//        
+//
+//    }
+
 }

@@ -9,7 +9,7 @@ using UnityEngine.Networking;
 
 
 [System.Serializable]
-public class TaskData : NetworkBehaviour
+public class TaskData : MonoBehaviour
 {
     public string _title, _description;
     public TaskData _out, _in;
