@@ -39,6 +39,8 @@ public class TestingScript : MonoBehaviour {
 				{
 					Debug.Log("Switching Task");
 					iterator = iterator.NextTask();
+					gameState.CmdSetApproved(false);
+					gameState.CmdSetAwating(false);
 				}
 				else if(!val.Value && gameState.isApproved && gameState.isAwating)
 				{

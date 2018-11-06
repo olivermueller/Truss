@@ -35,7 +35,7 @@ public class AnswerTaskData : TaskData
             _particleSpawner.Begin();
         }
         
-        _finished = null;
+//        _finished = null;
         base.StartTask();
         GameObject canvas = FindObjectOfType<Canvas>().gameObject.GetComponentInChildren<HorizontalLayoutGroup>().gameObject;
         
