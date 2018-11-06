@@ -23,6 +23,11 @@ public class PlayerUnit : NetworkBehaviour
 
     [SyncVar] public bool IsTrainer = false;
 
+    private void Awake()
+    {
+        RpcTellAllClientsToUpdateRoles(true);
+    }
+
     private void Start()
     {
         if (isServer && isLocalPlayer)
@@ -34,7 +39,6 @@ public class PlayerUnit : NetworkBehaviour
 //            _nextButton.transform.parent = FindObjectOfType<Canvas>().transform;
 //            _nextButton.onClick.AddListener(() => CmdOnClickSetAwating(true));
             
-            RpcTellAllClientsToUpdateRoles(true);
         }
 
     }
