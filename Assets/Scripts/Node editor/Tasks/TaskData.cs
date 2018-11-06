@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using FullSerializer;
@@ -8,7 +9,7 @@ using UnityEngine;
 using UnityEngine.Events;
 using UnityEngine.Networking;
 
-
+public delegate void Action();
 [System.Serializable]
 public class TaskData : NetworkBehaviour
 {
@@ -32,7 +33,8 @@ public class TaskData : NetworkBehaviour
         if (!player.IsTrainer)
         {
             var state = FindObjectOfType<NetworkedGameState>();
-            state.IdEvent.Invoke(ID);
+            Action hello = () => player.SetNode(ID);
+            hello.Invoke();
         }
 
         Debug.Log("<color=red>Started " + _title+"</color>" );
