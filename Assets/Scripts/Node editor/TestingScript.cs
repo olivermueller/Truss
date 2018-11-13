@@ -45,6 +45,8 @@ public class TestingScript : NetworkBehaviour {
 			{
 				if (val.Value && gameState.isApproved && gameState.isAwating)
 				{
+					gameState.isApproved = false;
+					gameState.isAwating = false;
 					var player = FindObjectsOfType<PlayerUnit>().First(p=>p.isLocalPlayer);
 					Debug.Log("Switching Task");
 					iterator = iterator.NextTask();
