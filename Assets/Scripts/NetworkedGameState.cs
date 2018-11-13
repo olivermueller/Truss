@@ -132,11 +132,11 @@ public class NetworkedGameState : NetworkBehaviour
 		}
 		else
 		{
-//			if (_testingScript == null)
-//			{
-//				_testingScript = GetComponent<TestingScript>();
-//			}
-//
+			if (_testingScript == null)
+			{
+				_testingScript = GetComponent<TestingScript>();
+			}
+
 //			if (_testingScript.iterator != null &&_testingScript.iterator.IsCompleted().HasValue)
 //			{
 //				if (_testingScript.iterator.IsCompleted().Value) value = 1;

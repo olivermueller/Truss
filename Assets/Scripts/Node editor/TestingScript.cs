@@ -66,7 +66,7 @@ public class TestingScript : NetworkBehaviour {
 					player.CmdResetBools();
 					//player.TraineeNext();
 				}
-				else if(!val.Value && gameState.isApproved && gameState.isAwating)
+				else if(val.HasValue && !val.Value && gameState.isApproved && gameState.isAwating)
 				{
 					Debug.Log("no task found");
 					var answerTaskData = (iterator as AnswerTaskData);
