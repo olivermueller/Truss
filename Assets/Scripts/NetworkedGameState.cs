@@ -56,10 +56,11 @@ public class NetworkedGameState : NetworkBehaviour
 		isAwating = val;
 		RpcUITraineeNext();
 	}
+	
 	[Command]
-	public void CmdSetTestString(string val)
+	public void CmdSetNodeId(string val)
 	{
-		testString = val;
+		nodeID = val;
 	}
 	
 	[Command]
@@ -67,20 +68,6 @@ public class NetworkedGameState : NetworkBehaviour
 	{
 		isApproved = val;
 		RpcUITrainerApproved();
-	}
-	
-	[Command]
-	public void CmdSetNodeID(string val)
-	{
-		nodeID = val;
-		//RpcSetNodeID(val);
-	}
-	
-	[ClientRpc]
-	public void RpcSetNodeID(string val)
-	{
-		nodeID = val;
-		RpcChangeTrainerIterator();
 	}
 
 	[ClientRpc]

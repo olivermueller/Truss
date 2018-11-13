@@ -42,18 +42,7 @@ public class PlayerUnit : NetworkBehaviour
     public void SetNode(string val)
     {
         GameStateManager = GameStateManager == null ? FindObjectOfType<NetworkedGameState>() : GameStateManager;
-//        if (isServer)
-//        {
-//            //rpc
-//            //GameStateManager.RpcSetNodeID(val);
-//            
-//        }
-//            else
-//        {
-//            //cmd
-//            
-//        }
-        GameStateManager.CmdSetNodeID(val);
+        GameStateManager.CmdSetNodeId(val);
     }
 
     public void TraineeNext()
@@ -73,13 +62,7 @@ public class PlayerUnit : NetworkBehaviour
     }
     
 
-    [Command]
-    public void CmdSetNodeID(string val)
-    {
-        GameStateManager = GameStateManager == null ? FindObjectOfType<NetworkedGameState>() : GameStateManager;
-        GameStateManager.CmdSetNodeID(val);
-        GameStateManager.RpcChangeTrainerIterator();
-    }
+    
     [Command]
     public void CmdTrainerApproved()
     {
@@ -91,7 +74,7 @@ public class PlayerUnit : NetworkBehaviour
     public void CmdTraineeTestString()
     {
         GameStateManager = GameStateManager == null ? FindObjectOfType<NetworkedGameState>() : GameStateManager;
-        GameStateManager.CmdSetTestString("Hello" + Random.Range(0, 1500));
+        GameStateManager.CmdSetNodeId("Hello" + Random.Range(0, 1500));
     }
     
     [Command]
