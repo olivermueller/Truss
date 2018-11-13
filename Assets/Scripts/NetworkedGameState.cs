@@ -11,6 +11,8 @@ public class NetworkedGameState : NetworkBehaviour
 {
 	public Button YesButton, NoButton;
 	private PlayerUnit playerUnit;
+	private TestingScript _testingScript;
+	
 	
 	[SyncVar] public bool isAwating = false;
 	[SyncVar] public bool isApproved = false;
@@ -128,9 +130,9 @@ public class NetworkedGameState : NetworkBehaviour
 		}
 		else
 		{
-			if (!isApproved && !isAwating)
+			if (!isApproved && !isAwating && _testingScript.iterator.IsCompleted().HasValue)
 			{
-				YesButton.gameObject.SetActive(true);
+				YesButton.gameObject.SetActive(_testingScript.iterator.IsCompleted().Value);
 			}
 			else
 			{
