@@ -50,7 +50,7 @@ public class TestingScript : MonoBehaviour {
 					gameState.isAwating = false;
 					
 					var player = FindObjectsOfType<PlayerUnit>().First(p=>p.isLocalPlayer);
-					//player.TraineeNext();
+					player.TraineeNext();
 				}
 				else if(!val.Value && gameState.isApproved && gameState.isAwating)
 				{

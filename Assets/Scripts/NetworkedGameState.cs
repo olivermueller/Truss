@@ -54,7 +54,7 @@ public class NetworkedGameState : NetworkBehaviour
 	public void CmdSetAwating(bool val)
 	{
 		isAwating = val;
-		RpcUITraineeNext();
+		//RpcUITraineeNext();
 	}
 	
 	[Command]
@@ -67,7 +67,7 @@ public class NetworkedGameState : NetworkBehaviour
 	public void CmdSetApproved(bool val)
 	{
 		isApproved = val;
-		RpcUITrainerApproved();
+		//RpcUITrainerApproved();
 	}
 
 	[ClientRpc]
@@ -107,5 +107,35 @@ public class NetworkedGameState : NetworkBehaviour
 			YesButton.gameObject.SetActive(!isApproved);
 		else
 			YesButton.gameObject.SetActive(isApproved);
+	}
+
+	private PlayerUnit player;
+	
+	private void Update()
+	{
+		if(!player) player = FindObjectsOfType<PlayerUnit>().First(p=>p.isLocalPlayer);
+
+		if (player.IsTrainer)
+		{
+			if (isAwating && !isApproved)
+			{
+				YesButton.gameObject.SetActive(true);
+			}
+			else
+			{
+				YesButton.gameObject.SetActive(false);
+			}
+		}
+		else
+		{
+			if (!isApproved && !isAwating)
+			{
+				YesButton.gameObject.SetActive(true);
+			}
+			else
+			{
+				YesButton.gameObject.SetActive(false);
+			}
+		}
 	}
 }
