@@ -29,7 +29,7 @@ public class AnswerTargetTaskData : TaskData
     public override void StartTask()
     {
         _baseObject.GetComponent<MissionTrackableEventHandler>().OnTrackableStateChange.AddListener(IsTargetActive);
-        CreateButtons(true);
+        //CreateButtons(true);
         if (goalPosition)
         {
             _particleSpawner = Camera.main.gameObject.AddComponent<ParticleSpawner>();
@@ -95,6 +95,6 @@ public class AnswerTargetTaskData : TaskData
     {
         targetActive = active;
         Debug.LogWarning("Callback made on " + _title + "Value: " + active);
-//        CreateButtons(active);
+        CreateButtons(active);
     }
 }
