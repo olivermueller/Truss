@@ -86,6 +86,14 @@ public class PlayerUnit : NetworkBehaviour
     }
     
     [Command]
+    public void CmdResetBools()
+    {
+        GameStateManager = GameStateManager == null ? FindObjectOfType<NetworkedGameState>() : GameStateManager;
+        GameStateManager.CmdSetApproved(false);
+        GameStateManager.CmdSetAwating(false);
+    }
+    
+    [Command]
     void CmdSpawnMyUnit()
     {
         GameObject go = Instantiate(GameStateManagerPrefab);

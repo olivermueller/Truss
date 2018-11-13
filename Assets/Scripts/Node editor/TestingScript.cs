@@ -47,11 +47,10 @@ public class TestingScript : NetworkBehaviour {
 				{
 					Debug.Log("Switching Task");
 					//iterator = iterator.NextTask();
-
-					if(isServer)
-						CmdResetBools();
+					
 					
 					var player = FindObjectsOfType<PlayerUnit>().First(p=>p.isLocalPlayer);
+					player.CmdResetBools();
 					//player.TraineeNext();
 				}
 				else if(!val.Value && gameState.isApproved && gameState.isAwating)
@@ -72,10 +71,5 @@ public class TestingScript : NetworkBehaviour {
 		}
 	}
 
-	[Command]
-	public void CmdResetBools()
-	{
-		gameState.CmdSetApproved(false);
-		gameState.CmdSetAwating(false);
-	}
+	
 }
