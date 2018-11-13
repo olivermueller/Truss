@@ -130,7 +130,11 @@ public class NetworkedGameState : NetworkBehaviour
 		}
 		else
 		{
-			if (!isApproved && !isAwating && _testingScript.iterator.IsCompleted().HasValue)
+			if (_testingScript == null)
+			{
+				_testingScript = GetComponent<TestingScript>();
+			}
+			if (!isApproved && !isAwating && _testingScript.iterator != null && _testingScript.iterator.IsCompleted().HasValue)
 			{
 				YesButton.gameObject.SetActive(_testingScript.iterator.IsCompleted().Value);
 			}
