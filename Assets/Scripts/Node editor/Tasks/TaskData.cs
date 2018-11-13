@@ -33,7 +33,7 @@ public class TaskData : NetworkBehaviour
         if (!player.IsTrainer)
         {
             var state = FindObjectOfType<NetworkedGameState>();
-            player.SetNode(ID);
+//            player.SetNode(ID);
         }
 
         Debug.Log("<color=red>Started " + _title+"</color>" );

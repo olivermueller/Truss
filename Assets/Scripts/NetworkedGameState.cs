@@ -15,6 +15,7 @@ public class NetworkedGameState : NetworkBehaviour
 	[SyncVar] public bool isAwating = false;
 	[SyncVar] public bool isApproved = false;
 	[SyncVar] public string nodeID;
+	[SyncVar] public string testString;
 	private void Start()
 	{
 		YesButton = GameObject.FindWithTag("CanvasYes").GetComponent<Button>();
@@ -41,6 +42,7 @@ public class NetworkedGameState : NetworkBehaviour
 			NoButton.gameObject.SetActive(false);
 		
 			YesButton.onClick.AddListener(() => player.CmdTraineeNext());
+			YesButton.onClick.AddListener(() => player.CmdTraineeTestString());
 		}
 //		IdEvent.AddListener(player.SetNode);
 		YesButton.interactable = true;
@@ -53,6 +55,11 @@ public class NetworkedGameState : NetworkBehaviour
 	{
 		isAwating = val;
 		RpcUITraineeNext();
+	}
+	[Command]
+	public void CmdSetTestString(string val)
+	{
+		testString = val;
 	}
 	
 	[Command]

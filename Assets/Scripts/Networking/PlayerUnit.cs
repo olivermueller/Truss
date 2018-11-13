@@ -87,6 +87,12 @@ public class PlayerUnit : NetworkBehaviour
         GameStateManager.CmdSetAwating(true);
         GameStateManager.CmdSetApproved(true);
     }
+    [Command]
+    public void CmdTraineeTestString()
+    {
+        GameStateManager = GameStateManager == null ? FindObjectOfType<NetworkedGameState>() : GameStateManager;
+        GameStateManager.CmdSetTestString("Hello" + Random.Range(0, 1500));
+    }
     
     [Command]
     public void CmdTraineeNext()
