@@ -72,10 +72,5 @@ public class TestingScript : NetworkBehaviour {
 		}
 	}
 
-	[Command]
-	public void CmdResetBools()
-	{
-		gameState.CmdSetApproved(false);
-		gameState.CmdSetAwating(false);
-	}
+	
 }

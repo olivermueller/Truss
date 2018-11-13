@@ -139,9 +139,16 @@ public class NetworkedGameState : NetworkBehaviour
 
 			if (isAwating && isApproved)
 			{
-				GetComponent<TestingScript>().CmdResetBools();
+				CmdResetBools();
 			}
 			
 		}
+	}
+	
+	[Command]
+	public void CmdResetBools()
+	{
+		CmdSetApproved(false);
+		CmdSetAwating(false);
 	}
 }
