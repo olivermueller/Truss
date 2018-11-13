@@ -55,7 +55,7 @@ public class TestingScript : NetworkBehaviour {
 			var val = iterator.IsCompleted();
 			if (val.HasValue)
 			{
-				if (val.Value && gameState.isApproved && gameState.isAwating)
+				if ( gameState.isApproved && gameState.isAwating)
 				{
 					gameState.isApproved = false;
 					gameState.isAwating = false;
