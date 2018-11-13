@@ -29,12 +29,6 @@ public class TaskData : NetworkBehaviour
     
     public virtual void StartTask()
     {
-        var player = FindObjectsOfType<PlayerUnit>().First(p=>p.isLocalPlayer);
-        if (!player.IsTrainer)
-        {
-            var state = FindObjectOfType<NetworkedGameState>();
-//            player.SetNode(ID);
-        }
 
         Debug.Log("<color=red>Started " + _title+"</color>" );
                      Debug.Log("<color=yellow>Mission: " + _description+"</color>" );

@@ -22,7 +22,19 @@ public class TestingScript : NetworkBehaviour {
 	
 	void Update () 
 	{
-		if (isTrainer) return;
+		if (isTrainer)
+		{
+			if(gameState.nodeID == "0")
+				return;
+			if (iterator == null || iterator.ID != gameState.nodeID)
+			{
+				iterator = TaskModel.Instance.tasks.First(p => p.ID == gameState.nodeID);
+				iterator.StartTask();
+			}
+
+			return;
+		}
+
 		if(!FindObjectsOfType<PlayerUnit>().Any(p=>p.IsTrainer)) return;
 		if(isFirst)
 		{
