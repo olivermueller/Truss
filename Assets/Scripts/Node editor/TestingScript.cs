@@ -3,8 +3,9 @@ using System.Collections.Generic;
 using System.Globalization;
 using System.Linq;
 using UnityEngine;
+using UnityEngine.Networking;
 
-public class TestingScript : MonoBehaviour {
+public class TestingScript : NetworkBehaviour {
 	public TaskData iterator;
 
 	bool isFirst = true;
@@ -46,10 +47,9 @@ public class TestingScript : MonoBehaviour {
 				{
 					Debug.Log("Switching Task");
 					//iterator = iterator.NextTask();
-					
-				
-					gameState.CmdSetApproved(false);
-					gameState.CmdSetAwating(false);
+
+
+					CmdResetBools();
 					
 					var player = FindObjectsOfType<PlayerUnit>().First(p=>p.isLocalPlayer);
 					//player.TraineeNext();
@@ -70,6 +70,12 @@ public class TestingScript : MonoBehaviour {
 			//Debug.Log("All Tasks completed!");
 			
 		}
-	} 
+	}
 
+	[Command]
+	void CmdResetBools()
+	{
+		gameState.CmdSetApproved(false);
+		gameState.CmdSetAwating(false);
+	}
 }
