@@ -49,7 +49,7 @@ public class TestingScript : NetworkBehaviour {
 					//iterator = iterator.NextTask();
 
 
-					CmdResetBools();
+					//CmdResetBools();
 					
 					var player = FindObjectsOfType<PlayerUnit>().First(p=>p.isLocalPlayer);
 					//player.TraineeNext();
@@ -73,7 +73,7 @@ public class TestingScript : NetworkBehaviour {
 	}
 
 	[Command]
-	void CmdResetBools()
+	public void CmdResetBools()
 	{
 		gameState.CmdSetApproved(false);
 		gameState.CmdSetAwating(false);

@@ -136,6 +136,12 @@ public class NetworkedGameState : NetworkBehaviour
 			{
 				YesButton.gameObject.SetActive(false);
 			}
+
+			if (isAwating && isApproved)
+			{
+				GetComponent<TestingScript>().CmdResetBools();
+			}
+			
 		}
 	}
 }
