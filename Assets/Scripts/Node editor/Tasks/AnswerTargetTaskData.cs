@@ -93,8 +93,14 @@ public class AnswerTargetTaskData : TaskData
     }
     public void IsTargetActive(bool active)
     {
-        targetActive = active;
-        Debug.LogWarning("Callback made on " + _title + "Value: " + active);
-        CreateButtons(active);
+        if (active)
+            _finished = true;
+        else
+            _finished = null;
+        
+        //USE CREATEBUTTONS FOR A UI POPUP MAYBE
+//        targetActive = active;
+//        Debug.LogWarning("Callback made on " + _title + "Value: " + active);
+//        CreateButtons(active);
     }
 }
