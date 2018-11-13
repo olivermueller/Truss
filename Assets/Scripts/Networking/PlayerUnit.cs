@@ -45,7 +45,7 @@ public class PlayerUnit : NetworkBehaviour
         if (isServer)
         {
             //rpc
-            GameStateManager.RpcSetNodeID(val);
+            //GameStateManager.RpcSetNodeID(val);
             
         }
             else

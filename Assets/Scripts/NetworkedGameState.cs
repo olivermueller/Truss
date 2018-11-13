@@ -7,7 +7,6 @@ using UnityEngine.Networking;
 using UnityEngine.UI;
 using Utils;
 [System.Serializable]
-public class IdEvent : UnityEvent<string> { }
 public class NetworkedGameState : NetworkBehaviour
 {
 	public Button YesButton, NoButton;
@@ -16,7 +15,6 @@ public class NetworkedGameState : NetworkBehaviour
 	[SyncVar] public bool isAwating = false;
 	[SyncVar] public bool isApproved = false;
 	[SyncVar] public string nodeID;
-	public IdEvent IdEvent;
 	private void Start()
 	{
 		YesButton = GameObject.FindWithTag("CanvasYes").GetComponent<Button>();
@@ -68,7 +66,7 @@ public class NetworkedGameState : NetworkBehaviour
 	public void CmdSetNodeID(string val)
 	{
 		nodeID = val;
-		RpcSetNodeID(val);
+		//RpcSetNodeID(val);
 	}
 	
 	[ClientRpc]
