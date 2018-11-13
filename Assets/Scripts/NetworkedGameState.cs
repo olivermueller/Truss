@@ -132,23 +132,23 @@ public class NetworkedGameState : NetworkBehaviour
 		}
 		else
 		{
-			if (_testingScript == null)
-			{
-				_testingScript = GetComponent<TestingScript>();
-			}
-
-			if (_testingScript.iterator != null &&_testingScript.iterator.IsCompleted().HasValue)
-			{
-				if (_testingScript.iterator.IsCompleted().Value) value = 1;
-				else
-				{
-					value = -1;
-				}
-			}
-			else if (_testingScript.iterator != null)
-			{
-				value = 0;
-			}
+//			if (_testingScript == null)
+//			{
+//				_testingScript = GetComponent<TestingScript>();
+//			}
+//
+//			if (_testingScript.iterator != null &&_testingScript.iterator.IsCompleted().HasValue)
+//			{
+//				if (_testingScript.iterator.IsCompleted().Value) value = 1;
+//				else
+//				{
+//					value = -1;
+//				}
+//			}
+//			else if (_testingScript.iterator != null)
+//			{
+//				value = 0;
+//			}
 			if (!isApproved && !isAwating && _testingScript.iterator != null && _testingScript.iterator.IsCompleted().HasValue)
 			{
 				YesButton.gameObject.SetActive(_testingScript.iterator.IsCompleted().Value);
