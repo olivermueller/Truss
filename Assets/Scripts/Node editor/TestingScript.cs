@@ -53,9 +53,9 @@ public class TestingScript : NetworkBehaviour {
 		{
 			//Debug.Log("iterator type: " + iterator.GetType().FullName);
 			var val = iterator.IsCompleted();
-			//if (val.HasValue)
+			if (val.HasValue)
 			{
-				if (!val.HasValue && gameState.isApproved && gameState.isAwating)
+				if (val.Value && gameState.isApproved && gameState.isAwating)
 				{
 					gameState.isApproved = false;
 					gameState.isAwating = false;
@@ -66,7 +66,7 @@ public class TestingScript : NetworkBehaviour {
 					player.CmdResetBools();
 					//player.TraineeNext();
 				}
-				else if(val.HasValue && !val.Value && gameState.isApproved && gameState.isAwating)
+				else if(!val.Value && gameState.isApproved && gameState.isAwating)
 				{
 					Debug.Log("no task found");
 					var answerTaskData = (iterator as AnswerTaskData);
