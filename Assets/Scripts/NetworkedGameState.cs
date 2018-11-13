@@ -125,10 +125,7 @@ public class NetworkedGameState : NetworkBehaviour
 			{
 				YesButton.gameObject.SetActive(false);
 			}
-			if (isAwating && isApproved)
-			{
-				CmdResetBools();
-			}
+
 		}
 		else
 		{
@@ -145,10 +142,5 @@ public class NetworkedGameState : NetworkBehaviour
 		
 	}
 	
-	[Command]
-	public void CmdResetBools()
-	{
-		CmdSetApproved(false);
-		CmdSetAwating(false);
-	}
+	
 }
