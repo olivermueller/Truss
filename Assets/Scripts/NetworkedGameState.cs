@@ -42,7 +42,6 @@ public class NetworkedGameState : NetworkBehaviour
 			NoButton.gameObject.SetActive(false);
 		
 			YesButton.onClick.AddListener(() => player.CmdTraineeNext());
-			YesButton.onClick.AddListener(() => player.CmdTraineeTestString());
 		}
 //		IdEvent.AddListener(player.SetNode);
 		YesButton.interactable = true;

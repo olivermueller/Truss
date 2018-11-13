@@ -32,8 +32,8 @@ public class TestingScript : NetworkBehaviour {
 			if(isTrainer) return;
 			// Check if there is a start task data in the scene and use it as the starting point. If there are none, use the first task that does not have any task pointing at it.
 			iterator = (FindObjectOfType<StartTaskData>()!=null) ? FindObjectOfType<StartTaskData>() : TaskModel.Instance.tasks.First(t => t._in == null);
-			
 			iterator = iterator.NextTask();
+			player.CmdSetId(iterator.ID);
 			isFirst = false;
 		}
 
@@ -45,11 +45,10 @@ public class TestingScript : NetworkBehaviour {
 			{
 				if (val.Value && gameState.isApproved && gameState.isAwating)
 				{
-					Debug.Log("Switching Task");
-					//iterator = iterator.NextTask();
-					
-					
 					var player = FindObjectsOfType<PlayerUnit>().First(p=>p.isLocalPlayer);
+					Debug.Log("Switching Task");
+					iterator = iterator.NextTask();
+					player.CmdSetId(iterator.ID);
 					player.CmdResetBools();
 					//player.TraineeNext();
 				}

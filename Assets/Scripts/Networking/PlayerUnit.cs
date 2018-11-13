@@ -71,10 +71,10 @@ public class PlayerUnit : NetworkBehaviour
         GameStateManager.CmdSetApproved(true);
     }
     [Command]
-    public void CmdTraineeTestString()
+    public void CmdSetId(string val)
     {
         GameStateManager = GameStateManager == null ? FindObjectOfType<NetworkedGameState>() : GameStateManager;
-        GameStateManager.CmdSetNodeId("Hello" + Random.Range(0, 1500));
+        GameStateManager.CmdSetNodeId(val);
     }
     
     [Command]
