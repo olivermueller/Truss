@@ -45,12 +45,14 @@ public class TestingScript : MonoBehaviour {
 				if (val.Value && gameState.isApproved && gameState.isAwating)
 				{
 					Debug.Log("Switching Task");
-					iterator = iterator.NextTask();
-					gameState.isApproved = false;
-					gameState.isAwating = false;
+					//iterator = iterator.NextTask();
+					
+				
+					gameState.CmdSetApproved(false);
+					gameState.CmdSetAwating(false);
 					
 					var player = FindObjectsOfType<PlayerUnit>().First(p=>p.isLocalPlayer);
-					player.TraineeNext();
+					//player.TraineeNext();
 				}
 				else if(!val.Value && gameState.isApproved && gameState.isAwating)
 				{
