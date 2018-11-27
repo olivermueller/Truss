@@ -37,7 +37,7 @@ public class AnswerTaskData : TaskData
         
 //        _finished = null;
         base.StartTask();
-        GameObject canvas = FindObjectOfType<Canvas>().gameObject.GetComponentInChildren<HorizontalLayoutGroup>().gameObject;
+      // GameObject canvas = FindObjectOfType<Canvas>().gameObject.GetComponentInChildren<HorizontalLayoutGroup>().gameObject;
         
 //        instantiatedYesButton = Instantiate(yesPrefab);
 //        if(noTask != null)

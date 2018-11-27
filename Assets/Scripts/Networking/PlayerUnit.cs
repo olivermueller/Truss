@@ -17,7 +17,7 @@ public class PlayerUnit : NetworkBehaviour
 {
     public GameObject GameStateManagerPrefab;
     public NetworkedGameState GameStateManager;
-    public GameObject NextButtonPrefab;
+    //public GameObject NextButtonPrefab;
 
     private Button _nextButton;
 
@@ -25,18 +25,23 @@ public class PlayerUnit : NetworkBehaviour
 
     private void Start()
     {
+        
+        StartCoroutine(OnReady());
+
+    }
+
+    IEnumerator OnReady()
+    {
         if (isServer && isLocalPlayer)
         {
+            yield return new WaitUntil(()=>connectionToClient.isReady);
             CmdSpawnMyUnit();
-            
-            
 //            _nextButton = Instantiate(NextButtonPrefab).GetComponent<Button>();
 //            _nextButton.transform.parent = FindObjectOfType<Canvas>().transform;
 //            _nextButton.onClick.AddListener(() => CmdOnClickSetAwating(true));
             
             RpcTellAllClientsToUpdateRoles(true);
         }
-
     }
 
     public void SetNode(string val)
@@ -99,6 +104,8 @@ public class PlayerUnit : NetworkBehaviour
         GameObject go = Instantiate(GameStateManagerPrefab);
         //go.GetComponent<NetworkIdentity>().AssignClientAuthority( connectionToClient );
         NetworkServer.SpawnWithClientAuthority(go, connectionToClient);
+        print("Spawned with authority");
+
     }
 
     public void TraineeNextButton()
@@ -132,6 +139,7 @@ public class PlayerUnit : NetworkBehaviour
     [ClientRpc] //fn executed on all clients
     void RpcTellAllClientsToUpdateRoles(bool newValue)
     {
+        print("Called UpdateRoles");
         IsTrainer = newValue;
     }
 //    [SyncVar]
