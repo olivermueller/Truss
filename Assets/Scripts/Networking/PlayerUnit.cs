@@ -17,6 +17,8 @@ public class PlayerUnit : NetworkBehaviour
 {
     public GameObject GameStateManagerPrefab;
     public NetworkedGameState GameStateManager;
+
+    public GameObject trainerUI, traineeUI;
     //public GameObject NextButtonPrefab;
 
     private Button _nextButton;
@@ -39,8 +41,9 @@ public class PlayerUnit : NetworkBehaviour
 //            _nextButton = Instantiate(NextButtonPrefab).GetComponent<Button>();
 //            _nextButton.transform.parent = FindObjectOfType<Canvas>().transform;
 //            _nextButton.onClick.AddListener(() => CmdOnClickSetAwating(true));
+              RpcTellAllClientsToUpdateRoles(true);
             
-            RpcTellAllClientsToUpdateRoles(true);
+            
         }
     }
 
@@ -141,6 +144,10 @@ public class PlayerUnit : NetworkBehaviour
     {
         print("Called UpdateRoles");
         IsTrainer = newValue;
+        if(IsTrainer)
+            trainerUI.SetActive(true);
+        else
+            traineeUI.SetActive(true);
     }
 //    [SyncVar]
 //    public bool Interactable;

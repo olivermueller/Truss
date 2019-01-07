@@ -285,7 +285,7 @@
           <e p="test.cs" t="Include" />
           <e p="UIManager.cs" t="Include" />
           <e p="Utilities.cs" t="Include" />
-          <e p="Verb.cs" t="Include" />
+          <e p="Verb1.cs" t="Include" />
           <e p="XAPIStatement.cs" t="Include" />
         </e>
         <e p="Source" t="Include">
@@ -391,6 +391,61 @@
           <e p="Sprites" t="Include">
             <e p="EmojiOne Attribution.txt" t="Include" />
           </e>
+        </e>
+        <e p="TinCan" t="Include">
+          <e p="About.cs" t="Include" />
+          <e p="Activity.cs" t="Include" />
+          <e p="ActivityDefinition.cs" t="Include" />
+          <e p="Agent.cs" t="Include" />
+          <e p="AgentAccount.cs" t="Include" />
+          <e p="Context.cs" t="Include" />
+          <e p="ContextActivities.cs" t="Include" />
+          <e p="Documents" t="Include">
+            <e p="ActivityProfileDocument.cs" t="Include" />
+            <e p="AgentProfileDocument.cs" t="Include" />
+            <e p="Document.cs" t="Include" />
+            <e p="StateDocument.cs" t="Include" />
+          </e>
+          <e p="Extensions.cs" t="Include" />
+          <e p="Group.cs" t="Include" />
+          <e p="ILRS.cs" t="Include" />
+          <e p="InteractionComponent.cs" t="Include" />
+          <e p="InteractionType.cs" t="Include" />
+          <e p="json" t="Include">
+            <e p="IJsonModel.cs" t="Include" />
+            <e p="JsonModel.cs" t="Include" />
+            <e p="StringOfJSON.cs" t="Include" />
+          </e>
+          <e p="LanguageMap.cs" t="Include" />
+          <e p="LRSResponses" t="Include">
+            <e p="AboutLRSResponse.cs" t="Include" />
+            <e p="ActivityProfileLRSResponse.cs" t="Include" />
+            <e p="AgentProfileLRSResponse.cs" t="Include" />
+            <e p="LRSResponse.cs" t="Include" />
+            <e p="ProfileKeysLRSResponse.cs" t="Include" />
+            <e p="StateLRSResponse.cs" t="Include" />
+            <e p="StatementLRSResponse.cs" t="Include" />
+            <e p="StatementsResultLRSResponse.cs" t="Include" />
+          </e>
+          <e p="Properties" t="Include">
+            <e p="AssemblyInfo.cs" t="Include" />
+          </e>
+          <e p="RemoteUnityLRS.cs" t="Include" />
+          <e p="Result.cs" t="Include" />
+          <e p="Score.cs" t="Include" />
+          <e p="Statement.cs" t="Include" />
+          <e p="StatementBase.cs" t="Include" />
+          <e p="StatementRef.cs" t="Include" />
+          <e p="StatementsQuery.cs" t="Include" />
+          <e p="StatementsQueryResultFormat.cs" t="Include" />
+          <e p="StatementsResult.cs" t="Include" />
+          <e p="StatementTarget.cs" t="Include" />
+          <e p="SubStatement.cs" t="Include" />
+          <e p="TCAPIVersion.cs" t="Include" />
+          <e p="Verb.cs" t="Include" />
+        </e>
+        <e p="TinCanExample" t="Include">
+          <e p="TestTinCan.cs" t="Include" />
         </e>
         <e p="UnityARKitPlugin" t="Include">
           <e p="ARKitRemote" t="Include">

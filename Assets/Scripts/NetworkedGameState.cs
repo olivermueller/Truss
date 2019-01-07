@@ -22,8 +22,7 @@ public class NetworkedGameState : NetworkBehaviour
 	[SyncVar] public string testString;
 	private void Start()
 	{
-		YesButton = GameObject.FindWithTag("CanvasYes").GetComponent<Button>();
-		NoButton = GameObject.FindWithTag("CanvasNo").GetComponent<Button>();
+		
 		StartCoroutine(InitAfter());
 		
 	}
@@ -33,6 +32,8 @@ public class NetworkedGameState : NetworkBehaviour
 		yield return new WaitUntil(()=>FindObjectsOfType<PlayerUnit>().Any(p=>p.IsTrainer));
 		
 		var player = FindObjectsOfType<PlayerUnit>().First(p=>p.isLocalPlayer);
+		YesButton = GameObject.FindWithTag("CanvasYes").GetComponent<Button>();
+		NoButton = GameObject.FindWithTag("CanvasNo").GetComponent<Button>();
 		if (player.IsTrainer)
 		{
 			YesButton.gameObject.SetActive(false);
@@ -116,7 +117,12 @@ public class NetworkedGameState : NetworkBehaviour
 	
 	private void Update()
 	{
-		if(!player) player = FindObjectsOfType<PlayerUnit>().First(p=>p.isLocalPlayer);
+		if (!player)
+		{
+			YesButton = GameObject.FindWithTag("CanvasYes").GetComponent<Button>();
+			NoButton = GameObject.FindWithTag("CanvasNo").GetComponent<Button>();
+			player = FindObjectsOfType<PlayerUnit>().First(p=>p.isLocalPlayer);
+		}
 
 		if (player.IsTrainer)
 		{
