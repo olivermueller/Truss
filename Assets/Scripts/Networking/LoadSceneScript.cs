@@ -8,9 +8,7 @@ public class LoadSceneScript : NetworkBehaviour {
 
 	public void LoadScene(int sceneToLoad)
 	{
-		connectionToServer.Disconnect();
-		connectionToServer.Dispose();
-		NetworkServer.DestroyPlayersForConnection(connectionToServer);
+		NetworkManager.singleton.StopHost();
 
 	}
 }

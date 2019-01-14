@@ -243,6 +243,7 @@ GameObject:
   m_Component:
   - component: {fileID: 224219957534676104}
   - component: {fileID: 114079766443929728}
+  - component: {fileID: 114499377163928368}
   m_Layer: 5
   m_Name: EndScreen
   m_TagString: EndScreen
@@ -1383,6 +1384,38 @@ MonoBehaviour:
     m_VerticalOverflow: 0
     m_LineSpacing: 1
   m_Text: WAIT FOR TRAINER...
+--- !u!114 &114499377163928368
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1369260548573938}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 372142912, guid: dc443db3e92b4983b9738c1131f555cb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_SceneId:
+    m_Value: 0
+  m_AssetId:
+    i0: 122
+    i1: 194
+    i2: 190
+    i3: 104
+    i4: 216
+    i5: 205
+    i6: 100
+    i7: 77
+    i8: 26
+    i9: 35
+    i10: 77
+    i11: 128
+    i12: 112
+    i13: 162
+    i14: 177
+    i15: 96
+  m_ServerOnly: 1
+  m_LocalPlayerAuthority: 0
 --- !u!114 &114538679427666602
 MonoBehaviour:
   m_ObjectHideFlags: 1
