@@ -42,14 +42,8 @@ public class PlayerUnit : NetworkBehaviour
 //            _nextButton.transform.parent = FindObjectOfType<Canvas>().transform;
 //            _nextButton.onClick.AddListener(() => CmdOnClickSetAwating(true));
             RpcTellAllClientsToUpdateRoles(true);
-            StartCoroutine(Spawn());
+            CmdSpawnMyUnit();
         }
-    }
-
-    IEnumerator Spawn()
-    {
-        yield return new WaitForSeconds(4);
-        CmdSpawnMyUnit();
     }
 
     public void SetNode(string val)
