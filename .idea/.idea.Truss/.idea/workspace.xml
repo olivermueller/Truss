@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="3a9f6f49-2e40-4cfd-9324-9b233b559f23" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Networking/LobbyUIStarter.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Networking/LobbyUIStarter.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Networking/LoadSceneScript.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Networking/LoadSceneScript.cs" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -153,29 +153,29 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="LobbyUIStarter.cs" pinned="false" current-in-tab="true">
+      <file leaf-file-name="LobbyUIStarter.cs" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Assets/Scripts/Networking/LobbyUIStarter.cs">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="135">
-              <caret line="9" lean-forward="true" selection-start-line="9" selection-end-line="9" />
+            <state relative-caret-position="180">
+              <caret line="12" column="8" selection-start-line="12" selection-start-column="8" selection-end-line="12" selection-end-column="8" />
               <folding>
-                <marker date="1547478992615" expanded="true" signature="6:108" ph="..." />
-                <marker date="1547478992615" expanded="true" signature="153:246" ph="{...}" />
-                <marker date="1547478992615" expanded="true" signature="209:244" ph="{...}" />
+                <marker date="1547479361237" expanded="true" signature="6:113" ph="..." />
+                <marker date="1547479361237" expanded="true" signature="158:225" ph="{...}" />
+                <marker date="1547479361237" expanded="true" signature="214:223" ph="{...}" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="LoadSceneScript.cs" pinned="false" current-in-tab="false">
+      <file leaf-file-name="LoadSceneScript.cs" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Assets/Scripts/Networking/LoadSceneScript.cs">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="105">
-              <caret line="7" column="10" selection-start-line="7" selection-start-column="10" selection-end-line="7" selection-end-column="10" />
+            <state relative-caret-position="150">
+              <caret line="10" column="22" selection-start-line="10" selection-start-column="22" selection-end-line="10" selection-end-column="22" />
               <folding>
-                <marker date="1547477972267" expanded="true" signature="6:113" ph="..." />
-                <marker date="1547477972267" expanded="true" signature="160:249" ph="{...}" />
-                <marker date="1547477972267" expanded="true" signature="202:247" ph="{...}" />
+                <marker date="1547481921973" expanded="true" signature="6:143" ph="..." />
+                <marker date="1547481921973" expanded="true" signature="190:261" ph="{...}" />
+                <marker date="1547481921973" expanded="true" signature="232:259" ph="{...}" />
               </folding>
             </state>
           </provider>
@@ -289,9 +289,9 @@
         <option value="$PROJECT_DIR$/Assets/Scripts/Networking/PlayerUnit.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Node editor/TaskModel.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Node editor/TestingScript.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Networking/LoadSceneScript.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Node editor/Tasks/TaskData.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Networking/LobbyUIStarter.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Networking/LoadSceneScript.cs" />
       </list>
     </option>
   </component>
@@ -380,12 +380,12 @@
       <workItem from="1547202630115" duration="1358000" />
       <workItem from="1547205579933" duration="9525000" />
       <workItem from="1547457090535" duration="2054000" />
-      <workItem from="1547460188544" duration="12667000" />
+      <workItem from="1547460188544" duration="13052000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="26950000" />
+    <option name="totallyTimeSpent" value="27335000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -434,7 +434,7 @@
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <option name="time" value="1" />
+      <option name="time" value="2" />
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
@@ -1281,18 +1281,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Assets/Scripts/Networking/LoadSceneScript.cs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="105">
-          <caret line="7" column="10" selection-start-line="7" selection-start-column="10" selection-end-line="7" selection-end-column="10" />
-          <folding>
-            <marker date="1547477972267" expanded="true" signature="6:113" ph="..." />
-            <marker date="1547477972267" expanded="true" signature="160:249" ph="{...}" />
-            <marker date="1547477972267" expanded="true" signature="202:247" ph="{...}" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Assets/Scripts/Node editor/Tasks/TaskData.cs">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="545">
@@ -1319,12 +1307,24 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/Assets/Scripts/Networking/LobbyUIStarter.cs">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="135">
-          <caret line="9" lean-forward="true" selection-start-line="9" selection-end-line="9" />
+        <state relative-caret-position="180">
+          <caret line="12" column="8" selection-start-line="12" selection-start-column="8" selection-end-line="12" selection-end-column="8" />
           <folding>
-            <marker date="1547478992615" expanded="true" signature="6:108" ph="..." />
-            <marker date="1547478992615" expanded="true" signature="153:246" ph="{...}" />
-            <marker date="1547478992615" expanded="true" signature="209:244" ph="{...}" />
+            <marker date="1547479361237" expanded="true" signature="6:113" ph="..." />
+            <marker date="1547479361237" expanded="true" signature="158:225" ph="{...}" />
+            <marker date="1547479361237" expanded="true" signature="214:223" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Assets/Scripts/Networking/LoadSceneScript.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="150">
+          <caret line="10" column="22" selection-start-line="10" selection-start-column="22" selection-end-line="10" selection-end-column="22" />
+          <folding>
+            <marker date="1547481921973" expanded="true" signature="6:143" ph="..." />
+            <marker date="1547481921973" expanded="true" signature="190:261" ph="{...}" />
+            <marker date="1547481921973" expanded="true" signature="232:259" ph="{...}" />
           </folding>
         </state>
       </provider>
