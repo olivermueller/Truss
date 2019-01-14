@@ -1,170 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="3a9f6f49-2e40-4cfd-9324-9b233b559f23" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/Assets/Common/Scripts/TrackableSettings.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Common/Scripts/TrackableSettings.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Models/VuforiaMars_ModelTarget/ddcf29fe83b64ee984697b36afc5e823/Model.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Models/VuforiaMars_ModelTarget/ddcf29fe83b64ee984697b36afc5e823/Model.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/ProCore/ProBuilder.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Network/PlayerUnit.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Network/PlayerUnit.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/VuforiaConfiguration.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/VuforiaConfiguration.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/SamplesResources/SceneAssets/CloudReco/Scripts.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/SamplesResources/SceneAssets/CloudReco/Scripts/CloudRecoContentManager.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/SamplesResources/SceneAssets/CloudReco/Scripts/CloudRecoContentManager.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/SamplesResources/SceneAssets/CloudReco/Scripts/CloudRecoEventHandler.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/SamplesResources/SceneAssets/CloudReco/Scripts/CloudRecoEventHandler.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/SamplesResources/SceneAssets/CloudReco/Scripts/CloudRecoTrackableEventHandler.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/SamplesResources/SceneAssets/CloudReco/Scripts/CloudRecoTrackableEventHandler.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/SamplesResources/SceneAssets/CloudReco/Scripts/Editor.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/SamplesResources/SceneAssets/CloudReco/Scripts/Editor/CloudRecoEventHandlerEditor.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/SamplesResources/SceneAssets/CloudReco/Scripts/Editor/CloudRecoEventHandlerEditor.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/SamplesResources/SceneAssets/CloudReco/Scripts/ScanLine.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/SamplesResources/SceneAssets/CloudReco/Scripts/ScanLine.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/SamplesResources/SceneAssets/CylinderTargets/Scripts.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/SamplesResources/SceneAssets/CylinderTargets/Scripts/RotateAroundCylinder.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/SamplesResources/SceneAssets/CylinderTargets/Scripts/RotateAroundCylinder.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/SamplesResources/SceneAssets/ImageTargets/Scripts.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/SamplesResources/SceneAssets/ImageTargets/Scripts/ModelSwap.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/SamplesResources/SceneAssets/ImageTargets/Scripts/ModelSwap.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/SamplesResources/SceneAssets/ImageTargets/Scripts/VideoController.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/SamplesResources/SceneAssets/ImageTargets/Scripts/VideoController.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/SamplesResources/SceneAssets/ImageTargets/Scripts/VideoTrackableEventHandler.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/SamplesResources/SceneAssets/ImageTargets/Scripts/VideoTrackableEventHandler.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/SamplesResources/SceneAssets/MultiTargets/Scripts.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/SamplesResources/SceneAssets/MultiTargets/Scripts/MultiTargetTrackableEventHandler.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/SamplesResources/SceneAssets/MultiTargets/Scripts/MultiTargetTrackableEventHandler.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/SamplesResources/SceneAssets/ObjectReco/Scripts.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/SamplesResources/SceneAssets/ObjectReco/Scripts/ObjectRecoTrackableEventHandler.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/SamplesResources/SceneAssets/ObjectReco/Scripts/ObjectRecoTrackableEventHandler.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/SamplesResources/SceneAssets/UserDefinedTargets/Scripts.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/SamplesResources/SceneAssets/UserDefinedTargets/Scripts/Editor.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/SamplesResources/SceneAssets/UserDefinedTargets/Scripts/Editor/UDTEventHandlerEditor.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/SamplesResources/SceneAssets/UserDefinedTargets/Scripts/Editor/UDTEventHandlerEditor.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/SamplesResources/SceneAssets/UserDefinedTargets/Scripts/FrameQualityMeter.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/SamplesResources/SceneAssets/UserDefinedTargets/Scripts/FrameQualityMeter.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/SamplesResources/SceneAssets/UserDefinedTargets/Scripts/QualityDialog.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/SamplesResources/SceneAssets/UserDefinedTargets/Scripts/QualityDialog.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/SamplesResources/SceneAssets/UserDefinedTargets/Scripts/UDTEventHandler.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/SamplesResources/SceneAssets/UserDefinedTargets/Scripts/UDTEventHandler.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/SamplesResources/SceneAssets/UserDefinedTargets/Scripts/UDTSettings.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/SamplesResources/SceneAssets/UserDefinedTargets/Scripts/UDTSettings.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/[NETWORKED] Lobby.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/[NETWORKED] Lobby.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/[NETWORK] Play_Scene.unity" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/[NETWORK] Play_Scene.unity.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/NetworkedGameState.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/NetworkedGameState.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Networking/PlayerDisplayContainer.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Networking/PlayerDisplayContainer.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Networking/PlayerUnit.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Networking/PlayerUnit.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/TinCan.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/TinCan/About.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/TinCan/About.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/TinCan/Activity.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/TinCan/Activity.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/TinCan/ActivityDefinition.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/TinCan/ActivityDefinition.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/TinCan/Agent.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/TinCan/Agent.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/TinCan/AgentAccount.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/TinCan/AgentAccount.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/TinCan/Context.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/TinCan/Context.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/TinCan/ContextActivities.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/TinCan/ContextActivities.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/TinCan/Documents.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/TinCan/Documents/ActivityProfileDocument.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/TinCan/Documents/ActivityProfileDocument.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/TinCan/Documents/AgentProfileDocument.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/TinCan/Documents/AgentProfileDocument.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/TinCan/Documents/Document.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/TinCan/Documents/Document.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/TinCan/Documents/StateDocument.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/TinCan/Documents/StateDocument.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/TinCan/Extensions.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/TinCan/Extensions.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/TinCan/Group.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/TinCan/Group.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/TinCan/ILRS.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/TinCan/ILRS.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/TinCan/InteractionComponent.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/TinCan/InteractionComponent.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/TinCan/InteractionType.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/TinCan/InteractionType.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/TinCan/LRSResponses.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/TinCan/LRSResponses/AboutLRSResponse.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/TinCan/LRSResponses/AboutLRSResponse.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/TinCan/LRSResponses/ActivityProfileLRSResponse.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/TinCan/LRSResponses/ActivityProfileLRSResponse.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/TinCan/LRSResponses/AgentProfileLRSResponse.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/TinCan/LRSResponses/AgentProfileLRSResponse.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/TinCan/LRSResponses/LRSResponse.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/TinCan/LRSResponses/LRSResponse.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/TinCan/LRSResponses/ProfileKeysLRSResponse.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/TinCan/LRSResponses/ProfileKeysLRSResponse.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/TinCan/LRSResponses/StateLRSResponse.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/TinCan/LRSResponses/StateLRSResponse.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/TinCan/LRSResponses/StatementLRSResponse.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/TinCan/LRSResponses/StatementLRSResponse.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/TinCan/LRSResponses/StatementsResultLRSResponse.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/TinCan/LRSResponses/StatementsResultLRSResponse.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/TinCan/LanguageMap.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/TinCan/LanguageMap.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/TinCan/Properties.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/TinCan/Properties/AssemblyInfo.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/TinCan/Properties/AssemblyInfo.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/TinCan/RemoteUnityLRS.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/TinCan/RemoteUnityLRS.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/TinCan/Result.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/TinCan/Result.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/TinCan/Score.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/TinCan/Score.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/TinCan/Statement.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/TinCan/Statement.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/TinCan/StatementBase.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/TinCan/StatementBase.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/TinCan/StatementRef.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/TinCan/StatementRef.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/TinCan/StatementTarget.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/TinCan/StatementTarget.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/TinCan/StatementsQuery.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/TinCan/StatementsQuery.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/TinCan/StatementsQueryResultFormat.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/TinCan/StatementsQueryResultFormat.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/TinCan/StatementsResult.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/TinCan/StatementsResult.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/TinCan/SubStatement.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/TinCan/SubStatement.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/TinCan/TCAPIVersion.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/TinCan/TCAPIVersion.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/TinCan/TinCan.csproj.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/TinCan/TinCan.nuspec" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/TinCan/TinCan.nuspec.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/TinCan/Verb.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/TinCan/Verb.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/TinCan/json.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/TinCan/json/IJsonModel.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/TinCan/json/IJsonModel.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/TinCan/json/JsonModel.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/TinCan/json/JsonModel.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/TinCan/json/StringOfJSON.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/TinCan/json/StringOfJSON.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/TinCan/packages.config" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/TinCan/packages.config.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/TinCanExample.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/TinCanExample/TestLevel.unity" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/TinCanExample/TestLevel.unity.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/TinCanExample/TestTinCan.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/TinCanExample/TestTinCan.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Vuforia/Databases.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Vuforia/Databases.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Vuforia/Databases/Emulator.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Vuforia/Databases/Emulator.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Vuforia/Databases/ForPrint.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Vuforia/Databases/ForPrint.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Vuforia/Databases/ForPrint/Emulator.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Vuforia/Databases/ForPrint/Emulator.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Vuforia/Editor/Scripts/OpenSourceInitializer.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Vuforia/Editor/Scripts/OpenSourceInitializer.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Vuforia/Scripts/DefaultTrackableEventHandler.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Vuforia/Scripts/DefaultTrackableEventHandler.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Vuforia/version" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Vuforia/version" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Vuforia/version.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Vuforia/version.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/EditorBuildSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/EditorBuildSettings.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/ProjectSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/ProjectSettings.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/ProjectVersion.txt" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/ProjectVersion.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/QualitySettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/QualitySettings.asset" afterDir="false" />
-    </list>
+    <list default="true" id="3a9f6f49-2e40-4cfd-9324-9b233b559f23" name="Default" comment="" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -210,8 +47,8 @@
       <file leaf-file-name="NetworkedGameState.cs" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Assets/Scripts/NetworkedGameState.cs">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="614">
-              <caret line="131" column="13" lean-forward="true" selection-start-line="131" selection-start-column="13" selection-end-line="131" selection-end-column="13" />
+            <state relative-caret-position="569">
+              <caret line="128" column="16" selection-start-line="128" selection-start-column="16" selection-end-line="128" selection-end-column="16" />
               <folding>
                 <marker date="1547460676944" expanded="false" signature="6:188" ph="..." />
                 <marker date="1547460676944" expanded="true" signature="261:3627" ph="{...}" />
@@ -419,7 +256,7 @@
   <component name="NodePackageJsonFileManager">
     <packageJsonPaths />
   </component>
-  <component name="ProjectFrameBounds" extendedState="1">
+  <component name="ProjectFrameBounds">
     <option name="y" value="23" />
     <option name="width" value="1680" />
     <option name="height" value="940" />
@@ -495,12 +332,12 @@
       <workItem from="1547202630115" duration="1358000" />
       <workItem from="1547205579933" duration="9525000" />
       <workItem from="1547457090535" duration="2054000" />
-      <workItem from="1547460188544" duration="472000" />
+      <workItem from="1547460188544" duration="617000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="14755000" />
+    <option name="totallyTimeSpent" value="14900000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -512,7 +349,7 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="23" width="1680" height="940" extended-state="1" />
+    <frame x="0" y="23" width="1680" height="940" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info anchor="bottom" id="TODO" order="6" />
@@ -1267,8 +1104,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/Assets/Scripts/NetworkedGameState.cs">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="614">
-          <caret line="131" column="13" lean-forward="true" selection-start-line="131" selection-start-column="13" selection-end-line="131" selection-end-column="13" />
+        <state relative-caret-position="569">
+          <caret line="128" column="16" selection-start-line="128" selection-start-column="16" selection-end-line="128" selection-end-column="16" />
           <folding>
             <marker date="1547460676944" expanded="false" signature="6:188" ph="..." />
             <marker date="1547460676944" expanded="true" signature="261:3627" ph="{...}" />
