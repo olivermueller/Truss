@@ -131,28 +131,28 @@ public class PlayerUnit : NetworkBehaviour
     }
 
 
-//    void Update()
-//    {
-//        //Update UI on the trainer side
-//        if (IsTrainer)
-//        {
-//            //if (gameStateManager.)
-//        }
-//        else
-//        {
-//
-//        }
-//    }
+    void Update()
+    {
+        //Update UI on the trainer side
+        if (IsTrainer && isServer)
+        {
+            trainerUI.SetActive(true);
+        }
+        else if (!IsTrainer && !isServer)
+        {
+            traineeUI.SetActive(true);
+        }
+    }
 
     [ClientRpc] //fn executed on all clients
     void RpcTellAllClientsToUpdateRoles(bool newValue)
     {
         print("Called UpdateRoles");
         IsTrainer = newValue;
-        if(IsTrainer)
-            trainerUI.SetActive(true);
-        else
-            traineeUI.SetActive(true);
+//        if(IsTrainer)
+//            trainerUI.SetActive(true);
+//        else
+//            traineeUI.SetActive(true);
     }
 //    [SyncVar]
 //    public bool Interactable;
