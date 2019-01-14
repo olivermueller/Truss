@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 using UnityEditor;
 using UnityEngine;
 #if UNITY_EDITOR
@@ -39,13 +40,58 @@ public class Node : MonoBehaviour
         rect.position += delta;
     }
 
+    private bool showTaskList = false;
+    private int taskListHeight = 150;
+    
     public virtual void Draw()
     {
         inPoint.Draw();
         outPoint.Draw();
         GUI.Box(rect, "", style);
         GUI.Label(new Rect(rect.position.x+rect.width/2, rect.position.y +20, rect.width/2, 20), title);
+        if (GUI.Button(new Rect(rect.position.x + 10, rect.position.y + rect.height - 70, rect.width - 20, 40),
+            "Trainer Task List"))
+        {
+            print("pressed");
+            showTaskList = !showTaskList;
+        }
 
+        if (showTaskList)
+        {
+            if (TaskData.tasks == null)
+            {
+                TaskData.tasks = new List<string>();
+            }
+            
+            //make the height of the list box match the sizd of the task list
+            taskListHeight = 60 * (TaskData.tasks.Count + 1);
+            
+            Rect taskListRect = new Rect(rect.position.x + 10, rect.position.y + rect.height + 150,
+                rect.width - 20, taskListHeight);
+            GUI.Box(taskListRect, "", style);
+            if (GUI.Button(new Rect(taskListRect.position.x + 20, taskListRect.position.y + taskListRect.height - 50, taskListRect.width - 30, 40),"+"))
+            {
+                taskListHeight += 150;
+                TaskData.tasks.Add("Add Task!");
+            }
+
+            for (int i = 0; i < TaskData.tasks.Count; i++)
+            {
+                DrawTextBox(i);
+            }
+        }
+        
+    }
+
+    void DrawTextBox(int index)
+    {
+        TaskData.tasks[index] = EditorGUI.TextField(new Rect(rect.position.x + 30, rect.position.y + rect.height + 160 + index * 60,
+            rect.width - 60, 40), "", TaskData.tasks[index]);
+        if (GUI.Button(new Rect(rect.position.x + rect.width - 20, rect.position.y + rect.height + 150 + index * 60,
+            40, 40), "-"))
+        {
+            TaskData.tasks.RemoveAt(index);
+        }
     }
 
     public bool ProcessEvents(Event e, Vector2 mousePos, Vector2 drag)

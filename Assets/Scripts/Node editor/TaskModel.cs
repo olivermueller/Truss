@@ -14,6 +14,8 @@ public class TaskModel:MonoBehaviour
     #if UNITY_EDITOR
     public ConnectionPoint selectedInPoint;
     public ConnectionPoint selectedOutPoint;
+    public GameObject checkListItemPrefab;
+
     #endif
     
     public static TaskModel Instance

@@ -18,7 +18,9 @@ public class TaskData : NetworkBehaviour
     public string _title, _description;
     public TaskData _out, _in;
     public GameObject _animationObject, _baseObject, _instantiatedAnimationObject, _uiObject;
+    public List<String> tasks;
 
+    
     public UnityEvent NodeIdEvent;
     //position of the goal you are being guided towards
     public Transform goalPosition;
@@ -48,7 +50,16 @@ public class TaskData : NetworkBehaviour
         
         GameObject.FindGameObjectWithTag("CanvasTitle").GetComponent<TextMeshProUGUI>().text = _title;
         GameObject.FindGameObjectWithTag("CanvasDescription").GetComponent<TextMeshProUGUI>().text = _description;
-        
+        var checkListObj = GameObject.FindGameObjectWithTag("CanvasCheckList").transform;
+
+        for (int i = 0; i < tasks.Count; i++)
+        {
+            var listElement = Instantiate(TaskModel.Instance.checkListItemPrefab);
+            listElement.transform.parent = checkListObj;
+            listElement.GetComponentInChildren<TextMeshProUGUI>().text = tasks[i];
+        }
+
+
     }
     public virtual TaskData NextTask()
     {
