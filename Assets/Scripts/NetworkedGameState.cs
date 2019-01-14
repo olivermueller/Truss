@@ -30,7 +30,8 @@ public class NetworkedGameState : NetworkBehaviour
 	public bool initializedPLayers = false;
 	IEnumerator InitAfter()
 	{
-		yield return new WaitUntil(()=>FindObjectsOfType<PlayerUnit>().Any(p=>p.IsTrainer));
+		//yield return new WaitUntil(()=>FindObjectsOfType<PlayerUnit>().Any(p=>p.IsTrainer));
+		yield return new WaitForSeconds(4);
 		YesButton = GameObject.FindWithTag("CanvasYes").GetComponent<Button>();
 		NoButton = GameObject.FindWithTag("CanvasNo").GetComponent<Button>();
 		var player = FindObjectsOfType<PlayerUnit>().First(p=>p.isLocalPlayer);
