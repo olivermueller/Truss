@@ -37,12 +37,11 @@ public class PlayerUnit : NetworkBehaviour
         if (isServer && isLocalPlayer)
         {
             yield return new WaitUntil(()=>connectionToClient.isReady);
-            
+            CmdSpawnMyUnit();
 //            _nextButton = Instantiate(NextButtonPrefab).GetComponent<Button>();
 //            _nextButton.transform.parent = FindObjectOfType<Canvas>().transform;
 //            _nextButton.onClick.AddListener(() => CmdOnClickSetAwating(true));
             RpcTellAllClientsToUpdateRoles(true);      
-            CmdSpawnMyUnit();
         }
     }
 
