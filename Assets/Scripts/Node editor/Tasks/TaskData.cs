@@ -70,6 +70,12 @@ public class TaskData : NetworkBehaviour
             listElement.GetComponentInChildren<TextMeshProUGUI>().text = tasks[i];
         }
 
+        if (_out == null)
+        {
+            GameObject.FindGameObjectWithTag("EndScreen").transform.GetChild(0).gameObject.SetActive(true);
+
+        }
+
 
     }
     public virtual TaskData NextTask()

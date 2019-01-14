@@ -15,7 +15,7 @@ public class TaskModel:MonoBehaviour
     public ConnectionPoint selectedInPoint;
     public ConnectionPoint selectedOutPoint;
     public GameObject checkListItemPrefab;
-
+    
     #endif
     
     public static TaskModel Instance

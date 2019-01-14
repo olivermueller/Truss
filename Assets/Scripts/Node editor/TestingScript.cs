@@ -10,6 +10,7 @@ public class TestingScript : NetworkBehaviour {
 
 	bool isFirst = true;
 	bool finished = false;
+	
 	private NetworkedGameState gameState;
 
 	private bool isTrainer;
@@ -67,6 +68,7 @@ public class TestingScript : NetworkBehaviour {
 					iterator = iterator.NextTask();
 					player.CmdSetId(iterator.ID);
 					player.CmdResetBools();
+					
 					//player.TraineeNext();
 				}
 				else if (val.HasValue && !val.Value && gameState.isApproved && gameState.isAwating)
@@ -77,9 +79,9 @@ public class TestingScript : NetworkBehaviour {
 					if (answerTaskData != null) answerTaskData.StartNoTask();
 					else if (answerTargetTaskData != null) answerTargetTaskData.StartNoTask();
 				}
+				
+				
 			}
-
-
 			else
 			{
 				//Debug.Log("All Tasks completed!");
