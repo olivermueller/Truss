@@ -33,6 +33,16 @@ public class TaskData : NetworkBehaviour
     public virtual void StartTask()
     {
 
+        GameObject[] checkListElements = GameObject.FindGameObjectsWithTag("CheckListElement");
+        print("Check List Size: " + checkListElements.Length);
+        if (checkListElements != null)
+        {
+            for (int i = 0; i < checkListElements.Length; i++)
+            {
+                Destroy(checkListElements[i]);
+            }
+        }
+        
         Debug.Log("<color=red>Started " + _title+"</color>" );
                      Debug.Log("<color=yellow>Mission: " + _description+"</color>" );
          //        Debug.Log("Started" + _title);
@@ -64,15 +74,7 @@ public class TaskData : NetworkBehaviour
     }
     public virtual TaskData NextTask()
     {
-        var checkListElements = GameObject.FindGameObjectsWithTag("CheckListElement");
-
-        if (checkListElements != null)
-        {
-            for (int i = 0; i < checkListElements.Length; i++)
-            {
-                Destroy(checkListElements[i]);
-            }
-        }
+        
         
         if (_instantiatedAnimationObject) GameObject.Destroy(_instantiatedAnimationObject);
         Debug.Log("<color=green>completed " + _title+"</color>" );
