@@ -134,11 +134,11 @@ public class PlayerUnit : NetworkBehaviour
     void Update()
     {
         //Update UI on the trainer side
-        if (IsTrainer && isServer)
+        if (IsTrainer && isServer && isLocalPlayer)
         {
             trainerUI.SetActive(true);
         }
-        else if (!IsTrainer && !isServer)
+        else if (!IsTrainer && !isServer && isLocalPlayer)
         {
             traineeUI.SetActive(true);
         }
