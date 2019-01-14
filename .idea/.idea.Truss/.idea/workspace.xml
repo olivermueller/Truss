@@ -2,8 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="3a9f6f49-2e40-4cfd-9324-9b233b559f23" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.Truss/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Truss/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/NetworkedGameState.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/NetworkedGameState.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/Networking/PlayerUnit.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Networking/PlayerUnit.cs" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -18,32 +16,32 @@
       <file leaf-file-name="PlayerUnit.cs" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Assets/Scripts/Networking/PlayerUnit.cs">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="401">
-              <caret line="51" column="25" selection-start-line="51" selection-start-column="25" selection-end-line="51" selection-end-column="25" />
+            <state relative-caret-position="296">
+              <caret line="44" column="36" selection-start-line="44" selection-start-column="36" selection-end-line="44" selection-end-column="36" />
               <folding>
-                <marker date="1547463676572" expanded="false" signature="6:290" ph="..." />
-                <marker date="1547463676572" expanded="true" signature="292:423" ph="/* A PlayerUnit is a unit controlled by a player ... */" />
-                <marker date="1547463676572" expanded="true" signature="467:7151" ph="{...}" />
-                <marker date="1547463676572" expanded="true" signature="755:812" ph="{...}" />
-                <marker date="1547463676572" expanded="true" signature="839:1310" ph="{...}" />
-                <marker date="1547463676572" expanded="true" signature="884:1304" ph="{...}" />
-                <marker date="1547463676572" expanded="true" signature="980:1225" ph="/* _nextButton = Instantiate(NextButtonPrefab).GetComponent&lt;Button&gt;(); ... */" />
-                <marker date="1547463676572" expanded="true" signature="1335:1417" ph="{...}" />
-                <marker date="1547463676572" expanded="true" signature="1454:1623" ph="{...}" />
-                <marker date="1547463676572" expanded="true" signature="1654:2001" ph="{...}" />
-                <marker date="1547463676572" expanded="true" signature="1795:1895" ph="{...}" />
-                <marker date="1547463676572" expanded="true" signature="1908:1995" ph="{...}" />
-                <marker date="1547463676572" expanded="true" signature="2063:2281" ph="{...}" />
-                <marker date="1547463676572" expanded="true" signature="2332:2501" ph="{...}" />
-                <marker date="1547463676572" expanded="true" signature="2553:2772" ph="{...}" />
-                <marker date="1547463676572" expanded="true" signature="2823:3043" ph="{...}" />
-                <marker date="1547463676572" expanded="true" signature="3088:3365" ph="{...}" />
-                <marker date="1547463676572" expanded="true" signature="3402:3621" ph="{...}" />
-                <marker date="1547463676572" expanded="true" signature="3662:3880" ph="{...}" />
-                <marker date="1547463676572" expanded="true" signature="3883:4090" ph="/* void Update() ... */" />
-                <marker date="1547463676572" expanded="true" signature="4191:4383" ph="{...}" />
-                <marker date="1547463676572" expanded="true" signature="4384:6551" ph="/* [SyncVar] ... */" />
-                <marker date="1547463676572" expanded="true" signature="6555:7148" ph="/* [ClientRpc] //fn executed on all clients ... */" />
+                <marker date="1547463954984" expanded="false" signature="6:290" ph="..." />
+                <marker date="1547463954984" expanded="true" signature="292:423" ph="/* A PlayerUnit is a unit controlled by a player ... */" />
+                <marker date="1547463954984" expanded="true" signature="467:7169" ph="{...}" />
+                <marker date="1547463954984" expanded="true" signature="755:812" ph="{...}" />
+                <marker date="1547463954984" expanded="true" signature="839:1328" ph="{...}" />
+                <marker date="1547463954984" expanded="true" signature="884:1322" ph="{...}" />
+                <marker date="1547463954984" expanded="true" signature="980:1225" ph="/* _nextButton = Instantiate(NextButtonPrefab).GetComponent&lt;Button&gt;(); ... */" />
+                <marker date="1547463954984" expanded="true" signature="1353:1435" ph="{...}" />
+                <marker date="1547463954984" expanded="true" signature="1472:1641" ph="{...}" />
+                <marker date="1547463954984" expanded="true" signature="1672:2019" ph="{...}" />
+                <marker date="1547463954984" expanded="true" signature="1813:1913" ph="{...}" />
+                <marker date="1547463954984" expanded="true" signature="1926:2013" ph="{...}" />
+                <marker date="1547463954984" expanded="true" signature="2081:2299" ph="{...}" />
+                <marker date="1547463954984" expanded="true" signature="2350:2519" ph="{...}" />
+                <marker date="1547463954984" expanded="true" signature="2571:2790" ph="{...}" />
+                <marker date="1547463954984" expanded="true" signature="2841:3061" ph="{...}" />
+                <marker date="1547463954984" expanded="true" signature="3106:3383" ph="{...}" />
+                <marker date="1547463954984" expanded="true" signature="3420:3639" ph="{...}" />
+                <marker date="1547463954984" expanded="true" signature="3680:3898" ph="{...}" />
+                <marker date="1547463954984" expanded="true" signature="3901:4108" ph="/* void Update() ... */" />
+                <marker date="1547463954984" expanded="true" signature="4209:4401" ph="{...}" />
+                <marker date="1547463954984" expanded="true" signature="4402:6569" ph="/* [SyncVar] ... */" />
+                <marker date="1547463954984" expanded="true" signature="6573:7166" ph="/* [ClientRpc] //fn executed on all clients ... */" />
               </folding>
             </state>
           </provider>
@@ -363,12 +361,12 @@
       <workItem from="1547202630115" duration="1358000" />
       <workItem from="1547205579933" duration="9525000" />
       <workItem from="1547457090535" duration="2054000" />
-      <workItem from="1547460188544" duration="2397000" />
+      <workItem from="1547460188544" duration="2673000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="16680000" />
+    <option name="totallyTimeSpent" value="16956000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -421,29 +419,29 @@
         <state relative-caret-position="450">
           <caret line="39" column="23" selection-start-line="39" selection-start-column="23" selection-end-line="39" selection-end-column="23" />
           <folding>
-            <marker date="1547463676572" expanded="false" signature="6:290" ph="..." />
-            <marker date="1547463676572" expanded="true" signature="292:423" ph="/* A PlayerUnit is a unit controlled by a player ... */" />
-            <marker date="1547463676572" expanded="true" signature="467:7151" ph="{...}" />
-            <marker date="1547463676572" expanded="true" signature="755:812" ph="{...}" />
-            <marker date="1547463676572" expanded="true" signature="839:1310" ph="{...}" />
-            <marker date="1547463676572" expanded="true" signature="884:1304" ph="{...}" />
-            <marker date="1547463676572" expanded="true" signature="980:1225" ph="/* _nextButton = Instantiate(NextButtonPrefab).GetComponent&lt;Button&gt;(); ... */" />
-            <marker date="1547463676572" expanded="true" signature="1335:1417" ph="{...}" />
-            <marker date="1547463676572" expanded="true" signature="1454:1623" ph="{...}" />
-            <marker date="1547463676572" expanded="true" signature="1654:2001" ph="{...}" />
-            <marker date="1547463676572" expanded="true" signature="1795:1895" ph="{...}" />
-            <marker date="1547463676572" expanded="true" signature="1908:1995" ph="{...}" />
-            <marker date="1547463676572" expanded="true" signature="2063:2281" ph="{...}" />
-            <marker date="1547463676572" expanded="true" signature="2332:2501" ph="{...}" />
-            <marker date="1547463676572" expanded="true" signature="2553:2772" ph="{...}" />
-            <marker date="1547463676572" expanded="true" signature="2823:3043" ph="{...}" />
-            <marker date="1547463676572" expanded="true" signature="3088:3365" ph="{...}" />
-            <marker date="1547463676572" expanded="true" signature="3402:3621" ph="{...}" />
-            <marker date="1547463676572" expanded="true" signature="3662:3880" ph="{...}" />
-            <marker date="1547463676572" expanded="true" signature="3883:4090" ph="/* void Update() ... */" />
-            <marker date="1547463676572" expanded="true" signature="4191:4383" ph="{...}" />
-            <marker date="1547463676572" expanded="true" signature="4384:6551" ph="/* [SyncVar] ... */" />
-            <marker date="1547463676572" expanded="true" signature="6555:7148" ph="/* [ClientRpc] //fn executed on all clients ... */" />
+            <marker date="1547463954984" expanded="false" signature="6:290" ph="..." />
+            <marker date="1547463954984" expanded="true" signature="292:423" ph="/* A PlayerUnit is a unit controlled by a player ... */" />
+            <marker date="1547463954984" expanded="true" signature="467:7169" ph="{...}" />
+            <marker date="1547463954984" expanded="true" signature="755:812" ph="{...}" />
+            <marker date="1547463954984" expanded="true" signature="839:1328" ph="{...}" />
+            <marker date="1547463954984" expanded="true" signature="884:1322" ph="{...}" />
+            <marker date="1547463954984" expanded="true" signature="980:1225" ph="/* _nextButton = Instantiate(NextButtonPrefab).GetComponent&lt;Button&gt;(); ... */" />
+            <marker date="1547463954984" expanded="true" signature="1353:1435" ph="{...}" />
+            <marker date="1547463954984" expanded="true" signature="1472:1641" ph="{...}" />
+            <marker date="1547463954984" expanded="true" signature="1672:2019" ph="{...}" />
+            <marker date="1547463954984" expanded="true" signature="1813:1913" ph="{...}" />
+            <marker date="1547463954984" expanded="true" signature="1926:2013" ph="{...}" />
+            <marker date="1547463954984" expanded="true" signature="2081:2299" ph="{...}" />
+            <marker date="1547463954984" expanded="true" signature="2350:2519" ph="{...}" />
+            <marker date="1547463954984" expanded="true" signature="2571:2790" ph="{...}" />
+            <marker date="1547463954984" expanded="true" signature="2841:3061" ph="{...}" />
+            <marker date="1547463954984" expanded="true" signature="3106:3383" ph="{...}" />
+            <marker date="1547463954984" expanded="true" signature="3420:3639" ph="{...}" />
+            <marker date="1547463954984" expanded="true" signature="3680:3898" ph="{...}" />
+            <marker date="1547463954984" expanded="true" signature="3901:4108" ph="/* void Update() ... */" />
+            <marker date="1547463954984" expanded="true" signature="4209:4401" ph="{...}" />
+            <marker date="1547463954984" expanded="true" signature="4402:6569" ph="/* [SyncVar] ... */" />
+            <marker date="1547463954984" expanded="true" signature="6573:7166" ph="/* [ClientRpc] //fn executed on all clients ... */" />
           </folding>
         </state>
       </provider>
@@ -608,29 +606,29 @@
         <state relative-caret-position="315">
           <caret line="30" column="34" selection-start-line="30" selection-start-column="34" selection-end-line="30" selection-end-column="34" />
           <folding>
-            <marker date="1547463676572" expanded="false" signature="6:290" ph="..." />
-            <marker date="1547463676572" expanded="true" signature="292:423" ph="/* A PlayerUnit is a unit controlled by a player ... */" />
-            <marker date="1547463676572" expanded="true" signature="467:7151" ph="{...}" />
-            <marker date="1547463676572" expanded="true" signature="755:812" ph="{...}" />
-            <marker date="1547463676572" expanded="true" signature="839:1310" ph="{...}" />
-            <marker date="1547463676572" expanded="true" signature="884:1304" ph="{...}" />
-            <marker date="1547463676572" expanded="true" signature="980:1225" ph="/* _nextButton = Instantiate(NextButtonPrefab).GetComponent&lt;Button&gt;(); ... */" />
-            <marker date="1547463676572" expanded="true" signature="1335:1417" ph="{...}" />
-            <marker date="1547463676572" expanded="true" signature="1454:1623" ph="{...}" />
-            <marker date="1547463676572" expanded="true" signature="1654:2001" ph="{...}" />
-            <marker date="1547463676572" expanded="true" signature="1795:1895" ph="{...}" />
-            <marker date="1547463676572" expanded="true" signature="1908:1995" ph="{...}" />
-            <marker date="1547463676572" expanded="true" signature="2063:2281" ph="{...}" />
-            <marker date="1547463676572" expanded="true" signature="2332:2501" ph="{...}" />
-            <marker date="1547463676572" expanded="true" signature="2553:2772" ph="{...}" />
-            <marker date="1547463676572" expanded="true" signature="2823:3043" ph="{...}" />
-            <marker date="1547463676572" expanded="true" signature="3088:3365" ph="{...}" />
-            <marker date="1547463676572" expanded="true" signature="3402:3621" ph="{...}" />
-            <marker date="1547463676572" expanded="true" signature="3662:3880" ph="{...}" />
-            <marker date="1547463676572" expanded="true" signature="3883:4090" ph="/* void Update() ... */" />
-            <marker date="1547463676572" expanded="true" signature="4191:4383" ph="{...}" />
-            <marker date="1547463676572" expanded="true" signature="4384:6551" ph="/* [SyncVar] ... */" />
-            <marker date="1547463676572" expanded="true" signature="6555:7148" ph="/* [ClientRpc] //fn executed on all clients ... */" />
+            <marker date="1547463954984" expanded="false" signature="6:290" ph="..." />
+            <marker date="1547463954984" expanded="true" signature="292:423" ph="/* A PlayerUnit is a unit controlled by a player ... */" />
+            <marker date="1547463954984" expanded="true" signature="467:7169" ph="{...}" />
+            <marker date="1547463954984" expanded="true" signature="755:812" ph="{...}" />
+            <marker date="1547463954984" expanded="true" signature="839:1328" ph="{...}" />
+            <marker date="1547463954984" expanded="true" signature="884:1322" ph="{...}" />
+            <marker date="1547463954984" expanded="true" signature="980:1225" ph="/* _nextButton = Instantiate(NextButtonPrefab).GetComponent&lt;Button&gt;(); ... */" />
+            <marker date="1547463954984" expanded="true" signature="1353:1435" ph="{...}" />
+            <marker date="1547463954984" expanded="true" signature="1472:1641" ph="{...}" />
+            <marker date="1547463954984" expanded="true" signature="1672:2019" ph="{...}" />
+            <marker date="1547463954984" expanded="true" signature="1813:1913" ph="{...}" />
+            <marker date="1547463954984" expanded="true" signature="1926:2013" ph="{...}" />
+            <marker date="1547463954984" expanded="true" signature="2081:2299" ph="{...}" />
+            <marker date="1547463954984" expanded="true" signature="2350:2519" ph="{...}" />
+            <marker date="1547463954984" expanded="true" signature="2571:2790" ph="{...}" />
+            <marker date="1547463954984" expanded="true" signature="2841:3061" ph="{...}" />
+            <marker date="1547463954984" expanded="true" signature="3106:3383" ph="{...}" />
+            <marker date="1547463954984" expanded="true" signature="3420:3639" ph="{...}" />
+            <marker date="1547463954984" expanded="true" signature="3680:3898" ph="{...}" />
+            <marker date="1547463954984" expanded="true" signature="3901:4108" ph="/* void Update() ... */" />
+            <marker date="1547463954984" expanded="true" signature="4209:4401" ph="{...}" />
+            <marker date="1547463954984" expanded="true" signature="4402:6569" ph="/* [SyncVar] ... */" />
+            <marker date="1547463954984" expanded="true" signature="6573:7166" ph="/* [ClientRpc] //fn executed on all clients ... */" />
           </folding>
         </state>
       </provider>
@@ -774,29 +772,29 @@
       <provider selected="true" editor-type-id="text-editor">
         <state>
           <folding>
-            <marker date="1547463676572" expanded="false" signature="6:290" ph="..." />
-            <marker date="1547463676572" expanded="true" signature="292:423" ph="/* A PlayerUnit is a unit controlled by a player ... */" />
-            <marker date="1547463676572" expanded="true" signature="467:7151" ph="{...}" />
-            <marker date="1547463676572" expanded="true" signature="755:812" ph="{...}" />
-            <marker date="1547463676572" expanded="true" signature="839:1310" ph="{...}" />
-            <marker date="1547463676572" expanded="true" signature="884:1304" ph="{...}" />
-            <marker date="1547463676572" expanded="true" signature="980:1225" ph="/* _nextButton = Instantiate(NextButtonPrefab).GetComponent&lt;Button&gt;(); ... */" />
-            <marker date="1547463676572" expanded="true" signature="1335:1417" ph="{...}" />
-            <marker date="1547463676572" expanded="true" signature="1454:1623" ph="{...}" />
-            <marker date="1547463676572" expanded="true" signature="1654:2001" ph="{...}" />
-            <marker date="1547463676572" expanded="true" signature="1795:1895" ph="{...}" />
-            <marker date="1547463676572" expanded="true" signature="1908:1995" ph="{...}" />
-            <marker date="1547463676572" expanded="true" signature="2063:2281" ph="{...}" />
-            <marker date="1547463676572" expanded="true" signature="2332:2501" ph="{...}" />
-            <marker date="1547463676572" expanded="true" signature="2553:2772" ph="{...}" />
-            <marker date="1547463676572" expanded="true" signature="2823:3043" ph="{...}" />
-            <marker date="1547463676572" expanded="true" signature="3088:3365" ph="{...}" />
-            <marker date="1547463676572" expanded="true" signature="3402:3621" ph="{...}" />
-            <marker date="1547463676572" expanded="true" signature="3662:3880" ph="{...}" />
-            <marker date="1547463676572" expanded="true" signature="3883:4090" ph="/* void Update() ... */" />
-            <marker date="1547463676572" expanded="true" signature="4191:4383" ph="{...}" />
-            <marker date="1547463676572" expanded="true" signature="4384:6551" ph="/* [SyncVar] ... */" />
-            <marker date="1547463676572" expanded="true" signature="6555:7148" ph="/* [ClientRpc] //fn executed on all clients ... */" />
+            <marker date="1547463954984" expanded="false" signature="6:290" ph="..." />
+            <marker date="1547463954984" expanded="true" signature="292:423" ph="/* A PlayerUnit is a unit controlled by a player ... */" />
+            <marker date="1547463954984" expanded="true" signature="467:7169" ph="{...}" />
+            <marker date="1547463954984" expanded="true" signature="755:812" ph="{...}" />
+            <marker date="1547463954984" expanded="true" signature="839:1328" ph="{...}" />
+            <marker date="1547463954984" expanded="true" signature="884:1322" ph="{...}" />
+            <marker date="1547463954984" expanded="true" signature="980:1225" ph="/* _nextButton = Instantiate(NextButtonPrefab).GetComponent&lt;Button&gt;(); ... */" />
+            <marker date="1547463954984" expanded="true" signature="1353:1435" ph="{...}" />
+            <marker date="1547463954984" expanded="true" signature="1472:1641" ph="{...}" />
+            <marker date="1547463954984" expanded="true" signature="1672:2019" ph="{...}" />
+            <marker date="1547463954984" expanded="true" signature="1813:1913" ph="{...}" />
+            <marker date="1547463954984" expanded="true" signature="1926:2013" ph="{...}" />
+            <marker date="1547463954984" expanded="true" signature="2081:2299" ph="{...}" />
+            <marker date="1547463954984" expanded="true" signature="2350:2519" ph="{...}" />
+            <marker date="1547463954984" expanded="true" signature="2571:2790" ph="{...}" />
+            <marker date="1547463954984" expanded="true" signature="2841:3061" ph="{...}" />
+            <marker date="1547463954984" expanded="true" signature="3106:3383" ph="{...}" />
+            <marker date="1547463954984" expanded="true" signature="3420:3639" ph="{...}" />
+            <marker date="1547463954984" expanded="true" signature="3680:3898" ph="{...}" />
+            <marker date="1547463954984" expanded="true" signature="3901:4108" ph="/* void Update() ... */" />
+            <marker date="1547463954984" expanded="true" signature="4209:4401" ph="{...}" />
+            <marker date="1547463954984" expanded="true" signature="4402:6569" ph="/* [SyncVar] ... */" />
+            <marker date="1547463954984" expanded="true" signature="6573:7166" ph="/* [ClientRpc] //fn executed on all clients ... */" />
           </folding>
         </state>
       </provider>
@@ -917,29 +915,29 @@
       <provider selected="true" editor-type-id="text-editor">
         <state>
           <folding>
-            <marker date="1547463676572" expanded="false" signature="6:290" ph="..." />
-            <marker date="1547463676572" expanded="true" signature="292:423" ph="/* A PlayerUnit is a unit controlled by a player ... */" />
-            <marker date="1547463676572" expanded="true" signature="467:7151" ph="{...}" />
-            <marker date="1547463676572" expanded="true" signature="755:812" ph="{...}" />
-            <marker date="1547463676572" expanded="true" signature="839:1310" ph="{...}" />
-            <marker date="1547463676572" expanded="true" signature="884:1304" ph="{...}" />
-            <marker date="1547463676572" expanded="true" signature="980:1225" ph="/* _nextButton = Instantiate(NextButtonPrefab).GetComponent&lt;Button&gt;(); ... */" />
-            <marker date="1547463676572" expanded="true" signature="1335:1417" ph="{...}" />
-            <marker date="1547463676572" expanded="true" signature="1454:1623" ph="{...}" />
-            <marker date="1547463676572" expanded="true" signature="1654:2001" ph="{...}" />
-            <marker date="1547463676572" expanded="true" signature="1795:1895" ph="{...}" />
-            <marker date="1547463676572" expanded="true" signature="1908:1995" ph="{...}" />
-            <marker date="1547463676572" expanded="true" signature="2063:2281" ph="{...}" />
-            <marker date="1547463676572" expanded="true" signature="2332:2501" ph="{...}" />
-            <marker date="1547463676572" expanded="true" signature="2553:2772" ph="{...}" />
-            <marker date="1547463676572" expanded="true" signature="2823:3043" ph="{...}" />
-            <marker date="1547463676572" expanded="true" signature="3088:3365" ph="{...}" />
-            <marker date="1547463676572" expanded="true" signature="3402:3621" ph="{...}" />
-            <marker date="1547463676572" expanded="true" signature="3662:3880" ph="{...}" />
-            <marker date="1547463676572" expanded="true" signature="3883:4090" ph="/* void Update() ... */" />
-            <marker date="1547463676572" expanded="true" signature="4191:4383" ph="{...}" />
-            <marker date="1547463676572" expanded="true" signature="4384:6551" ph="/* [SyncVar] ... */" />
-            <marker date="1547463676572" expanded="true" signature="6555:7148" ph="/* [ClientRpc] //fn executed on all clients ... */" />
+            <marker date="1547463954984" expanded="false" signature="6:290" ph="..." />
+            <marker date="1547463954984" expanded="true" signature="292:423" ph="/* A PlayerUnit is a unit controlled by a player ... */" />
+            <marker date="1547463954984" expanded="true" signature="467:7169" ph="{...}" />
+            <marker date="1547463954984" expanded="true" signature="755:812" ph="{...}" />
+            <marker date="1547463954984" expanded="true" signature="839:1328" ph="{...}" />
+            <marker date="1547463954984" expanded="true" signature="884:1322" ph="{...}" />
+            <marker date="1547463954984" expanded="true" signature="980:1225" ph="/* _nextButton = Instantiate(NextButtonPrefab).GetComponent&lt;Button&gt;(); ... */" />
+            <marker date="1547463954984" expanded="true" signature="1353:1435" ph="{...}" />
+            <marker date="1547463954984" expanded="true" signature="1472:1641" ph="{...}" />
+            <marker date="1547463954984" expanded="true" signature="1672:2019" ph="{...}" />
+            <marker date="1547463954984" expanded="true" signature="1813:1913" ph="{...}" />
+            <marker date="1547463954984" expanded="true" signature="1926:2013" ph="{...}" />
+            <marker date="1547463954984" expanded="true" signature="2081:2299" ph="{...}" />
+            <marker date="1547463954984" expanded="true" signature="2350:2519" ph="{...}" />
+            <marker date="1547463954984" expanded="true" signature="2571:2790" ph="{...}" />
+            <marker date="1547463954984" expanded="true" signature="2841:3061" ph="{...}" />
+            <marker date="1547463954984" expanded="true" signature="3106:3383" ph="{...}" />
+            <marker date="1547463954984" expanded="true" signature="3420:3639" ph="{...}" />
+            <marker date="1547463954984" expanded="true" signature="3680:3898" ph="{...}" />
+            <marker date="1547463954984" expanded="true" signature="3901:4108" ph="/* void Update() ... */" />
+            <marker date="1547463954984" expanded="true" signature="4209:4401" ph="{...}" />
+            <marker date="1547463954984" expanded="true" signature="4402:6569" ph="/* [SyncVar] ... */" />
+            <marker date="1547463954984" expanded="true" signature="6573:7166" ph="/* [ClientRpc] //fn executed on all clients ... */" />
           </folding>
         </state>
       </provider>
@@ -1167,32 +1165,32 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/Assets/Scripts/Networking/PlayerUnit.cs">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="401">
-          <caret line="51" column="25" selection-start-line="51" selection-start-column="25" selection-end-line="51" selection-end-column="25" />
+        <state relative-caret-position="296">
+          <caret line="44" column="36" selection-start-line="44" selection-start-column="36" selection-end-line="44" selection-end-column="36" />
           <folding>
-            <marker date="1547463676572" expanded="false" signature="6:290" ph="..." />
-            <marker date="1547463676572" expanded="true" signature="292:423" ph="/* A PlayerUnit is a unit controlled by a player ... */" />
-            <marker date="1547463676572" expanded="true" signature="467:7151" ph="{...}" />
-            <marker date="1547463676572" expanded="true" signature="755:812" ph="{...}" />
-            <marker date="1547463676572" expanded="true" signature="839:1310" ph="{...}" />
-            <marker date="1547463676572" expanded="true" signature="884:1304" ph="{...}" />
-            <marker date="1547463676572" expanded="true" signature="980:1225" ph="/* _nextButton = Instantiate(NextButtonPrefab).GetComponent&lt;Button&gt;(); ... */" />
-            <marker date="1547463676572" expanded="true" signature="1335:1417" ph="{...}" />
-            <marker date="1547463676572" expanded="true" signature="1454:1623" ph="{...}" />
-            <marker date="1547463676572" expanded="true" signature="1654:2001" ph="{...}" />
-            <marker date="1547463676572" expanded="true" signature="1795:1895" ph="{...}" />
-            <marker date="1547463676572" expanded="true" signature="1908:1995" ph="{...}" />
-            <marker date="1547463676572" expanded="true" signature="2063:2281" ph="{...}" />
-            <marker date="1547463676572" expanded="true" signature="2332:2501" ph="{...}" />
-            <marker date="1547463676572" expanded="true" signature="2553:2772" ph="{...}" />
-            <marker date="1547463676572" expanded="true" signature="2823:3043" ph="{...}" />
-            <marker date="1547463676572" expanded="true" signature="3088:3365" ph="{...}" />
-            <marker date="1547463676572" expanded="true" signature="3402:3621" ph="{...}" />
-            <marker date="1547463676572" expanded="true" signature="3662:3880" ph="{...}" />
-            <marker date="1547463676572" expanded="true" signature="3883:4090" ph="/* void Update() ... */" />
-            <marker date="1547463676572" expanded="true" signature="4191:4383" ph="{...}" />
-            <marker date="1547463676572" expanded="true" signature="4384:6551" ph="/* [SyncVar] ... */" />
-            <marker date="1547463676572" expanded="true" signature="6555:7148" ph="/* [ClientRpc] //fn executed on all clients ... */" />
+            <marker date="1547463954984" expanded="false" signature="6:290" ph="..." />
+            <marker date="1547463954984" expanded="true" signature="292:423" ph="/* A PlayerUnit is a unit controlled by a player ... */" />
+            <marker date="1547463954984" expanded="true" signature="467:7169" ph="{...}" />
+            <marker date="1547463954984" expanded="true" signature="755:812" ph="{...}" />
+            <marker date="1547463954984" expanded="true" signature="839:1328" ph="{...}" />
+            <marker date="1547463954984" expanded="true" signature="884:1322" ph="{...}" />
+            <marker date="1547463954984" expanded="true" signature="980:1225" ph="/* _nextButton = Instantiate(NextButtonPrefab).GetComponent&lt;Button&gt;(); ... */" />
+            <marker date="1547463954984" expanded="true" signature="1353:1435" ph="{...}" />
+            <marker date="1547463954984" expanded="true" signature="1472:1641" ph="{...}" />
+            <marker date="1547463954984" expanded="true" signature="1672:2019" ph="{...}" />
+            <marker date="1547463954984" expanded="true" signature="1813:1913" ph="{...}" />
+            <marker date="1547463954984" expanded="true" signature="1926:2013" ph="{...}" />
+            <marker date="1547463954984" expanded="true" signature="2081:2299" ph="{...}" />
+            <marker date="1547463954984" expanded="true" signature="2350:2519" ph="{...}" />
+            <marker date="1547463954984" expanded="true" signature="2571:2790" ph="{...}" />
+            <marker date="1547463954984" expanded="true" signature="2841:3061" ph="{...}" />
+            <marker date="1547463954984" expanded="true" signature="3106:3383" ph="{...}" />
+            <marker date="1547463954984" expanded="true" signature="3420:3639" ph="{...}" />
+            <marker date="1547463954984" expanded="true" signature="3680:3898" ph="{...}" />
+            <marker date="1547463954984" expanded="true" signature="3901:4108" ph="/* void Update() ... */" />
+            <marker date="1547463954984" expanded="true" signature="4209:4401" ph="{...}" />
+            <marker date="1547463954984" expanded="true" signature="4402:6569" ph="/* [SyncVar] ... */" />
+            <marker date="1547463954984" expanded="true" signature="6573:7166" ph="/* [ClientRpc] //fn executed on all clients ... */" />
           </folding>
         </state>
       </provider>

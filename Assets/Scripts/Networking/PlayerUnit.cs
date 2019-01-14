@@ -41,8 +41,8 @@ public class PlayerUnit : NetworkBehaviour
 //            _nextButton = Instantiate(NextButtonPrefab).GetComponent<Button>();
 //            _nextButton.transform.parent = FindObjectOfType<Canvas>().transform;
 //            _nextButton.onClick.AddListener(() => CmdOnClickSetAwating(true));
-            RpcTellAllClientsToUpdateRoles(true);      
-            
+            RpcTellAllClientsToUpdateRoles(true);
+            StartCoroutine(Spawn());
         }
     }
 
