@@ -50,12 +50,12 @@ public class TaskData : NetworkBehaviour
         
         GameObject.FindGameObjectWithTag("CanvasTitle").GetComponent<TextMeshProUGUI>().text = _title;
         GameObject.FindGameObjectWithTag("CanvasDescription").GetComponent<TextMeshProUGUI>().text = _description;
-        var checkListObj = GameObject.FindGameObjectWithTag("CanvasCheckList").transform;
+        var checkListObj = GameObject.FindGameObjectWithTag("CanvasCheckList");
 
-        for (int i = 0; i < tasks.Count; i++)
+        for (int i = 0; i < tasks.Count && checkListObj; i++)
         {
             var listElement = Instantiate(TaskModel.Instance.checkListItemPrefab);
-            listElement.transform.parent = checkListObj;
+            listElement.transform.parent = checkListObj.transform;
             listElement.GetComponentInChildren<TextMeshProUGUI>().text = tasks[i];
         }
 
