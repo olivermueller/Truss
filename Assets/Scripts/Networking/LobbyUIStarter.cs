@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Networking;
 
 public class LobbyUIStarter : MonoBehaviour
 {
@@ -9,6 +10,6 @@ public class LobbyUIStarter : MonoBehaviour
 
 	private void Awake()
 	{
-		MainPanel.SetActive(true);
+		NetworkManager.Shutdown();
 	}
 }
