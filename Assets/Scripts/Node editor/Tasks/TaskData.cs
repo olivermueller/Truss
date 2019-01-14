@@ -19,7 +19,8 @@ public class TaskData : NetworkBehaviour
     public TaskData _out, _in;
     public GameObject _animationObject, _baseObject, _instantiatedAnimationObject, _uiObject;
     public List<String> tasks;
-
+    
+    
     
     public UnityEvent NodeIdEvent;
     //position of the goal you are being guided towards
@@ -63,13 +64,22 @@ public class TaskData : NetworkBehaviour
     }
     public virtual TaskData NextTask()
     {
+        var checkListElements = GameObject.FindGameObjectsWithTag("CheckListElement");
+
+        if (checkListElements != null)
+        {
+            for (int i = 0; i < checkListElements.Length; i++)
+            {
+                Destroy(checkListElements[i]);
+            }
+        }
+        
         if (_instantiatedAnimationObject) GameObject.Destroy(_instantiatedAnimationObject);
         Debug.Log("<color=green>completed " + _title+"</color>" );
         if (_out != null)
         { 
             Debug.Log("<color=purple>Next Task " + _out._title+"</color>" );
             _out.StartTask();
-           
         }
         return _out;
     }
