@@ -1,16 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="3a9f6f49-2e40-4cfd-9324-9b233b559f23" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.Truss/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Truss/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Network/PlayerUnit.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Network/PlayerUnit.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/[NETWORKED] Lobby.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/[NETWORKED] Lobby.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/[NETWORKED]Play.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/[NETWORKED]Play.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Node editor/TaskModel.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Node editor/TaskModel.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Node editor/Tasks/TaskData.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Node editor/Tasks/TaskData.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Node editor/TestingScript.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Node editor/TestingScript.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/TagManager.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/TagManager.asset" afterDir="false" />
-    </list>
+    <list default="true" id="3a9f6f49-2e40-4cfd-9324-9b233b559f23" name="Default" comment="" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -134,11 +125,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="TaskData.cs" pinned="false" current-in-tab="true">
+      <file leaf-file-name="TaskData.cs" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Assets/Scripts/Node editor/Tasks/TaskData.cs">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="500">
-              <caret line="72" column="25" lean-forward="true" selection-start-line="72" selection-start-column="25" selection-end-line="72" selection-end-column="25" />
+              <caret line="72" column="25" selection-start-line="72" selection-start-column="25" selection-end-line="72" selection-end-column="25" />
               <folding>
                 <marker date="1547477565979" expanded="true" signature="6:221" ph="..." />
                 <marker date="1547477565979" expanded="true" signature="316:3538" ph="{...}" />
@@ -155,6 +146,20 @@
                 <marker date="1547477565979" expanded="true" signature="3304:3461" ph="{...}" />
                 <marker date="1547477565979" expanded="true" signature="3501:3535" ph="{...}" />
                 <marker date="1547477565979" expanded="true" signature="3540:7230" ph="/* public class TriggerClass : TaskData ... */" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="LoadSceneScript.cs" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/Assets/Scripts/Networking/LoadSceneScript.cs">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="180">
+              <caret line="12" lean-forward="true" selection-start-line="12" selection-end-line="12" />
+              <folding>
+                <marker date="1547477874220" expanded="true" signature="6:113" ph="..." />
+                <marker date="1547477874220" expanded="true" signature="160:249" ph="{...}" />
+                <marker date="1547477874220" expanded="true" signature="202:247" ph="{...}" />
               </folding>
             </state>
           </provider>
@@ -224,31 +229,6 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="DefaultTrackableEventHandler.cs" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Assets/Vuforia/Scripts/DefaultTrackableEventHandler.cs">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="405">
-              <caret line="49" column="18" selection-start-line="49" selection-start-column="18" selection-end-line="49" selection-end-column="18" />
-              <folding>
-                <marker date="1547203367492" expanded="true" signature="0:366" ph="/* ============================================================================== ... */" />
-                <marker date="1547203367492" expanded="false" signature="374:401" ph="..." />
-                <marker date="1547203367492" expanded="true" signature="403:695" ph="/// A custom handler that implements the ITrackableEventHandler interface. ... " />
-                <marker date="1547203367492" expanded="true" signature="777:4179" ph="{...}" />
-                <marker date="1547203367492" expanded="false" signature="784:1030" ph="PROTECTED_MEMBER_VARIABLES" />
-                <marker date="1547203367492" expanded="false" signature="1036:1490" ph="UNITY_MONOBEHAVIOUR_METHODS" />
-                <marker date="1547203367492" expanded="true" signature="1496:2827" ph="PUBLIC_METHODS" />
-                <marker date="1547203367492" expanded="true" signature="1524:1674" ph="///     Implementation of the ITrackableEventHandler function called when the ... " />
-                <marker date="1547203367492" expanded="true" signature="1818:2793" ph="{...}" />
-                <marker date="1547203367492" expanded="true" signature="2095:2230" ph="{...}" />
-                <marker date="1547203367492" expanded="true" signature="2367:2500" ph="{...}" />
-                <marker date="1547203367492" expanded="true" signature="2513:2787" ph="{...}" />
-                <marker date="1547203367492" expanded="true" signature="2536:2747" ph="/* For combo of previousStatus=UNKNOWN + newStatus=UNKNOWN|NOT_FOUND ... */" />
-                <marker date="1547203367492" expanded="false" signature="2833:4177" ph="PROTECTED_METHODS" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="ForceOrientation.cs" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Assets/ForceOrientation.cs">
           <provider selected="true" editor-type-id="text-editor">
@@ -275,20 +255,21 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="HighlightingSettingsPerFile">
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Networking/PlayerDisplayContainer.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Networking/PlayerUnit.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Networking/PlayerDisplayContainer.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Networking/PlayerUnit.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Common/Scripts/TrackableSettings.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Node editor/Nodes/NestedTaskNode.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/2152239E-1773-479F-A4CB-6CF28F044E3B/d4/10b5488c/ObjectTarget.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Vuforia/Scripts/DefaultTrackableEventHandler.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/ForceOrientation.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/ForceOrientation.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/96A2AAF2-3C2F-450B-B06F-6D9F3114D91B/97/3c12b559/JObject.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Node editor/Nodes/Node.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/NetworkedGameState.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Node editor/Tasks/TaskData.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/NetworkedGameState.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Node editor/Tasks/TaskData.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Node editor/TestingScript.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Node editor/TaskModel.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/MissionTrackableEventHandler.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Networking/LoadSceneScript.cs" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
@@ -307,6 +288,7 @@
         <option value="$PROJECT_DIR$/Assets/Scripts/Node editor/TaskModel.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Node editor/TestingScript.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Node editor/Tasks/TaskData.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Networking/LoadSceneScript.cs" />
       </list>
     </option>
   </component>
@@ -395,12 +377,12 @@
       <workItem from="1547202630115" duration="1358000" />
       <workItem from="1547205579933" duration="9525000" />
       <workItem from="1547457090535" duration="2054000" />
-      <workItem from="1547460188544" duration="11193000" />
+      <workItem from="1547460188544" duration="11502000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="25476000" />
+    <option name="totallyTimeSpent" value="25785000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -1294,7 +1276,7 @@
     <entry file="file://$PROJECT_DIR$/Assets/Scripts/Node editor/Tasks/TaskData.cs">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="500">
-          <caret line="72" column="25" lean-forward="true" selection-start-line="72" selection-start-column="25" selection-end-line="72" selection-end-column="25" />
+          <caret line="72" column="25" selection-start-line="72" selection-start-column="25" selection-end-line="72" selection-end-column="25" />
           <folding>
             <marker date="1547477565979" expanded="true" signature="6:221" ph="..." />
             <marker date="1547477565979" expanded="true" signature="316:3538" ph="{...}" />
@@ -1311,6 +1293,18 @@
             <marker date="1547477565979" expanded="true" signature="3304:3461" ph="{...}" />
             <marker date="1547477565979" expanded="true" signature="3501:3535" ph="{...}" />
             <marker date="1547477565979" expanded="true" signature="3540:7230" ph="/* public class TriggerClass : TaskData ... */" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Assets/Scripts/Networking/LoadSceneScript.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="180">
+          <caret line="12" lean-forward="true" selection-start-line="12" selection-end-line="12" />
+          <folding>
+            <marker date="1547477874220" expanded="true" signature="6:113" ph="..." />
+            <marker date="1547477874220" expanded="true" signature="160:249" ph="{...}" />
+            <marker date="1547477874220" expanded="true" signature="202:247" ph="{...}" />
           </folding>
         </state>
       </provider>
