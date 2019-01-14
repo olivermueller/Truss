@@ -122,26 +122,25 @@ public class NetworkedGameState : NetworkBehaviour
 			player = FindObjectsOfType<PlayerUnit>().First(p=>p.isLocalPlayer);
 		}
 
-		if (YesButton)
+		
+		if (player.IsTrainer)
 		{
-			if (player.IsTrainer)
+			if (isAwating && !isApproved )
 			{
-				if (isAwating && !isApproved)
-				{
-					YesButton.gameObject.SetActive(true);
-				}
-				else
-				{
-					YesButton.gameObject.SetActive(false);
-				}
-
+				YesButton.gameObject.SetActive(true);
 			}
 			else
 			{
-				if (_testingScript == null)
-				{
-					_testingScript = GetComponent<TestingScript>();
-				}
+				YesButton.gameObject.SetActive(false);
+			}
+
+		}
+		else
+		{
+			if (_testingScript == null)
+			{
+				_testingScript = GetComponent<TestingScript>();
+			}
 
 //			if (_testingScript.iterator != null &&_testingScript.iterator.IsCompleted().HasValue)
 //			{
@@ -155,19 +154,17 @@ public class NetworkedGameState : NetworkBehaviour
 //			{
 //				value = 0;
 //			}
-				if (!isApproved && !isAwating && _testingScript.iterator != null &&
-				    _testingScript.iterator.IsCompleted().HasValue)
-				{
-					YesButton.gameObject.SetActive(_testingScript.iterator.IsCompleted().Value);
-				}
-				else
-				{
-					YesButton.gameObject.SetActive(false);
-				}
-
+			if (!isApproved && !isAwating && _testingScript.iterator != null && _testingScript.iterator.IsCompleted().HasValue)
+			{
+				YesButton.gameObject.SetActive(_testingScript.iterator.IsCompleted().Value);
 			}
-		}
+			else
+			{
+				YesButton.gameObject.SetActive(false);
+			}
 
+		}
+		
 	}
 	
 	
