@@ -73,7 +73,7 @@ public class TaskData : NetworkBehaviour
         if (_out == null)
         {
             GameObject.FindGameObjectWithTag("EndScreen").transform.GetChild(0).gameObject.SetActive(true);
-
+            
         }
 
 
