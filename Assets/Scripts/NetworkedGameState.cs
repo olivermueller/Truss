@@ -27,7 +27,7 @@ public class NetworkedGameState : NetworkBehaviour
 		
 	}
 
-	private bool initializedPLayers = false;
+	public bool initializedPLayers = false;
 	IEnumerator InitAfter()
 	{
 		yield return new WaitUntil(()=>FindObjectsOfType<PlayerUnit>().Any(p=>p.IsTrainer));

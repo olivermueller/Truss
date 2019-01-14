@@ -22,50 +22,54 @@ public class TestingScript : NetworkBehaviour {
 	
 	void Update () 
 	{
-		if (isTrainer)
+		if (gameState.initializedPLayers)
 		{
-			if(gameState.nodeID == "0")
-				return;
-			if (iterator == null || iterator.ID != gameState.nodeID)
+			if (isTrainer)
 			{
-				iterator = TaskModel.Instance.tasks.First(p => p.ID == gameState.nodeID);
-				iterator.StartTask();
+				if (gameState.nodeID == "0")
+					return;
+				if (iterator == null || iterator.ID != gameState.nodeID)
+				{
+					iterator = TaskModel.Instance.tasks.First(p => p.ID == gameState.nodeID);
+					iterator.StartTask();
+				}
+
+				return;
 			}
 
-			return;
-		}
+			if (!FindObjectsOfType<PlayerUnit>().Any(p => p.IsTrainer)) return;
+			if (isFirst)
+			{
+				var player = FindObjectsOfType<PlayerUnit>().First(p => p.isLocalPlayer);
+				isTrainer = player.IsTrainer;
 
-		if(!FindObjectsOfType<PlayerUnit>().Any(p=>p.IsTrainer)) return;
-		if(isFirst)
-		{
-			var player = FindObjectsOfType<PlayerUnit>().First(p=>p.isLocalPlayer);
-			isTrainer = player.IsTrainer;
-			
-			if(isTrainer) return;
-			// Check if there is a start task data in the scene and use it as the starting point. If there are none, use the first task that does not have any task pointing at it.
-			iterator = (FindObjectOfType<StartTaskData>()!=null) ? FindObjectOfType<StartTaskData>() : TaskModel.Instance.tasks.First(t => t._in == null);
-			iterator = iterator.NextTask();
-			player.CmdSetId(iterator.ID);
-			isFirst = false;
-		}
+				if (isTrainer) return;
+				// Check if there is a start task data in the scene and use it as the starting point. If there are none, use the first task that does not have any task pointing at it.
+				iterator = (FindObjectOfType<StartTaskData>() != null)
+					? FindObjectOfType<StartTaskData>()
+					: TaskModel.Instance.tasks.First(t => t._in == null);
+				iterator = iterator.NextTask();
+				player.CmdSetId(iterator.ID);
+				isFirst = false;
+			}
 
-		if (iterator!=null)
-		{
-			//Debug.Log("iterator type: " + iterator.GetType().FullName);
-			var val = iterator.IsCompleted();
-			
+			if (iterator != null)
+			{
+				//Debug.Log("iterator type: " + iterator.GetType().FullName);
+				var val = iterator.IsCompleted();
+
 				if (gameState.isApproved && gameState.isAwating)
 				{
 					gameState.isApproved = false;
 					gameState.isAwating = false;
-					var player = FindObjectsOfType<PlayerUnit>().First(p=>p.isLocalPlayer);
+					var player = FindObjectsOfType<PlayerUnit>().First(p => p.isLocalPlayer);
 					Debug.Log("Switching Task");
 					iterator = iterator.NextTask();
 					player.CmdSetId(iterator.ID);
 					player.CmdResetBools();
 					//player.TraineeNext();
 				}
-				else if(val.HasValue && !val.Value && gameState.isApproved && gameState.isAwating)
+				else if (val.HasValue && !val.Value && gameState.isApproved && gameState.isAwating)
 				{
 					Debug.Log("no task found");
 					var answerTaskData = (iterator as AnswerTaskData);
@@ -74,12 +78,13 @@ public class TestingScript : NetworkBehaviour {
 					else if (answerTargetTaskData != null) answerTargetTaskData.StartNoTask();
 				}
 			}
-			
-		
-		else
-		{
-			//Debug.Log("All Tasks completed!");
-			
+
+
+			else
+			{
+				//Debug.Log("All Tasks completed!");
+
+			}
 		}
 	}
 
