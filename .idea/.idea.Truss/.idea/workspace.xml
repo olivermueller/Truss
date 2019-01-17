@@ -2,7 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="3a9f6f49-2e40-4cfd-9324-9b233b559f23" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/VuforiaConfiguration.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/VuforiaConfiguration.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.Truss/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Truss/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/DontDestroy.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/DontDestroy.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ForceOrientation.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/ForceOrientation.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/[NETWORKED] Lobby.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/[NETWORKED] Lobby.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/[NETWORKED]Play.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/[NETWORKED]Play.unity" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/Networking/LoadSceneScript.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Networking/LoadSceneScript.cs" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -119,10 +123,10 @@
       <file leaf-file-name="LobbyUIStarter.cs" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Assets/Scripts/Networking/LobbyUIStarter.cs">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="180">
+            <state relative-caret-position="135">
               <caret line="12" column="8" selection-start-line="12" selection-start-column="8" selection-end-line="12" selection-end-column="8" />
               <folding>
-                <marker date="1547479361237" expanded="true" signature="6:113" ph="..." />
+                <marker date="1547479361237" expanded="false" signature="6:113" ph="..." />
                 <marker date="1547479361237" expanded="true" signature="158:225" ph="{...}" />
                 <marker date="1547479361237" expanded="true" signature="214:223" ph="{...}" />
               </folding>
@@ -130,19 +134,47 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="LoadSceneScript.cs" pinned="false" current-in-tab="true">
+      <file leaf-file-name="ForceOrientation.cs" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Assets/ForceOrientation.cs">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="75">
+              <caret line="8" column="4" selection-start-line="8" selection-start-column="4" selection-end-line="8" selection-end-column="4" />
+              <folding>
+                <marker date="1547731508265" expanded="false" signature="6:100" ph="..." />
+                <marker date="1547731508265" expanded="true" signature="147:299" ph="{...}" />
+                <marker date="1547731508265" expanded="true" signature="196:297" ph="{...}" />
+                <marker date="1547731508265" expanded="true" signature="212:291" ph="{...}" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="LoadSceneScript.cs" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Assets/Scripts/Networking/LoadSceneScript.cs">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="120">
-              <caret line="8" column="22" selection-start-line="8" selection-start-column="22" selection-end-line="8" selection-end-column="22" />
+              <caret line="8" selection-start-line="8" selection-end-line="8" />
               <folding>
-                <marker date="1547730975765" expanded="true" signature="6:158" ph="..." />
-                <marker date="1547730975765" expanded="true" signature="208:661" ph="{...}" />
-                <marker date="1547730975765" expanded="true" signature="231:278" ph="{...}" />
-                <marker date="1547730975765" expanded="true" signature="319:364" ph="{...}" />
-                <marker date="1547730975765" expanded="true" signature="399:547" ph="{...}" />
-                <marker date="1547730975765" expanded="true" signature="574:659" ph="{...}" />
-                <marker date="1547730975765" expanded="true" signature="611:656" ph="{...}" />
+                <marker date="1547731451702" expanded="true" signature="6:158" ph="..." />
+                <marker date="1547731451702" expanded="true" signature="208:441" ph="{...}" />
+                <marker date="1547731451702" expanded="true" signature="250:292" ph="{...}" />
+                <marker date="1547731451702" expanded="true" signature="327:439" ph="{...}" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="DontDestroy.cs" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/Assets/DontDestroy.cs">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="135">
+              <caret line="9" column="29" selection-start-line="9" selection-start-column="29" selection-end-line="9" selection-end-column="29" />
+              <folding>
+                <marker date="1547731547966" expanded="true" signature="6:93" ph="..." />
+                <marker date="1547731547966" expanded="true" signature="136:430" ph="{...}" />
+                <marker date="1547731547966" expanded="true" signature="160:285" ph="{...}" />
+                <marker date="1547731547966" expanded="true" signature="335:366" ph="{...}" />
+                <marker date="1547731547966" expanded="true" signature="421:428" ph="{...}" />
               </folding>
             </state>
           </provider>
@@ -211,52 +243,6 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Node.cs" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Assets/Scripts/Node editor/Nodes/Node.cs">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1395">
-              <caret line="93" selection-start-line="93" selection-end-line="93" />
-              <folding>
-                <marker date="1547472029458" expanded="true" signature="6:85" ph="..." />
-                <marker date="1547472029458" expanded="true" signature="158:5062" ph="{...}" />
-                <marker date="1547472029458" expanded="true" signature="805:1406" ph="{...}" />
-                <marker date="1547472029458" expanded="true" signature="1443:1487" ph="{...}" />
-                <marker date="1547472029458" expanded="true" signature="1601:2967" ph="{...}" />
-                <marker date="1547472029458" expanded="true" signature="1941:2033" ph="{...}" />
-                <marker date="1547472029458" expanded="true" signature="2060:2952" ph="{...}" />
-                <marker date="1547472029458" expanded="true" signature="2110:2191" ph="{...}" />
-                <marker date="1547472029458" expanded="true" signature="2706:2822" ph="{...}" />
-                <marker date="1547472029458" expanded="true" signature="2882:2942" ph="{...}" />
-                <marker date="1547472029458" expanded="true" signature="3000:3415" ph="{...}" />
-                <marker date="1547472029458" expanded="true" signature="3345:3409" ph="{...}" />
-                <marker date="1547472029458" expanded="true" signature="3487:4697" ph="{...}" />
-                <marker date="1547472029458" expanded="true" signature="3517:4668" ph="{...}" />
-                <marker date="1547472029458" expanded="true" signature="3600:4116" ph="{...}" />
-                <marker date="1547472029458" expanded="true" signature="3667:3891" ph="{...}" />
-                <marker date="1547472029458" expanded="true" signature="3916:4098" ph="{...}" />
-                <marker date="1547472029458" expanded="true" signature="4193:4300" ph="{...}" />
-                <marker date="1547472029458" expanded="true" signature="4505:4635" ph="{...}" />
-                <marker date="1547472029458" expanded="true" signature="4736:4924" ph="{...}" />
-                <marker date="1547472029458" expanded="true" signature="4962:5060" ph="{...}" />
-                <marker date="1547472029458" expanded="true" signature="5002:5054" ph="{...}" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="PlayerDisplayContainer.cs" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Assets/Scripts/Networking/PlayerDisplayContainer.cs">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="105">
-              <caret line="10" selection-start-line="10" selection-end-line="10" />
-              <folding>
-                <marker date="1547217946114" expanded="false" signature="6:100" ph="..." />
-                <marker date="1547217946114" expanded="true" signature="153:205" ph="{...}" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
     </leaf>
   </component>
   <component name="FindInProjectRecents">
@@ -270,6 +256,7 @@
   <component name="HighlightingSettingsPerFile">
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Networking/PlayerDisplayContainer.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Networking/PlayerUnit.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/DontDestroy.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Common/Scripts/TrackableSettings.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Node editor/Nodes/NestedTaskNode.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/2152239E-1773-479F-A4CB-6CF28F044E3B/d4/10b5488c/ObjectTarget.cs" root0="SKIP_HIGHLIGHTING" />
@@ -277,14 +264,14 @@
     <setting file="file://$PROJECT_DIR$/Assets/ForceOrientation.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Vuforia/Scripts/DefaultInitializationErrorHandler.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/96A2AAF2-3C2F-450B-B06F-6D9F3114D91B/97/3c12b559/JObject.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Node editor/Nodes/Node.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Networking/LobbyUIStarter.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/NetworkedGameState.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Node editor/Tasks/TaskData.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Node editor/TestingScript.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Node editor/TaskModel.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Node editor/Nodes/Node.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Networking/LobbyUIStarter.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/NetworkedGameState.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Node editor/Tasks/TaskData.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Node editor/TestingScript.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Node editor/TaskModel.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/MissionTrackableEventHandler.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Networking/LoadSceneScript.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Networking/LoadSceneScript.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Networking/NetworkedButtonInit.cs" root0="SKIP_HIGHLIGHTING" />
   </component>
   <component name="IdeDocumentHistory">
@@ -296,7 +283,6 @@
         <option value="$PROJECT_DIR$/Assets/TinCan/Activity.cs" />
         <option value="$PROJECT_DIR$/Assets/TinCan/About.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Networking/PlayerDisplayContainer.cs" />
-        <option value="$PROJECT_DIR$/Assets/ForceOrientation.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/NetworkedGameState.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Node editor/Nodes/Node.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Networking/PlayerUnit.cs" />
@@ -306,6 +292,8 @@
         <option value="$PROJECT_DIR$/Assets/Scripts/Networking/LobbyUIStarter.cs" />
         <option value="$PROJECT_DIR$/Assets/Vuforia/Scripts/DefaultTrackableEventHandler.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Networking/LoadSceneScript.cs" />
+        <option value="$PROJECT_DIR$/Assets/ForceOrientation.cs" />
+        <option value="$PROJECT_DIR$/Assets/DontDestroy.cs" />
       </list>
     </option>
   </component>
@@ -395,12 +383,12 @@
       <workItem from="1547205579933" duration="9525000" />
       <workItem from="1547457090535" duration="2054000" />
       <workItem from="1547460188544" duration="14112000" />
-      <workItem from="1547718702299" duration="3333000" />
+      <workItem from="1547718702299" duration="3901000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="31728000" />
+    <option name="totallyTimeSpent" value="32296000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -449,26 +437,10 @@
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <option name="time" value="2" />
+      <option name="time" value="3" />
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/Assets/Scripts/Node editor/Nodes/NestedTaskNode.cs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="735">
-          <caret line="52" column="101" selection-start-line="52" selection-start-column="8" selection-end-line="52" selection-end-column="101" />
-          <folding>
-            <marker date="1546857951224" expanded="false" signature="6:97" ph="..." />
-            <marker date="1546857951224" expanded="true" signature="151:1684" ph="{...}" />
-            <marker date="1546857951224" expanded="true" signature="316:400" ph="{...}" />
-            <marker date="1546857951224" expanded="true" signature="456:561" ph="{...}" />
-            <marker date="1546857951224" expanded="true" signature="594:1677" ph="{...}" />
-            <marker date="1546857951224" expanded="true" signature="665:743" ph="{...}" />
-            <marker date="1546857951224" expanded="true" signature="775:1043" ph="{...}" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Assets/Scripts/Networking/PlayerDisplayContainer.cs">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="105">
@@ -485,13 +457,10 @@
         <state relative-caret-position="150">
           <caret line="10" column="44" selection-start-line="10" selection-start-column="44" selection-end-line="10" selection-end-column="44" />
           <folding>
-            <marker date="1547730975765" expanded="true" signature="6:158" ph="..." />
-            <marker date="1547730975765" expanded="true" signature="208:661" ph="{...}" />
-            <marker date="1547730975765" expanded="true" signature="231:278" ph="{...}" />
-            <marker date="1547730975765" expanded="true" signature="319:364" ph="{...}" />
-            <marker date="1547730975765" expanded="true" signature="399:547" ph="{...}" />
-            <marker date="1547730975765" expanded="true" signature="574:659" ph="{...}" />
-            <marker date="1547730975765" expanded="true" signature="611:656" ph="{...}" />
+            <marker date="1547731451702" expanded="true" signature="6:158" ph="..." />
+            <marker date="1547731451702" expanded="true" signature="208:441" ph="{...}" />
+            <marker date="1547731451702" expanded="true" signature="250:292" ph="{...}" />
+            <marker date="1547731451702" expanded="true" signature="327:439" ph="{...}" />
           </folding>
         </state>
       </provider>
@@ -1015,13 +984,6 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/Assets/TinCan/Activity.cs" />
     <entry file="file://$PROJECT_DIR$/Assets/TinCan/About.cs" />
-    <entry file="file://$PROJECT_DIR$/Assets/ForceOrientation.cs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="60">
-          <caret line="7" column="30" selection-start-line="7" selection-start-column="30" selection-end-line="7" selection-end-column="30" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Assets/Scripts/Node editor/Nodes/NestedTaskNode.cs">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="735">
@@ -1208,18 +1170,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Assets/Scripts/Networking/LobbyUIStarter.cs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="180">
-          <caret line="12" column="8" selection-start-line="12" selection-start-column="8" selection-end-line="12" selection-end-column="8" />
-          <folding>
-            <marker date="1547479361237" expanded="true" signature="6:113" ph="..." />
-            <marker date="1547479361237" expanded="true" signature="158:225" ph="{...}" />
-            <marker date="1547479361237" expanded="true" signature="214:223" ph="{...}" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Assets/Vuforia/Scripts/DefaultInitializationErrorHandler.cs">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="300">
@@ -1282,15 +1232,45 @@
     <entry file="file://$PROJECT_DIR$/Assets/Scripts/Networking/LoadSceneScript.cs">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="120">
-          <caret line="8" column="22" selection-start-line="8" selection-start-column="22" selection-end-line="8" selection-end-column="22" />
+          <caret line="8" selection-start-line="8" selection-end-line="8" />
           <folding>
-            <marker date="1547730975765" expanded="true" signature="6:158" ph="..." />
-            <marker date="1547730975765" expanded="true" signature="208:661" ph="{...}" />
-            <marker date="1547730975765" expanded="true" signature="231:278" ph="{...}" />
-            <marker date="1547730975765" expanded="true" signature="319:364" ph="{...}" />
-            <marker date="1547730975765" expanded="true" signature="399:547" ph="{...}" />
-            <marker date="1547730975765" expanded="true" signature="574:659" ph="{...}" />
-            <marker date="1547730975765" expanded="true" signature="611:656" ph="{...}" />
+            <marker date="1547731451702" expanded="true" signature="6:158" ph="..." />
+            <marker date="1547731451702" expanded="true" signature="208:441" ph="{...}" />
+            <marker date="1547731451702" expanded="true" signature="250:292" ph="{...}" />
+            <marker date="1547731451702" expanded="true" signature="327:439" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Assets/Scripts/Networking/LobbyUIStarter.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="135">
+          <caret line="12" column="8" selection-start-line="12" selection-start-column="8" selection-end-line="12" selection-end-column="8" />
+          <folding>
+            <marker date="1547479361237" expanded="false" signature="6:113" ph="..." />
+            <marker date="1547479361237" expanded="true" signature="158:225" ph="{...}" />
+            <marker date="1547479361237" expanded="true" signature="214:223" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Assets/ForceOrientation.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="75">
+          <caret line="8" column="4" selection-start-line="8" selection-start-column="4" selection-end-line="8" selection-end-column="4" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Assets/DontDestroy.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="135">
+          <caret line="9" column="29" selection-start-line="9" selection-start-column="29" selection-end-line="9" selection-end-column="29" />
+          <folding>
+            <marker date="1547731547966" expanded="true" signature="6:93" ph="..." />
+            <marker date="1547731547966" expanded="true" signature="136:430" ph="{...}" />
+            <marker date="1547731547966" expanded="true" signature="160:285" ph="{...}" />
+            <marker date="1547731547966" expanded="true" signature="335:366" ph="{...}" />
+            <marker date="1547731547966" expanded="true" signature="421:428" ph="{...}" />
           </folding>
         </state>
       </provider>

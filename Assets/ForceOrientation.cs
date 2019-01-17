@@ -6,7 +6,8 @@ using UnityEngine.UI;
 public class ForceOrientation : MonoBehaviour
 {
 	private bool first = true;
-
+	
+	
 	void Update()
 	{
 		if (first)
