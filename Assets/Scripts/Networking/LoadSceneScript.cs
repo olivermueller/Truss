@@ -6,6 +6,10 @@ using UnityEngine.SceneManagement;
 using Vuforia;
 
 public class LoadSceneScript : NetworkBehaviour {
+	private void Start()
+	{
+		VuforiaRuntime.Instance.InitVuforia();
+	}
 
 	public void LoadScene(int sceneToLoad)
 	{
