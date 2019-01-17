@@ -7,7 +7,7 @@ using Vuforia;
 public class DontDestroy : MonoBehaviour {
 	private void Awake()
 	{
-		//VuforiaRuntime.Instance.InitVuforia();
+		VuforiaRuntime.Instance.InitVuforia();
 		VuforiaBehaviour.Instance.enabled = true;
 	}
 
@@ -16,7 +16,7 @@ public class DontDestroy : MonoBehaviour {
 	{
 		VuforiaBehaviour.Instance.enabled = false;
 
-		//VuforiaRuntime.Instance.Deinit();
+		VuforiaRuntime.Instance.Deinit();
 	}
 
 
