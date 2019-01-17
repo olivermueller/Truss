@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Networking;
 using UnityEngine.SceneManagement;
+using Vuforia;
 
 public class LoadSceneScript : NetworkBehaviour {
 
@@ -14,6 +15,7 @@ public class LoadSceneScript : NetworkBehaviour {
 
 	IEnumerator StopHostAfter(int t)
 	{
+		VuforiaRuntime.Instance.Deinit();
 		yield return new WaitForSeconds(t);
 		NetworkManager.singleton.StopHost();
 		SceneManager.LoadScene(0);
