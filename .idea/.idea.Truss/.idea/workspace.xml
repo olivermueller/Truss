@@ -2,7 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="3a9f6f49-2e40-4cfd-9324-9b233b559f23" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/[NETWORKED] Lobby.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/[NETWORKED] Lobby.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.Truss/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Truss/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Networking/LoadSceneScript.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Networking/LoadSceneScript.cs" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -16,7 +17,7 @@
       <file leaf-file-name="NetworkedGameState.cs" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Assets/Scripts/NetworkedGameState.cs">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="390">
+            <state relative-caret-position="285">
               <caret line="33" selection-start-line="33" selection-end-line="33" />
               <folding>
                 <marker date="1547463241300" expanded="false" signature="6:188" ph="..." />
@@ -129,43 +130,79 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="LoadSceneScript.cs" pinned="false" current-in-tab="false">
+      <file leaf-file-name="LoadSceneScript.cs" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Assets/Scripts/Networking/LoadSceneScript.cs">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="90">
-              <caret line="10" column="44" selection-start-line="10" selection-start-column="44" selection-end-line="10" selection-end-column="44" />
+              <caret line="11" column="59" selection-start-line="11" selection-start-column="59" selection-end-line="11" selection-end-column="59" />
               <folding>
-                <marker date="1547482681299" expanded="false" signature="6:143" ph="..." />
-                <marker date="1547482681299" expanded="true" signature="193:283" ph="{...}" />
-                <marker date="1547482681299" expanded="true" signature="235:281" ph="{...}" />
+                <marker date="1547720530810" expanded="false" signature="6:173" ph="..." />
+                <marker date="1547720530810" expanded="true" signature="223:483" ph="{...}" />
+                <marker date="1547720530810" expanded="true" signature="265:363" ph="{...}" />
+                <marker date="1547720530810" expanded="true" signature="398:481" ph="{...}" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="DefaultTrackableEventHandler.cs" pinned="false" current-in-tab="true">
+      <file leaf-file-name="DefaultTrackableEventHandler.cs" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Assets/Vuforia/Scripts/DefaultTrackableEventHandler.cs">
           <provider selected="true" editor-type-id="text-editor">
-            <state>
+            <state relative-caret-position="330">
+              <caret line="29" column="29" selection-start-line="29" selection-start-column="29" selection-end-line="29" selection-end-column="29" />
               <folding>
-                <marker date="1547203367492" expanded="true" signature="0:366" ph="/* ============================================================================== ... */" />
-                <marker date="1547203367492" expanded="false" signature="374:401" ph="..." />
-                <marker date="1547203367492" expanded="true" signature="403:695" ph="/// A custom handler that implements the ITrackableEventHandler interface. ... " />
-                <marker date="1547203367492" expanded="true" signature="777:4179" ph="{...}" />
-                <marker date="1547203367492" expanded="false" signature="784:1030" ph="PROTECTED_MEMBER_VARIABLES" />
-                <marker date="1547203367492" expanded="false" signature="1036:1490" ph="UNITY_MONOBEHAVIOUR_METHODS" />
-                <marker date="1547203367492" expanded="true" signature="1107:1287" ph="{...}" />
-                <marker date="1547203367492" expanded="true" signature="1327:1443" ph="{...}" />
-                <marker date="1547203367492" expanded="false" signature="1496:2827" ph="PUBLIC_METHODS" />
-                <marker date="1547203367492" expanded="true" signature="1524:1674" ph="///     Implementation of the ITrackableEventHandler function called when the ... " />
-                <marker date="1547203367492" expanded="true" signature="1818:2793" ph="{...}" />
-                <marker date="1547203367492" expanded="true" signature="2095:2230" ph="{...}" />
-                <marker date="1547203367492" expanded="true" signature="2367:2500" ph="{...}" />
-                <marker date="1547203367492" expanded="true" signature="2513:2787" ph="{...}" />
-                <marker date="1547203367492" expanded="true" signature="2536:2747" ph="/* For combo of previousStatus=UNKNOWN + newStatus=UNKNOWN|NOT_FOUND ... */" />
-                <marker date="1547203367492" expanded="false" signature="2833:4177" ph="PROTECTED_METHODS" />
-                <marker date="1547203367492" expanded="true" signature="2904:3496" ph="{...}" />
-                <marker date="1547203367492" expanded="true" signature="3542:4140" ph="{...}" />
+                <marker date="1547719949389" expanded="true" signature="0:366" ph="/* ============================================================================== ... */" />
+                <marker date="1547719949389" expanded="false" signature="374:401" ph="..." />
+                <marker date="1547719949389" expanded="true" signature="403:695" ph="/// A custom handler that implements the ITrackableEventHandler interface. ... " />
+                <marker date="1547719949389" expanded="true" signature="777:4254" ph="{...}" />
+                <marker date="1547719949389" expanded="false" signature="784:1030" ph="PROTECTED_MEMBER_VARIABLES" />
+                <marker date="1547719949389" expanded="true" signature="1036:1565" ph="UNITY_MONOBEHAVIOUR_METHODS" />
+                <marker date="1547719949389" expanded="true" signature="1107:1362" ph="{...}" />
+                <marker date="1547719949389" expanded="true" signature="1402:1518" ph="{...}" />
+                <marker date="1547719949389" expanded="false" signature="1571:2902" ph="PUBLIC_METHODS" />
+                <marker date="1547719949389" expanded="true" signature="1599:1749" ph="///     Implementation of the ITrackableEventHandler function called when the ... " />
+                <marker date="1547719949389" expanded="true" signature="1893:2868" ph="{...}" />
+                <marker date="1547719949389" expanded="true" signature="2170:2305" ph="{...}" />
+                <marker date="1547719949389" expanded="true" signature="2442:2575" ph="{...}" />
+                <marker date="1547719949389" expanded="true" signature="2588:2862" ph="{...}" />
+                <marker date="1547719949389" expanded="true" signature="2611:2822" ph="/* For combo of previousStatus=UNKNOWN + newStatus=UNKNOWN|NOT_FOUND ... */" />
+                <marker date="1547719949389" expanded="false" signature="2908:4252" ph="PROTECTED_METHODS" />
+                <marker date="1547719949389" expanded="true" signature="2979:3571" ph="{...}" />
+                <marker date="1547719949389" expanded="true" signature="3617:4215" ph="{...}" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="DefaultInitializationErrorHandler.cs" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Assets/Vuforia/Scripts/DefaultInitializationErrorHandler.cs">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="300">
+              <caret line="32" selection-start-line="32" selection-end-line="32" />
+              <folding>
+                <marker date="1539653089000" expanded="true" signature="0:366" ph="/* ============================================================================== ... */" />
+                <marker date="1539653089000" expanded="false" signature="374:401" ph="..." />
+                <marker date="1539653089000" expanded="true" signature="403:692" ph="/// A custom handler that registers for Vuforia initialization errors ... " />
+                <marker date="1539653089000" expanded="true" signature="762:9539" ph="{...}" />
+                <marker date="1539653089000" expanded="false" signature="769:1092" ph="Vuforia_lifecycle_events" />
+                <marker date="1539653089000" expanded="true" signature="881:1048" ph="{...}" />
+                <marker date="1539653089000" expanded="true" signature="949:1042" ph="{...}" />
+                <marker date="1539653089000" expanded="false" signature="1098:1455" ph="PRIVATE_MEMBER_VARIABLES" />
+                <marker date="1539653089000" expanded="true" signature="1461:2239" ph="UNTIY_MONOBEHAVIOUR_METHODS" />
+                <marker date="1539653089000" expanded="true" signature="1514:1677" ph="{...}" />
+                <marker date="1539653089000" expanded="true" signature="1695:1733" ph="{...}" />
+                <marker date="1539653089000" expanded="true" signature="1751:1936" ph="{...}" />
+                <marker date="1539653089000" expanded="true" signature="1942:2061" ph="///     When this game object is destroyed, it unregisters itself as event handler ... " />
+                <marker date="1539653089000" expanded="true" signature="2082:2192" ph="{...}" />
+                <marker date="1539653089000" expanded="false" signature="2245:9537" ph="PRIVATE_METHODS" />
+                <marker date="1539653089000" expanded="true" signature="2304:2912" ph="{...}" />
+                <marker date="1539653089000" expanded="true" signature="2751:2906" ph="{...}" />
+                <marker date="1539653089000" expanded="true" signature="2969:6495" ph="{...}" />
+                <marker date="1539653089000" expanded="true" signature="3002:6092" ph="{...}" />
+                <marker date="1539653089000" expanded="true" signature="6542:6594" ph="{...}" />
+                <marker date="1539653089000" expanded="true" signature="6619:7280" ph="{...}" />
+                <marker date="1539653089000" expanded="true" signature="7307:9217" ph="{...}" />
+                <marker date="1539653089000" expanded="true" signature="9270:9502" ph="{...}" />
               </folding>
             </state>
           </provider>
@@ -204,24 +241,6 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="NestedTaskNode.cs" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Assets/Scripts/Node editor/Nodes/NestedTaskNode.cs">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="735">
-              <caret line="52" column="101" selection-start-line="52" selection-start-column="8" selection-end-line="52" selection-end-column="101" />
-              <folding>
-                <marker date="1546857951224" expanded="false" signature="6:97" ph="..." />
-                <marker date="1546857951224" expanded="true" signature="151:1684" ph="{...}" />
-                <marker date="1546857951224" expanded="true" signature="316:400" ph="{...}" />
-                <marker date="1546857951224" expanded="true" signature="456:561" ph="{...}" />
-                <marker date="1546857951224" expanded="true" signature="594:1677" ph="{...}" />
-                <marker date="1546857951224" expanded="true" signature="665:743" ph="{...}" />
-                <marker date="1546857951224" expanded="true" signature="775:1043" ph="{...}" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="PlayerDisplayContainer.cs" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Assets/Scripts/Networking/PlayerDisplayContainer.cs">
           <provider selected="true" editor-type-id="text-editor">
@@ -253,6 +272,7 @@
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/2152239E-1773-479F-A4CB-6CF28F044E3B/d4/10b5488c/ObjectTarget.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Vuforia/Scripts/DefaultTrackableEventHandler.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/ForceOrientation.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Vuforia/Scripts/DefaultInitializationErrorHandler.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/96A2AAF2-3C2F-450B-B06F-6D9F3114D91B/97/3c12b559/JObject.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Node editor/Nodes/Node.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Networking/LobbyUIStarter.cs" root0="SKIP_HIGHLIGHTING" />
@@ -270,7 +290,6 @@
         <option value="$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/2152239E-1773-479F-A4CB-6CF28F044E3B/d4/10b5488c/ObjectTarget.cs" />
         <option value="$PROJECT_DIR$/Assets/SamplesResources/SceneAssets/CloudReco/Scripts/CloudRecoEventHandler.cs" />
         <option value="$PROJECT_DIR$/Assets/Common/Scripts/TrackableSettings.cs" />
-        <option value="$PROJECT_DIR$/Assets/Vuforia/Scripts/DefaultTrackableEventHandler.cs" />
         <option value="$PROJECT_DIR$/Assets/TinCan/Activity.cs" />
         <option value="$PROJECT_DIR$/Assets/TinCan/About.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Networking/PlayerDisplayContainer.cs" />
@@ -282,6 +301,7 @@
         <option value="$PROJECT_DIR$/Assets/Scripts/Node editor/TestingScript.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Node editor/Tasks/TaskData.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Networking/LobbyUIStarter.cs" />
+        <option value="$PROJECT_DIR$/Assets/Vuforia/Scripts/DefaultTrackableEventHandler.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Networking/LoadSceneScript.cs" />
       </list>
     </option>
@@ -372,12 +392,12 @@
       <workItem from="1547205579933" duration="9525000" />
       <workItem from="1547457090535" duration="2054000" />
       <workItem from="1547460188544" duration="14112000" />
-      <workItem from="1547718702299" duration="658000" />
+      <workItem from="1547718702299" duration="1231000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="29053000" />
+    <option name="totallyTimeSpent" value="29626000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -394,13 +414,13 @@
     <layout>
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="right" id="Errors In Solution" order="3" />
-      <window_info anchor="bottom" id="Event Log" order="7" side_tool="true" />
+      <window_info active="true" anchor="bottom" id="Event Log" order="7" side_tool="true" visible="true" weight="0.17200474" />
       <window_info anchor="bottom" id="Unit Tests" order="7" />
       <window_info anchor="bottom" id="Database Changes" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Version Control" order="7" />
       <window_info anchor="bottom" id="Run" order="2" />
       <window_info anchor="bottom" id="Terminal" order="7" />
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.26495728" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.26495728" />
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Unity" order="7" />
       <window_info anchor="right" id="Database" order="3" />
@@ -430,37 +450,6 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/Assets/Scripts/Node editor/Nodes/Node.cs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1395">
-          <caret line="93" selection-start-line="93" selection-end-line="93" />
-          <folding>
-            <marker date="1547472029458" expanded="true" signature="6:85" ph="..." />
-            <marker date="1547472029458" expanded="true" signature="158:5062" ph="{...}" />
-            <marker date="1547472029458" expanded="true" signature="805:1406" ph="{...}" />
-            <marker date="1547472029458" expanded="true" signature="1443:1487" ph="{...}" />
-            <marker date="1547472029458" expanded="true" signature="1601:2967" ph="{...}" />
-            <marker date="1547472029458" expanded="true" signature="1941:2033" ph="{...}" />
-            <marker date="1547472029458" expanded="true" signature="2060:2952" ph="{...}" />
-            <marker date="1547472029458" expanded="true" signature="2110:2191" ph="{...}" />
-            <marker date="1547472029458" expanded="true" signature="2706:2822" ph="{...}" />
-            <marker date="1547472029458" expanded="true" signature="2882:2942" ph="{...}" />
-            <marker date="1547472029458" expanded="true" signature="3000:3415" ph="{...}" />
-            <marker date="1547472029458" expanded="true" signature="3345:3409" ph="{...}" />
-            <marker date="1547472029458" expanded="true" signature="3487:4697" ph="{...}" />
-            <marker date="1547472029458" expanded="true" signature="3517:4668" ph="{...}" />
-            <marker date="1547472029458" expanded="true" signature="3600:4116" ph="{...}" />
-            <marker date="1547472029458" expanded="true" signature="3667:3891" ph="{...}" />
-            <marker date="1547472029458" expanded="true" signature="3916:4098" ph="{...}" />
-            <marker date="1547472029458" expanded="true" signature="4193:4300" ph="{...}" />
-            <marker date="1547472029458" expanded="true" signature="4505:4635" ph="{...}" />
-            <marker date="1547472029458" expanded="true" signature="4736:4924" ph="{...}" />
-            <marker date="1547472029458" expanded="true" signature="4962:5060" ph="{...}" />
-            <marker date="1547472029458" expanded="true" signature="5002:5054" ph="{...}" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Assets/Scripts/Node editor/Nodes/NestedTaskNode.cs">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="735">
@@ -493,9 +482,10 @@
         <state relative-caret-position="150">
           <caret line="10" column="44" selection-start-line="10" selection-start-column="44" selection-end-line="10" selection-end-column="44" />
           <folding>
-            <marker date="1547482681299" expanded="false" signature="6:143" ph="..." />
-            <marker date="1547482681299" expanded="true" signature="193:283" ph="{...}" />
-            <marker date="1547482681299" expanded="true" signature="235:281" ph="{...}" />
+            <marker date="1547720530810" expanded="false" signature="6:173" ph="..." />
+            <marker date="1547720530810" expanded="true" signature="223:483" ph="{...}" />
+            <marker date="1547720530810" expanded="true" signature="265:363" ph="{...}" />
+            <marker date="1547720530810" expanded="true" signature="398:481" ph="{...}" />
           </folding>
         </state>
       </provider>
@@ -600,20 +590,24 @@
         <state relative-caret-position="405">
           <caret line="49" column="18" selection-start-line="49" selection-start-column="18" selection-end-line="49" selection-end-column="18" />
           <folding>
-            <marker date="1547203367492" expanded="true" signature="0:366" ph="/* ============================================================================== ... */" />
-            <marker date="1547203367492" expanded="false" signature="374:401" ph="..." />
-            <marker date="1547203367492" expanded="true" signature="403:695" ph="/// A custom handler that implements the ITrackableEventHandler interface. ... " />
-            <marker date="1547203367492" expanded="true" signature="777:4179" ph="{...}" />
-            <marker date="1547203367492" expanded="false" signature="784:1030" ph="PROTECTED_MEMBER_VARIABLES" />
-            <marker date="1547203367492" expanded="false" signature="1036:1490" ph="UNITY_MONOBEHAVIOUR_METHODS" />
-            <marker date="1547203367492" expanded="true" signature="1496:2827" ph="PUBLIC_METHODS" />
-            <marker date="1547203367492" expanded="true" signature="1524:1674" ph="///     Implementation of the ITrackableEventHandler function called when the ... " />
-            <marker date="1547203367492" expanded="true" signature="1818:2793" ph="{...}" />
-            <marker date="1547203367492" expanded="true" signature="2095:2230" ph="{...}" />
-            <marker date="1547203367492" expanded="true" signature="2367:2500" ph="{...}" />
-            <marker date="1547203367492" expanded="true" signature="2513:2787" ph="{...}" />
-            <marker date="1547203367492" expanded="true" signature="2536:2747" ph="/* For combo of previousStatus=UNKNOWN + newStatus=UNKNOWN|NOT_FOUND ... */" />
-            <marker date="1547203367492" expanded="false" signature="2833:4177" ph="PROTECTED_METHODS" />
+            <marker date="1547719949389" expanded="true" signature="0:366" ph="/* ============================================================================== ... */" />
+            <marker date="1547719949389" expanded="false" signature="374:401" ph="..." />
+            <marker date="1547719949389" expanded="true" signature="403:695" ph="/// A custom handler that implements the ITrackableEventHandler interface. ... " />
+            <marker date="1547719949389" expanded="true" signature="777:4254" ph="{...}" />
+            <marker date="1547719949389" expanded="false" signature="784:1030" ph="PROTECTED_MEMBER_VARIABLES" />
+            <marker date="1547719949389" expanded="true" signature="1036:1565" ph="UNITY_MONOBEHAVIOUR_METHODS" />
+            <marker date="1547719949389" expanded="true" signature="1107:1362" ph="{...}" />
+            <marker date="1547719949389" expanded="true" signature="1402:1518" ph="{...}" />
+            <marker date="1547719949389" expanded="false" signature="1571:2902" ph="PUBLIC_METHODS" />
+            <marker date="1547719949389" expanded="true" signature="1599:1749" ph="///     Implementation of the ITrackableEventHandler function called when the ... " />
+            <marker date="1547719949389" expanded="true" signature="1893:2868" ph="{...}" />
+            <marker date="1547719949389" expanded="true" signature="2170:2305" ph="{...}" />
+            <marker date="1547719949389" expanded="true" signature="2442:2575" ph="{...}" />
+            <marker date="1547719949389" expanded="true" signature="2588:2862" ph="{...}" />
+            <marker date="1547719949389" expanded="true" signature="2611:2822" ph="/* For combo of previousStatus=UNKNOWN + newStatus=UNKNOWN|NOT_FOUND ... */" />
+            <marker date="1547719949389" expanded="false" signature="2908:4252" ph="PROTECTED_METHODS" />
+            <marker date="1547719949389" expanded="true" signature="2979:3571" ph="{...}" />
+            <marker date="1547719949389" expanded="true" signature="3617:4215" ph="{...}" />
           </folding>
         </state>
       </provider>
@@ -764,20 +758,24 @@
         <state relative-caret-position="405">
           <caret line="49" column="18" selection-start-line="49" selection-start-column="18" selection-end-line="49" selection-end-column="18" />
           <folding>
-            <marker date="1547203367492" expanded="true" signature="0:366" ph="/* ============================================================================== ... */" />
-            <marker date="1547203367492" expanded="false" signature="374:401" ph="..." />
-            <marker date="1547203367492" expanded="true" signature="403:695" ph="/// A custom handler that implements the ITrackableEventHandler interface. ... " />
-            <marker date="1547203367492" expanded="true" signature="777:4179" ph="{...}" />
-            <marker date="1547203367492" expanded="false" signature="784:1030" ph="PROTECTED_MEMBER_VARIABLES" />
-            <marker date="1547203367492" expanded="false" signature="1036:1490" ph="UNITY_MONOBEHAVIOUR_METHODS" />
-            <marker date="1547203367492" expanded="true" signature="1496:2827" ph="PUBLIC_METHODS" />
-            <marker date="1547203367492" expanded="true" signature="1524:1674" ph="///     Implementation of the ITrackableEventHandler function called when the ... " />
-            <marker date="1547203367492" expanded="true" signature="1818:2793" ph="{...}" />
-            <marker date="1547203367492" expanded="true" signature="2095:2230" ph="{...}" />
-            <marker date="1547203367492" expanded="true" signature="2367:2500" ph="{...}" />
-            <marker date="1547203367492" expanded="true" signature="2513:2787" ph="{...}" />
-            <marker date="1547203367492" expanded="true" signature="2536:2747" ph="/* For combo of previousStatus=UNKNOWN + newStatus=UNKNOWN|NOT_FOUND ... */" />
-            <marker date="1547203367492" expanded="false" signature="2833:4177" ph="PROTECTED_METHODS" />
+            <marker date="1547719949389" expanded="true" signature="0:366" ph="/* ============================================================================== ... */" />
+            <marker date="1547719949389" expanded="false" signature="374:401" ph="..." />
+            <marker date="1547719949389" expanded="true" signature="403:695" ph="/// A custom handler that implements the ITrackableEventHandler interface. ... " />
+            <marker date="1547719949389" expanded="true" signature="777:4254" ph="{...}" />
+            <marker date="1547719949389" expanded="false" signature="784:1030" ph="PROTECTED_MEMBER_VARIABLES" />
+            <marker date="1547719949389" expanded="true" signature="1036:1565" ph="UNITY_MONOBEHAVIOUR_METHODS" />
+            <marker date="1547719949389" expanded="true" signature="1107:1362" ph="{...}" />
+            <marker date="1547719949389" expanded="true" signature="1402:1518" ph="{...}" />
+            <marker date="1547719949389" expanded="false" signature="1571:2902" ph="PUBLIC_METHODS" />
+            <marker date="1547719949389" expanded="true" signature="1599:1749" ph="///     Implementation of the ITrackableEventHandler function called when the ... " />
+            <marker date="1547719949389" expanded="true" signature="1893:2868" ph="{...}" />
+            <marker date="1547719949389" expanded="true" signature="2170:2305" ph="{...}" />
+            <marker date="1547719949389" expanded="true" signature="2442:2575" ph="{...}" />
+            <marker date="1547719949389" expanded="true" signature="2588:2862" ph="{...}" />
+            <marker date="1547719949389" expanded="true" signature="2611:2822" ph="/* For combo of previousStatus=UNKNOWN + newStatus=UNKNOWN|NOT_FOUND ... */" />
+            <marker date="1547719949389" expanded="false" signature="2908:4252" ph="PROTECTED_METHODS" />
+            <marker date="1547719949389" expanded="true" signature="2979:3571" ph="{...}" />
+            <marker date="1547719949389" expanded="true" signature="3617:4215" ph="{...}" />
           </folding>
         </state>
       </provider>
@@ -882,20 +880,24 @@
         <state relative-caret-position="405">
           <caret line="49" column="18" selection-start-line="49" selection-start-column="18" selection-end-line="49" selection-end-column="18" />
           <folding>
-            <marker date="1547203367492" expanded="true" signature="0:366" ph="/* ============================================================================== ... */" />
-            <marker date="1547203367492" expanded="false" signature="374:401" ph="..." />
-            <marker date="1547203367492" expanded="true" signature="403:695" ph="/// A custom handler that implements the ITrackableEventHandler interface. ... " />
-            <marker date="1547203367492" expanded="true" signature="777:4179" ph="{...}" />
-            <marker date="1547203367492" expanded="false" signature="784:1030" ph="PROTECTED_MEMBER_VARIABLES" />
-            <marker date="1547203367492" expanded="false" signature="1036:1490" ph="UNITY_MONOBEHAVIOUR_METHODS" />
-            <marker date="1547203367492" expanded="true" signature="1496:2827" ph="PUBLIC_METHODS" />
-            <marker date="1547203367492" expanded="true" signature="1524:1674" ph="///     Implementation of the ITrackableEventHandler function called when the ... " />
-            <marker date="1547203367492" expanded="true" signature="1818:2793" ph="{...}" />
-            <marker date="1547203367492" expanded="true" signature="2095:2230" ph="{...}" />
-            <marker date="1547203367492" expanded="true" signature="2367:2500" ph="{...}" />
-            <marker date="1547203367492" expanded="true" signature="2513:2787" ph="{...}" />
-            <marker date="1547203367492" expanded="true" signature="2536:2747" ph="/* For combo of previousStatus=UNKNOWN + newStatus=UNKNOWN|NOT_FOUND ... */" />
-            <marker date="1547203367492" expanded="false" signature="2833:4177" ph="PROTECTED_METHODS" />
+            <marker date="1547719949389" expanded="true" signature="0:366" ph="/* ============================================================================== ... */" />
+            <marker date="1547719949389" expanded="false" signature="374:401" ph="..." />
+            <marker date="1547719949389" expanded="true" signature="403:695" ph="/// A custom handler that implements the ITrackableEventHandler interface. ... " />
+            <marker date="1547719949389" expanded="true" signature="777:4254" ph="{...}" />
+            <marker date="1547719949389" expanded="false" signature="784:1030" ph="PROTECTED_MEMBER_VARIABLES" />
+            <marker date="1547719949389" expanded="true" signature="1036:1565" ph="UNITY_MONOBEHAVIOUR_METHODS" />
+            <marker date="1547719949389" expanded="true" signature="1107:1362" ph="{...}" />
+            <marker date="1547719949389" expanded="true" signature="1402:1518" ph="{...}" />
+            <marker date="1547719949389" expanded="false" signature="1571:2902" ph="PUBLIC_METHODS" />
+            <marker date="1547719949389" expanded="true" signature="1599:1749" ph="///     Implementation of the ITrackableEventHandler function called when the ... " />
+            <marker date="1547719949389" expanded="true" signature="1893:2868" ph="{...}" />
+            <marker date="1547719949389" expanded="true" signature="2170:2305" ph="{...}" />
+            <marker date="1547719949389" expanded="true" signature="2442:2575" ph="{...}" />
+            <marker date="1547719949389" expanded="true" signature="2588:2862" ph="{...}" />
+            <marker date="1547719949389" expanded="true" signature="2611:2822" ph="/* For combo of previousStatus=UNKNOWN + newStatus=UNKNOWN|NOT_FOUND ... */" />
+            <marker date="1547719949389" expanded="false" signature="2908:4252" ph="PROTECTED_METHODS" />
+            <marker date="1547719949389" expanded="true" signature="2979:3571" ph="{...}" />
+            <marker date="1547719949389" expanded="true" signature="3617:4215" ph="{...}" />
           </folding>
         </state>
       </provider>
@@ -1144,7 +1146,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/Assets/Scripts/NetworkedGameState.cs">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="390">
+        <state relative-caret-position="285">
           <caret line="33" selection-start-line="33" selection-end-line="33" />
           <folding>
             <marker date="1547463241300" expanded="false" signature="6:188" ph="..." />
@@ -1212,36 +1214,74 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Assets/Scripts/Networking/LoadSceneScript.cs">
+    <entry file="file://$PROJECT_DIR$/Assets/Vuforia/Scripts/DefaultInitializationErrorHandler.cs">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="90">
-          <caret line="10" column="44" selection-start-line="10" selection-start-column="44" selection-end-line="10" selection-end-column="44" />
+        <state relative-caret-position="300">
+          <caret line="32" selection-start-line="32" selection-end-line="32" />
           <folding>
-            <marker date="1547482681299" expanded="false" signature="6:143" ph="..." />
-            <marker date="1547482681299" expanded="true" signature="193:283" ph="{...}" />
-            <marker date="1547482681299" expanded="true" signature="235:281" ph="{...}" />
+            <marker date="1539653089000" expanded="true" signature="0:366" ph="/* ============================================================================== ... */" />
+            <marker date="1539653089000" expanded="false" signature="374:401" ph="..." />
+            <marker date="1539653089000" expanded="true" signature="403:692" ph="/// A custom handler that registers for Vuforia initialization errors ... " />
+            <marker date="1539653089000" expanded="true" signature="762:9539" ph="{...}" />
+            <marker date="1539653089000" expanded="false" signature="769:1092" ph="Vuforia_lifecycle_events" />
+            <marker date="1539653089000" expanded="true" signature="881:1048" ph="{...}" />
+            <marker date="1539653089000" expanded="true" signature="949:1042" ph="{...}" />
+            <marker date="1539653089000" expanded="false" signature="1098:1455" ph="PRIVATE_MEMBER_VARIABLES" />
+            <marker date="1539653089000" expanded="true" signature="1461:2239" ph="UNTIY_MONOBEHAVIOUR_METHODS" />
+            <marker date="1539653089000" expanded="true" signature="1514:1677" ph="{...}" />
+            <marker date="1539653089000" expanded="true" signature="1695:1733" ph="{...}" />
+            <marker date="1539653089000" expanded="true" signature="1751:1936" ph="{...}" />
+            <marker date="1539653089000" expanded="true" signature="1942:2061" ph="///     When this game object is destroyed, it unregisters itself as event handler ... " />
+            <marker date="1539653089000" expanded="true" signature="2082:2192" ph="{...}" />
+            <marker date="1539653089000" expanded="false" signature="2245:9537" ph="PRIVATE_METHODS" />
+            <marker date="1539653089000" expanded="true" signature="2304:2912" ph="{...}" />
+            <marker date="1539653089000" expanded="true" signature="2751:2906" ph="{...}" />
+            <marker date="1539653089000" expanded="true" signature="2969:6495" ph="{...}" />
+            <marker date="1539653089000" expanded="true" signature="3002:6092" ph="{...}" />
+            <marker date="1539653089000" expanded="true" signature="6542:6594" ph="{...}" />
+            <marker date="1539653089000" expanded="true" signature="6619:7280" ph="{...}" />
+            <marker date="1539653089000" expanded="true" signature="7307:9217" ph="{...}" />
+            <marker date="1539653089000" expanded="true" signature="9270:9502" ph="{...}" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Assets/Vuforia/Scripts/DefaultTrackableEventHandler.cs">
       <provider selected="true" editor-type-id="text-editor">
-        <state>
+        <state relative-caret-position="330">
+          <caret line="29" column="29" selection-start-line="29" selection-start-column="29" selection-end-line="29" selection-end-column="29" />
           <folding>
-            <marker date="1547203367492" expanded="true" signature="0:366" ph="/* ============================================================================== ... */" />
-            <marker date="1547203367492" expanded="false" signature="374:401" ph="..." />
-            <marker date="1547203367492" expanded="true" signature="403:695" ph="/// A custom handler that implements the ITrackableEventHandler interface. ... " />
-            <marker date="1547203367492" expanded="true" signature="777:4179" ph="{...}" />
-            <marker date="1547203367492" expanded="false" signature="784:1030" ph="PROTECTED_MEMBER_VARIABLES" />
-            <marker date="1547203367492" expanded="false" signature="1036:1490" ph="UNITY_MONOBEHAVIOUR_METHODS" />
-            <marker date="1547203367492" expanded="true" signature="1496:2827" ph="PUBLIC_METHODS" />
-            <marker date="1547203367492" expanded="true" signature="1524:1674" ph="///     Implementation of the ITrackableEventHandler function called when the ... " />
-            <marker date="1547203367492" expanded="true" signature="1818:2793" ph="{...}" />
-            <marker date="1547203367492" expanded="true" signature="2095:2230" ph="{...}" />
-            <marker date="1547203367492" expanded="true" signature="2367:2500" ph="{...}" />
-            <marker date="1547203367492" expanded="true" signature="2513:2787" ph="{...}" />
-            <marker date="1547203367492" expanded="true" signature="2536:2747" ph="/* For combo of previousStatus=UNKNOWN + newStatus=UNKNOWN|NOT_FOUND ... */" />
-            <marker date="1547203367492" expanded="false" signature="2833:4177" ph="PROTECTED_METHODS" />
+            <marker date="1547719949389" expanded="true" signature="0:366" ph="/* ============================================================================== ... */" />
+            <marker date="1547719949389" expanded="false" signature="374:401" ph="..." />
+            <marker date="1547719949389" expanded="true" signature="403:695" ph="/// A custom handler that implements the ITrackableEventHandler interface. ... " />
+            <marker date="1547719949389" expanded="true" signature="777:4254" ph="{...}" />
+            <marker date="1547719949389" expanded="false" signature="784:1030" ph="PROTECTED_MEMBER_VARIABLES" />
+            <marker date="1547719949389" expanded="true" signature="1036:1565" ph="UNITY_MONOBEHAVIOUR_METHODS" />
+            <marker date="1547719949389" expanded="true" signature="1107:1362" ph="{...}" />
+            <marker date="1547719949389" expanded="true" signature="1402:1518" ph="{...}" />
+            <marker date="1547719949389" expanded="false" signature="1571:2902" ph="PUBLIC_METHODS" />
+            <marker date="1547719949389" expanded="true" signature="1599:1749" ph="///     Implementation of the ITrackableEventHandler function called when the ... " />
+            <marker date="1547719949389" expanded="true" signature="1893:2868" ph="{...}" />
+            <marker date="1547719949389" expanded="true" signature="2170:2305" ph="{...}" />
+            <marker date="1547719949389" expanded="true" signature="2442:2575" ph="{...}" />
+            <marker date="1547719949389" expanded="true" signature="2588:2862" ph="{...}" />
+            <marker date="1547719949389" expanded="true" signature="2611:2822" ph="/* For combo of previousStatus=UNKNOWN + newStatus=UNKNOWN|NOT_FOUND ... */" />
+            <marker date="1547719949389" expanded="false" signature="2908:4252" ph="PROTECTED_METHODS" />
+            <marker date="1547719949389" expanded="true" signature="2979:3571" ph="{...}" />
+            <marker date="1547719949389" expanded="true" signature="3617:4215" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Assets/Scripts/Networking/LoadSceneScript.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="90">
+          <caret line="11" column="59" selection-start-line="11" selection-start-column="59" selection-end-line="11" selection-end-column="59" />
+          <folding>
+            <marker date="1547720530810" expanded="false" signature="6:173" ph="..." />
+            <marker date="1547720530810" expanded="true" signature="223:483" ph="{...}" />
+            <marker date="1547720530810" expanded="true" signature="265:363" ph="{...}" />
+            <marker date="1547720530810" expanded="true" signature="398:481" ph="{...}" />
           </folding>
         </state>
       </provider>
