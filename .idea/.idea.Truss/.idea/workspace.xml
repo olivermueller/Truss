@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="3a9f6f49-2e40-4cfd-9324-9b233b559f23" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.Truss/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Truss/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Networking/LoadSceneScript.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Networking/LoadSceneScript.cs" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -144,22 +144,22 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="LoadSceneScript.cs" pinned="false" current-in-tab="false">
+      <file leaf-file-name="LoadSceneScript.cs" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Assets/Scripts/Networking/LoadSceneScript.cs">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="45">
-              <caret line="8" selection-start-line="8" selection-end-line="8" />
+            <state relative-caret-position="165">
+              <caret line="16" column="44" selection-start-line="16" selection-start-column="44" selection-end-line="16" selection-end-column="44" />
               <folding>
-                <marker date="1547731451702" expanded="false" signature="6:158" ph="..." />
-                <marker date="1547731451702" expanded="true" signature="208:441" ph="{...}" />
-                <marker date="1547731451702" expanded="true" signature="250:292" ph="{...}" />
-                <marker date="1547731451702" expanded="true" signature="327:439" ph="{...}" />
+                <marker date="1547734942625" expanded="false" signature="6:158" ph="..." />
+                <marker date="1547734942625" expanded="true" signature="208:444" ph="{...}" />
+                <marker date="1547734942625" expanded="true" signature="250:292" ph="{...}" />
+                <marker date="1547734942625" expanded="true" signature="327:442" ph="{...}" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="DontDestroy.cs" pinned="false" current-in-tab="true">
+      <file leaf-file-name="DontDestroy.cs" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Assets/DontDestroy.cs">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="165">
@@ -267,9 +267,9 @@
         <option value="$PROJECT_DIR$/Assets/Scripts/Node editor/Tasks/TaskData.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Networking/LobbyUIStarter.cs" />
         <option value="$PROJECT_DIR$/Assets/Vuforia/Scripts/DefaultTrackableEventHandler.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Networking/LoadSceneScript.cs" />
         <option value="$PROJECT_DIR$/Assets/ForceOrientation.cs" />
         <option value="$PROJECT_DIR$/Assets/DontDestroy.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Networking/LoadSceneScript.cs" />
       </list>
     </option>
   </component>
@@ -292,6 +292,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scratches" />
       <pane id="UnityExplorer">
         <subPane>
           <expand>
@@ -315,7 +316,6 @@
         </subPane>
         <option name="show-hidden-items" value="false" />
       </pane>
-      <pane id="Scratches" />
       <pane id="SolutionExplorer">
         <option name="show-file-system" value="false" />
         <option name="show-all-items" value="false" />
@@ -361,11 +361,12 @@
       <workItem from="1547460188544" duration="14112000" />
       <workItem from="1547718702299" duration="4768000" />
       <workItem from="1547733015490" duration="575000" />
+      <workItem from="1547734609743" duration="334000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="33738000" />
+    <option name="totallyTimeSpent" value="34072000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -378,22 +379,23 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1680" height="940" extended-state="0" />
+    <editor active="true" />
     <layout>
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="right" id="Errors In Solution" order="3" />
       <window_info active="true" anchor="bottom" id="Event Log" order="7" side_tool="true" visible="true" weight="0.17200474" />
       <window_info anchor="bottom" id="Unit Tests" order="7" />
       <window_info anchor="bottom" id="Database Changes" order="7" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Version Control" order="7" />
       <window_info anchor="bottom" id="Run" order="2" />
+      <window_info anchor="bottom" id="Version Control" order="7" />
       <window_info anchor="bottom" id="Terminal" order="7" />
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.26800978" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.27106228" />
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Unity" order="7" />
       <window_info anchor="right" id="Database" order="3" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
-      <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
+      <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="NuGet" order="7" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -429,10 +431,10 @@
         <state relative-caret-position="150">
           <caret line="10" column="44" selection-start-line="10" selection-start-column="44" selection-end-line="10" selection-end-column="44" />
           <folding>
-            <marker date="1547731451702" expanded="false" signature="6:158" ph="..." />
-            <marker date="1547731451702" expanded="true" signature="208:441" ph="{...}" />
-            <marker date="1547731451702" expanded="true" signature="250:292" ph="{...}" />
-            <marker date="1547731451702" expanded="true" signature="327:439" ph="{...}" />
+            <marker date="1547734942625" expanded="false" signature="6:158" ph="..." />
+            <marker date="1547734942625" expanded="true" signature="208:444" ph="{...}" />
+            <marker date="1547734942625" expanded="true" signature="250:292" ph="{...}" />
+            <marker date="1547734942625" expanded="true" signature="327:442" ph="{...}" />
           </folding>
         </state>
       </provider>
@@ -988,6 +990,19 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/Assets/DontDestroy.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="165">
+          <caret line="15" column="40" selection-start-line="15" selection-start-column="40" selection-end-line="15" selection-end-column="40" />
+          <folding>
+            <marker date="1547733096285" expanded="false" signature="6:128" ph="..." />
+            <marker date="1547733096285" expanded="true" signature="171:346" ph="{...}" />
+            <marker date="1547733096285" expanded="true" signature="194:241" ph="{...}" />
+            <marker date="1547733096285" expanded="true" signature="300:342" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/Assets/ForceOrientation.cs">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="75">
@@ -1003,26 +1018,13 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/Assets/Scripts/Networking/LoadSceneScript.cs">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="45">
-          <caret line="8" selection-start-line="8" selection-end-line="8" />
-          <folding>
-            <marker date="1547731451702" expanded="false" signature="6:158" ph="..." />
-            <marker date="1547731451702" expanded="true" signature="208:441" ph="{...}" />
-            <marker date="1547731451702" expanded="true" signature="250:292" ph="{...}" />
-            <marker date="1547731451702" expanded="true" signature="327:439" ph="{...}" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Assets/DontDestroy.cs">
-      <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="165">
-          <caret line="15" column="40" selection-start-line="15" selection-start-column="40" selection-end-line="15" selection-end-column="40" />
+          <caret line="16" column="44" selection-start-line="16" selection-start-column="44" selection-end-line="16" selection-end-column="44" />
           <folding>
-            <marker date="1547733096285" expanded="false" signature="6:128" ph="..." />
-            <marker date="1547733096285" expanded="true" signature="171:346" ph="{...}" />
-            <marker date="1547733096285" expanded="true" signature="194:241" ph="{...}" />
-            <marker date="1547733096285" expanded="true" signature="300:342" ph="{...}" />
+            <marker date="1547734942625" expanded="false" signature="6:158" ph="..." />
+            <marker date="1547734942625" expanded="true" signature="208:444" ph="{...}" />
+            <marker date="1547734942625" expanded="true" signature="250:292" ph="{...}" />
+            <marker date="1547734942625" expanded="true" signature="327:442" ph="{...}" />
           </folding>
         </state>
       </provider>
