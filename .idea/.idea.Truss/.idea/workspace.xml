@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="3a9f6f49-2e40-4cfd-9324-9b233b559f23" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Networking/LoadSceneScript.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Networking/LoadSceneScript.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/DontDestroy.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/DontDestroy.cs" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -144,7 +144,7 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="LoadSceneScript.cs" pinned="false" current-in-tab="true">
+      <file leaf-file-name="LoadSceneScript.cs" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Assets/Scripts/Networking/LoadSceneScript.cs">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="165">
@@ -159,16 +159,16 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="DontDestroy.cs" pinned="false" current-in-tab="false">
+      <file leaf-file-name="DontDestroy.cs" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Assets/DontDestroy.cs">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="165">
-              <caret line="15" column="40" selection-start-line="15" selection-start-column="40" selection-end-line="15" selection-end-column="40" />
+            <state relative-caret-position="90">
+              <caret line="10" column="48" selection-start-line="10" selection-start-column="48" selection-end-line="10" selection-end-column="48" />
               <folding>
-                <marker date="1547733096285" expanded="false" signature="6:128" ph="..." />
-                <marker date="1547733096285" expanded="true" signature="171:346" ph="{...}" />
-                <marker date="1547733096285" expanded="true" signature="194:241" ph="{...}" />
-                <marker date="1547733096285" expanded="true" signature="300:342" ph="{...}" />
+                <marker date="1547735310739" expanded="false" signature="6:128" ph="..." />
+                <marker date="1547735310739" expanded="true" signature="171:440" ph="{...}" />
+                <marker date="1547735310739" expanded="true" signature="194:287" ph="{...}" />
+                <marker date="1547735310739" expanded="true" signature="346:436" ph="{...}" />
               </folding>
             </state>
           </provider>
@@ -268,8 +268,8 @@
         <option value="$PROJECT_DIR$/Assets/Scripts/Networking/LobbyUIStarter.cs" />
         <option value="$PROJECT_DIR$/Assets/Vuforia/Scripts/DefaultTrackableEventHandler.cs" />
         <option value="$PROJECT_DIR$/Assets/ForceOrientation.cs" />
-        <option value="$PROJECT_DIR$/Assets/DontDestroy.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Networking/LoadSceneScript.cs" />
+        <option value="$PROJECT_DIR$/Assets/DontDestroy.cs" />
       </list>
     </option>
   </component>
@@ -361,12 +361,12 @@
       <workItem from="1547460188544" duration="14112000" />
       <workItem from="1547718702299" duration="4768000" />
       <workItem from="1547733015490" duration="575000" />
-      <workItem from="1547734609743" duration="334000" />
+      <workItem from="1547734609743" duration="593000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="34072000" />
+    <option name="totallyTimeSpent" value="34331000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -990,19 +990,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Assets/DontDestroy.cs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="165">
-          <caret line="15" column="40" selection-start-line="15" selection-start-column="40" selection-end-line="15" selection-end-column="40" />
-          <folding>
-            <marker date="1547733096285" expanded="false" signature="6:128" ph="..." />
-            <marker date="1547733096285" expanded="true" signature="171:346" ph="{...}" />
-            <marker date="1547733096285" expanded="true" signature="194:241" ph="{...}" />
-            <marker date="1547733096285" expanded="true" signature="300:342" ph="{...}" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Assets/ForceOrientation.cs">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="75">
@@ -1025,6 +1012,19 @@
             <marker date="1547734942625" expanded="true" signature="208:444" ph="{...}" />
             <marker date="1547734942625" expanded="true" signature="250:292" ph="{...}" />
             <marker date="1547734942625" expanded="true" signature="327:442" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Assets/DontDestroy.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="90">
+          <caret line="10" column="48" selection-start-line="10" selection-start-column="48" selection-end-line="10" selection-end-column="48" />
+          <folding>
+            <marker date="1547735310739" expanded="false" signature="6:128" ph="..." />
+            <marker date="1547735310739" expanded="true" signature="171:440" ph="{...}" />
+            <marker date="1547735310739" expanded="true" signature="194:287" ph="{...}" />
+            <marker date="1547735310739" expanded="true" signature="346:436" ph="{...}" />
           </folding>
         </state>
       </provider>
