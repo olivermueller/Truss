@@ -20,4 +20,12 @@ public class LoadSceneScript : NetworkBehaviour {
 		NetworkManager.singleton.StopHost();
 		SceneManager.LoadScene(0);
 	}
+
+	private void OnDestroy()
+	{
+		if (isLocalPlayer && !isServer)
+		{
+			VuforiaRuntime.Instance.Deinit();
+		}
+	}
 }
