@@ -5,10 +5,14 @@ using UnityEngine.SceneManagement;
 using Vuforia;
 
 public class DontDestroy : MonoBehaviour {
-
-	private void Awake()
+	private void OnEnable()
 	{
-		if (SceneManager.GetActiveScene().buildIndex == 1)
+		SceneManager.sceneLoaded += OnLevelWasLoaded;
+	}
+
+	void OnLevelWasLoaded(Scene scene, LoadSceneMode mode)
+	{
+		if (scene.buildIndex == 1)
 		{
 			GetComponent<VuforiaBehaviour>().enabled = true;
 			GetComponent<DefaultInitializationErrorHandler>().enabled = true;
