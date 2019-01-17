@@ -227,6 +227,8 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 224960984051560812}
+  - component: {fileID: 114030128179006372}
+  - component: {fileID: 114914811117431518}
   m_Layer: 5
   m_Name: EndScreen
   m_TagString: EndScreen
@@ -613,6 +615,38 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_ShowMaskGraphic: 1
+--- !u!114 &114030128179006372
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1346774946342504}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 372142912, guid: dc443db3e92b4983b9738c1131f555cb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_SceneId:
+    m_Value: 0
+  m_AssetId:
+    i0: 122
+    i1: 194
+    i2: 190
+    i3: 104
+    i4: 216
+    i5: 205
+    i6: 100
+    i7: 77
+    i8: 26
+    i9: 35
+    i10: 77
+    i11: 128
+    i12: 112
+    i13: 162
+    i14: 177
+    i15: 96
+  m_ServerOnly: 0
+  m_LocalPlayerAuthority: 1
 --- !u!114 &114046118129784108
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -2352,6 +2386,17 @@ MonoBehaviour:
   trainerUI: {fileID: 1790298581657724}
   traineeUI: {fileID: 1308509853300630}
   IsTrainer: 0
+--- !u!114 &114914811117431518
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1346774946342504}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 44e44e0f9a09d4d1b81b114df3da3282, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &114929598036350864
 MonoBehaviour:
   m_ObjectHideFlags: 1
