@@ -15,7 +15,7 @@ public class LoadSceneScript : NetworkBehaviour {
 	IEnumerator StopHostAfter(int t)
 	{
 		yield return new WaitForSeconds(t);
-		NetworkManager.singleton.StopHost();
+		//NetworkManager.singleton.StopHost();
 		SceneManager.LoadScene(0);
 	}
 }
