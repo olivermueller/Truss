@@ -14,10 +14,8 @@ public class DontDestroy : MonoBehaviour {
 	// Use this for initialization
 	private void OnDestroy()
 	{
-		
-
-		VuforiaRuntime.Instance.Deinit();
-		VuforiaBehaviour.Instance.enabled = false;
+		//VuforiaRuntime.Instance.Deinit();
+		//VuforiaBehaviour.Instance.enabled = false;
 	}
 
 
