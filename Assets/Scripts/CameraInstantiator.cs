@@ -9,14 +9,23 @@ public class CameraInstantiator : MonoBehaviour
 
 	public GameObject ARCameraPrefab;
 	
-	void Awake () 
+	
+	
+	void Awake ()
 	{
+		SceneManager.sceneLoaded += InitVuforia;
+	}
+
+	void InitVuforia(Scene scene, LoadSceneMode mode)
+	{
+		
 		TrackerManager.Instance.GetStateManager().ReassociateTrackables();
 
 		if (FindObjectOfType<Camera>() == null)
 		{
 			GameObject.Instantiate(ARCameraPrefab);
 		}
+		
 		var camera = GameObject.FindObjectOfType<Camera>().gameObject;
 		if (SceneManager.GetActiveScene().buildIndex == 0)
 		{
@@ -28,6 +37,6 @@ public class CameraInstantiator : MonoBehaviour
 			camera.GetComponent<VuforiaBehaviour>().enabled = true;
 			camera.GetComponent<DefaultInitializationErrorHandler>().enabled = true;
 		}
-			
 	}
+	
 }
