@@ -18,7 +18,7 @@ public class CameraInstantiator : MonoBehaviour
 
 	void InitVuforia(Scene scene, LoadSceneMode mode)
 	{
-		
+		print("INITIALIZED VUFORIA============");
 		TrackerManager.Instance.GetStateManager().ReassociateTrackables();
 
 		if (FindObjectOfType<Camera>() == null)
@@ -27,7 +27,7 @@ public class CameraInstantiator : MonoBehaviour
 		}
 		
 		var camera = GameObject.FindObjectOfType<Camera>().gameObject;
-		if (SceneManager.GetActiveScene().buildIndex == 0)
+		if (scene.buildIndex == 0)
 		{
 			camera.GetComponent<VuforiaBehaviour>().enabled = false;
 			camera.GetComponent<DefaultInitializationErrorHandler>().enabled = false;
