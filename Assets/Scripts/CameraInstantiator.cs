@@ -17,17 +17,17 @@ public class CameraInstantiator : MonoBehaviour
 		{
 			GameObject.Instantiate(ARCameraPrefab);
 		}
-//		var camera = GameObject.FindObjectOfType<Camera>().gameObject;
-//		if (SceneManager.GetActiveScene().buildIndex == 0)
-//		{
-//			camera.GetComponent<VuforiaBehaviour>().enabled = false;
-//			camera.GetComponent<DefaultInitializationErrorHandler>().enabled = false;
-//		}
-//		else
-//		{
-//			camera.GetComponent<VuforiaBehaviour>().enabled = true;
-//			camera.GetComponent<DefaultInitializationErrorHandler>().enabled = true;
-//		}
+		var camera = GameObject.FindObjectOfType<Camera>().gameObject;
+		if (SceneManager.GetActiveScene().buildIndex == 0)
+		{
+			camera.GetComponent<VuforiaBehaviour>().enabled = false;
+			camera.GetComponent<DefaultInitializationErrorHandler>().enabled = false;
+		}
+		else
+		{
+			camera.GetComponent<VuforiaBehaviour>().enabled = true;
+			camera.GetComponent<DefaultInitializationErrorHandler>().enabled = true;
+		}
 			
 	}
 }
