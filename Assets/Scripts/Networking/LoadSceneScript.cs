@@ -19,4 +19,19 @@ public class LoadSceneScript : NetworkBehaviour {
 		
 		SceneManager.LoadScene(0);
 	}
+	
+	public void LoadSceneTest(int sceneToLoad)
+	{
+		SceneManager.LoadScene(sceneToLoad);
+	}
+
+//	private void OnEnable()
+//	{
+//		VuforiaBehaviour.Instance.enabled = true;
+//	}
+//	
+//	private void OnDisable()
+//	{
+//		VuforiaBehaviour.Instance.enabled = false;
+//	}
 }
