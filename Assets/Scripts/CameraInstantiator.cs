@@ -40,13 +40,13 @@ public class CameraInstantiator : MonoBehaviour
 		{
 			camera.GetComponent<VuforiaBehaviour>().enabled = false;
 			camera.GetComponent<DefaultInitializationErrorHandler>().enabled = false;
-			GameObject.FindObjectOfType<LobbyManager>().transform.GetChild(1).gameObject.SetActive(true);
+			FindObjectOfType<LobbyManager>().transform.GetChild(1).gameObject.SetActive(true);
 		}
 		else
 		{
 			camera.GetComponent<VuforiaBehaviour>().enabled = true;
 			camera.GetComponent<DefaultInitializationErrorHandler>().enabled = true;
-			//GameObject.FindWithTag("MainPanel").gameObject.SetActive(false);
+			FindObjectOfType<LobbyManager>().transform.GetChild(1).gameObject.SetActive(false);
 		}
 	}
 	
