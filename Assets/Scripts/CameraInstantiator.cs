@@ -35,18 +35,18 @@ public class CameraInstantiator : MonoBehaviour
 			camera = Instantiate(ARCameraPrefab);
 		}
 		camera = GameObject.FindWithTag("MainCamera");
-		if (scene.buildIndex == 0)
-		{
-			camera.GetComponent<VuforiaBehaviour>().enabled = false;
-			camera.GetComponent<DefaultInitializationErrorHandler>().enabled = false;
-			FindObjectOfType<LobbyManager>().transform.GetChild(1).gameObject.SetActive(true);
-		}
-		else
-		{
-			camera.GetComponent<VuforiaBehaviour>().enabled = true;
-			camera.GetComponent<DefaultInitializationErrorHandler>().enabled = true;
-			FindObjectOfType<LobbyManager>().transform.GetChild(1).gameObject.SetActive(false);
-		}
+//		if (scene.buildIndex == 0)
+//		{
+//			camera.GetComponent<VuforiaBehaviour>().enabled = false;
+//			camera.GetComponent<DefaultInitializationErrorHandler>().enabled = false;
+//			FindObjectOfType<LobbyManager>().transform.GetChild(1).gameObject.SetActive(true);
+//		}
+//		else
+//		{
+//			camera.GetComponent<VuforiaBehaviour>().enabled = true;
+//			camera.GetComponent<DefaultInitializationErrorHandler>().enabled = true;
+//			FindObjectOfType<LobbyManager>().transform.GetChild(1).gameObject.SetActive(false);
+//		}
 	}
 	
 }

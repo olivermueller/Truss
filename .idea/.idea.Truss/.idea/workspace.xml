@@ -3,13 +3,10 @@
   <component name="ChangeListManager">
     <list default="true" id="3a9f6f49-2e40-4cfd-9324-9b233b559f23" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Truss/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Truss/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/ForceOrientation.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/ForceOrientation.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/ChecklistItem.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/ChecklistItem.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/[NETWORKED] Lobby.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/[NETWORKED] Lobby.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/[NETWORKED]Play.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/[NETWORKED]Play.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/ARCamera.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/ARCamera.prefab" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/CameraInstantiator.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/CameraInstantiator.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Node editor/TaskModel.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Node editor/TaskModel.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Node editor/TaskModel.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Node editor/TaskModel.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectSettings/EditorBuildSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/EditorBuildSettings.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectSettings/ProjectSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/ProjectSettings.asset" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -94,7 +91,7 @@
         <entry file="file://$PROJECT_DIR$/Assets/ForceOrientation.cs">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="210">
-              <caret line="17" lean-forward="true" selection-start-line="17" selection-end-line="17" />
+              <caret line="17" selection-start-line="17" selection-end-line="17" />
               <folding>
                 <marker date="1548076757016" expanded="false" signature="6:100" ph="..." />
                 <marker date="1548076757016" expanded="true" signature="147:319" ph="{...}" />
@@ -203,17 +200,16 @@
       <file leaf-file-name="CameraInstantiator.cs" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Assets/Scripts/CameraInstantiator.cs">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="420">
-              <caret line="30" selection-start-line="30" selection-end-line="30" />
+            <state relative-caret-position="690">
+              <caret line="48" column="9" selection-start-line="37" selection-start-column="8" selection-end-line="48" selection-end-column="9" />
               <folding>
-                <marker date="1548078337481" expanded="true" signature="6:226" ph="..." />
-                <marker date="1548078337481" expanded="true" signature="275:1290" ph="{...}" />
-                <marker date="1548078337481" expanded="true" signature="402:521" ph="{...}" />
-                <marker date="1548078337481" expanded="true" signature="434:518" ph="{...}" />
-                <marker date="1548078337481" expanded="true" signature="573:1286" ph="{...}" />
-                <marker date="1548078337481" expanded="true" signature="688:737" ph="{...}" />
-                <marker date="1548078337481" expanded="true" signature="815:1046" ph="{...}" />
-                <marker date="1548078337481" expanded="true" signature="1053:1283" ph="{...}" />
+                <marker date="1548081787566" expanded="true" signature="6:226" ph="..." />
+                <marker date="1548081787566" expanded="true" signature="275:1314" ph="{...}" />
+                <marker date="1548081787566" expanded="true" signature="402:521" ph="{...}" />
+                <marker date="1548081787566" expanded="true" signature="434:518" ph="{...}" />
+                <marker date="1548081787566" expanded="true" signature="573:1310" ph="{...}" />
+                <marker date="1548081787566" expanded="true" signature="688:737" ph="{...}" />
+                <marker date="1548081787566" expanded="true" signature="787:1307" ph="/* if (scene.buildIndex == 0) ... */" />
               </folding>
             </state>
           </provider>
@@ -373,12 +369,12 @@
       <workItem from="1547718702299" duration="4768000" />
       <workItem from="1547733015490" duration="575000" />
       <workItem from="1547734609743" duration="1680000" />
-      <workItem from="1548062623471" duration="7929000" />
+      <workItem from="1548062623471" duration="8475000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="43347000" />
+    <option name="totallyTimeSpent" value="43893000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -1143,7 +1139,7 @@
     <entry file="file://$PROJECT_DIR$/Assets/ForceOrientation.cs">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="210">
-          <caret line="17" lean-forward="true" selection-start-line="17" selection-end-line="17" />
+          <caret line="17" selection-start-line="17" selection-end-line="17" />
           <folding>
             <marker date="1548076757016" expanded="false" signature="6:100" ph="..." />
             <marker date="1548076757016" expanded="true" signature="147:319" ph="{...}" />
@@ -1154,17 +1150,16 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/Assets/Scripts/CameraInstantiator.cs">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="420">
-          <caret line="30" selection-start-line="30" selection-end-line="30" />
+        <state relative-caret-position="690">
+          <caret line="48" column="9" selection-start-line="37" selection-start-column="8" selection-end-line="48" selection-end-column="9" />
           <folding>
-            <marker date="1548078337481" expanded="true" signature="6:226" ph="..." />
-            <marker date="1548078337481" expanded="true" signature="275:1290" ph="{...}" />
-            <marker date="1548078337481" expanded="true" signature="402:521" ph="{...}" />
-            <marker date="1548078337481" expanded="true" signature="434:518" ph="{...}" />
-            <marker date="1548078337481" expanded="true" signature="573:1286" ph="{...}" />
-            <marker date="1548078337481" expanded="true" signature="688:737" ph="{...}" />
-            <marker date="1548078337481" expanded="true" signature="815:1046" ph="{...}" />
-            <marker date="1548078337481" expanded="true" signature="1053:1283" ph="{...}" />
+            <marker date="1548081787566" expanded="true" signature="6:226" ph="..." />
+            <marker date="1548081787566" expanded="true" signature="275:1314" ph="{...}" />
+            <marker date="1548081787566" expanded="true" signature="402:521" ph="{...}" />
+            <marker date="1548081787566" expanded="true" signature="434:518" ph="{...}" />
+            <marker date="1548081787566" expanded="true" signature="573:1310" ph="{...}" />
+            <marker date="1548081787566" expanded="true" signature="688:737" ph="{...}" />
+            <marker date="1548081787566" expanded="true" signature="787:1307" ph="/* if (scene.buildIndex == 0) ... */" />
           </folding>
         </state>
       </provider>
