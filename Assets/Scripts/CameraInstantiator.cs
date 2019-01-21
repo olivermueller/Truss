@@ -28,7 +28,6 @@ public class CameraInstantiator : MonoBehaviour
 
 	void InitVuforia(Scene scene, LoadSceneMode mode)
 	{
-		print("INITIALIZED VUFORIA============");
 		TrackerManager.Instance.GetStateManager().ReassociateTrackables();
 
 		if (FindObjectOfType<Camera>() == null)

@@ -8,13 +8,10 @@ public class ForceOrientation : MonoBehaviour
 	private bool first = true;
 	
 	
-	void Update()
+	void LateUpdate()
 	{
-		if (first)
-		{
-			first = false;
+		if(Screen.orientation != ScreenOrientation.Portrait)
 			Screen.orientation = ScreenOrientation.Portrait;	
-		}
 		
 	}
 }

@@ -11,10 +11,11 @@ public class TaskModel:MonoBehaviour
 
     static TaskModel mInstance;
     public Material lineMaterial;
+    public GameObject checkListItemPrefab;
     #if UNITY_EDITOR
     public ConnectionPoint selectedInPoint;
     public ConnectionPoint selectedOutPoint;
-    public GameObject checkListItemPrefab;
+    
     
     #endif
     
