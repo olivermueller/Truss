@@ -11,7 +11,8 @@ public class CameraInstantiator : MonoBehaviour
 	
 	void Awake () 
 	{
-		
+		TrackerManager.Instance.GetStateManager().ReassociateTrackables();
+
 		if (FindObjectOfType<Camera>() == null)
 		{
 			GameObject.Instantiate(ARCameraPrefab);
