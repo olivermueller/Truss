@@ -17,7 +17,7 @@ public class CameraInstantiator : MonoBehaviour
 	void Awake()
 	{
 
-		if (initializedDelegate)
+		if (!initializedDelegate)
 		{
 			initializedDelegate = false;
 			SceneManager.sceneLoaded += InitVuforia;
