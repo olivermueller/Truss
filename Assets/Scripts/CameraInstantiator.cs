@@ -10,7 +10,7 @@ public class CameraInstantiator : MonoBehaviour
 {
 
 	public GameObject ARCameraPrefab;
-	public GameObject MainPanel;
+	
 
 	private GameObject camera;
 	private bool initializedDelegate = false;
@@ -39,13 +39,13 @@ public class CameraInstantiator : MonoBehaviour
 		{
 			camera.GetComponent<VuforiaBehaviour>().enabled = false;
 			camera.GetComponent<DefaultInitializationErrorHandler>().enabled = false;
-			MainPanel.SetActive(true);
+			GameObject.FindWithTag("MainPanel").gameObject.SetActive(true);
 		}
 		else
 		{
 			camera.GetComponent<VuforiaBehaviour>().enabled = true;
 			camera.GetComponent<DefaultInitializationErrorHandler>().enabled = true;
-			MainPanel.SetActive(false);
+			//GameObject.FindWithTag("MainPanel").gameObject.SetActive(false);
 		}
 	}
 	
