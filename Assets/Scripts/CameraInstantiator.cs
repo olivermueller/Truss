@@ -1,5 +1,6 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using System.Runtime.InteropServices;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using Vuforia;
@@ -8,9 +9,9 @@ public class CameraInstantiator : MonoBehaviour
 {
 
 	public GameObject ARCameraPrefab;
-	
-	
-	
+
+
+	private GameObject camera;
 	void Awake ()
 	{
 		SceneManager.sceneLoaded += InitVuforia;
@@ -23,10 +24,9 @@ public class CameraInstantiator : MonoBehaviour
 
 		if (FindObjectOfType<Camera>() == null)
 		{
-			GameObject.Instantiate(ARCameraPrefab);
+			camera = Instantiate(ARCameraPrefab);
 		}
 		
-		var camera = GameObject.FindObjectOfType<Camera>().gameObject;
 		if (scene.buildIndex == 0)
 		{
 			camera.GetComponent<VuforiaBehaviour>().enabled = false;
