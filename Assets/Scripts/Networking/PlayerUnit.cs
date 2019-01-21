@@ -8,6 +8,7 @@ using UnityEngine;
 using UnityEngine.Experimental.PlayerLoop;
 using UnityEngine.Networking;
 using UnityEngine.UI;
+using Vuforia;
 
 // A PlayerUnit is a unit controlled by a player
 // This could be a character in an FPS, a zergling in a RTS
@@ -24,6 +25,11 @@ public class PlayerUnit : NetworkBehaviour
     private Button _nextButton;
 
     [SyncVar] public bool IsTrainer = false;
+
+    private void Awake()
+    {
+        VuforiaRuntime.Instance.InitVuforia();
+    }
 
     private void Start()
     {

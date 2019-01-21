@@ -7,14 +7,14 @@ using Vuforia;
 public class DontDestroy : MonoBehaviour {
 	private void Awake()
 	{
-		VuforiaRuntime.Instance.InitVuforia();
-		VuforiaBehaviour.Instance.enabled = true;
+		
+		//VuforiaBehaviour.Instance.enabled = true;
 	}
 
 	// Use this for initialization
 	private void OnDestroy()
 	{
-		//VuforiaRuntime.Instance.Deinit();
+		VuforiaRuntime.Instance.Deinit();
 		//VuforiaBehaviour.Instance.enabled = false;
 	}
 
