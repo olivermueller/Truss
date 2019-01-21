@@ -15,6 +15,8 @@ public class MissionTrackableEventHandler : DefaultTrackableEventHandler
 		TrackableBehaviour.Status previousStatus,
 		TrackableBehaviour.Status newStatus)
 	{
+		
+		TrackerManager.Instance.GetStateManager().ReassociateTrackables();
 		if (newStatus == TrackableBehaviour.Status.DETECTED ||
 		    newStatus == TrackableBehaviour.Status.TRACKED)
 		{
