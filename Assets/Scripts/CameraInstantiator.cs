@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Runtime.InteropServices;
 using System.Security.Policy;
+using Prototype.NetworkLobby;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using Vuforia;
@@ -39,7 +40,7 @@ public class CameraInstantiator : MonoBehaviour
 		{
 			camera.GetComponent<VuforiaBehaviour>().enabled = false;
 			camera.GetComponent<DefaultInitializationErrorHandler>().enabled = false;
-			GameObject.FindWithTag("MainPanel").gameObject.SetActive(true);
+			GameObject.FindObjectOfType<LobbyManager>().transform.GetChild(1).gameObject.SetActive(true);
 		}
 		else
 		{
