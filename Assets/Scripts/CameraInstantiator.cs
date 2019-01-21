@@ -12,9 +12,16 @@ public class CameraInstantiator : MonoBehaviour
 
 
 	private GameObject camera;
-	void Awake ()
+	private bool initializedDelegate = false;
+
+	void Awake()
 	{
-		SceneManager.sceneLoaded += InitVuforia;
+
+		if (initializedDelegate)
+		{
+			initializedDelegate = false;
+			SceneManager.sceneLoaded += InitVuforia;
+		}
 	}
 
 	void InitVuforia(Scene scene, LoadSceneMode mode)
