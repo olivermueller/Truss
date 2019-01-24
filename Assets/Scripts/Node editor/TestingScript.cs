@@ -71,7 +71,7 @@ public class TestingScript : NetworkBehaviour {
 					
 					//player.TraineeNext();
 				}
-				else if (val.HasValue && !val.Value && !gameState.isApproved && gameState.isAwating)
+				else if (val.HasValue && !val.Value && !gameState.isApproved && !gameState.isAwating)
 				{
 					gameState.isApproved = false;
 					gameState.isAwating = false;
