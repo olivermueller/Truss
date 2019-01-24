@@ -98,7 +98,7 @@ public class PlayerUnit : NetworkBehaviour
 
         
 //        GameStateManager.CmdSetNodeId((FindObjectOfType<TestingScript>().iterator as AnswerTaskData).noTask.ID);
-        GameStateManager._testingScript= GetComponent<TestingScript>();
+        //GameStateManager._testingScript= GetComponent<TestingScript>();
         
         GameStateManager.CmdSetNodeId((GameStateManager._testingScript.iterator as AnswerTaskData).noTask.ID);
         
