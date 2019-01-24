@@ -55,7 +55,7 @@ public class TestingScript : NetworkBehaviour {
 				var player = FindObjectsOfType<PlayerUnit>().First(p => p.isLocalPlayer);
 				if(!isTrainer) iterator = (FindObjectOfType<TaskData>() != null) ? FindObjectOfType<TaskData>() : TaskModel.Instance.tasks.First(t => t.ID == gameState.nodeID);
 				
-				if(isTrainer) player.CmdResetBools();
+				gameState.isDenied = false;
 				iterator.StartTask();
 				return;
 			}
