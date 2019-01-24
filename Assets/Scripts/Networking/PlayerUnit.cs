@@ -110,7 +110,6 @@ public class PlayerUnit : NetworkBehaviour
        
     }
     
-   [ClientRpc]
    
     
     [Command]
