@@ -19,7 +19,7 @@ public class TaskData : NetworkBehaviour
     public TaskData _out, _in;
     public GameObject _animationObject, _baseObject, _instantiatedAnimationObject, _uiObject;
     public List<String> tasks;
-    
+    protected TaskData noTask;
     
     
     public UnityEvent NodeIdEvent;
@@ -28,6 +28,11 @@ public class TaskData : NetworkBehaviour
     public void SetNextTask(TaskData next)
     {
         _out = next;
+    }
+
+    public TaskData GetNoTask()
+    {
+        return noTask;
     }
     
     public virtual void StartTask()
