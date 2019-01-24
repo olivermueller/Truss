@@ -47,7 +47,6 @@ public class NetworkedGameState : NetworkBehaviour
 		else
 		{
 			YesButton.gameObject.SetActive(true);
-			NoButton.gameObject.SetActive(true);
 		
 			YesButton.onClick.AddListener(() => player.CmdTraineeNext());
 		}
@@ -170,10 +169,13 @@ public class NetworkedGameState : NetworkBehaviour
 				    _testingScript.iterator.IsCompleted().HasValue)
 				{
 					YesButton.gameObject.SetActive(_testingScript.iterator.IsCompleted().Value);
+					NoButton.gameObject.SetActive(_testingScript.iterator.IsCompleted().Value);
+
 				}
 				else
 				{
 					YesButton.gameObject.SetActive(false);
+					NoButton.gameObject.SetActive(false);
 				}
 
 			}

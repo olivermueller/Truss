@@ -10,7 +10,7 @@ public class AnswerTargetTaskData : TaskData
     private bool targetActive;
 	public GameObject yesPrefab, noPrefab;
     public GameObject instantiatedYesButton, instantiatedNoButton;
-    //public TaskData noTask;
+    public TaskData noTask;
 
     public void SetNoTask(TaskData no)
     {

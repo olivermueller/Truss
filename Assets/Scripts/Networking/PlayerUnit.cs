@@ -100,9 +100,19 @@ public class PlayerUnit : NetworkBehaviour
 //        GameStateManager.CmdSetNodeId((FindObjectOfType<TestingScript>().iterator as AnswerTaskData).noTask.ID);
         //GameStateManager._testingScript= GetComponent<TestingScript>();
 
-        
-        
-        GameStateManager.CmdSetNodeId(GameStateManager._testingScript.iterator.GetNoTask().ID);
+        AnswerTaskData answerTask = GameStateManager._testingScript.iterator as AnswerTaskData;
+        AnswerTargetTaskData answerTargetTask = GameStateManager._testingScript.iterator as AnswerTargetTaskData;
+
+
+        if (answerTask)
+        {
+            GameStateManager.CmdSetNodeId(answerTask.noTask.ID);
+        }
+        else if (answerTargetTask)
+        {
+            GameStateManager.CmdSetNodeId(answerTargetTask.noTask.ID);
+
+        }
         
         GameStateManager.CmdSetDenied(true);
         GameStateManager.CmdSetAwating(false);
