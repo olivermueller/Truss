@@ -1,5 +1,6 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 using System.Runtime.InteropServices;
 using System.Runtime.Serialization.Formatters;
 using TMPro;
@@ -97,11 +98,14 @@ public class PlayerUnit : NetworkBehaviour
         
 //        GameStateManager.CmdSetNodeId((FindObjectOfType<TestingScript>().iterator as AnswerTaskData).noTask.ID);
         GameStateManager._testingScript.iterator = (FindObjectOfType<TestingScript>().iterator as AnswerTaskData).noTask;
-        GameStateManager._testingScript.iterator.StartTask();
-
+        print("iterator ID: " + GameStateManager._testingScript.iterator.ID);
         GameStateManager.CmdSetAwating(false);
         GameStateManager.CmdSetApproved(false);
         GameStateManager.CmdSetDenied(false);
+        
+        GameStateManager._testingScript.iterator.StartTask();
+
+       
     }
     
     [Command]
