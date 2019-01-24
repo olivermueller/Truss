@@ -52,9 +52,10 @@ public class TestingScript : NetworkBehaviour {
 			}
 			else if(gameState.isDenied)
 			{
+				var player = FindObjectsOfType<PlayerUnit>().First(p => p.isLocalPlayer);
 				if(!isTrainer) iterator = (FindObjectOfType<TaskData>() != null) ? FindObjectOfType<TaskData>() : TaskModel.Instance.tasks.First(t => t.ID == gameState.nodeID);
 				
-				if(isTrainer) gameState.CmdSetDenied(false);
+				if(isTrainer) player.CmdResetBools();
 				iterator.StartTask();
 				return;
 			}
