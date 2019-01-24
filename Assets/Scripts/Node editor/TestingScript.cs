@@ -73,21 +73,21 @@ public class TestingScript : NetworkBehaviour {
 				}
 				else if (val.HasValue && val.Value && !gameState.isApproved && gameState.isAwating && gameState.isDenied)
 				{
-					gameState.isApproved = false;
-					gameState.isAwating = false;
-					
-					Debug.Log("DENIED TASK");
-					var answerTaskData = (iterator as AnswerTaskData);
-					var answerTargetTaskData = (iterator as AnswerTargetTaskData);
-					if (answerTaskData != null)
-					{
-						var player = FindObjectsOfType<PlayerUnit>().First(p => p.isLocalPlayer);
-						iterator = answerTaskData.noTask;
-						iterator.StartTask();
-						player.CmdSetId(iterator.ID);
-						player.CmdResetBools();
-					}
-					else if (answerTargetTaskData != null) answerTargetTaskData.StartNoTask();
+//					gameState.isApproved = false;
+//					gameState.isAwating = false;
+//					
+//					Debug.Log("DENIED TASK");
+//					var answerTaskData = (iterator as AnswerTaskData);
+//					var answerTargetTaskData = (iterator as AnswerTargetTaskData);
+//					if (answerTaskData != null)
+//					{
+//						var player = FindObjectsOfType<PlayerUnit>().First(p => p.isLocalPlayer);
+//						iterator = answerTaskData.noTask;
+//						iterator.StartTask();
+//						player.CmdSetId(iterator.ID);
+//						player.CmdResetBools();
+//					}
+//					else if (answerTargetTaskData != null) answerTargetTaskData.StartNoTask();
 				}
 				
 				

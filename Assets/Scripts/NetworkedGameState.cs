@@ -11,7 +11,7 @@ public class NetworkedGameState : NetworkBehaviour
 {
 	public Button YesButton, NoButton;
 	private PlayerUnit playerUnit;
-	private TestingScript _testingScript;
+	public TestingScript _testingScript;
 
 
 	public int value;
