@@ -111,7 +111,6 @@ public class NetworkedGameState : NetworkBehaviour
 		else
 		{
 			YesButton.gameObject.SetActive(!isAwating);
-			//NoButton.gameObject.SetActive(!isAwating);
 			
 		}
 	}
@@ -156,6 +155,8 @@ public class NetworkedGameState : NetworkBehaviour
 				else
 				{
 					YesButton.gameObject.SetActive(false);
+					NoButton.gameObject.SetActive(false);
+
 				}
 
 			}
@@ -169,7 +170,6 @@ public class NetworkedGameState : NetworkBehaviour
 				    _testingScript.iterator.IsCompleted().HasValue)
 				{
 					YesButton.gameObject.SetActive(_testingScript.iterator.IsCompleted().Value);
-					NoButton.gameObject.SetActive(_testingScript.iterator.IsCompleted().Value);
 
 				}
 				else
