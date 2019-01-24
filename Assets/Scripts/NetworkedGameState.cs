@@ -173,7 +173,6 @@ public class NetworkedGameState : NetworkBehaviour
 				if (!isApproved && !isAwating && _testingScript.iterator != null &&
 				    _testingScript.iterator.IsCompleted().HasValue)
 				{
-					
 					YesButton.gameObject.SetActive(_testingScript.iterator.IsCompleted().Value);
 				}
 				else

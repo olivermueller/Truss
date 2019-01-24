@@ -71,11 +71,11 @@ public class AnswerTaskData : TaskData
         Destroy(instantiatedYesButton);
         _finished = false;
     }
-        public override bool? IsCompleted()
-        {
-            
-            if(_finished != null) Destroy(_particleSpawner);
-            return _finished;
-        }
+    public override bool? IsCompleted()
+    {
+        
+        if(_finished != null) Destroy(_particleSpawner);
+        return _finished;
+    }
 
 }

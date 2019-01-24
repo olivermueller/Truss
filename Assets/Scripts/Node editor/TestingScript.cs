@@ -79,6 +79,14 @@ public class TestingScript : NetworkBehaviour {
 					if (answerTaskData != null) answerTaskData.StartNoTask();
 					else if (answerTargetTaskData != null) answerTargetTaskData.StartNoTask();
 				}
+				else if (val.HasValue && val.Value && !gameState.isApproved && gameState.isAwating)
+				{
+					Debug.Log("Denied task ------ going back");
+					var answerTaskData = (iterator as AnswerTaskData);
+					var answerTargetTaskData = (iterator as AnswerTargetTaskData);
+					if (answerTaskData != null) iterator = answerTaskData.StartNoTask();
+					else if (answerTargetTaskData != null) answerTargetTaskData.StartNoTask();
+				}
 				
 				
 			}

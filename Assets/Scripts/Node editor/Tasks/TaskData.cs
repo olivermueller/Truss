@@ -34,7 +34,6 @@ public class TaskData : NetworkBehaviour
     {
 
         GameObject[] checkListElements = GameObject.FindGameObjectsWithTag("CheckListElement");
-        print("Check List Size: " + checkListElements.Length);
         if (checkListElements != null)
         {
             for (int i = 0; i < checkListElements.Length; i++)
