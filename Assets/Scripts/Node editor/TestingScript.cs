@@ -25,7 +25,7 @@ public class TestingScript : NetworkBehaviour {
 	{
 		if (gameState.initializedPLayers)
 		{
-			if (isTrainer)
+			//if (isTrainer)
 			{
 				if (gameState.nodeID == "0")
 					return;
@@ -35,7 +35,7 @@ public class TestingScript : NetworkBehaviour {
 					iterator.StartTask();
 				}
 
-				return;
+				//return;
 			}
 
 			if (!FindObjectsOfType<PlayerUnit>().Any(p => p.IsTrainer)) return;
