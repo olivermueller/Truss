@@ -106,11 +106,19 @@ public class PlayerUnit : NetworkBehaviour
 
         if (answerTask)
         {
-            GameStateManager.CmdSetNodeId(answerTask.noTask.ID);
+            if(answerTask.noTask != null)
+                GameStateManager.CmdSetNodeId(answerTask.noTask.ID);
+            else
+                GameStateManager.CmdSetNodeId(answerTask.ID);
+
         }
         else if (answerTargetTask)
         {
-            GameStateManager.CmdSetNodeId(answerTargetTask.noTask.ID);
+            if(answerTargetTask.noTask != null)
+                GameStateManager.CmdSetNodeId(answerTargetTask.noTask.ID);
+            else
+                GameStateManager.CmdSetNodeId(answerTargetTask.ID);
+
 
         }
         
