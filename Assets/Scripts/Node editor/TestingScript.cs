@@ -34,9 +34,6 @@ public class TestingScript : NetworkBehaviour {
 					iterator = TaskModel.Instance.tasks.First(p => p.ID == gameState.nodeID);
 					iterator.StartTask();
 				}
-				iterator = (FindObjectOfType<TaskData>() != null) ? FindObjectOfType<TaskData>() : TaskModel.Instance.tasks.First(t => t.ID == gameState.nodeID);
-				gameState.isDenied = false;
-				iterator.StartTask();
 				return;
 			}
 
@@ -56,7 +53,8 @@ public class TestingScript : NetworkBehaviour {
 			else if(gameState.isDenied)
 			{
 				iterator = (FindObjectOfType<TaskData>() != null) ? FindObjectOfType<TaskData>() : TaskModel.Instance.tasks.First(t => t.ID == gameState.nodeID);
-				gameState.CmdSetDenied(false);
+				
+				if(isTrainer) gameState.CmdSetDenied(false);
 				iterator.StartTask();
 			}
 
