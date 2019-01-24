@@ -37,6 +37,8 @@ public class TestingScript : NetworkBehaviour {
 
 				return;
 			}
+			if (gameState.nodeID == "0")
+				return;
 			if (iterator == null || iterator.ID != gameState.nodeID)
 			{
 				iterator = TaskModel.Instance.tasks.First(p => p.ID == gameState.nodeID);
