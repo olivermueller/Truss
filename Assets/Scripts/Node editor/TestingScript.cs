@@ -37,11 +37,7 @@ public class TestingScript : NetworkBehaviour {
 
 				return;
 			}
-			if (iterator == null || iterator.ID != gameState.nodeID)
-			{
-				iterator = TaskModel.Instance.tasks.First(p => p.ID == gameState.nodeID);
-				iterator.StartTask();
-			}
+		
 			if (!FindObjectsOfType<PlayerUnit>().Any(p => p.IsTrainer)) return;
 			if (isFirst)
 			{
