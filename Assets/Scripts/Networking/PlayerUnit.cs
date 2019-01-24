@@ -111,6 +111,9 @@ public class PlayerUnit : NetworkBehaviour
        
     }
     
+   [ClientRpc]
+   
+    
     [Command]
     public void CmdSetId(string val)
     {
