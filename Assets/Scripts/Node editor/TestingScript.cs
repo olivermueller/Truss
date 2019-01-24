@@ -71,10 +71,11 @@ public class TestingScript : NetworkBehaviour {
 					
 					//player.TraineeNext();
 				}
-				else if (val.HasValue && !val.Value && !gameState.isApproved && !gameState.isAwating)
+				else if (val.HasValue && val.Value && !gameState.isApproved && gameState.isAwating && gameState.isDenied)
 				{
 					gameState.isApproved = false;
 					gameState.isAwating = false;
+					
 					Debug.Log("DENIED TASK");
 					var answerTaskData = (iterator as AnswerTaskData);
 					var answerTargetTaskData = (iterator as AnswerTargetTaskData);

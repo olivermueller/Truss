@@ -18,6 +18,7 @@ public class NetworkedGameState : NetworkBehaviour
 	
 	[SyncVar] public bool isAwating = false;
 	[SyncVar] public bool isApproved = false;
+	[SyncVar] public bool isDenied = false;
 	[SyncVar] public string nodeID;
 	[SyncVar] public string testString;
 	private void Start()
@@ -74,6 +75,12 @@ public class NetworkedGameState : NetworkBehaviour
 	public void CmdSetApproved(bool val)
 	{
 		isApproved = val;
+		//RpcUITrainerApproved();
+	}
+	[Command]
+	public void CmdSetDenied(bool val)
+	{
+		isDenied = val;
 		//RpcUITrainerApproved();
 	}
 
