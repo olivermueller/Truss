@@ -89,6 +89,18 @@ public class PlayerUnit : NetworkBehaviour
         GameStateManager.CmdSetAwating(true);
         GameStateManager.CmdSetApproved(true);
     }
+    
+    [Command]
+    public void CmdTrainerNotApproved()
+    {
+        GameStateManager = GameStateManager == null ? FindObjectOfType<NetworkedGameState>() : GameStateManager;
+        
+        GameStateManager.CmdSetNodeId((FindObjectOfType<TestingScript>().iterator as AnswerTaskData).noTask.ID);
+        FindObjectOfType<TestingScript>().iterator = (FindObjectOfType<TestingScript>().iterator as AnswerTaskData).noTask;
+        GameStateManager.CmdSetAwating(true);
+        GameStateManager.CmdSetApproved(false);
+    }
+    
     [Command]
     public void CmdSetId(string val)
     {

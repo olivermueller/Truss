@@ -41,6 +41,7 @@ public class NetworkedGameState : NetworkBehaviour
 			NoButton.gameObject.SetActive(false);
 			
 			YesButton.onClick.AddListener(() => player.CmdTrainerApproved());
+			NoButton.onClick.AddListener(() => player.CmdTrainerNotApproved());
 		}
 		else
 		{
@@ -172,6 +173,7 @@ public class NetworkedGameState : NetworkBehaviour
 				if (!isApproved && !isAwating && _testingScript.iterator != null &&
 				    _testingScript.iterator.IsCompleted().HasValue)
 				{
+					
 					YesButton.gameObject.SetActive(_testingScript.iterator.IsCompleted().Value);
 				}
 				else
