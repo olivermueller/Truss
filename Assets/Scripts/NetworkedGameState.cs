@@ -75,13 +75,11 @@ public class NetworkedGameState : NetworkBehaviour
 	public void CmdSetApproved(bool val)
 	{
 		isApproved = val;
-		//RpcUITrainerApproved();
 	}
 	[Command]
 	public void CmdSetDenied(bool val)
 	{
 		isDenied = val;
-		//RpcUITrainerApproved();
 	}
 
 	[ClientRpc]
