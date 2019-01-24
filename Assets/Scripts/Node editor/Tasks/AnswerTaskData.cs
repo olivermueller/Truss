@@ -23,7 +23,7 @@ public class AnswerTaskData : TaskData
         return noTask;
     }
     
-    private bool? _finished;
+    public bool? _finished;
     private ParticleSpawner _particleSpawner;
     public override void StartTask()
     {
