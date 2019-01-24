@@ -97,6 +97,7 @@ public class PlayerUnit : NetworkBehaviour
         GameStateManager = GameStateManager == null ? FindObjectOfType<NetworkedGameState>() : GameStateManager;
         GameStateManager.CmdSetAwating(false);
         GameStateManager.CmdSetApproved(false);
+        GameStateManager.CmdSetDenied(true);
 //        GameStateManager.CmdSetNodeId((FindObjectOfType<TestingScript>().iterator as AnswerTaskData).noTask.ID);
         GameStateManager._testingScript= FindObjectOfType<TestingScript>();
         GameStateManager._testingScript.iterator = (GameStateManager._testingScript.iterator as AnswerTaskData).noTask;

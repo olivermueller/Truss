@@ -37,13 +37,7 @@ public class TestingScript : NetworkBehaviour {
 
 				return;
 			}
-			if (gameState.nodeID == "0")
-				return;
-			if (iterator == null || iterator.ID != gameState.nodeID)
-			{
-				iterator = TaskModel.Instance.tasks.First(p => p.ID == gameState.nodeID);
-				iterator.StartTask();
-			}
+
 			if (!FindObjectsOfType<PlayerUnit>().Any(p => p.IsTrainer)) return;
 			if (isFirst)
 			{
@@ -52,12 +46,16 @@ public class TestingScript : NetworkBehaviour {
 
 				if (isTrainer) return;
 				// Check if there is a start task data in the scene and use it as the starting point. If there are none, use the first task that does not have any task pointing at it.
-				iterator = (FindObjectOfType<StartTaskData>() != null)
-					? FindObjectOfType<StartTaskData>()
-					: TaskModel.Instance.tasks.First(t => t._in == null);
+				iterator = (FindObjectOfType<StartTaskData>() != null) ? FindObjectOfType<StartTaskData>() : TaskModel.Instance.tasks.First(t => t._in == null);
 				iterator = iterator.NextTask();
 				player.CmdSetId(iterator.ID);
 				isFirst = false;
+			}
+			else if(gameState.isDenied)
+			{
+				iterator = (FindObjectOfType<TaskData>() != null) ? FindObjectOfType<TaskData>() : TaskModel.Instance.tasks.First(t => t.ID == gameState.nodeID);
+				gameState.isDenied = false;
+				iterator.StartTask();
 			}
 
 			if (iterator != null)
