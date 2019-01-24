@@ -45,7 +45,7 @@ public class NetworkedGameState : NetworkBehaviour
 		else
 		{
 			YesButton.gameObject.SetActive(true);
-			NoButton.gameObject.SetActive(false);
+			NoButton.gameObject.SetActive(true);
 		
 			YesButton.onClick.AddListener(() => player.CmdTraineeNext());
 		}
@@ -97,20 +97,30 @@ public class NetworkedGameState : NetworkBehaviour
 	public void RpcUITraineeNext()
 	{
 		var player = FindObjectsOfType<PlayerUnit>().First(p=>p.isLocalPlayer);
-		
-		if(player.IsTrainer)
+
+		if (player.IsTrainer)
+		{
 			YesButton.gameObject.SetActive(isAwating);
+			NoButton.gameObject.SetActive(isAwating);
+		}
 		else
+		{
 			YesButton.gameObject.SetActive(!isAwating);
+			//NoButton.gameObject.SetActive(!isAwating);
+			
+		}
 	}
 
 	[ClientRpc]
 	public void RpcUITrainerApproved()
 	{
 		var player = FindObjectsOfType<PlayerUnit>().First(p=>p.isLocalPlayer);
-		
-		if(player.IsTrainer)
+
+		if (player.IsTrainer)
+		{
 			YesButton.gameObject.SetActive(!isApproved);
+			NoButton.gameObject.SetActive(!isApproved);
+		}
 		else
 			YesButton.gameObject.SetActive(isApproved);
 	}
@@ -132,6 +142,7 @@ public class NetworkedGameState : NetworkBehaviour
 				if (isAwating && !isApproved)
 				{
 					YesButton.gameObject.SetActive(true);
+					NoButton.gameObject.SetActive(true);
 				}
 				else
 				{

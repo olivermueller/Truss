@@ -157,7 +157,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   rect:
     serializedVersion: 2
-    x: -492.9532
+    x: -579.3737
     y: 390.72815
     width: 40
     height: 50
@@ -245,7 +245,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   rect:
     serializedVersion: 2
-    x: -916.9532
+    x: -1003.3737
     y: 390.72815
     width: 40
     height: 50
@@ -333,7 +333,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   rect:
     serializedVersion: 2
-    x: -884.9532
+    x: -971.3737
     y: 265.72815
     width: 400
     height: 300
@@ -1290,8 +1290,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   rect:
     serializedVersion: 2
-    x: 1467.6581
-    y: 392.89127
+    x: 1350.6255
+    y: 984.7306
     width: 40
     height: 50
   type: 1
@@ -1378,8 +1378,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   rect:
     serializedVersion: 2
-    x: 1075.6581
-    y: 267.89127
+    x: 958.6255
+    y: 859.7306
     width: 400
     height: 300
   title: AnswerTaskNode
@@ -1606,8 +1606,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   rect:
     serializedVersion: 2
-    x: 1275.6581
-    y: 559.89124
+    x: 1158.6255
+    y: 1151.7306
     width: 60
     height: 50
   type: 3
@@ -1694,8 +1694,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   rect:
     serializedVersion: 2
-    x: 1043.6581
-    y: 392.89127
+    x: 926.6255
+    y: 984.7306
     width: 40
     height: 50
   type: 0
@@ -2298,7 +2298,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   rect:
     serializedVersion: 2
-    x: 797.1324
+    x: 710.7118
     y: 561.93604
     width: 60
     height: 50
@@ -2386,7 +2386,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   rect:
     serializedVersion: 2
-    x: 989.1324
+    x: 902.7118
     y: 394.936
     width: 40
     height: 50
@@ -2474,7 +2474,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   rect:
     serializedVersion: 2
-    x: 565.1324
+    x: 478.71182
     y: 394.936
     width: 40
     height: 50
@@ -2562,7 +2562,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   rect:
     serializedVersion: 2
-    x: 597.1324
+    x: 510.71182
     y: 269.936
     width: 400
     height: 300
@@ -2851,7 +2851,7 @@ MonoBehaviour:
   _title: Find austronaut
   _description: 
   _out: {fileID: 161059706}
-  _in: {fileID: 1256308437}
+  _in: {fileID: 1426255677}
   _animationObject: {fileID: 0}
   _baseObject: {fileID: 1617421581}
   _instantiatedAnimationObject: {fileID: 0}
@@ -3388,34 +3388,6 @@ MonoBehaviour:
   m_ChildForceExpandHeight: 1
   m_ChildControlWidth: 0
   m_ChildControlHeight: 0
---- !u!1 &1115641468
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1115641469}
-  m_Layer: 0
-  m_Name: GameObject
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &1115641469
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1115641468}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 611.66846, y: 901.7665, z: 28}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 11
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1156993730
 GameObject:
   m_ObjectHideFlags: 0
@@ -3674,10 +3646,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   lineMaterial: {fileID: 0}
-  selectedInPoint: {fileID: 0}
-  selectedOutPoint: {fileID: 0}
   checkListItemPrefab: {fileID: 1162570790069174, guid: 636e290c96c754df198400eb8484132e,
     type: 2}
+  selectedInPoint: {fileID: 0}
+  selectedOutPoint: {fileID: 0}
   tasks:
   - {fileID: 2052762676}
   - {fileID: 1256308437}
@@ -3698,6 +3670,7 @@ MonoBehaviour:
   - {fileID: 153831705}
   - {fileID: 632445802}
   - {fileID: 268201882}
+  - {fileID: 2076632198}
   nodeStyle:
     m_Name: 
     m_Normal:
@@ -4441,7 +4414,7 @@ MonoBehaviour:
   noPrefab: {fileID: 1967012788811928, guid: 8e3ce9b6c8bec457a84bc1f260fce2ad, type: 2}
   instantiatedYesButton: {fileID: 0}
   instantiatedNoButton: {fileID: 0}
-  noTask: {fileID: 0}
+  noTask: {fileID: 638425280}
 --- !u!4 &1426255678
 Transform:
   m_ObjectHideFlags: 0
@@ -4531,7 +4504,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   rect:
     serializedVersion: 2
-    x: 1970.7231
+    x: 1884.3026
     y: 407.2063
     width: 40
     height: 50
@@ -4619,7 +4592,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   rect:
     serializedVersion: 2
-    x: 1578.7231
+    x: 1492.3026
     y: 282.2063
     width: 400
     height: 300
@@ -4846,7 +4819,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   rect:
     serializedVersion: 2
-    x: 1546.7231
+    x: 1460.3026
     y: 407.2063
     width: 40
     height: 50
@@ -4966,7 +4939,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   rect:
     serializedVersion: 2
-    x: -213.39731
+    x: -299.8179
     y: 555.6835
     width: 60
     height: 50
@@ -5054,7 +5027,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   rect:
     serializedVersion: 2
-    x: -21.397308
+    x: -107.8179
     y: 388.68344
     width: 40
     height: 50
@@ -5142,7 +5115,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   rect:
     serializedVersion: 2
-    x: -445.3973
+    x: -531.8179
     y: 388.68344
     width: 40
     height: 50
@@ -5230,7 +5203,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   rect:
     serializedVersion: 2
-    x: -413.3973
+    x: -499.8179
     y: 263.68344
     width: 400
     height: 300
@@ -5475,6 +5448,7 @@ Transform:
   - {fileID: 153831704}
   - {fileID: 632445801}
   - {fileID: 268201881}
+  - {fileID: 2076632197}
   m_Father: {fileID: 0}
   m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -5523,7 +5497,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   rect:
     serializedVersion: 2
-    x: 314.5178
+    x: 228.0972
     y: 559.8913
     width: 60
     height: 50
@@ -5611,7 +5585,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   rect:
     serializedVersion: 2
-    x: 506.5178
+    x: 420.0972
     y: 392.8913
     width: 40
     height: 50
@@ -5699,7 +5673,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   rect:
     serializedVersion: 2
-    x: 82.517784
+    x: -3.902794
     y: 392.8913
     width: 40
     height: 50
@@ -5787,7 +5761,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   rect:
     serializedVersion: 2
-    x: 114.517784
+    x: 28.097206
     y: 267.8913
     width: 400
     height: 300
@@ -6314,3 +6288,45 @@ Transform:
   m_Father: {fileID: 1307365142}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &2076632196
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2076632197}
+  - component: {fileID: 2076632198}
+  m_Layer: 0
+  m_Name: Connection Object
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2076632197
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 2076632196}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1568037138}
+  m_RootOrder: 5
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &2076632198
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 2076632196}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5f372edd6d25049dc9daf6f98e2e8301, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  inPoint: {fileID: 1605264254}
+  outPoint: {fileID: 307424345}
