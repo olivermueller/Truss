@@ -55,7 +55,17 @@ public class TestingScript : NetworkBehaviour {
 				print("Changed iterator" + " IsTrainer: " + isTrainer);
 				print("Game State Node ID" + gameState.nodeID);
 				var player = FindObjectsOfType<PlayerUnit>().First(p => p.isLocalPlayer);
-				iterator = (FindObjectOfType<TaskData>() != null) ? FindObjectOfType<TaskData>() : TaskModel.Instance.tasks.First(t => t.ID == gameState.nodeID);
+
+				foreach (var t in FindObjectsOfType<TaskData>())
+				{
+					if (t.ID == gameState.nodeID)
+					{
+						iterator = t;
+						break;
+					}
+				}
+
+				
 				print("Iterator ID" + iterator.ID);
 
 				gameState.isDenied = false;
