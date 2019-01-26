@@ -102,6 +102,7 @@ public class PlayerUnit : NetworkBehaviour
 
         AnswerTaskData answerTask = GameStateManager._testingScript.iterator as AnswerTaskData;
         AnswerTargetTaskData answerTargetTask = GameStateManager._testingScript.iterator as AnswerTargetTaskData;
+        NestedTaskData nestedTask = GameStateManager._testingScript.iterator as NestedTaskData;
 
 
         if (answerTask)
@@ -118,8 +119,6 @@ public class PlayerUnit : NetworkBehaviour
                 GameStateManager.CmdSetNodeId(answerTargetTask.noTask.ID);
             else
                 GameStateManager.CmdSetNodeId(answerTargetTask.ID);
-
-
         }
         
         GameStateManager.CmdSetDenied(true);
