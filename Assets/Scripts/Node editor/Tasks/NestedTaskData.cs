@@ -56,8 +56,11 @@ public class NestedTaskData : TaskData {
             var player = FindObjectsOfType<PlayerUnit>().First(p => p.isLocalPlayer);
 
             gameState.nodeID = iterator.ID;
-            gameState.isDenied = false;
-            player.CmdResetBools();
+            gameState.isDenied = true;
+            
+            player.CmdSetId(iterator.ID);
+            gameState.CmdSetDenied(true);
+            
             print("----------------Subtask iterator ID: " + iterator.ID);
         }
         if (iterator == null) return null;
