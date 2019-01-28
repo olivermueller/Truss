@@ -15,6 +15,7 @@ public class NestedTaskData : TaskData {
     public TaskData iterator;
     public List<TaskData> _subTasks;
     public SubtaskEntry[] subTaskEntries;
+    public TestingScript testingScript;
     public override void StartTask()
     {
         iterator = null;
@@ -31,6 +32,7 @@ public class NestedTaskData : TaskData {
         // First time IsCompleted is called on SubTaskTask, set its local iterator to the first subtask.
         if(isFirst)
         {
+            testingScript = FindObjectOfType<TestingScript>();
             subTaskEntries = new SubtaskEntry [_subTasks.Count];
             for (int i = 0; i < _subTasks.Count; i++)
             {
@@ -59,7 +61,8 @@ public class NestedTaskData : TaskData {
             if (val.Value)
             {
                 // If it is complete, move to the next task
-                iterator = iterator.NextTask();
+                //iterator = iterator.NextTask();
+                testingScript.iterator = iterator._out;
                 if (iterator == null || iterator as FinishTaskData)
                 {
                     GameObject.FindGameObjectWithTag("CanvasTitle").GetComponent<TextMeshProUGUI>().text = _title;
