@@ -86,6 +86,14 @@ public class TestingScript : NetworkBehaviour {
 					var player = FindObjectsOfType<PlayerUnit>().First(p => p.isLocalPlayer);
 					Debug.Log("Switching Task");
 					iterator = iterator.NextTask();
+
+					if (iterator == null)
+					{
+						var nestedNodes = FindObjectsOfType<NestedTaskData>();
+
+						iterator = nestedNodes.First(t => !t.completed);
+					}
+					
 					player.CmdSetId(iterator.ID);
 					player.CmdResetBools();
 					

@@ -77,6 +77,7 @@ public class TaskData : NetworkBehaviour
         }
 
 
+
     }
     public virtual TaskData NextTask()
     {
