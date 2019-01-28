@@ -14,7 +14,7 @@ public class NestedTaskData : TaskData {
     private int subtaskId = 0;
     public TaskData iterator;
     public List<TaskData> _subTasks;
-    public SubtaskEntry[] subtasks;
+    public SubtaskEntry[] subTaskEntries;
     public override void StartTask()
     {
         iterator = null;
@@ -31,19 +31,19 @@ public class NestedTaskData : TaskData {
         // First time IsCompleted is called on SubTaskTask, set its local iterator to the first subtask.
         if(isFirst)
         {
-            subtasks = new SubtaskEntry [_subTasks.Count];
+            subTaskEntries = new SubtaskEntry [_subTasks.Count];
             for (int i = 0; i < _subTasks.Count; i++)
             {
                 Debug.Log("Preparing: " + _subTasks[i]._title);
-                _subTasks[i].StartTask();
-                subtasks[i] = new SubtaskEntry() {Task = _subTasks[i], isCompleted = false};
+                //_subTasks[i].StartTask();
+                subTaskEntries[i] = new SubtaskEntry() {Task = _subTasks[i], isCompleted = false};
             }
             GameObject.FindGameObjectWithTag("CanvasTitle").GetComponent<TextMeshProUGUI>().text = _title;
             GameObject.FindGameObjectWithTag("CanvasDescription").GetComponent<TextMeshProUGUI>().text = _description;
             isFirst = false;
         }
 
-        foreach (var t in subtasks)
+        foreach (var t in subTaskEntries)
         {
             if (t.isSelected) break;
             if (t.isCompleted || !t.Task.IsCompleted().HasValue || !t.Task.IsCompleted().Value) continue;
@@ -64,11 +64,11 @@ public class NestedTaskData : TaskData {
                 {
                     GameObject.FindGameObjectWithTag("CanvasTitle").GetComponent<TextMeshProUGUI>().text = _title;
                     GameObject.FindGameObjectWithTag("CanvasDescription").GetComponent<TextMeshProUGUI>().text = _description;
-                    var subtask = subtasks.First(t => t.isSelected);
+                    var subtask = subTaskEntries.First(t => t.isSelected);
                     print("Subtask: "+ subtask.Task._title + " Completed");
                     subtask.isCompleted = true;
                     subtask.isSelected = false;
-                    if (subtasks.All(t=>t.isCompleted))
+                    if (subTaskEntries.All(t=>t.isCompleted))
                     {
                         return true;
                     }
