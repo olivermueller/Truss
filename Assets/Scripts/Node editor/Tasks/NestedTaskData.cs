@@ -88,6 +88,16 @@ public class NestedTaskData : TaskData {
                     {
                         return true;
                     }
+                    
+                    
+            
+                    var player = FindObjectsOfType<PlayerUnit>().First(p => p.isLocalPlayer);
+
+                    gameState.nodeID = ID;
+                    gameState.isDenied = true;
+            
+                    player.CmdSetId(ID);
+                    gameState.CmdSetDenied(true);
                 }
             }
             else
