@@ -92,6 +92,7 @@ public class TestingScript : NetworkBehaviour {
 						var nestedNodes = FindObjectsOfType<NestedTaskData>();
 
 						iterator = nestedNodes.First(t => !t.completed);
+						iterator.StartTask();
 					}
 					
 					player.CmdSetId(iterator.ID);
