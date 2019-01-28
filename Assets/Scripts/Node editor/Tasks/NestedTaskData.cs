@@ -52,7 +52,12 @@ public class NestedTaskData : TaskData {
             Debug.Log("Found: " + t.Task._title + " in update");
             t.isSelected = true;
             iterator = t.Task;
+            
+            var player = FindObjectsOfType<PlayerUnit>().First(p => p.isLocalPlayer);
+
             gameState.nodeID = iterator.ID;
+            gameState.isDenied = false;
+            player.CmdResetBools();
             print("----------------Subtask iterator ID: " + iterator.ID);
         }
         if (iterator == null) return null;
