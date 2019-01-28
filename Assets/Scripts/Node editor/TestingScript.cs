@@ -87,19 +87,19 @@ public class TestingScript : NetworkBehaviour {
 					Debug.Log("Switching Task");
 					iterator = iterator.NextTask();
 
-					if (iterator == null)
+					if (iterator != null)
 					{
-						print("=============Moving back to the top");
-						var nestedNodes = FindObjectsOfType<NestedTaskData>();
+						//print("=============Moving back to the top");
+						//var nestedNodes = FindObjectsOfType<NestedTaskData>();
 
 
-						iterator = nestedNodes.First(x=>x.subTaskEntries.All(t=>t.isCompleted));
-						iterator.StartTask();
-
+						//iterator = nestedNodes.First(x=>x.subTaskEntries.All(t=>t.isCompleted));
+						//iterator.StartTask();
+						player.CmdSetId(iterator.ID);
+						player.CmdResetBools();
 					}
 					
-					player.CmdSetId(iterator.ID);
-					player.CmdResetBools();
+					
 					
 					//player.TraineeNext();
 				}

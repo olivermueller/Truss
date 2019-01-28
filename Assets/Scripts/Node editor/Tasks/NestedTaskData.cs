@@ -33,7 +33,6 @@ public class NestedTaskData : TaskData {
         // First time IsCompleted is called on SubTaskTask, set its local iterator to the first subtask.
         if(isFirst)
         {
-            
             gameState = FindObjectOfType<NetworkedGameState>();
             subTaskEntries = new SubtaskEntry [_subTasks.Count];
             for (int i = 0; i < _subTasks.Count; i++)
@@ -72,7 +71,7 @@ public class NestedTaskData : TaskData {
             if (val.Value)
             {
                 // If it is complete, move to the next task
-                //iterator = iterator.NextTask();
+                iterator = iterator._out;
                 //gameState.nodeID = iterator._out.ID;
 
                
@@ -89,8 +88,10 @@ public class NestedTaskData : TaskData {
                     {
                         return true;
                     }
-                    
-                    
+
+
+                    iterator = this;
+                    iterator.StartTask();
             
                     var player = FindObjectsOfType<PlayerUnit>().First(p => p.isLocalPlayer);
 
@@ -120,6 +121,7 @@ public class NestedTaskData : TaskData {
     }
 }
 
+[Serializable]
 public class SubtaskEntry
 {
     public TaskData Task;
