@@ -16,8 +16,6 @@ public class NestedTaskData : TaskData {
     public List<TaskData> _subTasks;
     public SubtaskEntry[] subTaskEntries;
     public NetworkedGameState gameState;
-    public int completedSubTAsks = 0;
-    public bool completed;
     public override void StartTask()
     {
         iterator = null;
@@ -31,13 +29,7 @@ public class NestedTaskData : TaskData {
 
     public override bool? IsCompleted()
     {
-        if (completedSubTAsks == _subTasks.Count)
 
-        {
-            completed = true;
-            return true;
-            
-        }
         // First time IsCompleted is called on SubTaskTask, set its local iterator to the first subtask.
         if(isFirst)
         {

@@ -93,10 +93,8 @@ public class TestingScript : NetworkBehaviour {
 						var nestedNodes = FindObjectsOfType<NestedTaskData>();
 
 
-						iterator = nestedNodes.First(t => !t.completed);
+						iterator = nestedNodes.First(x=>x.subTaskEntries.All(t=>t.isCompleted));
 						iterator.StartTask();
-
-						iterator = nestedNodes.First(t => !t.completed);
 
 					}
 					
