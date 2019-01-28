@@ -92,9 +92,13 @@ public class TestingScript : NetworkBehaviour {
 						print("=============Moving back to the top");
 						var nestedNodes = FindObjectsOfType<NestedTaskData>();
 
+<<<<<<< HEAD
 						iterator = nestedNodes.First(t => t.finishedSubtasks != t._subTasks.Count);
 						(iterator as NestedTaskData).finishedSubtasks++;
 						iterator.StartTask();
+=======
+						iterator = nestedNodes.First(t => !t.completed);
+>>>>>>> parent of bac6f94... wergwe
 					}
 					
 					player.CmdSetId(iterator.ID);
