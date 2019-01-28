@@ -62,6 +62,7 @@ public class NestedTaskData : TaskData {
             {
                 // If it is complete, move to the next task
                 //iterator = iterator.NextTask();
+                print("----------------Subtask iterator ID: " + iterator._out.ID);
                 gameState.nodeID = iterator._out.ID;
                 
                 if (iterator == null || iterator as FinishTaskData)
