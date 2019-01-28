@@ -52,8 +52,8 @@ public class NestedTaskData : TaskData {
             Debug.Log("Found: " + t.Task._title + " in update");
             t.isSelected = true;
             iterator = t.Task;
-            gameState.nodeID = iterator._out.ID;
-            print("----------------Subtask iterator ID: " + iterator._out.ID);
+            gameState.nodeID = iterator.ID;
+            print("----------------Subtask iterator ID: " + iterator.ID);
         }
         if (iterator == null) return null;
         // Evaluate if the subtask is completed
