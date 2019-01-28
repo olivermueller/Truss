@@ -30,6 +30,7 @@ public class NestedTaskData : TaskData {
 
     public override bool? IsCompleted()
     {
+        if (completed) return true;
         // First time IsCompleted is called on SubTaskTask, set its local iterator to the first subtask.
         if(isFirst)
         {
