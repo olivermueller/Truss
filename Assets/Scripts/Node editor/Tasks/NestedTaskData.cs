@@ -15,7 +15,7 @@ public class NestedTaskData : TaskData {
     public TaskData iterator;
     public List<TaskData> _subTasks;
     public SubtaskEntry[] subTaskEntries;
-    public bool completed; 
+    public int completedTasks; 
     public NetworkedGameState gameState;
     public override void StartTask()
     {
