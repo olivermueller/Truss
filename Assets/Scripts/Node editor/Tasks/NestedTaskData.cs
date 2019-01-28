@@ -65,7 +65,7 @@ public class NestedTaskData : TaskData {
             
             print("----------------Subtask iterator ID: " + iterator.ID);
         }
-        if (iterator == null) return null;
+        //if (iterator == null) return null;
         // Evaluate if the subtask is completed
         var val = iterator.IsCompleted();
         if (val.HasValue)
