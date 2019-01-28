@@ -31,17 +31,7 @@ public class NestedTaskData : TaskData {
     public override bool? IsCompleted()
     {
 
-        if (completedTasks == _subTasks.Count)
-        {
-            var player = FindObjectsOfType<PlayerUnit>().First(p => p.isLocalPlayer);
-
-            gameState.nodeID = _out.ID;
-            
-            player.CmdSetId(_out.ID);
-            player.CmdResetBools();
-            _out.StartTask();
-            return true;
-        }
+        
         // First time IsCompleted is called on SubTaskTask, set its local iterator to the first subtask.
         if(isFirst)
         {
@@ -56,6 +46,18 @@ public class NestedTaskData : TaskData {
             GameObject.FindGameObjectWithTag("CanvasTitle").GetComponent<TextMeshProUGUI>().text = _title;
             GameObject.FindGameObjectWithTag("CanvasDescription").GetComponent<TextMeshProUGUI>().text = _description;
             isFirst = false;
+        }
+        
+        if (completedTasks == _subTasks.Count)
+        {
+            var player = FindObjectsOfType<PlayerUnit>().First(p => p.isLocalPlayer);
+
+            gameState.nodeID = _out.ID;
+            
+            player.CmdSetId(_out.ID);
+            player.CmdResetBools();
+            _out.StartTask();
+            return true;
         }
         foreach (var t in subTaskEntries)
         {
