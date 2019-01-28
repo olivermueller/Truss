@@ -8,6 +8,8 @@ public class FinishTaskData : TaskData {
     public override void StartTask()
     {
         base.StartTask();
+        GameObject.FindGameObjectWithTag("EndScreen").transform.GetChild(0).gameObject.SetActive(true);
+
     }
 
     public override bool? IsCompleted()

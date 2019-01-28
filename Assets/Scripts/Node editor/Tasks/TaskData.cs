@@ -69,13 +69,6 @@ public class TaskData : NetworkBehaviour
             listElement.GetComponentInChildren<TextMeshProUGUI>().text = tasks[i];
         }
 
-        var lastNode = _out as FinishTaskData;
-        
-        if (lastNode)
-        {
-            GameObject.FindGameObjectWithTag("EndScreen").transform.GetChild(0).gameObject.SetActive(true);
-        }
-
 
 
     }
