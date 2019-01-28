@@ -31,6 +31,11 @@ public class NestedTaskData : TaskData {
     public override bool? IsCompleted()
     {
 
+        if (completedTasks == _subTasks.Count)
+        {
+            print("Finished Nested Tasks");
+            return true;
+        }
         // First time IsCompleted is called on SubTaskTask, set its local iterator to the first subtask.
         if(isFirst)
         {
