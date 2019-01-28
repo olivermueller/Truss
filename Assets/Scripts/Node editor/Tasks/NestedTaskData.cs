@@ -30,7 +30,7 @@ public class NestedTaskData : TaskData {
 
     public override bool? IsCompleted()
     {
-        if (finishedSubtasks == _subTasks.Count - 1) return true;
+        
         // First time IsCompleted is called on SubTaskTask, set its local iterator to the first subtask.
         if(isFirst)
         {
@@ -46,7 +46,7 @@ public class NestedTaskData : TaskData {
             GameObject.FindGameObjectWithTag("CanvasDescription").GetComponent<TextMeshProUGUI>().text = _description;
             isFirst = false;
         }
-
+        if (finishedSubtasks == _subTasks.Count - 1) return true;
         foreach (var t in subTaskEntries)
         {
             if (t.isSelected) break;

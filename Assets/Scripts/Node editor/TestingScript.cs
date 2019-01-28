@@ -85,12 +85,11 @@ public class TestingScript : NetworkBehaviour {
 					gameState.isAwating = false;
 					var player = FindObjectsOfType<PlayerUnit>().First(p => p.isLocalPlayer);
 					Debug.Log("Switching Task");
-					if(iterator._out)
-						iterator = iterator.NextTask();
+					iterator = iterator.NextTask();
 
 					if (iterator == null)
 					{
-						print("moved back to nested node");
+						print("=============Moving back to the top");
 						var nestedNodes = FindObjectsOfType<NestedTaskData>();
 
 						iterator = nestedNodes.First(t => t.finishedSubtasks != t._subTasks.Count);
