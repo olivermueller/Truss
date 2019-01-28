@@ -85,22 +85,21 @@ public class TestingScript : NetworkBehaviour {
 					gameState.isAwating = false;
 					var player = FindObjectsOfType<PlayerUnit>().First(p => p.isLocalPlayer);
 					Debug.Log("Switching Task");
-					if (iterator._out)
-					{
+					if(iterator._out)
 						iterator = iterator.NextTask();
 
-//					if (iterator == null)
-//					{
-//						var nestedNodes = FindObjectsOfType<NestedTaskData>();
-//
-//						iterator = nestedNodes.First(t => !t.completed);
-//						iterator.StartTask();
-//					}
+					if (iterator == null)
+					{
+						var nestedNodes = FindObjectsOfType<NestedTaskData>();
 
-						player.CmdSetId(iterator.ID);
-						player.CmdResetBools();
+						iterator = nestedNodes.First(t => t.finishedSubtasks != t._subTasks.Count);
+						(iterator as NestedTaskData).finishedSubtasks++;
+						iterator.StartTask();
 					}
-
+					
+					player.CmdSetId(iterator.ID);
+					player.CmdResetBools();
+					
 					//player.TraineeNext();
 				}
 				else if (val.HasValue && val.Value && !gameState.isApproved && gameState.isAwating && gameState.isDenied)
