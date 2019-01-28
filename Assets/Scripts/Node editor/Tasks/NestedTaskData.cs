@@ -33,7 +33,13 @@ public class NestedTaskData : TaskData {
 
         if (completedTasks == _subTasks.Count)
         {
-            print("Finished Nested Tasks");
+            var player = FindObjectsOfType<PlayerUnit>().First(p => p.isLocalPlayer);
+
+            gameState.nodeID = _out.ID;
+            
+            player.CmdSetId(_out.ID);
+            player.CmdResetBools();
+            _out.StartTask();
             return true;
         }
         // First time IsCompleted is called on SubTaskTask, set its local iterator to the first subtask.
