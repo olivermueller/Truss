@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using TMPro;
+using UnityEditor.Experimental.UIElements.GraphView;
 using UnityEngine;
 
 public class NestedTaskData : TaskData {
@@ -15,7 +16,8 @@ public class NestedTaskData : TaskData {
     public TaskData iterator;
     public List<TaskData> _subTasks;
     public SubtaskEntry[] subTaskEntries;
-    public int completedTasks; 
+    public int completedTasks;
+    private bool completed;
     public NetworkedGameState gameState;
     public override void StartTask()
     {
@@ -48,8 +50,9 @@ public class NestedTaskData : TaskData {
             isFirst = false;
         }
         
-        if (completedTasks == _subTasks.Count)
+        if (completedTasks == _subTasks.Count && !completed)
         {
+            completed = true;
             var player = FindObjectsOfType<PlayerUnit>().First(p => p.isLocalPlayer);
 
             gameState.nodeID = _out.ID;
