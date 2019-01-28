@@ -37,7 +37,7 @@ public class NestedTaskData : TaskData {
             for (int i = 0; i < _subTasks.Count; i++)
             {
                 Debug.Log("Preparing: " + _subTasks[i]._title);
-                //_subTasks[i].StartTask();
+                _subTasks[i].StartTask();
                 subTaskEntries[i] = new SubtaskEntry() {Task = _subTasks[i], isCompleted = false};
             }
             GameObject.FindGameObjectWithTag("CanvasTitle").GetComponent<TextMeshProUGUI>().text = _title;
@@ -64,7 +64,8 @@ public class NestedTaskData : TaskData {
             {
                 // If it is complete, move to the next task
                 //iterator = iterator.NextTask();
-                
+                gameState.nodeID = iterator._out.ID;
+
                
                 
                 if (iterator == null || iterator as FinishTaskData)
