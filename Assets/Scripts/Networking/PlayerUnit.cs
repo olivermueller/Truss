@@ -24,7 +24,7 @@ public class PlayerUnit : NetworkBehaviour
     //public GameObject NextButtonPrefab;
 
     private Button _nextButton;
-
+    
     [SyncVar] public bool IsTrainer = false;
 
     private void Awake()

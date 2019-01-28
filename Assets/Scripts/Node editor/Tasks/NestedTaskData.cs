@@ -10,11 +10,12 @@ public class NestedTaskData : TaskData {
     
     
     
-    bool isFirst = true;
+    public bool isFirst = true;
     private int subtaskId = 0;
     public TaskData iterator;
     public List<TaskData> _subTasks;
     public SubtaskEntry[] subTaskEntries;
+    public bool completed; 
     public NetworkedGameState gameState;
     public override void StartTask()
     {
@@ -71,7 +72,7 @@ public class NestedTaskData : TaskData {
             if (val.Value)
             {
                 // If it is complete, move to the next task
-                iterator = iterator._out;
+                //iterator = iterator.NextTask();
                 //gameState.nodeID = iterator._out.ID;
 
                
@@ -88,10 +89,8 @@ public class NestedTaskData : TaskData {
                     {
                         return true;
                     }
-
-
-                    iterator = this;
-                    iterator.StartTask();
+                    
+                    
             
                     var player = FindObjectsOfType<PlayerUnit>().First(p => p.isLocalPlayer);
 
