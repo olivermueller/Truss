@@ -90,6 +90,7 @@ public class TestingScript : NetworkBehaviour {
 
 					if (iterator == null)
 					{
+						print("moved back to nested node");
 						var nestedNodes = FindObjectsOfType<NestedTaskData>();
 
 						iterator = nestedNodes.First(t => t.finishedSubtasks != t._subTasks.Count);
