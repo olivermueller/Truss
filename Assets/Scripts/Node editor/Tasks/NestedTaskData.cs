@@ -39,9 +39,17 @@ public class NestedTaskData : TaskData {
             for (int i = 0; i < _subTasks.Count; i++)
             {
                 Debug.Log("Preparing: " + _subTasks[i]._title);
-                _subTasks[i].parentTask = this;
                 _subTasks[i].StartTask();
                 subTaskEntries[i] = new SubtaskEntry() {Task = _subTasks[i], isCompleted = false};
+
+                var it = _subTasks[i];
+
+                while (it._out != null)
+                {
+                    it = it._out;
+                }
+
+                it.parentTask = this;
             }
             GameObject.FindGameObjectWithTag("CanvasTitle").GetComponent<TextMeshProUGUI>().text = _title;
             GameObject.FindGameObjectWithTag("CanvasDescription").GetComponent<TextMeshProUGUI>().text = _description;
