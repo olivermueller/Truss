@@ -7,9 +7,6 @@ using UnityEditor.Experimental.UIElements.GraphView;
 using UnityEngine;
 
 public class NestedTaskData : TaskData {
-
-    
-    
     
     public bool isFirst = true;
     private int subtaskId = 0;
