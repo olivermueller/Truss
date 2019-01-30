@@ -403,7 +403,6 @@ GameObject:
   - component: {fileID: 222571923430786388}
   - component: {fileID: 114046118129784108}
   - component: {fileID: 114616007537468536}
-  - component: {fileID: 114419429616296570}
   m_Layer: 5
   m_Name: YesButton
   m_TagString: CanvasYes
@@ -1377,69 +1376,6 @@ MonoBehaviour:
   m_FillAmount: 1
   m_FillClockwise: 1
   m_FillOrigin: 0
---- !u!114 &114419429616296570
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1734625567216254}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3a4ce9b8d7b3c4b8ba9b890eb0d3c390, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  animationCurve:
-    serializedVersion: 2
-    m_Curve:
-    - serializedVersion: 3
-      time: 0
-      value: 0
-      inSlope: 1.2992222
-      outSlope: 1.2992222
-      tangentMode: 34
-      weightedMode: 0
-      inWeight: 0
-      outWeight: 0.33333334
-    - serializedVersion: 3
-      time: 0.5031708
-      value: 0.6537307
-      inSlope: 1.7194353
-      outSlope: 1.7194353
-      tangentMode: 0
-      weightedMode: 0
-      inWeight: 0.33333334
-      outWeight: 0.46411455
-    - serializedVersion: 3
-      time: 0.67064214
-      value: 0.96938074
-      inSlope: -0.040526073
-      outSlope: -0.040526073
-      tangentMode: 0
-      weightedMode: 0
-      inWeight: 0.33333334
-      outWeight: 0.35474044
-    - serializedVersion: 3
-      time: 0.8459031
-      value: 0.9267882
-      inSlope: 0.5953734
-      outSlope: 0.5953734
-      tangentMode: 0
-      weightedMode: 0
-      inWeight: 0.33333334
-      outWeight: 0.33333334
-    - serializedVersion: 3
-      time: 1
-      value: 1
-      inSlope: 0.47510228
-      outSlope: 0.47510228
-      tangentMode: 34
-      weightedMode: 0
-      inWeight: 0.33333334
-      outWeight: 0
-    m_PreInfinity: 2
-    m_PostInfinity: 2
-    m_RotationOrder: 4
-  animationSpeed: 0.5
 --- !u!114 &114444355025045050
 MonoBehaviour:
   m_ObjectHideFlags: 1
