@@ -85,6 +85,7 @@ public class TestingScript : NetworkBehaviour {
 					gameState.isAwating = false;
 					var player = FindObjectsOfType<PlayerUnit>().First(p => p.isLocalPlayer);
 					Debug.Log("Switching Task");
+					var prevIterator = iterator;
 					iterator = iterator.NextTask();
 
 					if (iterator == null)
@@ -93,7 +94,7 @@ public class TestingScript : NetworkBehaviour {
 						//var nestedNodes = FindObjectsOfType<NestedTaskData>();
 
 
-						iterator = iterator.parentTask;
+						iterator = prevIterator.parentTask;
 						(iterator as NestedTaskData).completedTasks ++;
 
 						var subTaskEntry = (iterator as NestedTaskData).subTaskEntries.First(t => t.isSelected);
