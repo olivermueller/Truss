@@ -39,6 +39,7 @@ public class NestedTaskData : TaskData {
             for (int i = 0; i < _subTasks.Count; i++)
             {
                 Debug.Log("Preparing: " + _subTasks[i]._title);
+                _subTasks[i].parentTask = this;
                 _subTasks[i].StartTask();
                 subTaskEntries[i] = new SubtaskEntry() {Task = _subTasks[i], isCompleted = false};
             }
@@ -51,13 +52,22 @@ public class NestedTaskData : TaskData {
         {
             completed = true;
             var player = FindObjectsOfType<PlayerUnit>().First(p => p.isLocalPlayer);
-
+            
             gameState.nodeID = _out.ID;
             gameState.isDenied = true;
             
             player.CmdSetId(_out.ID);
             player.CmdResetBools();
             _out.StartTask();
+
+            completed = false;
+            completedTasks = 0;
+            for (int i = 0; i < subTaskEntries.Length; i++)
+            {
+                subTaskEntries[i].isCompleted = false;
+                subTaskEntries[i].isSelected = false;
+            }
+            
             return true;
         }
         foreach (var t in subTaskEntries)

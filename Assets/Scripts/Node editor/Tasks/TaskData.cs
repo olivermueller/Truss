@@ -19,7 +19,7 @@ public class TaskData : NetworkBehaviour
     public TaskData _out, _in;
     public GameObject _animationObject, _baseObject, _instantiatedAnimationObject, _uiObject;
     public List<String> tasks;
-    
+    public TaskData parentTask;
     
     public UnityEvent NodeIdEvent;
     //position of the goal you are being guided towards

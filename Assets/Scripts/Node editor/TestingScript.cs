@@ -90,18 +90,17 @@ public class TestingScript : NetworkBehaviour {
 					if (iterator == null)
 					{
 						print("=============Moving back to the top");
-						var nestedNodes = FindObjectsOfType<NestedTaskData>();
+						//var nestedNodes = FindObjectsOfType<NestedTaskData>();
 
 
-						iterator = nestedNodes.First(t => t.completedTasks != t._subTasks.Count);
+						iterator = iterator.parentTask;
 						(iterator as NestedTaskData).completedTasks ++;
 
 						var subTaskEntry = (iterator as NestedTaskData).subTaskEntries.First(t => t.isSelected);
 						subTaskEntry.isCompleted = true;
 						subTaskEntry.isSelected = false;
 						iterator.StartTask();
-
-
+						
 					}
 					
 					player.CmdSetId(iterator.ID);
