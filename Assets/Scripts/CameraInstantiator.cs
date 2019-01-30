@@ -18,7 +18,7 @@ public class CameraInstantiator : MonoBehaviour
 
 	void Awake()
 	{
-
+		
 		if (!initializedDelegate)
 		{
 			initializedDelegate = false;

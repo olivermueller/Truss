@@ -167,6 +167,10 @@
         <e p="Scripts" t="Include">
           <e p="ActivatorScript.cs" t="Include" />
           <e p="Actor.cs" t="Include" />
+          <e p="Animations" t="Include">
+            <e p="UIAnimations.cs" t="Include" />
+            <e p="UIPopUp.cs" t="Include" />
+          </e>
           <e p="CameraFocusController.cs" t="Include" />
           <e p="CameraInstantiator.cs" t="Include" />
           <e p="CheckItem.cs" t="Include" />
