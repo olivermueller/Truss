@@ -33,6 +33,7 @@ public class UIAnimations : MonoBehaviour
 	IEnumerator Move(Vector3 pos1, Vector3 pos2, AnimationCurve ac, float time)
 	{
 		isAnimating = true;
+		Application.targetFrameRate = 60;
 		float timer = 0.0f;
 		while (timer <= time)
 		{
@@ -40,7 +41,7 @@ public class UIAnimations : MonoBehaviour
 			timer += Time.deltaTime;
 			yield return null;
 		}
-
+		Application.targetFrameRate = 30;
 		isAnimating = false;
 	}
 }

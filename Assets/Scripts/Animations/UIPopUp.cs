@@ -19,7 +19,7 @@ public class UIPopUp : MonoBehaviour
 	
 	IEnumerator Move(Vector3 scale1, Vector3 scale2, AnimationCurve ac, float time)
 	{
-		
+		Application.targetFrameRate = 60;
 		float timer = 0.0f;
 		while (timer <= time)
 		{
@@ -28,6 +28,8 @@ public class UIPopUp : MonoBehaviour
 			timer += Time.deltaTime;
 			yield return null;
 		}
+		Application.targetFrameRate = 30;
+
 
 	}
 }
