@@ -213,7 +213,8 @@ Transform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 611.66846, y: 901.7665, z: 28}
   m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
+  m_Children:
+  - {fileID: 1922874671}
   m_Father: {fileID: 0}
   m_RootOrder: 10
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -567,8 +568,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   rect:
     serializedVersion: 2
-    x: 2558.4011
-    y: 182.66086
+    x: 3248.5679
+    y: 957.3378
     width: 40
     height: 50
   type: 1
@@ -655,8 +656,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   rect:
     serializedVersion: 2
-    x: 2166.4011
-    y: 57.660866
+    x: 2856.5679
+    y: 832.3378
     width: 400
     height: 300
   title: FinishTaskNode
@@ -882,8 +883,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   rect:
     serializedVersion: 2
-    x: 2134.4011
-    y: 182.66086
+    x: 2824.5679
+    y: 957.3378
     width: 40
     height: 50
   type: 0
@@ -1612,8 +1613,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   rect:
     serializedVersion: 2
-    x: 717.24133
-    y: 325.78394
+    x: 1407.4078
+    y: 1100.4609
     width: 60
     height: 50
   type: 3
@@ -1700,8 +1701,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   rect:
     serializedVersion: 2
-    x: 909.24133
-    y: 158.78394
+    x: 1599.4078
+    y: 933.46094
     width: 40
     height: 50
   type: 1
@@ -1788,8 +1789,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   rect:
     serializedVersion: 2
-    x: 485.24133
-    y: 158.78394
+    x: 1175.4078
+    y: 933.46094
     width: 40
     height: 50
   type: 0
@@ -1876,8 +1877,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   rect:
     serializedVersion: 2
-    x: 517.24133
-    y: 33.78394
+    x: 1207.4078
+    y: 808.46094
     width: 400
     height: 300
   title: AnswerTargetTaskNode
@@ -2316,8 +2317,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   rect:
     serializedVersion: 2
-    x: 1791.4397
-    y: 1504.5258
+    x: 2481.6067
+    y: 2279.203
     width: 60
     height: 50
   type: 3
@@ -2404,8 +2405,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   rect:
     serializedVersion: 2
-    x: 1983.4397
-    y: 1337.5258
+    x: 2673.6067
+    y: 2112.203
     width: 40
     height: 50
   type: 1
@@ -2492,8 +2493,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   rect:
     serializedVersion: 2
-    x: 1559.4397
-    y: 1337.5258
+    x: 2249.6067
+    y: 2112.203
     width: 40
     height: 50
   type: 0
@@ -2580,8 +2581,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   rect:
     serializedVersion: 2
-    x: 1591.4397
-    y: 1212.5258
+    x: 2281.6067
+    y: 1987.2029
     width: 400
     height: 300
   title: AnswerTaskNode
@@ -3301,7 +3302,7 @@ MonoBehaviour:
   noPrefab: {fileID: 1967012788811928, guid: 8e3ce9b6c8bec457a84bc1f260fce2ad, type: 2}
   instantiatedYesButton: {fileID: 0}
   instantiatedNoButton: {fileID: 0}
-  noTask: {fileID: 0}
+  noTask: {fileID: 717293411}
 --- !u!4 &848092131
 Transform:
   m_ObjectHideFlags: 0
@@ -3739,8 +3740,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   rect:
     serializedVersion: 2
-    x: 242.3133
-    y: 328.7339
+    x: 932.4797
+    y: 1103.4109
     width: 60
     height: 50
   type: 3
@@ -3827,8 +3828,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   rect:
     serializedVersion: 2
-    x: 434.3133
-    y: 161.73387
+    x: 1124.4797
+    y: 936.4109
     width: 40
     height: 50
   type: 1
@@ -3915,8 +3916,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   rect:
     serializedVersion: 2
-    x: 10.313293
-    y: 161.73387
+    x: 700.4797
+    y: 936.4109
     width: 40
     height: 50
   type: 0
@@ -4003,8 +4004,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   rect:
     serializedVersion: 2
-    x: 42.313293
-    y: 36.733875
+    x: 732.4797
+    y: 811.4109
     width: 400
     height: 300
   title: AnswerTaskNode
@@ -4481,8 +4482,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   rect:
     serializedVersion: 2
-    x: 1275.7874
-    y: 738.459
+    x: 1965.9543
+    y: 1513.136
     width: 60
     height: 50
   type: 3
@@ -4569,8 +4570,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   rect:
     serializedVersion: 2
-    x: 1467.7874
-    y: 571.459
+    x: 2157.9543
+    y: 1346.136
     width: 40
     height: 50
   type: 1
@@ -4657,8 +4658,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   rect:
     serializedVersion: 2
-    x: 1043.7874
-    y: 571.459
+    x: 1733.9543
+    y: 1346.136
     width: 40
     height: 50
   type: 0
@@ -4745,8 +4746,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   rect:
     serializedVersion: 2
-    x: 1075.7874
-    y: 446.45895
+    x: 1765.9543
+    y: 1221.136
     width: 400
     height: 300
   title: AnswerTargetTaskNode
@@ -5954,8 +5955,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   rect:
     serializedVersion: 2
-    x: 1269.1976
-    y: 1489.6989
+    x: 1959.3647
+    y: 2264.376
     width: 60
     height: 50
   type: 3
@@ -6042,8 +6043,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   rect:
     serializedVersion: 2
-    x: 1461.1976
-    y: 1322.6989
+    x: 2151.3647
+    y: 2097.376
     width: 40
     height: 50
   type: 1
@@ -6130,8 +6131,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   rect:
     serializedVersion: 2
-    x: 1037.1976
-    y: 1322.6989
+    x: 1727.3647
+    y: 2097.376
     width: 40
     height: 50
   type: 0
@@ -6218,8 +6219,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   rect:
     serializedVersion: 2
-    x: 1069.1976
-    y: 1197.6989
+    x: 1759.3647
+    y: 1972.376
     width: 400
     height: 300
   title: AnswerTaskNode
@@ -6531,8 +6532,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   rect:
     serializedVersion: 2
-    x: 2003.2096
-    y: 167.83362
+    x: 2693.3765
+    y: 942.5106
     width: 40
     height: 50
   type: 1
@@ -6619,8 +6620,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   rect:
     serializedVersion: 2
-    x: 1611.2096
-    y: 42.83362
+    x: 2301.3765
+    y: 817.5106
     width: 400
     height: 300
   title: AnswerTaskNode
@@ -6847,8 +6848,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   rect:
     serializedVersion: 2
-    x: 1811.2096
-    y: 334.83362
+    x: 2501.3765
+    y: 1109.5106
     width: 60
     height: 50
   type: 3
@@ -6935,8 +6936,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   rect:
     serializedVersion: 2
-    x: 1579.2096
-    y: 167.83362
+    x: 2269.3765
+    y: 942.5106
     width: 40
     height: 50
   type: 0
@@ -7423,8 +7424,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   rect:
     serializedVersion: 2
-    x: 1223.0686
-    y: 328.24304
+    x: 1913.2355
+    y: 1102.92
     width: 20
     height: 10
   type: 2
@@ -7511,8 +7512,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   rect:
     serializedVersion: 2
-    x: 1415.0686
-    y: 161.24303
+    x: 2105.2354
+    y: 935.92004
     width: 40
     height: 50
   type: 1
@@ -7599,8 +7600,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   rect:
     serializedVersion: 2
-    x: 991.0686
-    y: 161.24303
+    x: 1681.2355
+    y: 935.92004
     width: 40
     height: 50
   type: 0
@@ -7687,8 +7688,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   rect:
     serializedVersion: 2
-    x: 1023.0686
-    y: 36.24303
+    x: 1713.2355
+    y: 810.92004
     width: 400
     height: 300
   title: NestedTaskNode
@@ -7989,8 +7990,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   rect:
     serializedVersion: 2
-    x: 1765.0807
-    y: 904.853
+    x: 2455.2478
+    y: 1679.5299
     width: 60
     height: 50
   type: 3
@@ -8077,8 +8078,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   rect:
     serializedVersion: 2
-    x: 1957.0807
-    y: 737.853
+    x: 2647.2478
+    y: 1512.5299
     width: 40
     height: 50
   type: 1
@@ -8165,8 +8166,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   rect:
     serializedVersion: 2
-    x: 1533.0807
-    y: 737.853
+    x: 2223.2478
+    y: 1512.5299
     width: 40
     height: 50
   type: 0
@@ -8253,8 +8254,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   rect:
     serializedVersion: 2
-    x: 1565.0807
-    y: 612.853
+    x: 2255.2478
+    y: 1387.5299
     width: 400
     height: 300
   title: AnswerTargetTaskNode
@@ -8468,6 +8469,34 @@ MonoBehaviour:
     m_StretchHeight: 0
   TaskData: {fileID: 610103689}
   _noPoint: {fileID: 1899470004}
+--- !u!1 &1922874670
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1922874671}
+  m_Layer: 0
+  m_Name: GameObject
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1922874671
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1922874670}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 186616461}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1942688059
 GameObject:
   m_ObjectHideFlags: 0
@@ -8512,8 +8541,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   rect:
     serializedVersion: 2
-    x: -52.41638
-    y: 161.734
+    x: 637.7505
+    y: 936.411
     width: 40
     height: 50
   type: 1
@@ -8600,8 +8629,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   rect:
     serializedVersion: 2
-    x: -476.41638
-    y: 161.734
+    x: 213.75047
+    y: 936.411
     width: 40
     height: 50
   type: 0
@@ -8688,8 +8717,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   rect:
     serializedVersion: 2
-    x: -444.41638
-    y: 36.733997
+    x: 245.75047
+    y: 811.411
     width: 400
     height: 300
   title: StartTaskNode
