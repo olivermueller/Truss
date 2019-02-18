@@ -59,13 +59,18 @@ public class TaskData : NetworkBehaviour
             }
             //check if the previous target is the same as the current one
 
-            if (_in._baseObject != null && _baseObject!=null && (_in._baseObject == _baseObject || _in._baseObject.GetType() == typeof(NestedTaskData)))
+            if (_in._baseObject != null && _baseObject!=null && _in._baseObject == _baseObject)
             {
                 Debug.Log("<color=red>Dodgy: ");
                 _instantiatedAnimationObject.transform.parent.GetComponent<MissionTrackableEventHandler>()
                     .OnTrackableStateChange.Invoke(true);
             }
             else OnTrackingLost(_instantiatedAnimationObject.transform.parent.gameObject);
+
+            if (_in._baseObject.GetType() == typeof(NestedTaskData))
+            {
+                FindObjectOfType<NetworkedGameState>().YesButton.gameObject.SetActive(true);
+            }
         }
         
         
