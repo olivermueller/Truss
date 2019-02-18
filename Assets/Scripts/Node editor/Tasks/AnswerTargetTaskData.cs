@@ -91,19 +91,25 @@ public class AnswerTargetTaskData : TaskData
         if (_finished != null)
         {
             Destroy(_particleSpawner);
-           // if(_instantiatedAnimationObject) Destroy(_instantiatedAnimationObject);
+          
         }
         
         return _finished;
     }
+
     public void IsTargetActive(bool active)
     {
         if (active)
             _finished = true;
         else
+        {
+            if(_instantiatedAnimationObject) Destroy(_instantiatedAnimationObject);
             _finished = null;
-        
-        //USE CREATEBUTTONS FOR A UI POPUP MAYBE
+        }
+
+    }
+
+    //USE CREATEBUTTONS FOR A UI POPUP MAYBE
 //        targetActive = active;
 //        Debug.LogWarning("Callback made on " + _title + "Value: " + active);
 //        CreateButtons(active);
