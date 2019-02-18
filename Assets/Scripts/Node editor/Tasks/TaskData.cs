@@ -61,6 +61,7 @@ public class TaskData : NetworkBehaviour
 
             if (_in._baseObject != null && _baseObject!=null && _in._baseObject == _baseObject)
             {
+                Debug.Log("<color=red>Dodgy: ");
                 _instantiatedAnimationObject.transform.parent.GetComponent<MissionTrackableEventHandler>()
                     .OnTrackableStateChange.Invoke(true);
             }

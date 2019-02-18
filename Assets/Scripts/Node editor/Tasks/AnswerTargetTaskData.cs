@@ -101,10 +101,7 @@ public class AnswerTargetTaskData : TaskData
         if (active)
             _finished = true;
         else
-        {
-            
             _finished = null;
-        }
 
     }
 

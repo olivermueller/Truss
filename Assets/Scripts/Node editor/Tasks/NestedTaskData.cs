@@ -38,8 +38,8 @@ public class NestedTaskData : TaskData {
             {
                 Debug.Log("Preparing: " + _subTasks[i]._title);
                 _subTasks[i].StartTask();
-                var answswerTargetTask = _subTasks[i] as AnswerTargetTaskData;
-                if (answswerTargetTask) answswerTargetTask.IsTargetActive(true);
+                //var answswerTargetTask = _subTasks[i] as AnswerTargetTaskData;
+                //if (answswerTargetTask) answswerTargetTask.IsTargetActive(true);
                 subTaskEntries[i] = new SubtaskEntry() {Task = _subTasks[i], isCompleted = false};
 
                 var it = _subTasks[i];
@@ -50,7 +50,6 @@ public class NestedTaskData : TaskData {
                 }
 
                 it.parentTask = this;
-                subTaskEntries[i].isSelected = false;
             }
             GameObject.FindGameObjectWithTag("CanvasTitle").GetComponent<TextMeshProUGUI>().text = _title;
             GameObject.FindGameObjectWithTag("CanvasDescription").GetComponent<TextMeshProUGUI>().text = _description;
@@ -84,6 +83,8 @@ public class NestedTaskData : TaskData {
             if (t.isSelected) break;
             if (t.isCompleted || !t.Task.IsCompleted().HasValue || !t.Task.IsCompleted().Value) continue;
             Debug.Log("Found: " + t.Task._title + " in update");
+            
+            print("<color=red>DODGY: ");
             t.isSelected = true;
             iterator = t.Task;
             
