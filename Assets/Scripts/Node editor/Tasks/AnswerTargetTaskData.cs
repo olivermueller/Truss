@@ -91,7 +91,7 @@ public class AnswerTargetTaskData : TaskData
         if (_finished != null)
         {
             Destroy(_particleSpawner);
-          
+            //if(_instantiatedAnimationObject) Destroy(_instantiatedAnimationObject);
         }
         
         return _finished;
@@ -103,7 +103,7 @@ public class AnswerTargetTaskData : TaskData
             _finished = true;
         else
         {
-            if(_instantiatedAnimationObject) Destroy(_instantiatedAnimationObject);
+            
             _finished = null;
         }
 

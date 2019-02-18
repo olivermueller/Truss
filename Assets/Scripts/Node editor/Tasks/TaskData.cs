@@ -47,7 +47,7 @@ public class TaskData : NetworkBehaviour
         Debug.Log("<color=red>Started " + _title+"</color>" );
                      Debug.Log("<color=yellow>Mission: " + _description+"</color>" );
          //        Debug.Log("Started" + _title);
-        if (_animationObject != null)
+        if (_animationObject != null && _instantiatedAnimationObject == null)
         {
             _instantiatedAnimationObject = GameObject.Instantiate(_animationObject);
             var localscale = _instantiatedAnimationObject.transform.localScale;
