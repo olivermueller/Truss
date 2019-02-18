@@ -57,6 +57,8 @@ public class TaskData : NetworkBehaviour
                 _instantiatedAnimationObject.transform.localPosition = Vector3.zero;
                 _instantiatedAnimationObject.transform.localScale = localscale;
                 _instantiatedAnimationObject.transform.localRotation = Quaternion.identity;
+                OnTrackingLost(_instantiatedAnimationObject.transform.parent.gameObject);
+                
             }
         }
         
@@ -70,9 +72,25 @@ public class TaskData : NetworkBehaviour
             listElement.transform.parent = checkListObj.transform;
             listElement.GetComponentInChildren<TextMeshProUGUI>().text = tasks[i];
         }
+    }
+    
+    protected void OnTrackingLost(GameObject obj)
+    {
+        var rendererComponents = obj.GetComponentsInChildren<Renderer>(true);
+        var colliderComponents = obj.GetComponentsInChildren<Collider>(true);
+        var canvasComponents = obj.GetComponentsInChildren<Canvas>(true);
 
+        // Disable rendering:
+        foreach (var component in rendererComponents)
+            component.enabled = false;
 
+        // Disable colliders:
+        foreach (var component in colliderComponents)
+            component.enabled = false;
 
+        // Disable canvas':
+        foreach (var component in canvasComponents)
+            component.enabled = false;
     }
     public virtual TaskData NextTask()
     {
