@@ -1,9 +1,9 @@
 ﻿/*===============================================================================
 Copyright (c) 2015-2017 PTC Inc. All Rights Reserved.
- 
+
 Copyright (c) 2015 Qualcomm Connected Experiences, Inc. All Rights Reserved.
- 
-Vuforia is a trademark of PTC Inc., registered in the United States and other 
+
+Vuforia is a trademark of PTC Inc., registered in the United States and other
 countries.
 ===============================================================================*/
 using UnityEngine;
@@ -43,8 +43,6 @@ public class SamplesNavigationHandler : MonoBehaviour
 
     void Update()
     {
-#if (UNITY_EDITOR || UNITY_ANDROID)
-
         if (Input.GetKeyUp(KeyCode.Escape))
         {
 
@@ -58,12 +56,17 @@ public class SamplesNavigationHandler : MonoBehaviour
                 }
                 else
                 {
+                    if (Application.isEditor)
+                    {
 #if UNITY_EDITOR
-                    UnityEditor.EditorApplication.isPlaying = false;
-#elif UNITY_ANDROID
-                    // On Android, the Back button is mapped to the Esc key
-                    Application.Quit();
+                        UnityEditor.EditorApplication.isPlaying = false;
 #endif
+                    }
+                    else
+                    {
+                        // On Android, the Back button is mapped to the Esc key
+                        Application.Quit();
+                    }
                 }
             }
             else
@@ -82,8 +85,6 @@ public class SamplesNavigationHandler : MonoBehaviour
                 OnStartAR();
             }
         }
-
-#endif // UNITY_EDITOR || UNITY_ANDROID
     }
 
     #endregion // MONOBEHAVIOUR_METHODS

@@ -87,8 +87,13 @@ public class AnswerTargetTaskData : TaskData
     }
     public override bool? IsCompleted()
     {
+
+        if (_finished != null)
+        {
+            Destroy(_particleSpawner);
+           // if(_instantiatedAnimationObject) Destroy(_instantiatedAnimationObject);
+        }
         
-        if(_finished != null) Destroy(_particleSpawner);
         return _finished;
     }
     public void IsTargetActive(bool active)

@@ -12,8 +12,8 @@ MonoBehaviour:
   m_Name: VuforiaConfiguration
   m_EditorClassIdentifier: 
   vuforia:
-    vuforiaLicenseKey: AXnmqRH/////AAABGTC6EPHTF0GJkb+7vpRGsS5emTOb4gB1f0BNTSQQgrIyByFYY2giNEOv54KHeSIa0U4jXXWcttMEdnNhZqhizon9ubpA4M2wMe0NQUm5m14WjUhk2QyV9nnVZ1xlH8ah1OVpBwl6VEuNU+iZLNRIJxRxKeq1/V/hlUntcf1R5sQmb/TgLS+jVmycKXoxUrbVTmIz2kISSEweoJJ0AwLxgZa55vHhu4fWGy2C6y1+C7M7xl/YE8XvQhJ0JtKY9pYTt88bG+TC405rXpmysiCBmmTdwohWpVCnXZp3ug4EDlclNX7TafoTM42NNy1iyWiwX87QrYU617wThl5kkVeIQ+stuBBwQ4Ey2U7ktEcAlrvb
-    ufoLicenseKey: QVRObDBnbi8vLy8vQUFBQUtBUkpnbzMxcWtxYmtGTnhodkJ0UkZSaEp6Z0JNS25oQWV3MHNDdjg0WXR5L3pqbUlmZFVTSko3em5aUjdsNk1pRnFhREJxd1EvTGd3UjhHakpWZ3Uxdi9xUHNWMmlrR29KNmhlY3IxRGdTYk9vZVFRQmkxNkdmUmRvazg3aDA4SU1DeVNSckVPS1U0alFJWHBtdTFHTmxiUXFqMmc5VlI0d2w2SVQxSHh5Z1FHTkpyTGVBeG8zNWE4UGEyVmhrU0Z5TndiU1lielNhZzBOWDRQQ0g0N2x3L0JBMG1lampNbTNqTEJCbHdUalNvcDlRek41bWRmQzhSb2RnTkZTTDFmTGd0T2pwQjQ3T2ovQnBmS2NlVElzSkJyd2gyU2Rlc1NNTnp1enZzRkg4NTVsck5tb2UxMHRQVGNsSjNTRVZVN3JtdFF2ZW9LTEppb0VQN3c2RTJlbmNnRnM0RkhjdTl1Mmdwd1ZaUEVQbG0=
+    vuforiaLicenseKey: AWdqnBb/////AAAAGd8HIYc1/Uwlk6FLcUhjXXte4m/It70IPzzEs7MJuejohARdXa37UZ8VtsT7nA8y3V/y0kQ3nquD0fqNpoNW8/niq+3WKPhHHb1NCLhVOKxCQsUvtLuqeudl6tEf2iyBLx9Pjw9/91I3z5sKzkifnt6Zncmph6/5JOqUhhpCw3mQtK31Xc8fsr48uAD4clmGU2aqNdENvHEMJqywd8l/rJOMnKUNjAs79GfLsSCJRqm5WAfc1zj38271wHg54EpPzQJCFV8b+z02e4bcZdqJIV/jcu/BOjSVH4RQVMOOw+Ny3MXPQ/WRIfzzmYgPeuRUsbNFxkBJcebqaZ95JqvafZkRoJHOD26n07uAYQnwKVMR
+    ufoLicenseKey: QWRvN0R6WC8vLy8vQUFBQUtFN1VZOWEvRkVyRmgwQUJpbkdwWHU0OHZROWgvK0l5Y3l2UkxucDRJWjU0V29rYlJEaXhrUnM0Uy9idkd1bDk2SDNyVmpENWpEMW5tU2JIR3A1VGRuTXNIK3cxUHpPRk0xbnVxU0JHOUYrbTJTa2JPd2VlbHVrUVQ2T1dNWWNRQmNtWUZ5emxGRFpOV0drcnRXYm91T1BtYzJsanZkZk4rR1RqcDBPSWhoWm5qM05iN3BJcTJZeVNISkkvSW9FQTlqUGZlRzZuZHNqUngwWkYxYzcweWlIM0phWTZMeWt5bkdtTHhnbkZjWlNRY29hb0JtN0VmVlBIbE41aGxveGw5MXo5d0xHV3Uwd2hYRHNaWldvRlJ0N2o2eWxEdk5jNXd0MUNsR05rcW82TFAxUlg2QmpZQTF6aU5STUc0RENOdnB6UlhYZW5hOXZST21RSURPMzJmSUQrNEkwVmVSeXVZTmRmS3VNVDJQRzI=
     delayedInitialization: 0
     cameraDeviceModeSetting: -1
     maxSimultaneousImageTargets: 4
@@ -22,13 +22,13 @@ MonoBehaviour:
     cameraDirection: 0
     mirrorVideoBackground: 0
     version: 8.0.10
-    eulaAcceptedVersions: '{"Values":["7.1","7.2","7.5","8.0"]}'
+    eulaAcceptedVersions: '{"Values":["7.1","7.2","7.5","8.0","7.7","8.1","0.0"]}'
   digitalEyewear:
     cameraOffset: 0.06
     distortionRenderingLayer: 31
-    eyewearType: 1
+    eyewearType: 0
     stereoFramework: 0
-    seeThroughConfiguration: 1
+    seeThroughConfiguration: 0
     viewerName: 
     viewerManufacturer: 
     useCustomViewer: 0
@@ -63,7 +63,7 @@ MonoBehaviour:
     autoInitTracker: 0
     autoStartTracker: 0
   webcam:
-    deviceNameSetInEditor: Logitech Camera
+    deviceNameSetInEditor: 
     flipHorizontally: 0
     turnOffWebCam: 0
     renderTextureLayer: 30

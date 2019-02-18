@@ -7,6 +7,7 @@ countries.
 using UnityEngine;
 using UnityEngine.UI;
 using Vuforia;
+using TMPro;
 
 public class SamplesMainMenu : MonoBehaviour
 {
@@ -16,42 +17,61 @@ public class SamplesMainMenu : MonoBehaviour
     public enum MenuItem
     {
         ImageTargets,
+        ModelTargets,
+        ModelTargetsTrained,
+        GroundPlane,
         VuMark,
-        CylinderTargets,
-        MultiTargets,
-        UserDefinedTargets,
-        ObjectReco,
         CloudReco,
-        VirtualButtons,
+        ObjectReco,
+        MultiTargets,
+        CylinderTargets,
+        UserDefinedTargets,
+        VirtualButtons
     }
-
-    public Canvas AboutCanvas;
-    public Text AboutTitle;
-    public Text AboutDescription;
-
-    public static bool isAboutScreenVisible;
 
     // initialize static enum with one of the items
     public static MenuItem menuItem = MenuItem.ImageTargets;
-
     public const string MenuScene = "1-Menu";
     public const string LoadingScene = "2-Loading";
-
-    SamplesAboutScreenInfo aboutScreenInfo;
+    public static bool isAboutScreenVisible;
 
     #endregion // PUBLIC_MEMBERS
+
+
+    #region PRIVATE_MEMBERS
+
+    [SerializeField] Canvas aboutCanvas;
+    [SerializeField] Text aboutTitle;
+    [SerializeField] TextMeshProUGUI aboutDescription;
+
+    AboutScreenInfo aboutScreenInfo;
+    SafeAreaManager safeAreaManager;
+    Color lightGrey;
+
+    #endregion // PRIVATE_MEMBERS
+
 
     #region MONOBEHAVIOUR_METHODS
 
     void Start()
     {
+        this.lightGrey = new Color(220f / 255f, 220f / 255f, 220f / 255f);
+
         // reset about screen state variable to false when returning from AR scene
         isAboutScreenVisible = false;
 
-        if (aboutScreenInfo == null)
+        if (this.aboutScreenInfo == null)
         {
             // initialize if null
-            aboutScreenInfo = new SamplesAboutScreenInfo();
+            this.aboutScreenInfo = new AboutScreenInfo();
+        }
+
+        this.safeAreaManager = FindObjectOfType<SafeAreaManager>();
+
+        if (this.safeAreaManager)
+        {
+            this.safeAreaManager.SetAreaColors(lightGrey, Color.white);
+            this.safeAreaManager.SetAreasEnabled(true, true);
         }
     }
 
@@ -73,8 +93,14 @@ public class SamplesMainMenu : MonoBehaviour
     public void BackToMenu()
     {
         // called to return to Menu from About screen
-        AboutCanvas.sortingOrder = 0;
+        aboutCanvas.sortingOrder = 0;
         isAboutScreenVisible = false;
+
+        if (this.safeAreaManager)
+        {
+            this.safeAreaManager.SetAreaColors(lightGrey, Color.white);
+            this.safeAreaManager.SetAreasEnabled(true, true);
+        }
     }
 
     public void LoadAboutScene(string itemSelected)
@@ -84,40 +110,55 @@ public class SamplesMainMenu : MonoBehaviour
         // This method called from list of Sample App menu buttons
         switch (itemSelected)
         {
-
             case ("ImageTargets"):
                 menuItem = MenuItem.ImageTargets;
+                break;
+            case ("ModelTargets"):
+                menuItem = MenuItem.ModelTargets;
+                break;
+            case ("ModelTargetsTrained"):
+                menuItem = MenuItem.ModelTargetsTrained;
+                break;
+            case ("GroundPlane"):
+                menuItem = MenuItem.GroundPlane;
                 break;
             case ("VuMark"):
                 menuItem = MenuItem.VuMark;
                 break;
-            case ("CylinderTargets"):
-                menuItem = MenuItem.CylinderTargets;
-                break;
-            case ("MultiTargets"):
-                menuItem = MenuItem.MultiTargets;
-                break;
-            case ("UserDefinedTargets"):
-                menuItem = MenuItem.UserDefinedTargets;
+            case ("CloudReco"):
+                menuItem = MenuItem.CloudReco;
                 break;
             case ("ObjectReco"):
                 menuItem = MenuItem.ObjectReco;
                 break;
-            case ("CloudReco"):
-                menuItem = MenuItem.CloudReco;
+            case ("MultiTargets"):
+                menuItem = MenuItem.MultiTargets;
+                break;
+            case ("CylinderTargets"):
+                menuItem = MenuItem.CylinderTargets;
+                break;
+            case ("UserDefinedTargets"):
+                menuItem = MenuItem.UserDefinedTargets;
                 break;
             case ("VirtualButtons"):
                 menuItem = MenuItem.VirtualButtons;
                 break;
         }
 
-        AboutTitle.text = aboutScreenInfo.GetTitle(menuItem.ToString());
-        AboutDescription.text = aboutScreenInfo.GetDescription(menuItem.ToString());
+        LoadingScreen.SceneToLoad = "3-" + menuItem.ToString();
 
-        AboutCanvas.transform.parent.transform.position = Vector3.zero; // move canvas into position
-        AboutCanvas.sortingOrder = 2; // bring canvas in front of main menu
+        this.aboutTitle.text = this.aboutScreenInfo.GetTitle(menuItem.ToString());
+        this.aboutDescription.text = this.aboutScreenInfo.GetDescription(menuItem.ToString());
+
+        this.aboutCanvas.transform.parent.transform.position = Vector3.zero; // move canvas into position
+        this.aboutCanvas.sortingOrder = 2; // bring canvas in front of main menu
         isAboutScreenVisible = true;
 
+        if (this.safeAreaManager)
+        {
+            this.safeAreaManager.SetAreaColors(this.lightGrey, Color.clear);
+            this.safeAreaManager.SetAreasEnabled(true, false);
+        }
     }
 
     void UpdateConfiguration(string scene)

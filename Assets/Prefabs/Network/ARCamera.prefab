@@ -23,7 +23,7 @@ GameObject:
   - component: {fileID: 81028265932547320}
   - component: {fileID: 114884828650633714}
   - component: {fileID: 114255566016628006}
-  - component: {fileID: 114697201320770016}
+  - component: {fileID: 114067911812262668}
   m_Layer: 0
   m_Name: ARCamera
   m_TagString: MainCamera
@@ -91,6 +91,23 @@ AudioListener:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1711869721071640}
   m_Enabled: 1
+--- !u!114 &114067911812262668
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1711869721071640}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d1d25e236841a456fbd005430fe5d704, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  spawnTime: 1
+  distanceFromSource: 0.2
+  percentPerSecond: 0.65
+  particleSystemPrefab: {fileID: 1891972527774278, guid: 4d35711ba17dcd4409264568d9155360,
+    type: 2}
+  endPoint: {fileID: 0}
 --- !u!114 &114255566016628006
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -100,17 +117,6 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: c47f92041efbb4b429a4eafca855ebe3, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!114 &114697201320770016
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1711869721071640}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 562a9fe49bfc2418099790a804f22711, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!114 &114884828650633714

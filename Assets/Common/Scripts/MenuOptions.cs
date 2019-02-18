@@ -1,21 +1,23 @@
 /*===============================================================================
 Copyright (c) 2015-2018 PTC Inc. All Rights Reserved.
- 
+
 Copyright (c) 2015 Qualcomm Connected Experiences, Inc. All Rights Reserved.
- 
-Vuforia is a trademark of PTC Inc., registered in the United States and other 
+
+Vuforia is a trademark of PTC Inc., registered in the United States and other
 countries.
 ===============================================================================*/
 using UnityEngine;
 using UnityEngine.UI;
 using Vuforia;
 
+using System.Collections.Generic;
+
 public class MenuOptions : MonoBehaviour
 {
     #region PRIVATE_MEMBERS
     CameraSettings m_CameraSettings;
     TrackableSettings m_TrackableSettings;
-    Toggle m_ExtTrackingToggle, m_AutofocusToggle, m_FlashToggle, m_FrontCamToggle;
+    Toggle m_DeviceTrackerToggle, m_AutofocusToggle, m_FlashToggle;
     Canvas m_OptionsMenuCanvas;
     OptionsConfig m_OptionsConfig;
     #endregion //PRIVATE_MEMBERS
@@ -29,10 +31,9 @@ public class MenuOptions : MonoBehaviour
         m_TrackableSettings = FindObjectOfType<TrackableSettings>();
         m_OptionsConfig = FindObjectOfType<OptionsConfig>();
         m_OptionsMenuCanvas = GetComponentInChildren<Canvas>(true);
-        m_ExtTrackingToggle = FindUISelectableWithText<Toggle>("Extended");
+        m_DeviceTrackerToggle = FindUISelectableWithText<Toggle>("Tracker");
         m_AutofocusToggle = FindUISelectableWithText<Toggle>("Autofocus");
         m_FlashToggle = FindUISelectableWithText<Toggle>("Flash");
-        m_FrontCamToggle = FindUISelectableWithText<Toggle>("FrontCamera");
 
         var vuforia = VuforiaARController.Instance;
         vuforia.RegisterOnPauseCallback(OnPaused);
@@ -42,41 +43,28 @@ public class MenuOptions : MonoBehaviour
 
     #region PUBLIC_METHODS
 
-    public void ToggleAutofocus(bool enabled)
+    public void ToggleAutofocus(bool enable)
     {
         if (m_CameraSettings)
-            m_CameraSettings.SwitchAutofocus(enabled);
+            m_CameraSettings.SwitchAutofocus(enable);
     }
 
-    public void ToggleTorch(bool enabled)
+    public void ToggleTorch(bool enable)
     {
         if (m_FlashToggle && m_CameraSettings)
         {
-            m_CameraSettings.SwitchFlashTorch(enabled);
+            m_CameraSettings.SwitchFlashTorch(enable);
 
             // Update UI toggle status (ON/OFF) in case the flash switch failed
             m_FlashToggle.isOn = m_CameraSettings.IsFlashTorchEnabled();
         }
     }
 
-    public void ToggleFrontCamera(bool enabled)
-    {
-        if (m_CameraSettings)
-        {
-            m_CameraSettings.SelectCamera(m_CameraSettings.IsFrontCameraActive() ?
-                                          CameraDevice.CameraDirection.CAMERA_BACK :
-                                          CameraDevice.CameraDirection.CAMERA_FRONT);
 
-            // Toggle flash if it is on while switching to front camera
-            if (m_CameraSettings.IsFrontCameraActive() && m_FlashToggle && m_FlashToggle.isOn)
-                ToggleTorch(false);
-        }
-    }
-
-    public void ToggleExtendedTracking(bool enabled)
+    public void ToggleExtendedTracking(bool enable)
     {
         if (m_TrackableSettings)
-            m_TrackableSettings.SwitchExtendedTracking(enabled);
+            m_TrackableSettings.ToggleDeviceTracking(enable);
     }
 
     public void ActivateDataset(string datasetName)
@@ -87,35 +75,58 @@ public class MenuOptions : MonoBehaviour
 
     public void UpdateUI()
     {
-        if (m_ExtTrackingToggle && m_TrackableSettings)
-            m_ExtTrackingToggle.isOn = m_TrackableSettings.IsExtendedTrackingEnabled();
+        if (m_DeviceTrackerToggle && m_TrackableSettings)
+            m_DeviceTrackerToggle.isOn = m_TrackableSettings.IsDeviceTrackingEnabled();
 
         if (m_FlashToggle && m_CameraSettings)
             m_FlashToggle.isOn = m_CameraSettings.IsFlashTorchEnabled();
 
         if (m_AutofocusToggle && m_CameraSettings)
             m_AutofocusToggle.isOn = m_CameraSettings.IsAutofocusEnabled();
-
-        if (m_FrontCamToggle && m_CameraSettings)
-            m_FrontCamToggle.isOn = m_CameraSettings.IsFrontCameraActive();
     }
 
-    public void RestartObjectTracker()
+    public void ResetDeviceTracker()
     {
         var objTracker = TrackerManager.Instance.GetTracker<ObjectTracker>();
+
         if (objTracker != null && objTracker.IsActive)
         {
+            Debug.Log("Stopping the ObjectTracker...");
             objTracker.Stop();
 
+            List<DataSet> tempDataSetList = new List<DataSet>();
+
+            // Create a temporary list of active datasets to prevent
+            // InvalidOperationException caused by modifying the active
+            // dataset list while iterating through it
             foreach (DataSet dataset in objTracker.GetDataSets())
+            {
+                tempDataSetList.Add(dataset);
+            }
+
+            // Reset active datasets
+            foreach (DataSet dataset in tempDataSetList)
             {
                 objTracker.DeactivateDataSet(dataset);
                 objTracker.ActivateDataSet(dataset);
             }
 
+            Debug.Log("Restarting the ObjectTracker...");
             objTracker.Start();
         }
+
+        var deviceTracker = TrackerManager.Instance.GetTracker<PositionalDeviceTracker>();
+
+        if (deviceTracker != null && deviceTracker.Reset())
+        {
+            Debug.Log("Successfully reset device tracker");
+        }
+        else
+        {
+            Debug.LogError("Failed to reset device tracker");
+        }
     }
+
 
     public void ShowOptionsMenu(bool show)
     {
@@ -135,6 +146,15 @@ public class MenuOptions : MonoBehaviour
                 IsDisplayed = false;
             }
         }
+    }
+
+    public void CycleGuideView()
+    {
+        var modelTarget = FindObjectOfType<ModelTargetBehaviour>().ModelTarget;
+
+        int guideViewIndexToActivate =
+            (modelTarget.GetActiveGuideViewIndex() + 1) % modelTarget.GetNumGuideViews();
+        modelTarget.SetActiveGuideViewIndex(guideViewIndexToActivate);
     }
 
     #endregion //PUBLIC_METHODS

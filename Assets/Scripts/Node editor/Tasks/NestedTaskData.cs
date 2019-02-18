@@ -38,6 +38,8 @@ public class NestedTaskData : TaskData {
             {
                 Debug.Log("Preparing: " + _subTasks[i]._title);
                 _subTasks[i].StartTask();
+                var answswerTargetTask = _subTasks[i] as AnswerTargetTaskData;
+                if (answswerTargetTask) answswerTargetTask.IsTargetActive(true);
                 subTaskEntries[i] = new SubtaskEntry() {Task = _subTasks[i], isCompleted = false};
 
                 var it = _subTasks[i];

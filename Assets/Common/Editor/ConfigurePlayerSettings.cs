@@ -101,10 +101,10 @@ namespace Vuforia.EditorClasses
 
                 CheckVuforiaConfigurationForEyewearSettings(wsaBuildTarget);
 
-                if (PlayerSettings.GetScriptingBackend(wsaBuildTarget) != ScriptingImplementation.WinRTDotNET)
+                if (PlayerSettings.GetScriptingBackend(wsaBuildTarget) != ScriptingImplementation.IL2CPP)
                 {
-                    Debug.Log("Setting WSA Scripting Backend to .NET");
-                    PlayerSettings.SetScriptingBackend(wsaBuildTarget, ScriptingImplementation.WinRTDotNET);
+                    Debug.Log("Setting WSA Scripting Backend to IL2CPP");
+                    PlayerSettings.SetScriptingBackend(wsaBuildTarget, ScriptingImplementation.IL2CPP);
                 }
 
                 // Vuforia needs WebCam permission; UWP requires Microphone permission if using WebCam permission.
@@ -158,7 +158,7 @@ namespace Vuforia.EditorClasses
 
         static void CheckVuforiaConfigurationForEyewearSettings(BuildTargetGroup buildTargetGroup)
         {
-            VuforiaConfiguration vuforiaConfiguration = VuforiaConfigurationEditor.LoadConfigurationObject();
+            VuforiaConfiguration vuforiaConfiguration = VuforiaConfiguration.Instance;
 
             DigitalEyewearARController.EyewearType eyewearType = vuforiaConfiguration.DigitalEyewear.EyewearType;
             DigitalEyewearARController.SeeThroughConfiguration opticalConfig = vuforiaConfiguration.DigitalEyewear.SeeThroughConfiguration;

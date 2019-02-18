@@ -1,9 +1,9 @@
 ﻿/*===============================================================================
-Copyright (c) 2015-2017 PTC Inc. All Rights Reserved.
- 
+Copyright (c) 2015-2018 PTC Inc. All Rights Reserved.
+
 Copyright (c) 2015 Qualcomm Connected Experiences, Inc. All Rights Reserved.
- 
-Vuforia is a trademark of PTC Inc., registered in the United States and other 
+
+Vuforia is a trademark of PTC Inc., registered in the United States and other
 countries.
 ===============================================================================*/
 using UnityEngine;
@@ -16,7 +16,6 @@ public class CameraSettings : MonoBehaviour
     private bool mVuforiaStarted = false;
     private bool mAutofocusEnabled = true;
     private bool mFlashTorchEnabled = false;
-    private CameraDevice.CameraDirection mActiveDirection = CameraDevice.CameraDirection.CAMERA_DEFAULT;
     #endregion //PRIVATE_MEMBERS
 
 
@@ -89,49 +88,35 @@ public class CameraSettings : MonoBehaviour
         StartCoroutine(RestoreOriginalFocusMode());
     }
 
-    public void SelectCamera(CameraDevice.CameraDirection camDir)
+    public bool RestartCamera()
     {
-        if (RestartCamera(camDir))
+        ObjectTracker objectTracker = TrackerManager.Instance.GetTracker<ObjectTracker>();
+
+        if (objectTracker != null)
         {
-            mActiveDirection = camDir;
-
-            // Upon camera restart, flash is turned off
-            mFlashTorchEnabled = false;
+            objectTracker.Stop();
         }
-    }
 
-    public bool IsFrontCameraActive()
-    {
-        return (mActiveDirection == CameraDevice.CameraDirection.CAMERA_FRONT);
-    }
-
-
-    public bool RestartCamera(CameraDevice.CameraDirection direction)
-    {
-        ObjectTracker tracker = TrackerManager.Instance.GetTracker<ObjectTracker>();
-        if (tracker != null)
-        {
-            tracker.Stop();
-        }
+        // Camera must be deinitialized before attempting to deinitialize trackers
         CameraDevice.Instance.Stop();
         CameraDevice.Instance.Deinit();
 
-        if (!CameraDevice.Instance.Init(direction))
+        if (!CameraDevice.Instance.Init())
         {
-            Debug.Log("Failed to init camera for direction: " + direction.ToString());
+            Debug.Log("Failed to initialize the camera.");
             return false;
         }
         if (!CameraDevice.Instance.Start())
         {
-            Debug.Log("Failed to start camera for direction: " + direction.ToString());
+            Debug.Log("Failed to start the camera.");
             return false;
         }
 
-        if (tracker != null)
+        if (objectTracker != null)
         {
-            if (!tracker.Start())
+            if (!objectTracker.Start())
             {
-                Debug.Log("Failed to restart the Tracker.");
+                Debug.Log("Failed to restart the Object Tracker.");
                 return false;
             }
         }
