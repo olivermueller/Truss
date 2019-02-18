@@ -56,10 +56,11 @@ public class TaskData : NetworkBehaviour
                 _instantiatedAnimationObject.transform.localPosition = Vector3.zero;
                 _instantiatedAnimationObject.transform.localScale = localscale;
                 _instantiatedAnimationObject.transform.localRotation = Quaternion.identity;
-                OnTrackingLost(_instantiatedAnimationObject.transform.parent.gameObject);
+                
                 
             }
         }
+        OnTrackingLost(_instantiatedAnimationObject.transform.parent.gameObject);
         
         GameObject.FindGameObjectWithTag("CanvasTitle").GetComponent<TextMeshProUGUI>().text = _title;
         GameObject.FindGameObjectWithTag("CanvasDescription").GetComponent<TextMeshProUGUI>().text = _description;
