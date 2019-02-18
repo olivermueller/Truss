@@ -40,7 +40,7 @@ public class NestedTaskData : TaskData {
                 _subTasks[i].StartTask();
                 var answswerTargetTask = _subTasks[i] as AnswerTargetTaskData;
                 if (answswerTargetTask) answswerTargetTask.IsTargetActive(true);
-                subTaskEntries[i] = new SubtaskEntry() {Task = _subTasks[i], isCompleted = false};
+                subTaskEntries[i] = new SubtaskEntry() {Task = _subTasks[i], isCompleted = false, isSelected = false};
 
                 var it = _subTasks[i];
 

@@ -59,7 +59,7 @@ public class TaskData : NetworkBehaviour
             }
             //check if the previous target is the same as the current one
 
-            if (_in._baseObject != null && _in._baseObject == _baseObject)
+            if (_in._baseObject != null && _baseObject!=null && _in._baseObject == _baseObject)
             {
                 _instantiatedAnimationObject.transform.parent.GetComponent<MissionTrackableEventHandler>()
                     .OnTrackableStateChange.Invoke(true);
