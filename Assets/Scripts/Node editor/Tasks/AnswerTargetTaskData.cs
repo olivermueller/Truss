@@ -91,7 +91,7 @@ public class AnswerTargetTaskData : TaskData
         if (_finished != null)
         {
             Destroy(_particleSpawner);
-            //if(_instantiatedAnimationObject) Destroy(_instantiatedAnimationObject);
+            if(_instantiatedAnimationObject) Destroy(_instantiatedAnimationObject);
         }
         
         return _finished;
