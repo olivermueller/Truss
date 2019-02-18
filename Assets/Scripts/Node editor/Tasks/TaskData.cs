@@ -42,6 +42,8 @@ public class TaskData : NetworkBehaviour
             }
         }
         
+        if(_instantiatedAnimationObject) Destroy(_instantiatedAnimationObject);
+        
         Debug.Log("<color=red>Started " + _title+"</color>" );
                      Debug.Log("<color=yellow>Mission: " + _description+"</color>" );
          //        Debug.Log("Started" + _title);
