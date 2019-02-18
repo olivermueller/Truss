@@ -40,7 +40,7 @@ public class NestedTaskData : TaskData {
                 _subTasks[i].StartTask();
                 var answswerTargetTask = _subTasks[i] as AnswerTargetTaskData;
                 if (answswerTargetTask) answswerTargetTask.IsTargetActive(true);
-                subTaskEntries[i] = new SubtaskEntry() {Task = _subTasks[i], isCompleted = false, isSelected = false};
+                subTaskEntries[i] = new SubtaskEntry() {Task = _subTasks[i], isCompleted = false};
 
                 var it = _subTasks[i];
 
@@ -50,6 +50,7 @@ public class NestedTaskData : TaskData {
                 }
 
                 it.parentTask = this;
+                subTaskEntries[i].isSelected = false;
             }
             GameObject.FindGameObjectWithTag("CanvasTitle").GetComponent<TextMeshProUGUI>().text = _title;
             GameObject.FindGameObjectWithTag("CanvasDescription").GetComponent<TextMeshProUGUI>().text = _description;
