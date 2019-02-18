@@ -57,15 +57,16 @@ public class TaskData : NetworkBehaviour
                 _instantiatedAnimationObject.transform.localScale = localscale;
                 _instantiatedAnimationObject.transform.localRotation = Quaternion.identity; 
             }
-        }
-        //check if the previous target is the same as the current one
+            //check if the previous target is the same as the current one
 
-        if (_in._baseObject == _baseObject)
-        {
-            _instantiatedAnimationObject.transform.parent.GetComponent<MissionTrackableEventHandler>()
-                .OnTrackableStateChange.Invoke(true);
+            if (_in._baseObject == _baseObject)
+            {
+                _instantiatedAnimationObject.transform.parent.GetComponent<MissionTrackableEventHandler>()
+                    .OnTrackableStateChange.Invoke(true);
+            }
+            else OnTrackingLost(_instantiatedAnimationObject.transform.parent.gameObject);
         }
-        else OnTrackingLost(_instantiatedAnimationObject.transform.parent.gameObject);
+        
         
         
         GameObject.FindGameObjectWithTag("CanvasTitle").GetComponent<TextMeshProUGUI>().text = _title;
