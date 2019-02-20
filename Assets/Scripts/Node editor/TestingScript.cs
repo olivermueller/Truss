@@ -25,8 +25,10 @@ public class TestingScript : NetworkBehaviour {
 	IEnumerator ExecuteAfterFrameEnd()
 	{
 		yield return new WaitForEndOfFrame();
+		print("--------");
 		if (iterator.parentTask && iterator.parentTask.GetType() == typeof(NestedTaskData))
 		{
+			print("--------Entered");
 			var a = iterator as AnswerTargetTaskData;
 
 			if (a)
@@ -52,7 +54,7 @@ public class TestingScript : NetworkBehaviour {
 					iterator = TaskModel.Instance.tasks.First(p => p.ID == gameState.nodeID);
 					
 					iterator.StartTask();
-					StartCoroutine(ExecuteAfterFrameEnd());
+					StartCoroutine(nameof(ExecuteAfterFrameEnd));
 				}
 				return;
 			}
