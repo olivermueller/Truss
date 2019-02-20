@@ -76,6 +76,8 @@ public class TestingScript : NetworkBehaviour {
 				gameState.isDenied = false;
 				player.CmdResetBools();
 				iterator.StartTask();
+				StartCoroutine(Balh());
+
 				return;
 			}
 
@@ -92,7 +94,6 @@ public class TestingScript : NetworkBehaviour {
 					Debug.Log("Switching Task");
 					var prevIterator = iterator;
 					iterator = iterator.NextTask();
-					StartCoroutine(Balh());
 					if (iterator == null)
 					{
 						print("=============Moving back to the top");
