@@ -4,6 +4,7 @@ using System.Globalization;
 using System.Linq;
 using UnityEngine;
 using UnityEngine.Networking;
+using Vuforia;
 
 public class TestingScript : NetworkBehaviour {
 	public TaskData iterator;
@@ -28,8 +29,14 @@ public class TestingScript : NetworkBehaviour {
 		{
 			var a = iterator as AnswerTargetTaskData;
 
-			if (a) a._finished = true;
-			gameState.YesButton.gameObject.SetActive(true);
+			if (a)
+			{
+				print("--------changing stuff to true");
+				gameState.GetComponent<MissionTrackableEventHandler>().OnTrackableStateChange.Invoke(true);
+				gameState.GetComponent<MissionTrackableEventHandler>().OnTrackableStateChanged(TrackableBehaviour.Status.DETECTED, TrackableBehaviour.Status.TRACKED);
+				a._finished = true;
+				gameState.YesButton.gameObject.SetActive(true);
+			}
 		}
 	}
 	void Update () 
