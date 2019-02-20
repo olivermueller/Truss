@@ -6,6 +6,7 @@ using Vuforia;
 
 public class MissionTrackableEventHandler : DefaultTrackableEventHandler
 {
+	
 	public OnTrackableStateChanged OnTrackableStateChange;
 	/// <summary>
 	///     Implementation of the ITrackableEventHandler function called when the
@@ -15,7 +16,6 @@ public class MissionTrackableEventHandler : DefaultTrackableEventHandler
 		TrackableBehaviour.Status previousStatus,
 		TrackableBehaviour.Status newStatus)
 	{
-		
 		if (newStatus == TrackableBehaviour.Status.DETECTED ||
 		    newStatus == TrackableBehaviour.Status.TRACKED)
 		{

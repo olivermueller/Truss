@@ -62,8 +62,10 @@ public class TaskData : NetworkBehaviour
 
             if (_in._baseObject != null && _baseObject!=null && _in._baseObject == _baseObject)
             {
+                var currentStatus = _instantiatedAnimationObject.transform.parent
+                    .GetComponent<CylinderTargetBehaviour>().CurrentStatus;
                 _instantiatedAnimationObject.transform.parent.GetComponent<MissionTrackableEventHandler>()
-                    .OnTrackableStateChange.Invoke(true);
+                    .OnTrackableStateChange.Invoke(currentStatus == TrackableBehaviour.Status.TRACKED);
             }
             else OnTrackingLost(_instantiatedAnimationObject.transform.parent.gameObject);
             

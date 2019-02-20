@@ -40,7 +40,6 @@ public class AnswerTargetTaskData : TaskData
         
         _finished = null;
         base.StartTask();
-        print("--------");
         
 
     }
