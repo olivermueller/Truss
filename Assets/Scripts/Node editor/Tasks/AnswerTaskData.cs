@@ -30,6 +30,11 @@ public class AnswerTaskData : TaskData
         _finished = true;
         if (goalPosition)
         {
+            if (_particleSpawner)
+            {
+                DestroyImmediate(_particleSpawner);
+            }
+            
             _particleSpawner = Camera.main.gameObject.AddComponent<ParticleSpawner>();
             _particleSpawner.endPoint = goalPosition;
             _particleSpawner.Begin();

@@ -117,8 +117,8 @@ namespace Prototype.NetworkLobby
 
             //have to use child count of player prefab already setup as "this.slot" is not set yet
             if (playerName == "")
-                CmdNameChanged("PLAYER " + (LobbyPlayerList._instance.playerListContentTransform.childCount-1));
-
+                //CmdNameChanged("PLAYER " + (LobbyPlayerList._instance.playerListContentTransform.childCount-1));
+                CmdNameChanged(isServer?"TRAINER":"TRAINEE");
             //we switch from simple name display to name input
             colorButton.interactable = true;
             nameInput.interactable = true;
