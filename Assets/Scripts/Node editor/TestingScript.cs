@@ -36,7 +36,8 @@ public class TestingScript : NetworkBehaviour {
 					{
 						var a = iterator as AnswerTargetTaskData;
 
-						a._finished = true;
+						if (a) a._finished = true;
+						gameState.YesButton.gameObject.SetActive(true);
 					}
 					iterator.StartTask();
 				}
