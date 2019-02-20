@@ -32,7 +32,7 @@ public class TestingScript : NetworkBehaviour {
 				if (iterator == null || iterator.ID != gameState.nodeID)
 				{
 					iterator = TaskModel.Instance.tasks.First(p => p.ID == gameState.nodeID);
-					if (iterator.parentTask.GetType() == typeof(NestedTaskData))
+					if (iterator.parentTask && iterator.parentTask.GetType() == typeof(NestedTaskData))
 					{
 						var a = iterator as AnswerTargetTaskData;
 
