@@ -66,7 +66,7 @@ public class TaskData : NetworkBehaviour
                     .GetComponent<CylinderTargetBehaviour>().CurrentStatus;
                 
                 _instantiatedAnimationObject.transform.parent.GetComponent<MissionTrackableEventHandler>()
-                    .OnTrackableStateChange.Invoke(currentStatus == TrackableBehaviour.Status.TRACKED);
+                    .OnTrackableStateChange.Invoke(true);
             }
             else OnTrackingLost(_instantiatedAnimationObject.transform.parent.gameObject);
             
