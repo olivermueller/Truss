@@ -4,10 +4,10 @@ using TMPro;
 using UnityEngine;
 using UnityEngine.Networking;
 using UnityEngine.UI;
+using Vuforia;
 
 public class AnswerTargetTaskData : TaskData
 {
-    private bool targetActive;
 	public GameObject yesPrefab, noPrefab;
     public GameObject instantiatedYesButton, instantiatedNoButton;
     public TaskData noTask;
@@ -40,6 +40,8 @@ public class AnswerTargetTaskData : TaskData
         
         _finished = null;
         base.StartTask();
+        print("--------");
+        
 
     }
 

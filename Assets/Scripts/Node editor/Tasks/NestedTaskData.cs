@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using TMPro;
 using UnityEngine;
+using Vuforia;
 
 public class NestedTaskData : TaskData {
     
@@ -87,7 +88,7 @@ public class NestedTaskData : TaskData {
             
             t.isSelected = true;
             iterator = t.Task;
-
+            
             
             
             var player = FindObjectsOfType<PlayerUnit>().First(p => p.isLocalPlayer);
@@ -97,6 +98,18 @@ public class NestedTaskData : TaskData {
             
             player.CmdSetId(iterator.ID);
             gameState.CmdSetDenied(true);
+
+            var a = iterator as AnswerTargetTaskData;
+            if (a && parentTask && parentTask.GetType() == typeof(NestedTaskData))
+            {
+                print("--------Entered");
+                var gameState = FindObjectOfType<NetworkedGameState>();
+                print("--------changing stuff to true");
+                gameState.GetComponent<MissionTrackableEventHandler>().OnTrackableStateChange.Invoke(true);
+                gameState.GetComponent<MissionTrackableEventHandler>().OnTrackableStateChanged(TrackableBehaviour.Status.DETECTED, TrackableBehaviour.Status.TRACKED);
+                a._finished = true;
+                gameState.YesButton.gameObject.SetActive(true);
+            }
             
             print("----------------Subtask iterator ID: " + iterator.ID);
         }

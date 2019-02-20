@@ -67,22 +67,7 @@ public class TaskData : NetworkBehaviour
             }
             else OnTrackingLost(_instantiatedAnimationObject.transform.parent.gameObject);
             
-            print("--------");
-            if (parentTask && parentTask.GetType() == typeof(NestedTaskData))
-            {
-                print("--------Entered");
-                var a = this as AnswerTargetTaskData;
-
-                if (a)
-                {
-                    var gameState = FindObjectOfType<NetworkedGameState>();
-                    print("--------changing stuff to true");
-                    gameState.GetComponent<MissionTrackableEventHandler>().OnTrackableStateChange.Invoke(true);
-                    gameState.GetComponent<MissionTrackableEventHandler>().OnTrackableStateChanged(TrackableBehaviour.Status.DETECTED, TrackableBehaviour.Status.TRACKED);
-                    a._finished = true;
-                    gameState.YesButton.gameObject.SetActive(true);
-                }
-            }
+            
             
          
         }
