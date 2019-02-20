@@ -90,8 +90,7 @@ public class NestedTaskData : TaskData {
 
             var answerTargetTaskData = iterator as AnswerTargetTaskData;
             if (answerTargetTaskData)
-                answerTargetTaskData._baseObject.GetComponent<MissionTrackableEventHandler>()
-                    .OnTrackableStateChange.Invoke(true);
+                answerTargetTaskData._finished = true;
             
             var player = FindObjectsOfType<PlayerUnit>().First(p => p.isLocalPlayer);
 
