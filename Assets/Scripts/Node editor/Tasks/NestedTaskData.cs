@@ -100,7 +100,7 @@ public class NestedTaskData : TaskData {
             gameState.CmdSetDenied(true);
 
             var a = iterator as AnswerTargetTaskData;
-            if (a && parentTask && parentTask.GetType() == typeof(NestedTaskData))
+            if (a)
             {
                 print("--------Entered");
                 var gameState = FindObjectOfType<NetworkedGameState>();
