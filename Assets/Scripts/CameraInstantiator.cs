@@ -34,7 +34,7 @@ public class CameraInstantiator : MonoBehaviour
 		{
 			camera = Instantiate(ARCameraPrefab);
 		}
-		camera = GameObject.FindWithTag("MainCamera");
+		else camera = GameObject.FindWithTag("MainCamera");
 		if (scene.buildIndex == 0)
 		{
 			camera.GetComponent<VuforiaBehaviour>().enabled = false;
