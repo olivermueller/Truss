@@ -105,8 +105,8 @@ public class NestedTaskData : TaskData {
                 print("--------Entered");
                 var gameState = FindObjectOfType<NetworkedGameState>();
                 print("--------changing stuff to true");
-                gameState.GetComponent<MissionTrackableEventHandler>().OnTrackableStateChange.Invoke(true);
-                gameState.GetComponent<MissionTrackableEventHandler>().OnTrackableStateChanged(TrackableBehaviour.Status.DETECTED, TrackableBehaviour.Status.TRACKED);
+                //gameState.GetComponent<MissionTrackableEventHandler>().OnTrackableStateChange.Invoke(true);
+                //gameState.GetComponent<MissionTrackableEventHandler>().OnTrackableStateChanged(TrackableBehaviour.Status.DETECTED, TrackableBehaviour.Status.TRACKED);
                 a._finished = true;
                 gameState.YesButton.gameObject.SetActive(true);
             }

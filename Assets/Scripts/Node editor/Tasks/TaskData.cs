@@ -64,6 +64,7 @@ public class TaskData : NetworkBehaviour
             {
                 var currentStatus = _instantiatedAnimationObject.transform.parent
                     .GetComponent<CylinderTargetBehaviour>().CurrentStatus;
+                
                 _instantiatedAnimationObject.transform.parent.GetComponent<MissionTrackableEventHandler>()
                     .OnTrackableStateChange.Invoke(currentStatus == TrackableBehaviour.Status.TRACKED);
             }
