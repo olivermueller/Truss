@@ -8,6 +8,7 @@ using UnityEditor;
 using UnityEngine;
 using UnityEngine.Events;
 using UnityEngine.Networking;
+using Vuforia;
 
 public delegate void Action();
 [System.Serializable]
@@ -65,7 +66,23 @@ public class TaskData : NetworkBehaviour
                     .OnTrackableStateChange.Invoke(true);
             }
             else OnTrackingLost(_instantiatedAnimationObject.transform.parent.gameObject);
+            
+            print("--------");
+            if (parentTask && parentTask.GetType() == typeof(NestedTaskData))
+            {
+                print("--------Entered");
+                var a = this as AnswerTargetTaskData;
 
+                if (a)
+                {
+                    var gameState = FindObjectOfType<NetworkedGameState>();
+                    print("--------changing stuff to true");
+                    gameState.GetComponent<MissionTrackableEventHandler>().OnTrackableStateChange.Invoke(true);
+                    gameState.GetComponent<MissionTrackableEventHandler>().OnTrackableStateChanged(TrackableBehaviour.Status.DETECTED, TrackableBehaviour.Status.TRACKED);
+                    a._finished = true;
+                    gameState.YesButton.gameObject.SetActive(true);
+                }
+            }
             
          
         }

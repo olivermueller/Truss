@@ -22,25 +22,7 @@ public class TestingScript : NetworkBehaviour {
 		
 	}
 
-	IEnumerator ExecuteAfterFrameEnd()
-	{
-		yield return new WaitForEndOfFrame();
-		print("--------");
-		if (iterator.parentTask && iterator.parentTask.GetType() == typeof(NestedTaskData))
-		{
-			print("--------Entered");
-			var a = iterator as AnswerTargetTaskData;
-
-			if (a)
-			{
-				print("--------changing stuff to true");
-				gameState.GetComponent<MissionTrackableEventHandler>().OnTrackableStateChange.Invoke(true);
-				gameState.GetComponent<MissionTrackableEventHandler>().OnTrackableStateChanged(TrackableBehaviour.Status.DETECTED, TrackableBehaviour.Status.TRACKED);
-				a._finished = true;
-				gameState.YesButton.gameObject.SetActive(true);
-			}
-		}
-	}
+	
 	void Update () 
 	{
 		if (gameState.initializedPLayers)
@@ -110,7 +92,6 @@ public class TestingScript : NetworkBehaviour {
 					Debug.Log("Switching Task");
 					var prevIterator = iterator;
 					iterator = iterator.NextTask();
-					StartCoroutine(nameof(ExecuteAfterFrameEnd));
 
 					if (iterator == null)
 					{
