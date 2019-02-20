@@ -129,7 +129,7 @@ public class TestingScript : NetworkBehaviour {
 				}
 				
 				
-			}
+			}			
 			else
 			{
 				//Debug.Log("All Tasks completed!");

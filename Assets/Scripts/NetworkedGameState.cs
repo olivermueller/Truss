@@ -171,7 +171,7 @@ public class NetworkedGameState : NetworkBehaviour
 				{
 					var completed = _testingScript.iterator.IsCompleted();
 					if(completed.HasValue) YesButton.gameObject.SetActive(completed.Value);
-
+					 
 				}
 				else
 				{
@@ -180,6 +180,8 @@ public class NetworkedGameState : NetworkBehaviour
 				}
 
 			}
+
+			
 		}
 
 	}

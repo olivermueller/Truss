@@ -23,12 +23,13 @@ public class AnswerTargetTaskData : TaskData
         return noTask;
     }
     
-    private bool? _finished;
+    public bool? _finished;
     
     private ParticleSpawner _particleSpawner;
     public override void StartTask()
     {
         _baseObject.GetComponent<MissionTrackableEventHandler>().OnTrackableStateChange.AddListener(IsTargetActive);
+
         //CreateButtons(true);
         if (goalPosition)
         {

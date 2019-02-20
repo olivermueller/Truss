@@ -61,16 +61,13 @@ public class TaskData : NetworkBehaviour
 
             if (_in._baseObject != null && _baseObject!=null && _in._baseObject == _baseObject)
             {
-                Debug.Log("<color=red>Dodgy: ");
                 _instantiatedAnimationObject.transform.parent.GetComponent<MissionTrackableEventHandler>()
                     .OnTrackableStateChange.Invoke(true);
             }
             else OnTrackingLost(_instantiatedAnimationObject.transform.parent.gameObject);
 
-            if (_in._baseObject.GetType() == typeof(NestedTaskData))
-            {
-                FindObjectOfType<NetworkedGameState>().YesButton.gameObject.SetActive(true);
-            }
+            
+         
         }
         
         
@@ -85,6 +82,7 @@ public class TaskData : NetworkBehaviour
             listElement.transform.parent = checkListObj.transform;
             listElement.GetComponentInChildren<TextMeshProUGUI>().text = tasks[i];
         }
+        
     }
     
     protected void OnTrackingLost(GameObject obj)

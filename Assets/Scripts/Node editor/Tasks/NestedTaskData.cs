@@ -42,7 +42,7 @@ public class NestedTaskData : TaskData {
                 subTaskEntries[i] = new SubtaskEntry() {Task = _subTasks[i], isCompleted = false};
 
                 var it = _subTasks[i];
-
+                it.parentTask = this;
                 while (it._out != null)
                 {
                     it = it._out;
@@ -85,9 +85,10 @@ public class NestedTaskData : TaskData {
             if (t.isCompleted || !t.Task.IsCompleted().HasValue || !t.Task.IsCompleted().Value) continue;
             Debug.Log("Found: " + t.Task._title + " in update");
             
-            print("<color=red>DODGY: ");
             t.isSelected = true;
             iterator = t.Task;
+            
+            
             
             var player = FindObjectsOfType<PlayerUnit>().First(p => p.isLocalPlayer);
 
