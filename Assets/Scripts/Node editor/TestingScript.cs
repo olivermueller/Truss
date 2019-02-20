@@ -76,7 +76,7 @@ public class TestingScript : NetworkBehaviour {
 				gameState.isDenied = false;
 				player.CmdResetBools();
 				iterator.StartTask();
-				StartCoroutine(Balh());
+				StartCoroutine(ActivateSubtask());
 
 				return;
 			}
@@ -144,7 +144,7 @@ public class TestingScript : NetworkBehaviour {
 		}
 	}
 
-	IEnumerator Balh()
+	IEnumerator ActivateSubtask()
 	{
 		yield return  new WaitForEndOfFrame();
 		var a = iterator as AnswerTargetTaskData;

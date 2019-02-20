@@ -63,10 +63,13 @@ public class TaskData : NetworkBehaviour
             if (_in._baseObject != null && _baseObject!=null && _in._baseObject == _baseObject)
             {
                 var currentStatus = _instantiatedAnimationObject.transform.parent
-                    .GetComponent<CylinderTargetBehaviour>().CurrentStatus;
-                
+                    .GetComponent<MissionTrackableEventHandler>().markerActive;
+                print("--------------------" + _instantiatedAnimationObject.name);
                 _instantiatedAnimationObject.transform.parent.GetComponent<MissionTrackableEventHandler>()
-                    .OnTrackableStateChange.Invoke(true);
+                    .OnTrackableStateChange.Invoke(currentStatus);
+                if (currentStatus)
+                    OnTrackingFound(_instantiatedAnimationObject.transform.parent.gameObject);
+                else OnTrackingLost(_instantiatedAnimationObject.transform.parent.gameObject);
             }
             else OnTrackingLost(_instantiatedAnimationObject.transform.parent.gameObject);
             
@@ -90,7 +93,7 @@ public class TaskData : NetworkBehaviour
         
     }
     
-    protected void OnTrackingLost(GameObject obj)
+    void OnTrackingLost(GameObject obj)
     {
         var rendererComponents = obj.GetComponentsInChildren<Renderer>(true);
         var colliderComponents = obj.GetComponentsInChildren<Collider>(true);
@@ -108,6 +111,25 @@ public class TaskData : NetworkBehaviour
         foreach (var component in canvasComponents)
             component.enabled = false;
     }
+    void OnTrackingFound(GameObject obj)
+    {
+        var rendererComponents = obj.GetComponentsInChildren<Renderer>(true);
+        var colliderComponents = obj.GetComponentsInChildren<Collider>(true);
+        var canvasComponents = obj.GetComponentsInChildren<Canvas>(true);
+
+        // Enable rendering:
+        foreach (var component in rendererComponents)
+            component.enabled = true;
+
+        // Enable colliders:
+        foreach (var component in colliderComponents)
+            component.enabled = true;
+
+        // Enable canvas':
+        foreach (var component in canvasComponents)
+            component.enabled = true;
+    }
+    
     public virtual TaskData NextTask()
     {
         
