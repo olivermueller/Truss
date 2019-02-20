@@ -8,7 +8,7 @@ using UnityEngine.Networking;
 using UnityEngine.SceneManagement;
 using Vuforia;
 
-public class CameraInstantiator : NetworkBehaviour
+public class CameraInstantiator : MonoBehaviour
 {
 
 	public GameObject ARCameraPrefab;
@@ -44,18 +44,9 @@ public class CameraInstantiator : NetworkBehaviour
 		}
 		else
 		{
-			if (!isServer)
-			{
-				camera.GetComponent<VuforiaBehaviour>().enabled = false;
-				camera.GetComponent<DefaultInitializationErrorHandler>().enabled = false;
-				FindObjectOfType<LobbyManager>().transform.GetChild(1).gameObject.SetActive(false);
-			}
-			else
-			{
-				camera.GetComponent<VuforiaBehaviour>().enabled = true;
-				camera.GetComponent<DefaultInitializationErrorHandler>().enabled = true;
-				FindObjectOfType<LobbyManager>().transform.GetChild(1).gameObject.SetActive(false);
-			}
+			camera.GetComponent<VuforiaBehaviour>().enabled = true;
+			camera.GetComponent<DefaultInitializationErrorHandler>().enabled = true;
+			FindObjectOfType<LobbyManager>().transform.GetChild(1).gameObject.SetActive(false);
 		}
 	}
 	

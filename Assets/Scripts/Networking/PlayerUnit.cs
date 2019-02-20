@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Runtime.InteropServices;
 using System.Runtime.Serialization.Formatters;
+using Prototype.NetworkLobby;
 using TMPro;
 using UnityEditor;
 using UnityEngine;
@@ -44,7 +45,10 @@ public class PlayerUnit : NetworkBehaviour
         if (isServer && isLocalPlayer)
         {
             yield return new WaitUntil(()=>connectionToClient.isReady);
-            
+            var camera = FindObjectOfType<Camera>().gameObject;
+            camera.GetComponent<VuforiaBehaviour>().enabled = true;
+            camera.GetComponent<DefaultInitializationErrorHandler>().enabled = true;
+            FindObjectOfType<LobbyManager>().transform.GetChild(1).gameObject.SetActive(false);
 //            _nextButton = Instantiate(NextButtonPrefab).GetComponent<Button>();
 //            _nextButton.transform.parent = FindObjectOfType<Canvas>().transform;
 //            _nextButton.onClick.AddListener(() => CmdOnClickSetAwating(true));
