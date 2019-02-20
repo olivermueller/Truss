@@ -32,6 +32,8 @@ public class TestingScript : NetworkBehaviour {
 				if (iterator == null || iterator.ID != gameState.nodeID)
 				{
 					iterator = TaskModel.Instance.tasks.First(p => p.ID == gameState.nodeID);
+					
+					iterator.StartTask();
 					if (iterator.parentTask && iterator.parentTask.GetType() == typeof(NestedTaskData))
 					{
 						var a = iterator as AnswerTargetTaskData;
@@ -39,7 +41,6 @@ public class TestingScript : NetworkBehaviour {
 						if (a) a._finished = true;
 						gameState.YesButton.gameObject.SetActive(true);
 					}
-					iterator.StartTask();
 				}
 				return;
 			}
