@@ -126,7 +126,7 @@ namespace Prototype.NetworkLobby
 //            lobbyManager.backDelegate = lobbyManager.StopHost;
             lobbyManager._isMatchmaking = true;
             lobbyManager.SetServerInfo("Matchmaker Host", lobbyManager.matchHost);
-            lobbyManager.serverText.text = "USE THE CODE: ";
+            lobbyManager.serverText.text = "GIVE CODE TO TRAINEE: ";
             lobbyManager.serverCode.text = lobbyName;
             lobbyManager.status.text = "WAITING...";
         }
