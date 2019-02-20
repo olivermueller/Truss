@@ -20,7 +20,18 @@ public class TestingScript : NetworkBehaviour {
 		gameState = GetComponent<NetworkedGameState>();
 		
 	}
-	
+
+	IEnumerator ExecuteAfterFrameEnd()
+	{
+		yield return new WaitForEndOfFrame();
+		if (iterator.parentTask && iterator.parentTask.GetType() == typeof(NestedTaskData))
+		{
+			var a = iterator as AnswerTargetTaskData;
+
+			if (a) a._finished = true;
+			gameState.YesButton.gameObject.SetActive(true);
+		}
+	}
 	void Update () 
 	{
 		if (gameState.initializedPLayers)
@@ -34,13 +45,7 @@ public class TestingScript : NetworkBehaviour {
 					iterator = TaskModel.Instance.tasks.First(p => p.ID == gameState.nodeID);
 					
 					iterator.StartTask();
-					if (iterator.parentTask && iterator.parentTask.GetType() == typeof(NestedTaskData))
-					{
-						var a = iterator as AnswerTargetTaskData;
-
-						if (a) a._finished = true;
-						gameState.YesButton.gameObject.SetActive(true);
-					}
+					StartCoroutine(ExecuteAfterFrameEnd());
 				}
 				return;
 			}
