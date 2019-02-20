@@ -51,10 +51,11 @@ public class TestingScript : NetworkBehaviour {
 					return;
 				if (iterator == null || iterator.ID != gameState.nodeID)
 				{
+					
 					iterator = TaskModel.Instance.tasks.First(p => p.ID == gameState.nodeID);
 					
 					iterator.StartTask();
-					StartCoroutine(nameof(ExecuteAfterFrameEnd));
+					
 				}
 				return;
 			}
@@ -109,6 +110,7 @@ public class TestingScript : NetworkBehaviour {
 					Debug.Log("Switching Task");
 					var prevIterator = iterator;
 					iterator = iterator.NextTask();
+					StartCoroutine(nameof(ExecuteAfterFrameEnd));
 
 					if (iterator == null)
 					{
