@@ -92,7 +92,17 @@ public class TestingScript : NetworkBehaviour {
 					Debug.Log("Switching Task");
 					var prevIterator = iterator;
 					iterator = iterator.NextTask();
-
+					var a = iterator as AnswerTargetTaskData;
+					if (a)
+					{
+						print("--------Entered");
+						var gameState = FindObjectOfType<NetworkedGameState>();
+						print("--------changing stuff to true");
+						//gameState.GetComponent<MissionTrackableEventHandler>().OnTrackableStateChange.Invoke(true);
+						//gameState.GetComponent<MissionTrackableEventHandler>().OnTrackableStateChanged(TrackableBehaviour.Status.DETECTED, TrackableBehaviour.Status.TRACKED);
+						a._finished = true;
+						gameState.YesButton.gameObject.SetActive(true);
+					}
 					if (iterator == null)
 					{
 						print("=============Moving back to the top");

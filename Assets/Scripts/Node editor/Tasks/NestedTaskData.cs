@@ -99,17 +99,7 @@ public class NestedTaskData : TaskData {
             player.CmdSetId(iterator.ID);
             gameState.CmdSetDenied(true);
 
-            var a = iterator as AnswerTargetTaskData;
-            if (a)
-            {
-                print("--------Entered");
-                var gameState = FindObjectOfType<NetworkedGameState>();
-                print("--------changing stuff to true");
-                //gameState.GetComponent<MissionTrackableEventHandler>().OnTrackableStateChange.Invoke(true);
-                //gameState.GetComponent<MissionTrackableEventHandler>().OnTrackableStateChanged(TrackableBehaviour.Status.DETECTED, TrackableBehaviour.Status.TRACKED);
-                a._finished = true;
-                gameState.YesButton.gameObject.SetActive(true);
-            }
+            
             
             print("----------------Subtask iterator ID: " + iterator.ID);
         }
