@@ -457,8 +457,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   rect:
     serializedVersion: 2
-    x: 79.250694
-    y: 725.6701
+    x: 499.31744
+    y: -151.87701
     width: 60
     height: 50
   type: 3
@@ -545,8 +545,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   rect:
     serializedVersion: 2
-    x: 271.2507
-    y: 558.6701
+    x: 691.31744
+    y: -318.877
     width: 40
     height: 50
   type: 1
@@ -633,8 +633,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   rect:
     serializedVersion: 2
-    x: -152.7493
-    y: 558.6701
+    x: 267.31744
+    y: -318.877
     width: 40
     height: 50
   type: 0
@@ -721,8 +721,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   rect:
     serializedVersion: 2
-    x: -120.749306
-    y: 433.6701
+    x: 299.31744
+    y: -443.877
     width: 400
     height: 300
   title: AnswerTargetTaskNode
@@ -1147,8 +1147,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   rect:
     serializedVersion: 2
-    x: 1293.3556
-    y: 240.64212
+    x: 1713.4236
+    y: -636.9039
     width: 40
     height: 50
   type: 1
@@ -1235,8 +1235,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   rect:
     serializedVersion: 2
-    x: 901.3556
-    y: 115.64211
+    x: 1321.4236
+    y: -761.9039
     width: 400
     height: 300
   title: FinishTaskNode
@@ -1462,8 +1462,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   rect:
     serializedVersion: 2
-    x: 869.3556
-    y: 240.64212
+    x: 1289.4236
+    y: -636.9039
     width: 40
     height: 50
   type: 0
@@ -2041,8 +2041,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   rect:
     serializedVersion: 2
-    x: -436.05396
-    y: 727.36804
+    x: -15.987335
+    y: -150.17902
     width: 60
     height: 50
   type: 3
@@ -2129,8 +2129,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   rect:
     serializedVersion: 2
-    x: -244.05396
-    y: 560.36804
+    x: 176.01266
+    y: -317.17902
     width: 40
     height: 50
   type: 1
@@ -2217,8 +2217,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   rect:
     serializedVersion: 2
-    x: -668.05396
-    y: 560.36804
+    x: -247.98734
+    y: -317.17902
     width: 40
     height: 50
   type: 0
@@ -2305,8 +2305,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   rect:
     serializedVersion: 2
-    x: -636.05396
-    y: 435.36807
+    x: -215.98734
+    y: -442.17902
     width: 400
     height: 300
   title: AnswerTargetTaskNode
@@ -4670,8 +4670,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   rect:
     serializedVersion: 2
-    x: 138.77359
-    y: 2201.8535
+    x: 558.8403
+    y: 1324.3063
     width: 60
     height: 50
   type: 3
@@ -4758,8 +4758,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   rect:
     serializedVersion: 2
-    x: 330.7736
-    y: 2034.8534
+    x: 750.8403
+    y: 1157.3063
     width: 40
     height: 50
   type: 1
@@ -4846,8 +4846,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   rect:
     serializedVersion: 2
-    x: -93.22641
-    y: 2034.8534
+    x: 326.84027
+    y: 1157.3063
     width: 40
     height: 50
   type: 0
@@ -4934,8 +4934,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   rect:
     serializedVersion: 2
-    x: -61.226406
-    y: 1909.8534
+    x: 358.84027
+    y: 1032.3063
     width: 400
     height: 300
   title: AnswerTaskNode
@@ -5576,6 +5576,34 @@ MonoBehaviour:
     i15: 0
   m_ServerOnly: 0
   m_LocalPlayerAuthority: 0
+--- !u!1 &1237869871
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1237869872}
+  m_Layer: 0
+  m_Name: GameObject
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1237869872
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1237869871}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 253.66089, y: 475.13858, z: 48.654423}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 16
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1300833553
 GameObject:
   m_ObjectHideFlags: 0
@@ -6195,8 +6223,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   rect:
     serializedVersion: 2
-    x: -1235.5508
-    y: 213.42679
+    x: -815.48267
+    y: -664.1193
     width: 40
     height: 50
   type: 1
@@ -6283,8 +6311,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   rect:
     serializedVersion: 2
-    x: -1659.5508
-    y: 213.42679
+    x: -1239.4827
+    y: -664.1193
     width: 40
     height: 50
   type: 0
@@ -6371,8 +6399,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   rect:
     serializedVersion: 2
-    x: -1627.5508
-    y: 88.42678
+    x: -1207.4827
+    y: -789.1193
     width: 400
     height: 300
   title: StartTaskNode
@@ -6630,8 +6658,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   rect:
     serializedVersion: 2
-    x: -437.75476
-    y: 2232.4639
+    x: -17.688202
+    y: 1354.9169
     width: 60
     height: 50
   type: 3
@@ -6718,8 +6746,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   rect:
     serializedVersion: 2
-    x: -245.75476
-    y: 2065.4639
+    x: 174.3118
+    y: 1187.9169
     width: 40
     height: 50
   type: 1
@@ -6806,8 +6834,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   rect:
     serializedVersion: 2
-    x: -669.75476
-    y: 2065.4639
+    x: -249.6882
+    y: 1187.9169
     width: 40
     height: 50
   type: 0
@@ -6894,8 +6922,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   rect:
     serializedVersion: 2
-    x: -637.75476
-    y: 1940.4637
+    x: -217.6882
+    y: 1062.9169
     width: 400
     height: 300
   title: AnswerTargetTaskNode
@@ -7139,7 +7167,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   ID: 3cde40c4-6ec9-4bcd-843a-7d7a1168876d
   _title: Ready to continue?
-  _description: 
+  _description: Point camera away from truss
   _out: {fileID: 0}
   _in: {fileID: 1231640644}
   _animationObject: {fileID: 0}
@@ -7529,8 +7557,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   rect:
     serializedVersion: 2
-    x: -441.15613
-    y: 1480.7667
+    x: -21.08957
+    y: 603.21875
     width: 60
     height: 50
   type: 3
@@ -7617,8 +7645,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   rect:
     serializedVersion: 2
-    x: -249.15613
-    y: 1313.7667
+    x: 170.91043
+    y: 436.21875
     width: 40
     height: 50
   type: 1
@@ -7705,8 +7733,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   rect:
     serializedVersion: 2
-    x: -673.1561
-    y: 1313.7667
+    x: -253.08957
+    y: 436.21875
     width: 40
     height: 50
   type: 0
@@ -7793,8 +7821,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   rect:
     serializedVersion: 2
-    x: -641.1561
-    y: 1188.7667
+    x: -221.08957
+    y: 311.21875
     width: 400
     height: 300
   title: AnswerTargetTaskNode
@@ -8053,8 +8081,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   rect:
     serializedVersion: 2
-    x: 96.25692
-    y: 1489.2726
+    x: 516.3236
+    y: 611.7246
     width: 60
     height: 50
   type: 3
@@ -8141,8 +8169,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   rect:
     serializedVersion: 2
-    x: 288.25693
-    y: 1322.2726
+    x: 708.3236
+    y: 444.7246
     width: 40
     height: 50
   type: 1
@@ -8229,8 +8257,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   rect:
     serializedVersion: 2
-    x: -135.74307
-    y: 1322.2726
+    x: 284.3236
+    y: 444.7246
     width: 40
     height: 50
   type: 0
@@ -8317,8 +8345,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   rect:
     serializedVersion: 2
-    x: -103.74308
-    y: 1197.2726
+    x: 316.3236
+    y: 319.7246
     width: 400
     height: 300
   title: AnswerTargetTaskNode
@@ -9014,7 +9042,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   ID: 4b38bb24-12cd-46a2-b130-061ca88e754a
   _title: Ready to continue?
-  _description: 
+  _description: Point camera away from truss
   _out: {fileID: 0}
   _in: {fileID: 1603494137}
   _animationObject: {fileID: 0}
@@ -9947,8 +9975,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   rect:
     serializedVersion: 2
-    x: -420.74744
-    y: 3710.35
+    x: -0.68081665
+    y: 2832.8018
     width: 60
     height: 50
   type: 3
@@ -10035,8 +10063,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   rect:
     serializedVersion: 2
-    x: -228.74744
-    y: 3543.35
+    x: 191.31918
+    y: 2665.8018
     width: 40
     height: 50
   type: 1
@@ -10123,8 +10151,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   rect:
     serializedVersion: 2
-    x: -652.74744
-    y: 3543.35
+    x: -232.68082
+    y: 2665.8018
     width: 40
     height: 50
   type: 0
@@ -10211,8 +10239,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   rect:
     serializedVersion: 2
-    x: -620.74744
-    y: 3418.35
+    x: -200.68082
+    y: 2540.8018
     width: 400
     height: 300
   title: AnswerTaskNode
@@ -10638,8 +10666,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   rect:
     serializedVersion: 2
-    x: -903.7412
-    y: 383.82816
+    x: -483.67432
+    y: -493.71796
     width: 60
     height: 50
   type: 3
@@ -10726,8 +10754,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   rect:
     serializedVersion: 2
-    x: -711.7412
-    y: 216.82816
+    x: -291.67432
+    y: -660.71796
     width: 40
     height: 50
   type: 1
@@ -10814,8 +10842,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   rect:
     serializedVersion: 2
-    x: -1135.7412
-    y: 216.82816
+    x: -715.6743
+    y: -660.71796
     width: 40
     height: 50
   type: 0
@@ -10902,8 +10930,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   rect:
     serializedVersion: 2
-    x: -1103.7412
-    y: 91.82815
+    x: -683.6743
+    y: -785.71796
     width: 400
     height: 300
   title: AnswerTaskNode
@@ -11317,8 +11345,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   rect:
     serializedVersion: 2
-    x: -434.3534
-    y: 387.22928
+    x: -14.286774
+    y: -490.31683
     width: 20
     height: 10
   type: 2
@@ -11405,8 +11433,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   rect:
     serializedVersion: 2
-    x: -242.3534
-    y: 220.22928
+    x: 177.71323
+    y: -657.31683
     width: 40
     height: 50
   type: 1
@@ -11493,8 +11521,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   rect:
     serializedVersion: 2
-    x: -666.3534
-    y: 220.22928
+    x: -246.28677
+    y: -657.31683
     width: 40
     height: 50
   type: 0
@@ -11581,8 +11609,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   rect:
     serializedVersion: 2
-    x: -634.3534
-    y: 95.22927
+    x: -214.28677
+    y: -782.31683
     width: 400
     height: 300
   title: NestedTaskNode
@@ -11841,8 +11869,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   rect:
     serializedVersion: 2
-    x: -429.2511
-    y: 3002.8706
+    x: -9.1844635
+    y: 2125.3218
     width: 60
     height: 50
   type: 3
@@ -11929,8 +11957,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   rect:
     serializedVersion: 2
-    x: -237.2511
-    y: 2835.8706
+    x: 182.81554
+    y: 1958.3218
     width: 40
     height: 50
   type: 1
@@ -12017,8 +12045,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   rect:
     serializedVersion: 2
-    x: -661.2511
-    y: 2835.8706
+    x: -241.18446
+    y: 1958.3218
     width: 40
     height: 50
   type: 0
@@ -12105,8 +12133,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   rect:
     serializedVersion: 2
-    x: -629.2511
-    y: 2710.8706
+    x: -209.18446
+    y: 1833.3218
     width: 400
     height: 300
   title: AnswerTargetTaskNode
@@ -12451,8 +12479,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   rect:
     serializedVersion: 2
-    x: 723.6294
-    y: 230.4385
+    x: 1143.6963
+    y: -647.1076
     width: 40
     height: 50
   type: 1
@@ -12539,8 +12567,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   rect:
     serializedVersion: 2
-    x: 331.6294
-    y: 105.4385
+    x: 751.6962
+    y: -772.1076
     width: 400
     height: 300
   title: AnswerTaskNode
@@ -12767,8 +12795,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   rect:
     serializedVersion: 2
-    x: 531.6294
-    y: 397.4385
+    x: 951.6962
+    y: -480.1076
     width: 60
     height: 50
   type: 3
@@ -12855,8 +12883,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   rect:
     serializedVersion: 2
-    x: 299.6294
-    y: 230.4385
+    x: 719.6962
+    y: -647.1076
     width: 40
     height: 50
   type: 0
