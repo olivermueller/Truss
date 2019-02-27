@@ -1564,8 +1564,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   rect:
     serializedVersion: 2
-    x: 1528.3546
-    y: -1301.5981
+    x: 1228.5309
+    y: 239.84631
     width: 40
     height: 50
   type: 1
@@ -1652,8 +1652,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   rect:
     serializedVersion: 2
-    x: 1136.3546
-    y: -1426.5981
+    x: 836.5309
+    y: 114.846306
     width: 400
     height: 300
   title: FinishTaskNode
@@ -1879,8 +1879,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   rect:
     serializedVersion: 2
-    x: 1104.3546
-    y: -1301.5981
+    x: 804.5309
+    y: 239.84631
     width: 40
     height: 50
   type: 0
@@ -3311,7 +3311,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   ID: f36390b5-e114-47d9-9d71-7f5d034cf34f
   _title: Take check and place split pen
-  _description: 
+  _description: When ready point at corner again and press READY
   _out: {fileID: 0}
   _in: {fileID: 1724020578}
   _animationObject: {fileID: 1023911024754922, guid: afeebdbb2cfd74813af921a8bb0a1fd4,
@@ -3320,7 +3320,7 @@ MonoBehaviour:
   _instantiatedAnimationObject: {fileID: 0}
   _uiObject: {fileID: 0}
   tasks:
-  - Chose rcorrect split pen
+  - Chose correct split pen
   - Checked if split pen closes properly
   - Put split pen in hole of pivot
   parentTask: {fileID: 0}
@@ -3922,8 +3922,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   rect:
     serializedVersion: 2
-    x: 480.74268
-    y: -1311.8065
+    x: 180.91916
+    y: 229.63782
     width: 40
     height: 50
   type: 1
@@ -4010,8 +4010,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   rect:
     serializedVersion: 2
-    x: 56.742683
-    y: -1311.8065
+    x: -243.08084
+    y: 229.63782
     width: 40
     height: 50
   type: 0
@@ -4098,8 +4098,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   rect:
     serializedVersion: 2
-    x: 88.74268
-    y: -1436.8065
+    x: -211.08084
+    y: 104.63781
     width: 400
     height: 300
   title: StartTaskNode
@@ -4715,8 +4715,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   rect:
     serializedVersion: 2
-    x: 761.1119
-    y: 78.990845
+    x: 461.2883
+    y: 1620.4365
     width: 60
     height: 50
   type: 3
@@ -4803,8 +4803,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   rect:
     serializedVersion: 2
-    x: 953.1119
-    y: -88.009155
+    x: 653.2883
+    y: 1453.4365
     width: 40
     height: 50
   type: 1
@@ -4891,8 +4891,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   rect:
     serializedVersion: 2
-    x: 529.1119
-    y: -88.009155
+    x: 229.2883
+    y: 1453.4365
     width: 40
     height: 50
   type: 0
@@ -4979,8 +4979,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   rect:
     serializedVersion: 2
-    x: 561.1119
-    y: -213.00916
+    x: 261.2883
+    y: 1328.4365
     width: 400
     height: 300
   title: AnswerTargetTaskNode
@@ -5810,8 +5810,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   rect:
     serializedVersion: 2
-    x: 788.7404
-    y: -795.9429
+    x: 488.9169
+    y: 745.50146
     width: 60
     height: 50
   type: 3
@@ -5898,8 +5898,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   rect:
     serializedVersion: 2
-    x: 980.7404
-    y: -962.9429
+    x: 680.9169
+    y: 578.50146
     width: 40
     height: 50
   type: 1
@@ -5986,8 +5986,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   rect:
     serializedVersion: 2
-    x: 556.7404
-    y: -962.9429
+    x: 256.9169
+    y: 578.50146
     width: 40
     height: 50
   type: 0
@@ -6074,8 +6074,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   rect:
     serializedVersion: 2
-    x: 588.7404
-    y: -1087.9429
+    x: 288.9169
+    y: 453.50143
     width: 400
     height: 300
   title: AnswerTargetTaskNode
@@ -6334,8 +6334,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   rect:
     serializedVersion: 2
-    x: 743.6874
-    y: 1069.5901
+    x: 443.86383
+    y: 2611.0361
     width: 60
     height: 50
   type: 3
@@ -6422,8 +6422,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   rect:
     serializedVersion: 2
-    x: 935.6874
-    y: 902.5901
+    x: 635.86383
+    y: 2444.0361
     width: 40
     height: 50
   type: 1
@@ -6510,8 +6510,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   rect:
     serializedVersion: 2
-    x: 511.68738
-    y: 902.5901
+    x: 211.86383
+    y: 2444.0361
     width: 40
     height: 50
   type: 0
@@ -6598,8 +6598,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   rect:
     serializedVersion: 2
-    x: 543.6874
-    y: 777.5901
+    x: 243.86383
+    y: 2319.0361
     width: 400
     height: 300
   title: AnswerTargetTaskNode
@@ -7660,8 +7660,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   rect:
     serializedVersion: 2
-    x: 982.441
-    y: -1308.4052
+    x: 682.61743
+    y: 233.03918
     width: 40
     height: 50
   type: 1
@@ -7748,8 +7748,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   rect:
     serializedVersion: 2
-    x: 590.441
-    y: -1433.4052
+    x: 290.61746
+    y: 108.03918
     width: 400
     height: 300
   title: NestedTaskNode
@@ -7976,8 +7976,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   rect:
     serializedVersion: 2
-    x: 790.441
-    y: -1141.4052
+    x: 490.61746
+    y: 400.03918
     width: 20
     height: 10
   type: 2
@@ -8064,8 +8064,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   rect:
     serializedVersion: 2
-    x: 558.441
-    y: -1308.4052
+    x: 258.61746
+    y: 233.03918
     width: 40
     height: 50
   type: 0
