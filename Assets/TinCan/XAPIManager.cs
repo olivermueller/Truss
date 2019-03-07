@@ -30,8 +30,8 @@ public class XAPIManager : MonoBehaviour
 	public void Send(string VerbID, string VerbAction, string ActivityID)
     {
         var actor = new Agent();
-        actor.name = AgentName;
-        actor.mbox = "mailto:" + AgentEmail;
+        actor.name = instance.AgentName;
+        actor.mbox = "mailto:" + instance.AgentEmail;
 
         var verb = new Verb();
         verb.id = new Uri(VerbID);
@@ -54,8 +54,8 @@ public class XAPIManager : MonoBehaviour
     public void AddToQueue(int QueueID,string VerbID, string VerbAction, string ActivityID)
     {
         var actor = new Agent();
-        actor.name = AgentName;
-        actor.mbox = "mailto:" + AgentEmail;
+        actor.name = instance.AgentName;
+        actor.mbox = "mailto:" + instance.AgentEmail;
 
         var verb = new Verb();
         verb.id = new Uri(VerbID);
