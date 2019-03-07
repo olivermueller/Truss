@@ -153,6 +153,9 @@ namespace Prototype.NetworkLobby
                //lobbyManager.DisplayIsConnecting();
                 lobbyManager.serverText.text = "CONNECTED TO: ";
                 lobbyManager.serverCode.text = matchNameInput.text;
+                XAPIManager.instance.AgentName = matchNameInput.text;
+                XAPIManager.instance.AgentEmail = matchNameInput.text + "@example.com";
+                
                 lobbyManager.status.text = "READY!";
                 lobbyManager.matchMaker.JoinMatch(nID, "", "", "", 0, 0, lobbyManager.OnMatchJoined);
                 
