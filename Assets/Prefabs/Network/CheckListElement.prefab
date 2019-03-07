@@ -38,6 +38,7 @@ GameObject:
   - component: {fileID: 224743791897790366}
   - component: {fileID: 114386123549734694}
   - component: {fileID: 114420600915647478}
+  - component: {fileID: 114612995270439072}
   m_Layer: 5
   m_Name: CheckListElement
   m_TagString: CheckListElement
@@ -283,6 +284,17 @@ MonoBehaviour:
   m_FillAmount: 1
   m_FillClockwise: 1
   m_FillOrigin: 0
+--- !u!114 &114612995270439072
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1162570790069174}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 145eacd049d7f429c99e1068779e217f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &114829117329445462
 MonoBehaviour:
   m_ObjectHideFlags: 1

@@ -93,6 +93,7 @@ public class PlayerUnit : NetworkBehaviour
         GameStateManager = GameStateManager == null ? FindObjectOfType<NetworkedGameState>() : GameStateManager;
         GameStateManager.CmdSetAwating(true);
         GameStateManager.CmdSetApproved(true);
+        XAPIManager.instance.SendQueuedStatements();
     }
     
     [Command]

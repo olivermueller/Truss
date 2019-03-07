@@ -42,23 +42,23 @@ public class TargetManager : MonoBehaviour {
 
     }
 
-    public WWW SEND(XAPIStatement statement)
-    {
-        string json = JsonUtility.ToJson(statement);
-        json = json.Replace("_", string.Empty);
-        Debug.Log(json.ToString());
-        WWW www;
-        Dictionary<string, string> postHeader = new Dictionary<string, string>();
-        postHeader.Add("Content-Type", "application/json");
-        postHeader.Add("Authorization", "Basic " + AUTHORIZATION_KEY);
-        postHeader.Add("X-Experience-API-Version", "1.0.1");
-        // convert json string to byte
-        var formData = System.Text.Encoding.UTF8.GetBytes(json);
-
-        www = new WWW(POSTAddUserURL, formData, postHeader);
-        StartCoroutine(WaitForRequest(www));
-        return www;
-    }
+//    public WWW SEND(XAPIStatement statement)
+//    {
+//        string json = JsonUtility.ToJson(statement);
+//        json = json.Replace("_", string.Empty);
+//        Debug.Log(json.ToString());
+//        WWW www;
+//        Dictionary<string, string> postHeader = new Dictionary<string, string>();
+//        postHeader.Add("Content-Type", "application/json");
+//        postHeader.Add("Authorization", "Basic " + AUTHORIZATION_KEY);
+//        postHeader.Add("X-Experience-API-Version", "1.0.1");
+//        // convert json string to byte
+//        var formData = System.Text.Encoding.UTF8.GetBytes(json);
+//
+//        www = new WWW(POSTAddUserURL, formData, postHeader);
+//        StartCoroutine(WaitForRequest(www));
+//        return www;
+//    }
 
     IEnumerator WaitForRequest(WWW data)
     {

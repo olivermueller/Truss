@@ -50,8 +50,8 @@ public class CompletedButton : MonoBehaviour {
 
       
 
-        XAPIStatement statement = new XAPIStatement(TargetManager.Instance.username, "mailto:" + TargetManager.Instance.email, "passed", "http:∕∕adlnet.gov∕expapi∕verbs∕passed", "http:∕∕adlnet.gov∕expapi∕activities∕ARTruss", ci.name + " Test", "Completed " + ci.name);
-        TargetManager.Instance.SEND(statement);
+//        XAPIStatement statement = new XAPIStatement(TargetManager.Instance.username, "mailto:" + TargetManager.Instance.email, "passed", "http:∕∕adlnet.gov∕expapi∕verbs∕passed", "http:∕∕adlnet.gov∕expapi∕activities∕ARTruss", ci.name + " Test", "Completed " + ci.name);
+      //  TargetManager.Instance.SEND(statement);
     }
 
     void CompletedTask(GameObject currentButton, UIManager um, CheckItem ci)
