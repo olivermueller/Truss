@@ -124,6 +124,17 @@
           </e>
         </e>
         <e p="ForceOrientation.cs" t="Include" />
+        <e p="InAppBrowser" t="Include">
+          <e p="Example" t="Include">
+            <e p="BrowserOpener.cs" t="Include" />
+            <e p="JSExecute.cs" t="Include" />
+            <e p="LocalFileOpener.cs" t="Include" />
+          </e>
+          <e p="Scripts" t="Include">
+            <e p="InAppBrowser.cs" t="Include" />
+            <e p="InAppBrowserBridge.cs" t="Include" />
+          </e>
+        </e>
         <e p="NetworkLobby_Third-PartyNotice.txt" t="Include" />
         <e p="Plugins" t="Include">
           <e p="Pixelplacement" t="Include">

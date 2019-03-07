@@ -118,34 +118,4 @@ public class XAPIManager : MonoBehaviour
         yield return null;
     }
 
-//    void OnApplicationQuit()
-//    {
-//        var actor = new Agent();
-//        actor.name = "2017TinCan";
-//        actor.mbox = "mailto:secretan@brookes.ac.uk";
-//
-//        var verb = new Verb();
-//        verb.id = new Uri("https://w3id.org/xapi/adl/verbs/logged-out");
-//        verb.display = new LanguageMap();
-//        verb.display.Add("en-US", "logged-out");
-//
-//        var activity = new Activity();
-//        activity.id = "http://activitystrea.ms/schema/1.0/application";
-//
-//        var statement = new Statement();
-//        statement.actor = actor;
-//        statement.verb = verb;
-//        statement.target = activity;
-//
-//        Debug.Log("Sending a message sync...");
-//        SendMessage(statement);
-//        Debug.Log("... message sent");
-//
-//        statement.actor.name = "2017TinCanAsync";
-//
-//        Debug.Log("Sending a message async...");
-//        StartCoroutine(sendMessageAsync(statement));
-//        Debug.Log("... message sent");
-//    }
-//}
 }
