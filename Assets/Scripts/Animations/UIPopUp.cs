@@ -23,7 +23,6 @@ public class UIPopUp : MonoBehaviour
 		float timer = 0.0f;
 		while (timer <= time)
 		{
-			print("calling");
 			transform.localScale = Vector3.Lerp(scale1, scale2, ac.Evaluate(timer / time));
 			timer += Time.deltaTime;
 			yield return null;

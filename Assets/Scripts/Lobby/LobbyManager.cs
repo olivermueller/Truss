@@ -58,12 +58,18 @@ namespace Prototype.NetworkLobby
 
         protected LobbyHook _lobbyHooks;
 
-        public string originalLobbyScene;
+        private string originalLobbyScene;
         
         private LobbyMainMenu lobbyMainMenu;
+        
+         public LobbyManager(): base()
+        {
+            offlineScene = "";
+            lobbyScene = "[NETWORKED] Lobby"; // Name of the scene with the network manager
+        }
         void Start()
         {
-
+            originalLobbyScene = lobbyScene;
             lobbyMainMenu = GetComponentInChildren<LobbyMainMenu>();
             s_Singleton = this;
             _lobbyHooks = GetComponent<Prototype.NetworkLobby.LobbyHook>();
@@ -429,18 +435,13 @@ namespace Prototype.NetworkLobby
         }
 
 
-        public override void OnClientDisconnect(NetworkConnection conn)
+        public override void OnStartClient(NetworkClient lobbyClient)
         {
-            base.OnClientDisconnect(conn);
-            lobbyScene = "";
+            lobbyScene = originalLobbyScene; // Ensures the client loads correctly
         }
-
-        public override void OnServerDisconnect(NetworkConnection conn)
+        public override void OnStopClient()
         {
-            base.OnServerDisconnect(conn);
-            //ChangeTo(mainMenuPanel);
-            lobbyScene = "";
-
+            lobbyScene = ""; // Ensures we don't reload the scene after quitting
         }
         public override void OnStartServer()
         {
