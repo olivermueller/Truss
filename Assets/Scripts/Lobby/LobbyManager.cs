@@ -439,15 +439,6 @@ namespace Prototype.NetworkLobby
             //base.OnClientDisconnect(conn);
             lobbyScene = "";
         }
-
-        public override void OnStartClient(NetworkClient lobbyClient)
-        {
-            lobbyScene = originalLobbyScene; // Ensures the client loads correctly
-        }
-        public override void OnStopClient()
-        {
-            lobbyScene = ""; // Ensures we don't reload the scene after quitting
-        }
     
         public override void OnClientError(NetworkConnection conn, int errorCode)
         {
