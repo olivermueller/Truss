@@ -39,7 +39,6 @@ namespace Prototype.NetworkLobby
         public Text statusInfo;
         public Text hostInfo;
 
-        public string originalLobbyScene = "[NETWORKED] Lobby";
         public Text serverCode;
         public Text serverText;
         
@@ -59,6 +58,8 @@ namespace Prototype.NetworkLobby
 
         protected LobbyHook _lobbyHooks;
 
+        public string originalLobbyScene;
+        
         private LobbyMainMenu lobbyMainMenu;
         void Start()
         {
@@ -453,15 +454,6 @@ namespace Prototype.NetworkLobby
         {
             ChangeTo(mainMenuPanel);
             infoPanel.Display("Client error : " + (errorCode == 6 ? "timeout" : errorCode.ToString()), "Close", null);
-        }
-        
-        public override void OnStartClient(NetworkClient lobbyClient)
-        {
-            lobbyScene = originalLobbyScene; // Ensures the client loads correctly
-        }
-        public override void OnStopClient()
-        {
-            lobbyScene = ""; // Ensures we don't reload the scene after quitting
         }
     }
 }
