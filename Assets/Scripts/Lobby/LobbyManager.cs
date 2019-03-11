@@ -59,10 +59,11 @@ namespace Prototype.NetworkLobby
 
         protected LobbyHook _lobbyHooks;
 
+        private LobbyMainMenu lobbyMainMenu;
         void Start()
         {
-            
 
+            lobbyMainMenu = GetComponentInChildren<LobbyMainMenu>();
             s_Singleton = this;
             _lobbyHooks = GetComponent<Prototype.NetworkLobby.LobbyHook>();
             currentPanel = mainMenuPanel;
@@ -430,13 +431,18 @@ namespace Prototype.NetworkLobby
         public override void OnClientDisconnect(NetworkConnection conn)
         {
             base.OnClientDisconnect(conn);
+            StartMatchMaker();
+            //matchesInLobby = new List<MatchInfoSnapshot>();
+            matchMaker.ListMatches(0, 10, "", true, 0, 0, lobbyMainMenu.OnGetGames);
+            var f = lobbyMainMenu.JoinAfter(0.1f);
+            StartCoroutine(f);
             //ChangeTo(mainMenuPanel);
             print("Client disconnected!!");
         }
-        
+
         public override void OnServerDisconnect(NetworkConnection conn)
         {
-            base.OnClientDisconnect(conn);
+            base.OnServerDisconnect(conn);
             //ChangeTo(mainMenuPanel);
             print("Server disconnected!!");
 

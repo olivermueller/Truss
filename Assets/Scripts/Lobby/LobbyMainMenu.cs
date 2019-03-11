@@ -133,7 +133,7 @@ namespace Prototype.NetworkLobby
             XAPIManager.instance.AgentEmail = lobbyName + "@example.com";
         }
 
-        IEnumerator JoinAfter(float sec)
+        public IEnumerator JoinAfter(float sec)
         {
             lobbyManager.DisplayIsConnectingNoCancel();
             yield return new WaitForSeconds(sec);
