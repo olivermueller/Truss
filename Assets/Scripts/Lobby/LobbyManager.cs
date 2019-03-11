@@ -39,7 +39,7 @@ namespace Prototype.NetworkLobby
         public Text statusInfo;
         public Text hostInfo;
 
-
+        public string originalLobbyScene = "[NETWORKED] Lobby";
         public Text serverCode;
         public Text serverText;
         
@@ -431,27 +431,37 @@ namespace Prototype.NetworkLobby
         public override void OnClientDisconnect(NetworkConnection conn)
         {
             base.OnClientDisconnect(conn);
-            StartMatchMaker();
-            //matchesInLobby = new List<MatchInfoSnapshot>();
-            matchMaker.ListMatches(0, 10, "", true, 0, 0, lobbyMainMenu.OnGetGames);
-            var f = lobbyMainMenu.JoinAfter(0.1f);
-            StartCoroutine(f);
-            //ChangeTo(mainMenuPanel);
-            print("Client disconnected!!");
+            lobbyScene = "";
         }
 
         public override void OnServerDisconnect(NetworkConnection conn)
         {
             base.OnServerDisconnect(conn);
             //ChangeTo(mainMenuPanel);
-            print("Server disconnected!!");
+            lobbyScene = "";
 
         }
-        
+        public override void OnStartServer()
+        {
+            lobbyScene = originalLobbyScene; // Ensures the server loads correctly
+        }
+        public override void OnStopServer()
+        {
+            lobbyScene = ""; // Ensures we don't reload the scene after quitting
+        }
         public override void OnClientError(NetworkConnection conn, int errorCode)
         {
             ChangeTo(mainMenuPanel);
             infoPanel.Display("Client error : " + (errorCode == 6 ? "timeout" : errorCode.ToString()), "Close", null);
+        }
+        
+        public override void OnStartClient(NetworkClient lobbyClient)
+        {
+            lobbyScene = originalLobbyScene; // Ensures the client loads correctly
+        }
+        public override void OnStopClient()
+        {
+            lobbyScene = ""; // Ensures we don't reload the scene after quitting
         }
     }
 }
