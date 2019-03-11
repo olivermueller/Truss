@@ -50,7 +50,7 @@ public class XAPIManager : MonoBehaviour
         StartCoroutine(sendMessageAsync(statement));
         Debug.Log("... message sent");
     }
-
+    
     public void AddToQueue(int QueueID,string VerbID, string VerbAction, string ActivityID)
     {
         var actor = new Agent();
