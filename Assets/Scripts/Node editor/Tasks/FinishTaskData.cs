@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class FinishTaskData : TaskData {
 
@@ -9,9 +10,15 @@ public class FinishTaskData : TaskData {
     {
         base.StartTask();
         GameObject.FindGameObjectWithTag("EndScreen").transform.GetChild(0).gameObject.SetActive(true);
-
+        StartCoroutine(LoadSceneAfter(1));
     }
 
+    IEnumerator LoadSceneAfter(float sec)
+    {
+        yield return new WaitForSeconds(sec);
+        SceneManager.LoadScene("[NETWORKED]DashBoard");
+    }
+    
     public override bool? IsCompleted()
     {
         return null;

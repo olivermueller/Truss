@@ -435,25 +435,7 @@ namespace Prototype.NetworkLobby
                 SetServerInfo("Client", networkAddress);
             }
         }
-
-        public override void OnClientDisconnect(NetworkConnection conn)
-        {
-            //base.OnClientDisconnect(conn);
-            lobbyScene = "";
-        }
-        
-        public override void OnServerDisconnect(NetworkConnection conn)
-        {
-            //base.OnClientDisconnect(conn);
-            lobbyScene = "";
-        }
-        
-        public override void OnServerConnect(NetworkConnection conn)
-        {
-            //base.OnClientDisconnect(conn);
-            lobbyScene = originalLobbyScene;
-        }
-
+       
         public override void OnClientError(NetworkConnection conn, int errorCode)
         {
             ChangeTo(mainMenuPanel);
