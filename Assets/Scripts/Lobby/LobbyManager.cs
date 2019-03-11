@@ -421,7 +421,9 @@ namespace Prototype.NetworkLobby
         public override void OnClientConnect(NetworkConnection conn)
         {
             base.OnClientConnect(conn);
-
+            
+            lobbyScene = originalLobbyScene;
+            
             infoPanel.gameObject.SetActive(false);
 
             conn.RegisterHandler(MsgKicked, KickedMessageHandler);
@@ -439,7 +441,19 @@ namespace Prototype.NetworkLobby
             //base.OnClientDisconnect(conn);
             lobbyScene = "";
         }
-    
+        
+        public override void OnServerDisconnect(NetworkConnection conn)
+        {
+            //base.OnClientDisconnect(conn);
+            lobbyScene = "";
+        }
+        
+        public override void OnServerConnect(NetworkConnection conn)
+        {
+            //base.OnClientDisconnect(conn);
+            lobbyScene = originalLobbyScene;
+        }
+
         public override void OnClientError(NetworkConnection conn, int errorCode)
         {
             ChangeTo(mainMenuPanel);
