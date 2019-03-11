@@ -430,9 +430,18 @@ namespace Prototype.NetworkLobby
         public override void OnClientDisconnect(NetworkConnection conn)
         {
             base.OnClientDisconnect(conn);
-            ChangeTo(mainMenuPanel);
+            //ChangeTo(mainMenuPanel);
+            print("Client disconnected!!");
         }
+        
+        public override void OnServerDisconnect(NetworkConnection conn)
+        {
+            base.OnClientDisconnect(conn);
+            //ChangeTo(mainMenuPanel);
+            print("Server disconnected!!");
 
+        }
+        
         public override void OnClientError(NetworkConnection conn, int errorCode)
         {
             ChangeTo(mainMenuPanel);

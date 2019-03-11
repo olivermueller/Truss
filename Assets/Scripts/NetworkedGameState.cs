@@ -27,7 +27,7 @@ public class NetworkedGameState : NetworkBehaviour
 		StartCoroutine(InitAfter());
 		
 	}
-
+	
 	public bool initializedPLayers = false;
 	IEnumerator InitAfter()
 	{
@@ -181,10 +181,11 @@ public class NetworkedGameState : NetworkBehaviour
 
 			}
 
-			
 		}
 
 	}
+	
+	
 	
 	
 }

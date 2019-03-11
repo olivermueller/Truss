@@ -51,7 +51,7 @@ public class CameraInstantiator : NetworkBehaviour
 				camera.GetComponent<VuforiaBehaviour>().enabled = false;
 				camera.GetComponent<DefaultInitializationErrorHandler>().enabled = false;
 				FindObjectOfType<LobbyManager>().transform.GetChild(1).gameObject.SetActive(false);
-				XAPIManager.instance.Send("http://adlnet.gov/expapi/verbs/initialized", "initialized", "http://activitystrea.ms/schema/1.0/application");
+				XAPIManager.instance.Send("http://adlnet.gov/expapi/verbs/launched", "launched", "http://activitystrea.ms/schema/1.0/application");
 			}
 			else
 			{
