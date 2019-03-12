@@ -57,19 +57,11 @@ namespace Prototype.NetworkLobby
         protected ulong _currentMatchID;
 
         protected LobbyHook _lobbyHooks;
-
-        private string originalLobbyScene;
         
         private LobbyMainMenu lobbyMainMenu;
         
-         public LobbyManager(): base()
-        {
-            offlineScene = "";
-            lobbyScene = "[NETWORKED] Lobby"; // Name of the scene with the network manager
-        }
         void Start()
         {
-            originalLobbyScene = lobbyScene;
             lobbyMainMenu = GetComponentInChildren<LobbyMainMenu>();
             s_Singleton = this;
             _lobbyHooks = GetComponent<Prototype.NetworkLobby.LobbyHook>();
@@ -420,10 +412,7 @@ namespace Prototype.NetworkLobby
 
         public override void OnClientConnect(NetworkConnection conn)
         {
-            base.OnClientConnect(conn);
-            
-            lobbyScene = originalLobbyScene;
-            
+            base.OnClientConnect(conn);            
             infoPanel.gameObject.SetActive(false);
 
             conn.RegisterHandler(MsgKicked, KickedMessageHandler);
