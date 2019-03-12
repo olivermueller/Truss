@@ -39,6 +39,7 @@ namespace Prototype.NetworkLobby
         public Text statusInfo;
         public Text hostInfo;
 
+
         public Text serverCode;
         public Text serverText;
         
@@ -57,12 +58,11 @@ namespace Prototype.NetworkLobby
         protected ulong _currentMatchID;
 
         protected LobbyHook _lobbyHooks;
-        
-        private LobbyMainMenu lobbyMainMenu;
-        
+
         void Start()
         {
-            lobbyMainMenu = GetComponentInChildren<LobbyMainMenu>();
+            
+
             s_Singleton = this;
             _lobbyHooks = GetComponent<Prototype.NetworkLobby.LobbyHook>();
             currentPanel = mainMenuPanel;
@@ -412,7 +412,8 @@ namespace Prototype.NetworkLobby
 
         public override void OnClientConnect(NetworkConnection conn)
         {
-            base.OnClientConnect(conn);            
+            base.OnClientConnect(conn);
+
             infoPanel.gameObject.SetActive(false);
 
             conn.RegisterHandler(MsgKicked, KickedMessageHandler);
@@ -424,7 +425,14 @@ namespace Prototype.NetworkLobby
                 SetServerInfo("Client", networkAddress);
             }
         }
-       
+
+
+        public override void OnClientDisconnect(NetworkConnection conn)
+        {
+            base.OnClientDisconnect(conn);
+            ChangeTo(mainMenuPanel);
+        }
+
         public override void OnClientError(NetworkConnection conn, int errorCode)
         {
             ChangeTo(mainMenuPanel);
