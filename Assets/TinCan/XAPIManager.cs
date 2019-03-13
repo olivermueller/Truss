@@ -48,7 +48,6 @@ public class XAPIManager : MonoBehaviour
         
         var account = new AgentAccount();
         account.name = instance.SessionID;
-
         actor.account = account;
         
         var statement = new Statement();
