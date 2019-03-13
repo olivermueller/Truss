@@ -14,7 +14,7 @@ public delegate void Action();
 [System.Serializable]
 public class TaskData : NetworkBehaviour
 {
-    
+    public int XapiID;
     public string ID;
     public string _title, _description;
     public TaskData _out, _in;
@@ -33,7 +33,14 @@ public class TaskData : NetworkBehaviour
 
     public virtual void StartTask()
     {
-
+        bool excludeStatements = this as StartTaskData || this as FinishTaskData;
+        
+        
+        if (isServer && !excludeStatements)
+        {
+            XAPIManager.instance.Send("http://adlnet.gov/expapi/verbs/launched", "launched", "Trainee", "http://example.com/node/" + XapiID);
+            XAPIManager.instance.Send("http://id.tincanapi.com/verb/viewed", "viewed", "Trainee", "http://example.com/node/" + XapiID);
+        }
         GameObject[] checkListElements = GameObject.FindGameObjectsWithTag("CheckListElement");
         if (checkListElements != null)
         {
@@ -83,12 +90,17 @@ public class TaskData : NetworkBehaviour
         GameObject.FindGameObjectWithTag("CanvasTitle").GetComponent<TextMeshProUGUI>().text = _title;
         GameObject.FindGameObjectWithTag("CanvasDescription").GetComponent<TextMeshProUGUI>().text = _description;
         var checkListObj = GameObject.FindGameObjectWithTag("CanvasCheckList");
+        if(isServer && !excludeStatements)            XAPIManager.instance.Send("http://www.tincanapi.co.uk/verbs/evaluated", "evaluated", "Trainer", "http://example.com/node/" + XapiID);
 
         for (int i = 0; i < tasks.Count && checkListObj; i++)
         {
+            
+
             var listElement = Instantiate(TaskModel.Instance.checkListItemPrefab);
             listElement.transform.parent = checkListObj.transform;
             listElement.GetComponentInChildren<TextMeshProUGUI>().text = tasks[i];
+            
+            if(isServer && !excludeStatements) XAPIManager.instance.Send("http://www.tincanapi.co.uk/verbs/evaluated", "evaluated", "Trainer", "http://example.com/node/" + XapiID + "/" + "checklistitem/" + i);
         }
         
     }

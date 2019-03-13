@@ -28,10 +28,14 @@ public class XAPIManager : MonoBehaviour
 	    DontDestroyOnLoad(gameObject);
 	}
 	
-	public void Send(string VerbID, string VerbAction)
+	public void Send(string VerbID, string VerbAction, string name = null, string activityID = null)
     {
+        if (name == null)
+        {
+            name = AgentName;
+        }
         var actor = new Agent();
-        actor.name = instance.AgentName;
+        actor.name = name;
         actor.mbox = "mailto:" + instance.AgentEmail;
 
         var verb = new Verb();
@@ -40,7 +44,7 @@ public class XAPIManager : MonoBehaviour
         verb.display.Add("en-US", VerbAction);
 
         var activity = new Activity();
-        activity.id = "http://activitystrea.ms/schema/1.0/application";
+        activity.id = activityID ?? "http://activitystrea.ms/schema/1.0/application";
         
 //        var account = new AgentAccount();
 //        account.name = SessionID;
