@@ -17,7 +17,7 @@ public class CameraInstantiator : NetworkBehaviour
 	private GameObject camera;
 	private bool initializedDelegate = false;
 
-	void Start()
+	void Awake()
 	{
 		if (!initializedDelegate)
 		{
@@ -25,10 +25,15 @@ public class CameraInstantiator : NetworkBehaviour
 			SceneManager.sceneLoaded += InitVuforia;
 		}
 
+		
+	}
+
+	private void Start()
+	{
 		if (isServer)
 			XAPIManager.instance.AgentName = "Trainer";
 		else
-			XAPIManager.instance.AgentName = "Trainee";
+			XAPIManager.instance.AgentName = "Trainee";	
 	}
 
 	void InitVuforia(Scene scene, LoadSceneMode mode)
