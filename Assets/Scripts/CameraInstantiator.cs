@@ -17,7 +17,7 @@ public class CameraInstantiator : NetworkBehaviour
 	private GameObject camera;
 	private bool initializedDelegate = false;
 
-	void Awake()
+	void Start()
 	{
 		if (!initializedDelegate)
 		{
