@@ -10,7 +10,7 @@ public class ForceOrientation : MonoBehaviour
 
 	void Start()
 	{
-		if(XAPIManager.instance.AgentName == "Trainer" ) XAPIManager.instance.Send("http://adlnet.gov/expapi/verbs/initialized", "initialized");
+		if(GetComponent<CameraInstantiator>().isServer)XAPIManager.instance.Send("http://adlnet.gov/expapi/verbs/initialized", "initialized");
 	}
 	
 	void ChangeFocusTo(CameraDevice.FocusMode focusType)
