@@ -1,5 +1,4 @@
-﻿using System;
-using System.Collections;
+﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
@@ -11,7 +10,7 @@ public class ForceOrientation : MonoBehaviour
 
 	void Start()
 	{
-		if(String.Compare(XAPIManager.instance.AgentName, "Trainer", StringComparison.Ordinal) == 0) XAPIManager.instance.Send("http://adlnet.gov/expapi/verbs/initialized", "initialized");
+		if(XAPIManager.instance.AgentName == "Trainer" ) XAPIManager.instance.Send("http://adlnet.gov/expapi/verbs/initialized", "initialized");
 	}
 	
 	void ChangeFocusTo(CameraDevice.FocusMode focusType)
