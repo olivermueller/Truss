@@ -8,6 +8,11 @@ public class ForceOrientation : MonoBehaviour
 {
 	private bool first = true;
 
+	void Start()
+	{
+		
+	}
+	
 	void ChangeFocusTo(CameraDevice.FocusMode focusType)
 	{
 		CameraDevice.Instance.SetFocusMode(focusType);
