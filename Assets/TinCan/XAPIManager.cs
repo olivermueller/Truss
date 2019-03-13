@@ -46,10 +46,10 @@ public class XAPIManager : MonoBehaviour
         var activity = new Activity();
         activity.id = activityID ?? "http://activitystrea.ms/schema/1.0/application";
         
-//        var account = new AgentAccount();
-//        account.name = SessionID;
-//
-//        actor.account = account;
+        var account = new AgentAccount();
+        account.name = instance.SessionID;
+
+        actor.account = account;
         
         var statement = new Statement();
         statement.actor = actor;
