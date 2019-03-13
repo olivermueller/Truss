@@ -12,8 +12,9 @@ public class XAPIManager : MonoBehaviour
         "281952f03d4e45540fa67e463ffdbada545b2875",
         "515a7b69ceb7de02ae8c96e058973f02d9e297b4"
     );
-    
-    public string AgentName = "2017TinCan";
+
+    public string SessionID = "";    //unique id for the training session that is ran
+    public string AgentName = "2017TinCan"; // trainer or trainee
     public string AgentEmail = "BobDylan@example.com";
 
     private Dictionary<int, Statement> _statementQueue;
@@ -27,7 +28,7 @@ public class XAPIManager : MonoBehaviour
 	    DontDestroyOnLoad(gameObject);
 	}
 	
-	public void Send(string VerbID, string VerbAction, string ActivityID)
+	public void Send(string VerbID, string VerbAction, string ActivityID = "http://activitystrea.ms/schema/1.0/application")
     {
         var actor = new Agent();
         actor.name = instance.AgentName;
@@ -40,7 +41,12 @@ public class XAPIManager : MonoBehaviour
 
         var activity = new Activity();
         activity.id = ActivityID;
+        
+        var account = new AgentAccount();
+        account.name = SessionID;
 
+        actor.account = account;
+        
         var statement = new Statement();
         statement.actor = actor;
         statement.verb = verb;
