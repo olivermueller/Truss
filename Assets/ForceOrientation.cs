@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Networking;
 using UnityEngine.UI;
 using Vuforia;
 
@@ -10,7 +11,15 @@ public class ForceOrientation : MonoBehaviour
 
 	void Start()
 	{
-		if(FindObjectOfType<CameraInstantiator>().isServer)XAPIManager.instance.Send("http://adlnet.gov/expapi/verbs/initialized", "initialized");
+		if (FindObjectOfType<NetworkBehaviour>().isServer)
+		{
+			XAPIManager.instance.AgentName = "Trainer";
+			XAPIManager.instance.Send("http://adlnet.gov/expapi/verbs/initialized", "initialized");
+		}
+		else
+			XAPIManager.instance.AgentName = "Trainee";	
+		
+		
 	}
 	
 	void ChangeFocusTo(CameraDevice.FocusMode focusType)
