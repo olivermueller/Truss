@@ -129,8 +129,9 @@ namespace Prototype.NetworkLobby
             lobbyManager.serverText.text = "GIVE CODE TO TRAINEE: ";
             lobbyManager.serverCode.text = lobbyName;
             lobbyManager.status.text = "WAITING...";
-            XAPIManager.instance.AgentName = lobbyName;
+            //XAPIManager.instance.AgentName = lobbyName;
             XAPIManager.instance.AgentEmail = lobbyName + "@example.com";
+            XAPIManager.instance.SessionID = lobbyName;
         }
 
         public IEnumerator JoinAfter(float sec)
