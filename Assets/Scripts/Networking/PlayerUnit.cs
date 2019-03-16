@@ -146,6 +146,10 @@ public class PlayerUnit : NetworkBehaviour
     [Command]
     public void CmdTraineeNext()
     {
+        var iterator = FindObjectOfType<TestingScript>().iterator;
+
+        XAPIManager.instance.Send("http://adlnet.gov/expapi/verbs/attempted", "attempted", "Trainee", "http://example.com/node/" + iterator.XapiID);
+
         GameStateManager = GameStateManager == null ? FindObjectOfType<NetworkedGameState>() : GameStateManager;
         GameStateManager.CmdSetAwating(true);
         GameStateManager.CmdSetApproved(false);

@@ -13,7 +13,7 @@ public class XAPIManager : MonoBehaviour
         "515a7b69ceb7de02ae8c96e058973f02d9e297b4"
     );
 
-    public string SessionID = "";    //unique id for the training session that is ran
+    public string SessionID = "AAAA";    //unique id for the training session that is ran
     public string AgentName = "2017TinCan"; // trainer or trainee
     public string AgentEmail = "BobDylan@example.com";
 
@@ -28,9 +28,9 @@ public class XAPIManager : MonoBehaviour
 	    DontDestroyOnLoad(gameObject);
 	}
 	
-	public void Send(string VerbID, string VerbAction, string name = null, string activityID = null)
+	public void Send(string VerbID, string VerbAction, string name = "", string activityID = "")
     {
-        if (name == null)
+        if (name == "")
         {
             name = AgentName;
         }
@@ -44,9 +44,10 @@ public class XAPIManager : MonoBehaviour
         verb.display.Add("en-US", VerbAction);
 
         var activity = new Activity();
-        activity.id = activityID ?? "http://activitystrea.ms/schema/1.0/application";
-        
+        activity.id = activityID ==""? "http://activitystrea.ms/schema/1.0/application": activityID;
+        var context = new Context();
         var account = new AgentAccount();
+        account.homePage = new Uri("http://doesntmatter.com");
         account.name = instance.SessionID;
         actor.account = account;
         
@@ -55,9 +56,7 @@ public class XAPIManager : MonoBehaviour
         statement.verb = verb;
         statement.target = activity;
 
-        Debug.Log("Sending a message async...");
         StartCoroutine(sendMessageAsync(statement));
-        Debug.Log("... message sent");
     }
     
     public void AddToQueue(int QueueID,string VerbID, string VerbAction, string ActivityID)
@@ -121,6 +120,7 @@ public class XAPIManager : MonoBehaviour
         }
         else
         {
+            Debug.LogError("Could not send statement");
             // Do something with failure
         }
 

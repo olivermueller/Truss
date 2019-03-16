@@ -18,22 +18,21 @@ public class CheclistStatementSender : MonoBehaviour
 			
 		 ID = transform.GetSiblingIndex();
 		 
-		 XAPIManager.instance.AddToQueue(ID,"http://id.tincanapi.com/activitytype/checklist-item", "not completed", "http://activitystrea.ms/schema/1.0/application"+GetComponentInChildren<TextMeshProUGUI>().text);
+		 //XAPIManager.instance.AddToQueue(ID,"http://id.tincanapi.com/activitytype/checklist-item", "not completed", "http://activitystrea.ms/schema/1.0/application"+GetComponentInChildren<TextMeshProUGUI>().text);
 
 	 }
 
 	void ToggleValueChanged(Toggle change)
 	{
+
+		var iterator = FindObjectOfType<TestingScript>().iterator;
 		if (change.isOn)
 		{
-			XAPIManager.instance.RemoveFromQueueAt(ID);
-			XAPIManager.instance.AddToQueue(ID,"http://id.tincanapi.com/activitytype/checklist-item", "completed", "http://activitystrea.ms/schema/1.0/application"+GetComponentInChildren<TextMeshProUGUI>().text);
+			XAPIManager.instance.Send("http://activitystrea.ms/schema/1.0/accept", "accepted", "Trainer", "http://example.com/node/" + iterator.XapiID + "/" + "checklistitem/" + transform.GetSiblingIndex());
 		}
 		else
 		{
-			XAPIManager.instance.RemoveFromQueueAt(ID);
-			XAPIManager.instance.AddToQueue(ID,"http://id.tincanapi.com/activitytype/checklist-item", "not completed", "http://activitystrea.ms/schema/1.0/application"+GetComponentInChildren<TextMeshProUGUI>().text);
-
+			XAPIManager.instance.Send("http://activitystrea.ms/schema/1.0/reject", "rejected", "Trainer", "http://example.com/node/" + iterator.XapiID + "/" + "checklistitem/" + transform.GetSiblingIndex());
 		}
 	}
 }
