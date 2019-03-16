@@ -100,7 +100,7 @@ public class TaskData : NetworkBehaviour
             listElement.transform.parent = checkListObj.transform;
             listElement.GetComponentInChildren<TextMeshProUGUI>().text = tasks[i];
             
-            if(isServer && !excludeStatements) XAPIManager.instance.Send("http://activitystrea.ms/schema/1.0/reject", "rejected", "Trainer", "http://example.com/node/" + XapiID + "/" + "checklistitem/" + i);
+            if(isServer && !excludeStatements) XAPIManager.instance.Send("http://activitystrea.ms/schema/1.0/rejectzz", "rejected", "Trainer", "http://example.com/node/" + XapiID + "/" + "checklistitem/" + i);
         }
         
     }
