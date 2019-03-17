@@ -123,7 +123,6 @@ GameObject:
   m_Component:
   - component: {fileID: 5226661}
   - component: {fileID: 5226662}
-  - component: {fileID: 5226663}
   m_Layer: 5
   m_Name: EndScreen
   m_TagString: EndScreen
@@ -163,39 +162,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 44e44e0f9a09d4d1b81b114df3da3282, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &5226663
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 114499377163928368, guid: 7ac2be68d8cd644d1a234d8070a2b160,
-    type: 2}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 5226660}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 372142912, guid: dc443db3e92b4983b9738c1131f555cb, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_SceneId:
-    m_Value: 0
-  m_AssetId:
-    i0: 122
-    i1: 194
-    i2: 190
-    i3: 104
-    i4: 216
-    i5: 205
-    i6: 100
-    i7: 77
-    i8: 26
-    i9: 35
-    i10: 77
-    i11: 128
-    i12: 112
-    i13: 162
-    i14: 177
-    i15: 96
-  m_ServerOnly: 1
-  m_LocalPlayerAuthority: 0
 --- !u!1 &65755955
 GameObject:
   m_ObjectHideFlags: 0

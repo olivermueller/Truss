@@ -5,7 +5,7 @@ using UnityEngine.Networking;
 using UnityEngine.SceneManagement;
 using Vuforia;
 
-public class LoadSceneScript : NetworkBehaviour {
+public class LoadSceneScript : MonoBehaviour {
 
 	public void LoadScene(int sceneToLoad)
 	{
