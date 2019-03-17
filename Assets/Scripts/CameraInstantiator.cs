@@ -18,7 +18,6 @@ public class CameraInstantiator : MonoBehaviour
 	private bool initializedDelegate = false;
 	void Awake()
 	{
-		
 		if (!initializedDelegate)
 		{
 			initializedDelegate = false;
@@ -34,20 +33,25 @@ public class CameraInstantiator : MonoBehaviour
 	{
 		TrackerManager.Instance.GetStateManager().ReassociateTrackables();
 
-		if (FindObjectOfType<Camera>() == null)
+		if (GameObject.FindWithTag("MainCamera") == null)
 		{
+			print("Instatiating");
 			camera = Instantiate(ARCameraPrefab);
 		}
-		else camera = GameObject.FindWithTag("MainCamera");
+		else
+		{
+			camera = GameObject.FindWithTag("MainCamera");
+			print(camera.gameObject.name);
+		}
 		
 		//starting scene
-		if (scene.buildIndex == 0)
+		if (scene.buildIndex == 0 || scene.buildIndex == 2)
 		{
 			camera.GetComponent<VuforiaBehaviour>().enabled = false;
 			camera.GetComponent<DefaultInitializationErrorHandler>().enabled = false;
-			FindObjectOfType<LobbyManager>().transform.GetChild(1).gameObject.SetActive(true);
+			if(scene.buildIndex == 0) FindObjectOfType<LobbyManager>().transform.GetChild(1).gameObject.SetActive(true);
 		}
-		else //training scene
+		else
 		{
 //			if (isServer)
 //			{
@@ -64,6 +68,7 @@ public class CameraInstantiator : MonoBehaviour
 			}
 			
 		}
+		
 	}
 	
 }
