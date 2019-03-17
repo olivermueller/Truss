@@ -40,14 +40,12 @@ public class PlayerUnit : NetworkBehaviour
 
     }
 
-    private TaskData iterator;
     IEnumerator OnReady()
     {
         if (isServer && isLocalPlayer)
         {
             yield return new WaitUntil(()=>connectionToClient.isReady);
             var camera = FindObjectOfType<Camera>().gameObject;
-            iterator = FindObjectOfType<TestingScript>().iterator;
             camera.GetComponent<VuforiaBehaviour>().enabled = true;
             camera.GetComponent<DefaultInitializationErrorHandler>().enabled = true;
             FindObjectOfType<LobbyManager>().transform.GetChild(1).gameObject.SetActive(false);
@@ -104,7 +102,8 @@ public class PlayerUnit : NetworkBehaviour
             }
 
         }
-        
+        var iterator = FindObjectOfType<TestingScript>().iterator;
+
         if(allCorrect) XAPIManager.instance.Send("http://adlnet.gov/expapi/verbs/passed", "passed", "Trainee", "http://example.com/node/" + iterator.XapiID);
         else XAPIManager.instance.Send("http://id.tincanapi.com/verb/skipped", "skipped", "Trainee", "http://example.com/node/" + iterator.XapiID);
         
@@ -117,6 +116,8 @@ public class PlayerUnit : NetworkBehaviour
     [Command]
     public void CmdTrainerNotApproved()
     {
+        var iterator = FindObjectOfType<TestingScript>().iterator;
+
         GameStateManager = GameStateManager == null ? FindObjectOfType<NetworkedGameState>() : GameStateManager;
         XAPIManager.instance.Send("http://adlnet.gov/expapi/verbs/failed", "failed", "Trainee", "http://example.com/node/" + iterator.XapiID);
         
