@@ -40,12 +40,14 @@ public class PlayerUnit : NetworkBehaviour
 
     }
 
+    private TaskData iterator;
     IEnumerator OnReady()
     {
         if (isServer && isLocalPlayer)
         {
             yield return new WaitUntil(()=>connectionToClient.isReady);
             var camera = FindObjectOfType<Camera>().gameObject;
+            iterator = FindObjectOfType<TestingScript>().iterator;
             camera.GetComponent<VuforiaBehaviour>().enabled = true;
             camera.GetComponent<DefaultInitializationErrorHandler>().enabled = true;
             FindObjectOfType<LobbyManager>().transform.GetChild(1).gameObject.SetActive(false);
@@ -90,6 +92,22 @@ public class PlayerUnit : NetworkBehaviour
     [Command]
     public void CmdTrainerApproved()
     {
+        
+        var checkList = GetComponentsInChildren<Toggle>();
+        bool allCorrect = true;
+        foreach (var checkListItem in checkList)
+        {
+            if (!checkListItem.isOn)
+            {
+                allCorrect = false;
+                break;
+            }
+
+        }
+        
+        if(allCorrect) XAPIManager.instance.Send("http://adlnet.gov/expapi/verbs/passed", "passed", "Trainee", "http://example.com/node/" + iterator.XapiID);
+        else XAPIManager.instance.Send("http://id.tincanapi.com/verb/skipped", "skipped", "Trainee", "http://example.com/node/" + iterator.XapiID);
+        
         GameStateManager = GameStateManager == null ? FindObjectOfType<NetworkedGameState>() : GameStateManager;
         GameStateManager.CmdSetAwating(true);
         GameStateManager.CmdSetApproved(true);
@@ -100,7 +118,7 @@ public class PlayerUnit : NetworkBehaviour
     public void CmdTrainerNotApproved()
     {
         GameStateManager = GameStateManager == null ? FindObjectOfType<NetworkedGameState>() : GameStateManager;
-
+        XAPIManager.instance.Send("http://adlnet.gov/expapi/verbs/failed", "failed", "Trainee", "http://example.com/node/" + iterator.XapiID);
         
 //        GameStateManager.CmdSetNodeId((FindObjectOfType<TestingScript>().iterator as AnswerTaskData).noTask.ID);
         //GameStateManager._testingScript= GetComponent<TestingScript>();

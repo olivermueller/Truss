@@ -429,8 +429,19 @@ namespace Prototype.NetworkLobby
 
         public override void OnClientDisconnect(NetworkConnection conn)
         {
+            XAPIManager.instance.Send("https://w3id.org/xapi/adl/abandoned", "abandoned", "Trainee", "http://example.com/application");
+
             base.OnClientDisconnect(conn);
+
             ChangeTo(mainMenuPanel);
+        }
+
+        public override void OnServerDisconnect(NetworkConnection conn)
+        {
+            XAPIManager.instance.Send("https://w3id.org/xapi/adl/abandoned", "abandoned", "Trainer", "http://example.com/application");
+
+            base.OnServerDisconnect(conn);
+            
         }
 
         public override void OnClientError(NetworkConnection conn, int errorCode)
