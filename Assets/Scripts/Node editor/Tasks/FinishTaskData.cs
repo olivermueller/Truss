@@ -9,7 +9,7 @@ public class FinishTaskData : TaskData {
     public override void StartTask()
     {
         base.StartTask();
-        XAPIManager.instance.Send("http://activitystrea.ms/schema/1.0/complete", "completed", "Trainee", "http://example.com/application");
+        XAPIManager.instance.Send("http://activitystrea.ms/schema/1.0/complete", "completed", "", "http://example.com/application");
         //GameObject.FindGameObjectWithTag("EndScreen").transform.GetChild(0).gameObject.SetActive(true);
         StartCoroutine(LoadSceneAfter(1));
     }
