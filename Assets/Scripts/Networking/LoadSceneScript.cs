@@ -14,8 +14,6 @@ public class LoadSceneScript : MonoBehaviour {
 
 	IEnumerator StopHostAfter(int t)
 	{
-		NetworkManager.singleton.StopClient();
-		NetworkManager.singleton.StopHost();
 		yield return new WaitForSeconds(t);
 		
 		SceneManager.LoadScene(0);

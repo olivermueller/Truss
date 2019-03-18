@@ -7,7 +7,7 @@ public class BrowserOpener : MonoBehaviour {
 	public string pageToOpen = "";
 
 	// check readme file to find out how to change title, colors etc.
-	private void Start() {
+	public void OpenPage() {
 		GameObject.FindObjectOfType<LobbyManager>().transform.GetChild(0).gameObject.SetActive(true);
 		if (pageToOpen == "")
 		{
