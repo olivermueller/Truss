@@ -441,7 +441,8 @@ namespace Prototype.NetworkLobby
             XAPIManager.instance.Send("https://w3id.org/xapi/adl/abandoned", "abandoned", "Trainer", "http://example.com/application");
 
             base.OnServerDisconnect(conn);
-            
+            ChangeTo(mainMenuPanel);
+
         }
 
         public override void OnClientError(NetworkConnection conn, int errorCode)

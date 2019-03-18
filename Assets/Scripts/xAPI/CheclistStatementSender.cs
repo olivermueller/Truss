@@ -28,11 +28,11 @@ public class CheclistStatementSender : MonoBehaviour
 		var iterator = FindObjectOfType<TestingScript>().iterator;
 		if (change.isOn)
 		{
-			XAPIManager.instance.Send("http://activitystrea.ms/schema/1.0/accept", "accepted", "Trainer", "http://example.com/node/" + iterator.XapiID + "/" + "checklistitem/" + transform.GetSiblingIndex()+1);
+			XAPIManager.instance.Send("http://activitystrea.ms/schema/1.0/accept", "accepted", "Trainer", "http://example.com/node/" + iterator.XapiID + "/" + "checklistitem/" + transform.GetSiblingIndex());
 		}
 		else
 		{
-			XAPIManager.instance.Send("http://activitystrea.ms/schema/1.0/reject", "rejected", "Trainer", "http://example.com/node/" + iterator.XapiID + "/" + "checklistitem/" + transform.GetSiblingIndex()+1);
+			XAPIManager.instance.Send("http://activitystrea.ms/schema/1.0/reject", "rejected", "Trainer", "http://example.com/node/" + iterator.XapiID + "/" + "checklistitem/" + transform.GetSiblingIndex());
 		}
 	}
 }
