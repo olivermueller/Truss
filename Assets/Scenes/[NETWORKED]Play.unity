@@ -528,8 +528,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   rect:
     serializedVersion: 2
-    x: 3320.7102
-    y: 354.88336
+    x: 2706.923
+    y: 347.98688
     width: 40
     height: 50
   type: 1
@@ -616,8 +616,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   rect:
     serializedVersion: 2
-    x: 2928.7102
-    y: 229.88336
+    x: 2314.923
+    y: 222.98688
     width: 400
     height: 300
   title: FinishTaskNode
@@ -843,8 +843,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   rect:
     serializedVersion: 2
-    x: 2896.7102
-    y: 354.88336
+    x: 2282.923
+    y: 347.98688
     width: 40
     height: 50
   type: 0
@@ -1044,7 +1044,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5289e3e77459048748665c2072294c5a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  XapiID: 0
+  XapiID: 1
   ID: 01dc2b18-2e39-45c6-96a1-a87ec3e395b1
   _title: Take, check and mount egg on Corner 1
   _description: Look at the corner and press READY when done
@@ -1146,7 +1146,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5289e3e77459048748665c2072294c5a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  XapiID: 0
+  XapiID: 3
   ID: b93025fa-b798-49ec-9ef4-85b6f014abb8
   _title: Take, check and place split pen on Corner 1
   _description: Look at the corner and press READY when done
@@ -1672,7 +1672,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 74802750eacc04d1794aa30d269101c0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  XapiID: 0
+  XapiID: 7
   ID: 0b14d742-dc3a-4846-9a46-d444e0ffc015
   _title: Congratulations!
   _description: 
@@ -2675,7 +2675,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5289e3e77459048748665c2072294c5a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  XapiID: 0
+  XapiID: 4
   ID: 92867768-89f5-450c-8ab6-17530083a8d7
   _title: Assemble Corner 2 as shown in the animation
   _description: Look at the corner and press READY when done
@@ -2871,14 +2871,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6b3fdb8f4db2c4c2cabe51aac6a137e7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  XapiID: 0
+  XapiID: 6
   ID: 4ada71d6-f1d1-49d8-af35-d828332a1b54
   _title: Assemble the Corner 4 on your own
   _description: Press READY when done
   _out: {fileID: 319845085}
   _in: {fileID: 633527071}
   _animationObject: {fileID: 0}
-  _baseObject: {fileID: 250310683}
+  _baseObject: {fileID: 0}
   _instantiatedAnimationObject: {fileID: 0}
   _uiObject: {fileID: 0}
   tasks:
@@ -2981,14 +2981,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6b3fdb8f4db2c4c2cabe51aac6a137e7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  XapiID: 0
+  XapiID: 5
   ID: 19f67cf4-11bd-4105-a3a4-58446bef31c3
   _title: Assemble the Corner 3 on your own
   _description: Press READY when done
   _out: {fileID: 619414290}
   _in: {fileID: 509535585}
   _animationObject: {fileID: 0}
-  _baseObject: {fileID: 1219494034}
+  _baseObject: {fileID: 0}
   _instantiatedAnimationObject: {fileID: 0}
   _uiObject: {fileID: 0}
   tasks:
@@ -3721,8 +3721,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   rect:
     serializedVersion: 2
-    x: -173.5412
-    y: 509.67035
+    x: -787.329
+    y: 502.77386
     width: 60
     height: 50
   type: 3
@@ -3809,8 +3809,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   rect:
     serializedVersion: 2
-    x: 18.458801
-    y: 342.67035
+    x: -595.329
+    y: 335.77386
     width: 40
     height: 50
   type: 1
@@ -3897,8 +3897,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   rect:
     serializedVersion: 2
-    x: -405.5412
-    y: 342.67035
+    x: -1019.329
+    y: 335.77386
     width: 40
     height: 50
   type: 0
@@ -3985,8 +3985,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   rect:
     serializedVersion: 2
-    x: -373.5412
-    y: 217.67035
+    x: -987.329
+    y: 210.77386
     width: 400
     height: 300
   title: AnswerTargetTaskNode
@@ -4343,8 +4343,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   rect:
     serializedVersion: 2
-    x: 1969.345
-    y: 522.75696
+    x: 1355.5576
+    y: 515.8605
     width: 60
     height: 50
   type: 3
@@ -4431,8 +4431,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   rect:
     serializedVersion: 2
-    x: 2161.345
-    y: 355.75696
+    x: 1547.5576
+    y: 348.86047
     width: 40
     height: 50
   type: 1
@@ -4519,8 +4519,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   rect:
     serializedVersion: 2
-    x: 1737.345
-    y: 355.75696
+    x: 1123.5576
+    y: 348.86047
     width: 40
     height: 50
   type: 0
@@ -4607,8 +4607,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   rect:
     serializedVersion: 2
-    x: 1769.345
-    y: 230.75696
+    x: 1155.5576
+    y: 223.86047
     width: 400
     height: 300
   title: AnswerTaskNode
@@ -5142,8 +5142,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   rect:
     serializedVersion: 2
-    x: 358.33685
-    y: 513.0259
+    x: -255.45102
+    y: 506.12943
     width: 60
     height: 50
   type: 3
@@ -5230,8 +5230,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   rect:
     serializedVersion: 2
-    x: 550.33685
-    y: 346.0259
+    x: -63.45102
+    y: 339.12943
     width: 40
     height: 50
   type: 1
@@ -5318,8 +5318,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   rect:
     serializedVersion: 2
-    x: 126.33685
-    y: 346.0259
+    x: -487.45102
+    y: 339.12943
     width: 40
     height: 50
   type: 0
@@ -5406,8 +5406,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   rect:
     serializedVersion: 2
-    x: 158.33685
-    y: 221.02591
+    x: -455.45102
+    y: 214.12943
     width: 400
     height: 300
   title: AnswerTargetTaskNode
@@ -6006,8 +6006,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   rect:
     serializedVersion: 2
-    x: 895.2435
-    y: 523.09326
+    x: 281.45563
+    y: 516.1968
     width: 60
     height: 50
   type: 3
@@ -6094,8 +6094,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   rect:
     serializedVersion: 2
-    x: 1087.2435
-    y: 356.09326
+    x: 473.45563
+    y: 349.19678
     width: 40
     height: 50
   type: 1
@@ -6182,8 +6182,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   rect:
     serializedVersion: 2
-    x: 663.2435
-    y: 356.09326
+    x: 49.455643
+    y: 349.19678
     width: 40
     height: 50
   type: 0
@@ -6270,8 +6270,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   rect:
     serializedVersion: 2
-    x: 695.2435
-    y: 231.09326
+    x: 81.45564
+    y: 224.19678
     width: 400
     height: 300
   title: AnswerTargetTaskNode
@@ -6741,8 +6741,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   rect:
     serializedVersion: 2
-    x: 1396.9213
-    y: 524.7711
+    x: 783.13367
+    y: 517.87463
     width: 60
     height: 50
   type: 3
@@ -6829,8 +6829,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   rect:
     serializedVersion: 2
-    x: 1588.9213
-    y: 357.77115
+    x: 975.13367
+    y: 350.87466
     width: 40
     height: 50
   type: 1
@@ -6917,8 +6917,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   rect:
     serializedVersion: 2
-    x: 1164.9213
-    y: 357.77115
+    x: 551.13367
+    y: 350.87466
     width: 40
     height: 50
   type: 0
@@ -7005,8 +7005,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   rect:
     serializedVersion: 2
-    x: 1196.9213
-    y: 232.77115
+    x: 583.13367
+    y: 225.87466
     width: 400
     height: 300
   title: AnswerTargetTaskNode
@@ -8021,8 +8021,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   rect:
     serializedVersion: 2
-    x: -484.89062
-    y: 337.63684
+    x: -1098.6781
+    y: 330.74036
     width: 40
     height: 50
   type: 1
@@ -8109,8 +8109,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   rect:
     serializedVersion: 2
-    x: -908.8906
-    y: 337.63684
+    x: -1522.6781
+    y: 330.74036
     width: 40
     height: 50
   type: 0
@@ -8197,8 +8197,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   rect:
     serializedVersion: 2
-    x: -876.8906
-    y: 212.63683
+    x: -1490.6781
+    y: 205.74034
     width: 400
     height: 300
   title: StartTaskNode
@@ -9164,8 +9164,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   rect:
     serializedVersion: 2
-    x: 2748.8137
-    y: 353.59708
+    x: 2135.0264
+    y: 346.7006
     width: 40
     height: 50
   type: 1
@@ -9252,8 +9252,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   rect:
     serializedVersion: 2
-    x: 2356.8137
-    y: 228.59708
+    x: 1743.0265
+    y: 221.70059
     width: 400
     height: 300
   title: AnswerTaskNode
@@ -9480,8 +9480,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   rect:
     serializedVersion: 2
-    x: 2556.8137
-    y: 520.59705
+    x: 1943.0265
+    y: 513.70056
     width: 60
     height: 50
   type: 3
@@ -9568,8 +9568,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   rect:
     serializedVersion: 2
-    x: 2324.8137
-    y: 353.59708
+    x: 1711.0265
+    y: 346.7006
     width: 40
     height: 50
   type: 0
@@ -9755,7 +9755,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5289e3e77459048748665c2072294c5a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  XapiID: 0
+  XapiID: 2
   ID: 2454fba9-4a66-4b33-a452-62f8bb1a385c
   _title: Take check and place pivot on Corner 1
   _description: Look at the corner and press READY when done
