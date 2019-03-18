@@ -434,6 +434,7 @@ namespace Prototype.NetworkLobby
             base.OnClientDisconnect(conn);
 
             ChangeTo(mainMenuPanel);
+            SceneManager.LoadScene(0);
         }
 
         public override void OnServerDisconnect(NetworkConnection conn)
@@ -442,6 +443,7 @@ namespace Prototype.NetworkLobby
 
             base.OnServerDisconnect(conn);
             ChangeTo(mainMenuPanel);
+            SceneManager.LoadScene(0);
 
         }
 

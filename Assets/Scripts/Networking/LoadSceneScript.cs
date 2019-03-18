@@ -9,8 +9,7 @@ public class LoadSceneScript : MonoBehaviour {
 
 	public void LoadScene(int sceneToLoad)
 	{
-		NetworkClient.ShutdownAll();
-		NetworkServer.DisconnectAll();
+		NetworkManager.singleton.client.Disconnect();
 		StartCoroutine(StopHostAfter(2));
 	}
 
@@ -26,7 +25,6 @@ public class LoadSceneScript : MonoBehaviour {
 		SceneManager.LoadScene(sceneToLoad);
 	}
 
-	
 
 //	private void OnEnable()
 //	{
