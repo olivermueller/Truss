@@ -15,6 +15,7 @@ public class BrowserOpener : MonoBehaviour {
 		}
 		else
 		{
+			GameObject.FindWithTag("EndScreen").transform.GetChild(0).gameObject.SetActive(true);
 			InAppBrowser.DisplayOptions options = new InAppBrowser.DisplayOptions();
 			options.displayURLAsPageTitle = false;
 			options.pageTitle = "Dashboard";
