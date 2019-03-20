@@ -182,6 +182,7 @@ namespace Prototype.NetworkLobby
         public void GoBackButton()
         {
             backDelegate();
+            StopServer();
 			topPanel.isInGame = false;
         }
 
@@ -435,6 +436,7 @@ namespace Prototype.NetworkLobby
 
             ChangeTo(mainMenuPanel);
             SceneManager.LoadScene(0);
+            
         }
 
         public override void OnServerDisconnect(NetworkConnection conn)
