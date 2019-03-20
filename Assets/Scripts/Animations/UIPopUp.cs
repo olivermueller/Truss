@@ -10,6 +10,8 @@ public class UIPopUp : MonoBehaviour
 	private Vector3 initialScale;
 	private void OnEnable()
 	{
+		Application.targetFrameRate = 60;
+
 		initialScale = transform.localScale;
 		transform.localScale = new Vector3(0.01f, 0.01f, 0.01f);
 
@@ -19,7 +21,6 @@ public class UIPopUp : MonoBehaviour
 	
 	IEnumerator Move(Vector3 scale1, Vector3 scale2, AnimationCurve ac, float time)
 	{
-		Application.targetFrameRate = 60;
 		float timer = 0.0f;
 		while (timer <= time)
 		{
@@ -29,8 +30,6 @@ public class UIPopUp : MonoBehaviour
 		}
 
 		transform.localScale = initialScale;
-		Application.targetFrameRate = 60;
-
 
 	}
 }
