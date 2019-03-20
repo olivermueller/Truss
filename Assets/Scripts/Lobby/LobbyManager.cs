@@ -181,8 +181,8 @@ namespace Prototype.NetworkLobby
         public BackButtonDelegate backDelegate;
         public void GoBackButton()
         {
-           // backDelegate();
-            StopServer();
+            backDelegate();
+            StopHost();
 			topPanel.isInGame = false;
         }
 
@@ -433,6 +433,7 @@ namespace Prototype.NetworkLobby
             XAPIManager.instance.Send("https://w3id.org/xapi/adl/abandoned", "abandoned", "Trainee", "http://example.com/application");
 
             base.OnClientDisconnect(conn);
+            StopHost();
 
             ChangeTo(mainMenuPanel);
             SceneManager.LoadScene(0);
@@ -442,6 +443,7 @@ namespace Prototype.NetworkLobby
         public override void OnServerDisconnect(NetworkConnection conn)
         {
             XAPIManager.instance.Send("https://w3id.org/xapi/adl/abandoned", "abandoned", "Trainer", "http://example.com/application");
+            StopHost();
 
             base.OnServerDisconnect(conn);
             ChangeTo(mainMenuPanel);
@@ -452,7 +454,14 @@ namespace Prototype.NetworkLobby
         public override void OnClientError(NetworkConnection conn, int errorCode)
         {
             ChangeTo(mainMenuPanel);
+            StopHost();
             infoPanel.Display("Client error : " + (errorCode == 6 ? "timeout" : errorCode.ToString()), "Close", null);
+        }
+
+        public override void OnServerError(NetworkConnection conn, int errorCode)
+        {
+            StopHost();
+            base.OnServerError(conn, errorCode);
         }
     }
 }
