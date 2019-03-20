@@ -181,7 +181,7 @@ namespace Prototype.NetworkLobby
         public BackButtonDelegate backDelegate;
         public void GoBackButton()
         {
-            backDelegate();
+           // backDelegate();
             StopServer();
 			topPanel.isInGame = false;
         }
