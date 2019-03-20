@@ -27,7 +27,9 @@ public class UIPopUp : MonoBehaviour
 			timer += Time.deltaTime;
 			yield return null;
 		}
-		Application.targetFrameRate = 30;
+
+		transform.localScale = initialScale;
+		Application.targetFrameRate = 60;
 
 
 	}
