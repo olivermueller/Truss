@@ -1,5 +1,6 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using Prototype.NetworkLobby;
 using UnityEngine;
 using UnityEngine.Networking;
 using UnityEngine.SceneManagement;
@@ -9,14 +10,14 @@ public class LoadSceneScript : MonoBehaviour {
 
 	public void LoadScene(int sceneToLoad)
 	{
-		NetworkManager.singleton.client.Disconnect();
+
 		StartCoroutine(StopHostAfter(2));
 	}
 
 	IEnumerator StopHostAfter(int t)
 	{
 		yield return new WaitForSeconds(t);
-		
+		FindObjectOfType<LobbyManager>().StopHost();
 		SceneManager.LoadScene(0);
 	}
 	
