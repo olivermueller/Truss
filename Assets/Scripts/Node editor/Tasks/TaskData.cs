@@ -25,6 +25,9 @@ public class TaskData : NetworkBehaviour
     public UnityEvent NodeIdEvent;
     //position of the goal you are being guided towards
     public Transform goalPosition;
+    
+    protected OffscreenArrow offscreeArrowScript;
+
     public void SetNextTask(TaskData next)
     {
         _out = next;
@@ -34,8 +37,8 @@ public class TaskData : NetworkBehaviour
     public virtual void StartTask()
     {
         bool excludeStatements = this as StartTaskData || this as FinishTaskData;
-        
-        
+        offscreeArrowScript = Camera.main.GetComponent<OffscreenArrow>();
+        offscreeArrowScript.ClearData();
         if (isServer && !excludeStatements)
         {
             XAPIManager.instance.Send("http://adlnet.gov/expapi/verbs/launched", "launched", "Trainee", "http://example.com/node/" + XapiID);

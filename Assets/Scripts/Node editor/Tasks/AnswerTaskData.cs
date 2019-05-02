@@ -24,14 +24,11 @@ public class AnswerTaskData : TaskData
     }
     
     public bool? _finished;
-    private OffscreenArrow offscreeArrowScript;
     public override void StartTask()
     {
         _finished = true;
         if (goalPosition)
         {
-            offscreeArrowScript = Camera.main.GetComponent<OffscreenArrow>();
-            var targetObj = new GameObject();
             offscreeArrowScript.Targets.Add(goalPosition.gameObject);
             offscreeArrowScript.Initialize();
         }
