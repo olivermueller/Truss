@@ -75,7 +75,7 @@ public class AnswerTaskData : TaskData
     public override bool? IsCompleted()
     {
         
-        if(_finished != null) offscreeArrowScript.Targets.Clear();
+        //if(_finished != null) offscreeArrowScript.Targets.Clear();
         return _finished;
     }
 
