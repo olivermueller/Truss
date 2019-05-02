@@ -24,6 +24,7 @@ GameObject:
   - component: {fileID: 114884828650633714}
   - component: {fileID: 114255566016628006}
   - component: {fileID: 114067911812262668}
+  - component: {fileID: 114433518307460520}
   m_Layer: 0
   m_Name: ARCamera
   m_TagString: MainCamera
@@ -119,6 +120,24 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c47f92041efbb4b429a4eafca855ebe3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &114433518307460520
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1711869721071640}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: afcc7a3c1a45c4d8dab3e51f213c7a5c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Targets: []
+  ArrowUIPrefab: {fileID: 1240293428149130, guid: f8f02a1b1e67243cb89a251c0ce9ced6,
+    type: 2}
+  SelectionUIPrefab: {fileID: 1199176921993538, guid: 1d1498b8da021465c9b3d6af3dff3b1b,
+    type: 2}
+  PaddingX: 50
+  PaddingY: 50
 --- !u!114 &114884828650633714
 MonoBehaviour:
   m_ObjectHideFlags: 1
