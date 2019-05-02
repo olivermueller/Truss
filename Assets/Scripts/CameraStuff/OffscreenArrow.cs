@@ -20,7 +20,7 @@ public class OffscreenArrow : MonoBehaviour
 	private GameObject[] _instantiatedArrows;
 	private GameObject[] _instantiatedSelections;
 	private Canvas _canvas;
-	void Start ()
+	public void Initialize ()
 	{
 		_viewportPaddingX = 1.0f - (Screen.width - PaddingX)/Screen.width;
 		_viewportPaddingY = 1.0f - (Screen.height - PaddingY)/Screen.height;

@@ -33,6 +33,7 @@ public class AnswerTaskData : TaskData
             offscreeArrowScript = Camera.main.GetComponent<OffscreenArrow>();
             var targetObj = new GameObject();
             offscreeArrowScript.Targets.Add(goalPosition.gameObject);
+            offscreeArrowScript.Initialize();
         }
         
 //        _finished = null;
