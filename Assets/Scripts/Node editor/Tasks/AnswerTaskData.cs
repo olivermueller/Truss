@@ -27,6 +27,7 @@ public class AnswerTaskData : TaskData
     public override void StartTask()
     {
         _finished = true;
+        base.StartTask();
         if (goalPosition)
         {
             offscreeArrowScript.Targets.Add(goalPosition.gameObject);
@@ -34,7 +35,7 @@ public class AnswerTaskData : TaskData
         }
         
 //        _finished = null;
-        base.StartTask();
+        
       // GameObject canvas = FindObjectOfType<Canvas>().gameObject.GetComponentInChildren<HorizontalLayoutGroup>().gameObject;
         
 //        instantiatedYesButton = Instantiate(yesPrefab);
