@@ -24,20 +24,15 @@ public class AnswerTaskData : TaskData
     }
     
     public bool? _finished;
-    private ParticleSpawner _particleSpawner;
+    private OffscreenArrow offscreeArrowScript;
     public override void StartTask()
     {
         _finished = true;
         if (goalPosition)
         {
-            if (_particleSpawner)
-            {
-                DestroyImmediate(_particleSpawner);
-            }
-            
-            _particleSpawner = Camera.main.gameObject.AddComponent<ParticleSpawner>();
-            _particleSpawner.endPoint = goalPosition;
-            _particleSpawner.Begin();
+            offscreeArrowScript = Camera.main.GetComponent<OffscreenArrow>();
+            var targetObj = new GameObject();
+            offscreeArrowScript.Targets.Add(goalPosition.gameObject);
         }
         
 //        _finished = null;
@@ -79,7 +74,7 @@ public class AnswerTaskData : TaskData
     public override bool? IsCompleted()
     {
         
-        if(_finished != null) Destroy(_particleSpawner);
+        if(_finished != null) offscreeArrowScript.Targets.Clear();
         return _finished;
     }
 
