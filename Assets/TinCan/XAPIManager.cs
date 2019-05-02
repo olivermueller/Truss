@@ -30,33 +30,33 @@ public class XAPIManager : MonoBehaviour
 	
 	public void Send(string VerbID, string VerbAction, string name = "", string activityID = "")
     {
-        if (name == "")
-        {
-            name = AgentName;
-        }
-        var actor = new Agent();
-        actor.name = name;
-        actor.mbox = "mailto:" + instance.AgentEmail;
-
-        var verb = new Verb();
-        verb.id = new Uri(VerbID);
-        verb.display = new LanguageMap();
-        verb.display.Add("en-US", VerbAction);
-
-        var activity = new Activity();
-        activity.id = activityID ==""? "http://activitystrea.ms/schema/1.0/application": activityID;
-        var context = new Context();
-        var account = new AgentAccount();
-        account.homePage = new Uri("http://doesntmatter.com");
-        account.name = instance.SessionID;
-        actor.account = account;
-        
-        var statement = new Statement();
-        statement.actor = actor;
-        statement.verb = verb;
-        statement.target = activity;
-
-        StartCoroutine(sendMessageAsync(statement));
+//        if (name == "")
+//        {
+//            name = AgentName;
+//        }
+//        var actor = new Agent();
+//        actor.name = name;
+//        actor.mbox = "mailto:" + instance.AgentEmail;
+//
+//        var verb = new Verb();
+//        verb.id = new Uri(VerbID);
+//        verb.display = new LanguageMap();
+//        verb.display.Add("en-US", VerbAction);
+//
+//        var activity = new Activity();
+//        activity.id = activityID ==""? "http://activitystrea.ms/schema/1.0/application": activityID;
+//        var context = new Context();
+//        var account = new AgentAccount();
+//        account.homePage = new Uri("http://doesntmatter.com");
+//        account.name = instance.SessionID;
+//        actor.account = account;
+//        
+//        var statement = new Statement();
+//        statement.actor = actor;
+//        statement.verb = verb;
+//        statement.target = activity;
+//
+//        StartCoroutine(sendMessageAsync(statement));
     }
     
     public void AddToQueue(int QueueID,string VerbID, string VerbAction, string ActivityID)
