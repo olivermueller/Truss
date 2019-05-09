@@ -9,6 +9,11 @@ public class TriggerTaskData : TaskData {
         {
             base.StartTask();
             _renderer = _baseObject.GetComponent<Renderer>();
+            if (goalPosition)
+            {
+                offscreeArrowScript.Targets.Add(goalPosition.gameObject);
+                offscreeArrowScript.Initialize();
+            }
         }
 
         public override bool? IsCompleted()

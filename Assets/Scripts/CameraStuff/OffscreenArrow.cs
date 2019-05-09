@@ -111,14 +111,16 @@ public class OffscreenArrow : MonoBehaviour
 
 	public void ClearData()
 	{
-		for (int i=0; i<Targets.Count; i++)		
+		for (int i = 0; i < Targets.Count; i++)
 		{
 			Destroy(_instantiatedArrows[i]);
 			Destroy(_instantiatedSelections[i]);
 		}
+		
 		Targets.Clear();
 	}
 	
+
 	bool TestRange(float min, float max, float val)
 	{
 		return val > min && val < max;

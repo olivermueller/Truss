@@ -19,6 +19,11 @@ public class NestedTaskData : TaskData {
     {
         iterator = null;
         base.StartTask();
+        if (goalPosition)
+        {
+            offscreeArrowScript.Targets.Add(goalPosition.gameObject);
+            offscreeArrowScript.Initialize();
+        }
     }
     public void AddSubTask(TaskData subtask)
     {

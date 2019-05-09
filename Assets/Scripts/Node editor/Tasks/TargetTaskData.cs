@@ -12,6 +12,11 @@ public class TargetTaskData:TaskData
             Debug.Log("<color=green> Started "+ _title +"</color>");
             _baseObject.GetComponent<MissionTrackableEventHandler>().OnTrackableStateChange.AddListener(IsTargetActive);
             base.StartTask();
+                if (goalPosition)
+                {
+                        offscreeArrowScript.Targets.Add(goalPosition.gameObject);
+                        offscreeArrowScript.Initialize();
+                }
         }
 
         public override bool? IsCompleted()

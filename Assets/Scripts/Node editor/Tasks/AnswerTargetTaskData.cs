@@ -25,21 +25,19 @@ public class AnswerTargetTaskData : TaskData
     
     public bool? _finished;
     
-    private ParticleSpawner _particleSpawner;
     public override void StartTask()
     {
         _baseObject.GetComponent<MissionTrackableEventHandler>().OnTrackableStateChange.AddListener(IsTargetActive);
-
+        _finished = null;
+        base.StartTask();
         //CreateButtons(true);
         if (goalPosition)
         {
-            _particleSpawner = Camera.main.gameObject.AddComponent<ParticleSpawner>();
-            _particleSpawner.endPoint = goalPosition;
-            _particleSpawner.Begin();
+            offscreeArrowScript.Targets.Add(goalPosition.gameObject);
+            offscreeArrowScript.Initialize();
         }
         
-        _finished = null;
-        base.StartTask();
+        
         
 
     }
@@ -88,13 +86,7 @@ public class AnswerTargetTaskData : TaskData
         _finished = false;
     }
     public override bool? IsCompleted()
-    {
-
-        if (_finished != null)
-        {
-            Destroy(_particleSpawner);
-        }
-        
+    {   
         return _finished;
     }
 
