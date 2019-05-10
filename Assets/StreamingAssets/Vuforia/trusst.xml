@@ -2,12 +2,12 @@
 <QCARConfig xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="qcar_config.xsd">
   <Tracking>
     <ImageTarget name="download" size="1.000000 1.000000" />
+    <CylinderTarget name="cornerTruss1" sideLength="2.600000"/>
     <CylinderTarget name="cornertest" sideLength="17.000000"/>
     <CylinderTarget name="Corner1" sideLength="2.600000"/>
     <CylinderTarget name="sideTruss" sideLength="7.000000"/>
     <CylinderTarget name="cornerTruss4" sideLength="2.600000"/>
     <CylinderTarget name="curnerTruss3" sideLength="2.600000"/>
     <CylinderTarget name="cornerTruss2" sideLength="2.600000"/>
-    <CylinderTarget name="cornerTruss1" sideLength="2.600000"/>
   </Tracking>
 </QCARConfig>
