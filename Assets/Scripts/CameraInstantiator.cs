@@ -43,7 +43,6 @@ public class CameraInstantiator : MonoBehaviour
 			camera = GameObject.FindWithTag("MainCamera");
 			print(camera.gameObject.name);
 		}
-		
 		//starting scene
 		if (scene.buildIndex == 0 || scene.buildIndex == 2)
 		{
