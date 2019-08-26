@@ -1,5 +1,5 @@
 ﻿using UnityEngine;
-using System.Collections;
+using System.Linq;
 using Prototype.NetworkLobby;
 using System.IO;
 using System.Xml;
@@ -7,16 +7,20 @@ public class BrowserOpener : MonoBehaviour {
 
 	public string pageToOpen;
 
-    public void Awake()
-    {
+    // check readme file to find out how to change title, colors etc.
+    public void OpenPage() {
+
+        //figure out if its a trainer or trainee
+        var player = FindObjectsOfType<PlayerUnit>().First(p => p.isLocalPlayer);
+
+        var xmlNodeName = "";
+        if (player.IsTrainer) xmlNodeName = "/root/TrainerLink";
+        else xmlNodeName = "/root/TraineeLink";
         var xmlPath = Path.Combine(Application.streamingAssetsPath, "config.xml");
         XmlDocument xmlDocument = new XmlDocument();
         xmlDocument.Load(xmlPath);
-        pageToOpen = xmlDocument.DocumentElement.SelectSingleNode("/link").InnerText.ToString();
-    }
 
-    // check readme file to find out how to change title, colors etc.
-    public void OpenPage() {
+        pageToOpen = xmlDocument.DocumentElement.SelectSingleNode(xmlNodeName).InnerText;
 		FindObjectOfType<LobbyManager>()?.transform.GetChild(0).gameObject.SetActive(true);
 		if (pageToOpen == "")
 		{
